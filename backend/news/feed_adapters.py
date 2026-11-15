@@ -135,7 +135,10 @@ try:
 
         _REPORTS_AVAILABLE = True
 except (ImportError, IndexError) as e:
-    logging.warning(f"[feed_adapters] reports/ not importable: {e}. Article feed disabled.")
+    logging.info(
+        "[feed_adapters] reports/ adapters unavailable (%s); using bundled evidence + feedparser RSS.",
+        e,
+    )
     _REPORTS_AVAILABLE = False
 
 

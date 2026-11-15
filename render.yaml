@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: market-radar-demo
+    runtime: python
+    plan: free
+    rootDir: .
+    buildCommand: pip install -r requirements.txt gunicorn
+    startCommand: cd backend && gunicorn wsgi:app --bind 0.0.0.0:$PORT --workers 2 --timeout 120
+    envVars:
+      - key: FLASK_DEBUG
+        value: "0"
+      - key: HOST
+        value: 0.0.0.0

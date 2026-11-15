@@ -281,7 +281,8 @@ def api_news_refresh():
 @news_bp.route("/pipeline/run", methods=["POST"])
 def run_pipeline():
     """
-    Trigger the Reports theme pipeline in a background thread.
+    Cloud-safe article refresh: rebuild feed from bundled evidence + RSS.
+    (Does not depend on the local Reports theme_pipeline.)
     Returns immediately. Poll /api/news/pipeline/status for progress.
     """
     with _pipeline_lock:
@@ -295,9 +296,6 @@ def run_pipeline():
             )
 
     def _run():
-        import os
-        import sys
-
         with _pipeline_lock:
             _pipeline_state["running"] = True
             _pipeline_state["status"] = "running"
@@ -312,27 +310,9 @@ def run_pipeline():
             pass
 
         try:
-            reports_tool_root = os.path.abspath(
-                os.path.join(os.path.dirname(__file__), "..", "..", "..", "..", "Reports", "tool")
-            )
-            import subprocess
+            # Force live rebuild of the news cache (RSS + bundled evidence seed).
+            _get_cached_feed(force_refresh=True)
 
-            subprocess.run(
-                [
-                    sys.executable,
-                    "-c",
-                    (
-                        "import sys; "
-                        f"sys.path.insert(0, r'{reports_tool_root}'); "
-                        "from backend import theme_pipeline; "
-                        "theme_pipeline.run_pipeline()"
-                    ),
-                ],
-                check=True,
-                capture_output=True,
-                text=True,
-            )
-            # Auto-enrich new articles after pipeline completes
             try:
                 from backend.news.article_enricher import run_enrichment
 
@@ -341,7 +321,6 @@ def run_pipeline():
                 logger.info("[pipeline] Post-pipeline enrichment complete.")
             except Exception as e:
                 logger.warning("[pipeline] Post-pipeline enrichment failed: %s", e)
-                # Don't fail the pipeline run if enrichment fails
 
             try:
                 after = len(aggregate(limit=5000, include_market_signals=False))
@@ -353,13 +332,13 @@ def run_pipeline():
             with _pipeline_lock:
                 _pipeline_state["status"] = "success"
                 _pipeline_state["finished_at"] = _time.strftime("%Y-%m-%dT%H:%M:%SZ", _time.gmtime())
-            logger.info("[pipeline] Background pipeline run complete.")
+            logger.info("[pipeline] Background feed refresh complete.")
         except Exception as e:
             with _pipeline_lock:
                 _pipeline_state["status"] = "error"
                 _pipeline_state["error"] = str(e)
                 _pipeline_state["finished_at"] = _time.strftime("%Y-%m-%dT%H:%M:%SZ", _time.gmtime())
-            logger.error("[pipeline] Background pipeline run failed: %s", e)
+            logger.error("[pipeline] Background feed refresh failed: %s", e)
         finally:
             with _pipeline_lock:
                 _pipeline_state["running"] = False

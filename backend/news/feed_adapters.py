@@ -347,22 +347,38 @@ def _sector_from_text(*parts: Any) -> str:
     return "Other"
 
 
+def _evidence_candidates() -> List[Path]:
+    here = Path(__file__).resolve()
+    candidates = [
+        here.parent / "data" / "evidence_seed.json",
+        here.parents[1] / "news" / "data" / "evidence_seed.json",
+    ]
+    env = os.environ.get("MARKET_RADAR_EVIDENCE_JSON")
+    if env:
+        candidates.insert(0, Path(env))
+    try:
+        candidates.append(
+            here.parents[4] / "Reports" / "tool" / "backend" / "data" / "evidence.json"
+        )
+    except IndexError:
+        pass
+    return candidates
+
+
 def fetch_articles_from_reports(
     max_age_days: int = 60,
     min_score: float = 5.0,
 ) -> List[RawItem]:
     try:
-        path = (
-            Path(__file__).resolve().parents[4]
-            / "Reports"
-            / "tool"
-            / "backend"
-            / "data"
-            / "evidence.json"
-        )
-        if not path.exists():
-            logger.warning("[feed_adapters] evidence.json not found: %s", str(path))
+        path = next((p for p in _evidence_candidates() if p.is_file()), None)
+        if path is None:
+            logger.warning("[feed_adapters] evidence.json not found in bundled or Reports paths")
             return []
+        logger.info("[feed_adapters] using evidence file: %s", path)
+        # Bundled demo seed can be older than live evidence — keep a wider window.
+        effective_max_age = max_age_days
+        if path.name == "evidence_seed.json":
+            effective_max_age = max(max_age_days, 400)
 
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -395,7 +411,7 @@ def fetch_articles_from_reports(
                 dt_for_feed = _NEUTRAL_OLD_DATE
             else:
                 dt_for_feed = dt
-            if dt is not None and not _is_recent(dt, max_age_days):
+            if dt is not None and not _is_recent(dt, effective_max_age):
                 continue
 
             date_published = dt_for_feed.isoformat().replace("+00:00", "Z")
@@ -461,20 +477,34 @@ def fetch_articles_from_reports(
         return []
 
 
-def fetch_articles_from_signal_rss(
-    max_age_days: int = 7,
-) -> List[RawItem]:
+def _rss_sources_candidates() -> List[Path]:
+    here = Path(__file__).resolve()
+    candidates = [here.parent / "data" / "rss_sources.yaml"]
+    env = os.environ.get("MARKET_RADAR_RSS_SOURCES")
+    if env:
+        candidates.insert(0, Path(env))
     try:
-        path = (
-            Path(__file__).resolve().parents[4]
+        candidates.append(
+            here.parents[4]
             / "Research Interface"
             / "signals"
             / "config"
             / "sources.yaml"
         )
-        if not path.exists():
-            logger.warning("[feed_adapters] signal sources.yaml not found: %s", str(path))
+    except IndexError:
+        pass
+    return candidates
+
+
+def fetch_articles_from_signal_rss(
+    max_age_days: int = 7,
+) -> List[RawItem]:
+    try:
+        path = next((p for p in _rss_sources_candidates() if p.is_file()), None)
+        if path is None:
+            logger.warning("[feed_adapters] signal sources.yaml not found")
             return []
+        logger.info("[feed_adapters] using RSS sources: %s", path)
 
         try:
             import yaml  # type: ignore
@@ -502,8 +532,12 @@ def fetch_articles_from_signal_rss(
         out: List[RawItem] = []
 
         for src in rss_sources:
-            name = (src.get("name") or src.get("id") or "RSS").strip() if isinstance(src, dict) else "RSS"
-            url = (src.get("url") or "").strip() if isinstance(src, dict) else ""
+            if not isinstance(src, dict):
+                continue
+            if src.get("enabled") is False:
+                continue
+            name = (src.get("name") or src.get("id") or "RSS").strip()
+            url = (src.get("url") or "").strip()
             if not url:
                 continue
             tier = src.get("tier")
@@ -513,7 +547,8 @@ def fetch_articles_from_signal_rss(
                 tier_i = 2
 
             articles = []
-            if _REPORTS_AVAILABLE:
+            # Prefer feedparser for cloud/demo stability; Reports adapter optional.
+            if _REPORTS_AVAILABLE and os.environ.get("MARKET_RADAR_USE_REPORTS_RSS") == "1":
                 articles, err, _bozo = fetch_rss({"url": url, "name": name, "tier": tier_i})
                 if err:
                     logger.warning("[feed_adapters] signal RSS fetch failed for %s: %s", url, err)

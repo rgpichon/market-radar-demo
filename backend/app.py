@@ -59,16 +59,20 @@ PACKS_PATH = Path(__file__).parent / "packs.json"
 
 @app.route('/')
 def index():
-    """Serve index.html"""
-    return send_from_directory(str(FRONTEND_DIR), 'index.html')
+    """Journalist / news intake is the primary product surface."""
+    return send_from_directory(str(FRONTEND_DIR), 'journalist.html')
 
 
 @app.route("/journalist")
 def journalist():
-    return send_from_directory(
-        os.path.join(os.path.dirname(__file__), '..', 'frontend'),
-        'journalist.html'
-    )
+    """Legacy path — same as /."""
+    return send_from_directory(str(FRONTEND_DIR), 'journalist.html')
+
+
+@app.route('/events')
+def events_home():
+    """Market Events Radar (zone homepage)."""
+    return send_from_directory(str(FRONTEND_DIR), 'index.html')
 
 
 @app.route('/editorial')

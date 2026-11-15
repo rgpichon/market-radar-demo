@@ -121,18 +121,20 @@ class RawItem(TypedDict):
     extra: dict  # Any additional fields (theme_id, event_id, intel_type, etc.)
 
 
-# sys.path injection for reports/
-_REPORTS_BACKEND = Path(__file__).resolve().parents[4] / "Reports" / "tool" / "backend"
-if str(_REPORTS_BACKEND) not in sys.path:
-    sys.path.insert(0, str(_REPORTS_BACKEND))
-
+# sys.path injection for reports/ (local monorepo only — skipped in cloud demo)
+_REPORTS_AVAILABLE = False
 try:
-    from adapters.rss_adapter import fetch_rss
-    from adapters.google_news_adapter import fetch_google_news_for_themes
-    from theme_matcher import match_article_to_themes
+    _here = Path(__file__).resolve()
+    if len(_here.parents) > 4:
+        _REPORTS_BACKEND = _here.parents[4] / "Reports" / "tool" / "backend"
+        if _REPORTS_BACKEND.is_dir() and str(_REPORTS_BACKEND) not in sys.path:
+            sys.path.insert(0, str(_REPORTS_BACKEND))
+        from adapters.rss_adapter import fetch_rss
+        from adapters.google_news_adapter import fetch_google_news_for_themes
+        from theme_matcher import match_article_to_themes
 
-    _REPORTS_AVAILABLE = True
-except ImportError as e:
+        _REPORTS_AVAILABLE = True
+except (ImportError, IndexError) as e:
     logging.warning(f"[feed_adapters] reports/ not importable: {e}. Article feed disabled.")
     _REPORTS_AVAILABLE = False
 

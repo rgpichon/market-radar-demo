@@ -1,0 +1,1072 @@
+{
+  "generated_at": "2026-03-31T16:55:01Z",
+  "article_count_total": 875,
+  "source_a_total": 794,
+  "source_b_total": 81,
+  "sectors": {
+    "technology": {
+      "score": 0.16,
+      "direction": "bullish",
+      "conviction": "medium",
+      "article_count": 339,
+      "bull_count": 80,
+      "bear_count": 38,
+      "neutral_count": 221,
+      "source_a_count": 324,
+      "source_b_count": 15,
+      "top_themes": [
+        "AI chip & semiconductor demand",
+        "AI model companies & platforms",
+        "Enterprise AI & SaaS adoption"
+      ],
+      "sample_evidence": [
+        "Arm Rises on Plan to Sell Own Chips With Meta as Key Client",
+        "Legal AI Startup Harvey Raises Funds at $11 Billion Valuation",
+        "AI Science Startup Periodic Labs Is in Deal Talks at About $7 Billion Valuation"
+      ],
+      "sub_sectors": {
+        "ai_infrastructure": {
+          "score": 0.1,
+          "direction": "neutral",
+          "conviction": "low",
+          "article_count": 162,
+          "bull_count": 39,
+          "bear_count": 18,
+          "neutral_count": 105
+        },
+        "ai_platforms": {
+          "score": 0.04,
+          "direction": "neutral",
+          "conviction": "low",
+          "article_count": 88,
+          "bull_count": 16,
+          "bear_count": 10,
+          "neutral_count": 62
+        },
+        "ai_enterprise": {
+          "score": 0.1,
+          "direction": "neutral",
+          "conviction": "low",
+          "article_count": 37,
+          "bull_count": 11,
+          "bear_count": 4,
+          "neutral_count": 22
+        }
+      },
+      "trend": [
+        {
+          "week_start": "2026-03-30",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-23",
+          "score": 0.05,
+          "article_count": 186
+        },
+        {
+          "week_start": "2026-03-16",
+          "score": -0.17,
+          "article_count": 9
+        },
+        {
+          "week_start": "2026-03-09",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-02",
+          "score": 0.17,
+          "article_count": 129
+        },
+        {
+          "week_start": "2026-02-23",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-02-16",
+          "score": -0.04,
+          "article_count": 3679
+        },
+        {
+          "week_start": "2026-02-09",
+          "score": 0.07,
+          "article_count": 108
+        }
+      ],
+      "themes_detail": [
+        {
+          "id": "a98ac4442ee64fd5bcf0d7ef6fbb44ae",
+          "name": "AI chip & semiconductor demand",
+          "article_count": 121,
+          "direction": "neutral",
+          "tickers": [
+            "NVDA",
+            "AMD",
+            "AVGO",
+            "QCOM",
+            "TSM",
+            "ASML",
+            "MRVL",
+            "KLAC"
+          ]
+        },
+        {
+          "id": "76c585dc84cd42cabcecf6c4fb726e80",
+          "name": "AI model companies & platforms",
+          "article_count": 82,
+          "direction": "neutral",
+          "tickers": [
+            "MSFT",
+            "GOOGL",
+            "META",
+            "AMZN",
+            "AAPL",
+            "ORCL",
+            "IBM"
+          ]
+        },
+        {
+          "id": "9e6c05f4f39c4394bc400570b1c685f4",
+          "name": "Enterprise AI & SaaS adoption",
+          "article_count": 37,
+          "direction": "neutral",
+          "tickers": [
+            "MSFT",
+            "GOOGL",
+            "CRM",
+            "NOW",
+            "PLTR",
+            "SNOW",
+            "DDOG",
+            "MDB"
+          ]
+        },
+        {
+          "id": "05d877f0039f4c2ba86feca1fd55b026",
+          "name": "US-China decoupling",
+          "article_count": 18,
+          "direction": "neutral",
+          "tickers": [
+            "TSM",
+            "AAPL",
+            "NVDA",
+            "QCOM",
+            "AVGO",
+            "MU",
+            "INTC"
+          ]
+        },
+        {
+          "id": "97e87fd2d4e1492395aa68720099c680",
+          "name": "Data center infrastructure & power",
+          "article_count": 13,
+          "direction": "bullish",
+          "tickers": [
+            "EQIX",
+            "DLR",
+            "VRT",
+            "ETN",
+            "PWR",
+            "EME",
+            "AMT",
+            "CCI"
+          ]
+        },
+        {
+          "id": "0bf274a67b2b4a25a3bfb08cf6525b5e",
+          "name": "AI & Compute Buildout",
+          "article_count": 12,
+          "direction": "neutral",
+          "tickers": []
+        },
+        {
+          "id": "027f2ab83add46eab7ef6ad7dd3faa30",
+          "name": "Cybersecurity & information warfare",
+          "article_count": 12,
+          "direction": "neutral",
+          "tickers": [
+            "PANW",
+            "CRWD",
+            "FTNT",
+            "ZS",
+            "S",
+            "OKTA",
+            "CYBR",
+            "QLYS"
+          ]
+        },
+        {
+          "id": "cc6a2d1975c64a489d2b935fa115dcd4",
+          "name": "Semiconductor onshoring (CHIPS Act)",
+          "article_count": 9,
+          "direction": "neutral",
+          "tickers": [
+            "INTC",
+            "TSM",
+            "AMAT",
+            "KLAC",
+            "LRCX",
+            "ON",
+            "GFS",
+            "ASML"
+          ]
+        },
+        {
+          "id": "60f381a5ccb2491e8f7c8155de321d08",
+          "name": "Edge AI & on-device compute",
+          "article_count": 7,
+          "direction": "neutral",
+          "tickers": [
+            "QCOM",
+            "AAPL",
+            "INTC",
+            "ARM",
+            "ADI",
+            "MCHP",
+            "SWKS",
+            "TXN"
+          ]
+        },
+        {
+          "id": "2f5c980d92de49999fc997c1157d2036",
+          "name": "Digital advertising & attention economy",
+          "article_count": 7,
+          "direction": "neutral",
+          "tickers": [
+            "META",
+            "GOOGL",
+            "SNAP",
+            "PINS",
+            "TTD",
+            "MGNI",
+            "PUBM",
+            "DIS"
+          ]
+        },
+        {
+          "id": "88580bf6b6fb47d7b77880c4f6c2714a",
+          "name": "Subscription & platform models",
+          "article_count": 6,
+          "direction": "neutral",
+          "tickers": [
+            "NFLX",
+            "SPOT",
+            "AAPL",
+            "MSFT",
+            "CRM",
+            "ADBE",
+            "NOW",
+            "DDOG"
+          ]
+        }
+      ]
+    },
+    "energy": {
+      "score": 0.06,
+      "direction": "neutral",
+      "conviction": "low",
+      "article_count": 126,
+      "bull_count": 26,
+      "bear_count": 21,
+      "neutral_count": 79,
+      "source_a_count": 106,
+      "source_b_count": 20,
+      "top_themes": [
+        "Natural gas as bridge fuel",
+        "Supply chain security & critical minerals",
+        "Mining & critical minerals"
+      ],
+      "sample_evidence": [
+        "\u2018Asia\u2019s Ukraine moment\u2019: How the Iran war could accelerate a shift into renewables",
+        "Mozambique Dollar Bond Selloff Extends as Oil Price Shock Deepens Crisis",
+        "AI Demand Is Shielding China\u2019s Booming Trade From War Shocks"
+      ],
+      "trend": [
+        {
+          "week_start": "2026-03-30",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-23",
+          "score": 0.03,
+          "article_count": 39
+        },
+        {
+          "week_start": "2026-03-16",
+          "score": 0.0,
+          "article_count": 4
+        },
+        {
+          "week_start": "2026-03-09",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-02",
+          "score": 0.03,
+          "article_count": 63
+        },
+        {
+          "week_start": "2026-02-23",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-02-16",
+          "score": -0.04,
+          "article_count": 1032
+        },
+        {
+          "week_start": "2026-02-09",
+          "score": -0.02,
+          "article_count": 62
+        }
+      ],
+      "themes_detail": [
+        {
+          "id": "967558e9bce143c88d784973f24ee41a",
+          "name": "Natural gas as bridge fuel",
+          "article_count": 45,
+          "direction": "neutral",
+          "tickers": [
+            "LNG",
+            "AR",
+            "EQT",
+            "SWN",
+            "OKE",
+            "WMB",
+            "KMI",
+            "TRGP"
+          ]
+        },
+        {
+          "id": "5df8c2c7bb724f1988b9bffd8440d9ae",
+          "name": "Supply chain security & critical minerals",
+          "article_count": 19,
+          "direction": "neutral",
+          "tickers": [
+            "MP",
+            "ALB",
+            "LAC",
+            "FCX",
+            "SCCO",
+            "AA",
+            "CLF",
+            "GOLD"
+          ]
+        },
+        {
+          "id": "b32f6d3c88414c728d5048698c0cb087",
+          "name": "Mining & critical minerals",
+          "article_count": 15,
+          "direction": "neutral",
+          "tickers": [
+            "FCX",
+            "NEM",
+            "AA",
+            "CLF",
+            "SCCO",
+            "MP",
+            "ALB",
+            "LAC"
+          ]
+        },
+        {
+          "id": "412a3c32512f4259ba320bcc08a76352",
+          "name": "Agriculture & food security",
+          "article_count": 9,
+          "direction": "neutral",
+          "tickers": [
+            "DE",
+            "AGCO",
+            "MOS",
+            "NTR",
+            "CF",
+            "FMC",
+            "ADM",
+            "BG"
+          ]
+        },
+        {
+          "id": "77c0aba75a3245bdb585b55b6b9dabfb",
+          "name": "Energy Transition & Power Demand",
+          "article_count": 7,
+          "direction": "bearish",
+          "tickers": []
+        },
+        {
+          "id": "4214fda39ba94494b64bd4f9147feab2",
+          "name": "Nuclear renaissance",
+          "article_count": 5,
+          "direction": "neutral",
+          "tickers": [
+            "CEG",
+            "VST",
+            "CCJ",
+            "LEU",
+            "SMR",
+            "NNE",
+            "OKLO",
+            "UEC"
+          ]
+        },
+        {
+          "id": "867b8b585b664e2796992a28b3519e2a",
+          "name": "Energy storage & batteries",
+          "article_count": 3,
+          "direction": "neutral",
+          "tickers": [
+            "TSLA",
+            "ALB",
+            "LAC",
+            "QS",
+            "ENVX",
+            "STEM",
+            "FLUX",
+            "PCRFY"
+          ]
+        },
+        {
+          "id": "847884c37f854efd9e90b32083bc7c0a",
+          "name": "Renewable energy (solar & wind)",
+          "article_count": 2,
+          "direction": "bullish",
+          "tickers": [
+            "FSLR",
+            "ENPH",
+            "SEDG",
+            "RUN",
+            "NOVA",
+            "CSIQ",
+            "JKS",
+            "ARRY"
+          ]
+        },
+        {
+          "id": "d8de0f49f5ba43bdbac2750a5cb24277",
+          "name": "Grid infrastructure & utilities",
+          "article_count": 1,
+          "direction": "bullish",
+          "tickers": [
+            "NEE",
+            "DUK",
+            "SO",
+            "D",
+            "AEP",
+            "EXC",
+            "SRE",
+            "ETN"
+          ]
+        }
+      ]
+    },
+    "macro": {
+      "score": -0.12,
+      "direction": "bearish",
+      "conviction": "low",
+      "article_count": 128,
+      "bull_count": 23,
+      "bear_count": 22,
+      "neutral_count": 83,
+      "source_a_count": 122,
+      "source_b_count": 6,
+      "top_themes": [
+        "US manufacturing reshoring",
+        "Commercial real estate repricing",
+        "GLP-1 & obesity drug disruption"
+      ],
+      "sample_evidence": [
+        "Recession odds climb on Wall Street as economy shows cracks beneath the surface",
+        "Software Firm Planview Pitches Private Credit to Refinance Debt",
+        "Private credit\u2019s \u2018zero-loss fantasy\u2019 is coming to an end as defaults and fund exits rise"
+      ],
+      "trend": [
+        {
+          "week_start": "2026-03-30",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-23",
+          "score": 0.14,
+          "article_count": 17
+        },
+        {
+          "week_start": "2026-03-16",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-09",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-02",
+          "score": 0.02,
+          "article_count": 105
+        },
+        {
+          "week_start": "2026-02-23",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-02-16",
+          "score": -0.06,
+          "article_count": 1200
+        },
+        {
+          "week_start": "2026-02-09",
+          "score": -0.04,
+          "article_count": 72
+        }
+      ],
+      "themes_detail": [
+        {
+          "id": "a986495290b24a7bb27ee5339aa04080",
+          "name": "US manufacturing reshoring",
+          "article_count": 19,
+          "direction": "neutral",
+          "tickers": [
+            "CAT",
+            "DE",
+            "HON",
+            "GE",
+            "EMR",
+            "ITW",
+            "ETN",
+            "ROK"
+          ]
+        },
+        {
+          "id": "8bad47651e014f4795f974b93f6586c9",
+          "name": "Commercial real estate repricing",
+          "article_count": 18,
+          "direction": "neutral",
+          "tickers": [
+            "BXP",
+            "VNO",
+            "SLG",
+            "KRC",
+            "HIW",
+            "CBRE",
+            "JLL",
+            "SPG"
+          ]
+        },
+        {
+          "id": "f6eddc9967d441fe91e18ce9217d8773",
+          "name": "GLP-1 & obesity drug disruption",
+          "article_count": 15,
+          "direction": "neutral",
+          "tickers": [
+            "NVO",
+            "LLY",
+            "AMGN",
+            "PFE",
+            "VKTX",
+            "ALT",
+            "GPCR",
+            "TERN"
+          ]
+        },
+        {
+          "id": "9273e3b51b844718b0c6f3a60c5c3ddb",
+          "name": "E-commerce & logistics evolution",
+          "article_count": 10,
+          "direction": "neutral",
+          "tickers": [
+            "AMZN",
+            "SHOP",
+            "MELI",
+            "SE",
+            "BABA",
+            "JD",
+            "FDX",
+            "UPS"
+          ]
+        },
+        {
+          "id": "6bdc686b9b034869b7912a38363f6c01",
+          "name": "Medical devices & robotics",
+          "article_count": 10,
+          "direction": "neutral",
+          "tickers": [
+            "ISRG",
+            "SYK",
+            "MDT",
+            "BSX",
+            "ABT",
+            "DHR",
+            "EW",
+            "BDX"
+          ]
+        },
+        {
+          "id": "0192ce49e03847febcbe0f4c33f5106c",
+          "name": "US housing undersupply",
+          "article_count": 9,
+          "direction": "neutral",
+          "tickers": [
+            "LEN",
+            "DHI",
+            "PHM",
+            "NVR",
+            "TOL",
+            "KBH",
+            "MTH",
+            "HD"
+          ]
+        },
+        {
+          "id": "446bea0baef0455892dd43939f52413b",
+          "name": "Trade policy & tariffs",
+          "article_count": 8,
+          "direction": "neutral",
+          "tickers": [
+            "CAT",
+            "DE",
+            "NKE",
+            "AAPL",
+            "TSLA",
+            "WMT",
+            "COST",
+            "HD"
+          ]
+        },
+        {
+          "id": "4adf77df73f048709fa48fc24ac9734f",
+          "name": "Real Assets & Physical World",
+          "article_count": 7,
+          "direction": "neutral",
+          "tickers": []
+        },
+        {
+          "id": "6edc10e2a26a406da08f80645a0780b8",
+          "name": "Biotech innovation pipeline",
+          "article_count": 6,
+          "direction": "neutral",
+          "tickers": [
+            "MRNA",
+            "CRSP",
+            "EDIT",
+            "NTLA",
+            "BEAM",
+            "VRTX",
+            "REGN",
+            "GILD"
+          ]
+        },
+        {
+          "id": "53c8307f1d044da2a690b7f9154f4b5c",
+          "name": "Healthcare cost & insurance reform",
+          "article_count": 5,
+          "direction": "neutral",
+          "tickers": [
+            "UNH",
+            "ELV",
+            "CI",
+            "HUM",
+            "CNC",
+            "MOH",
+            "HCA",
+            "CVS"
+          ]
+        },
+        {
+          "id": "42d6db7b235441f4912849889b92a01f",
+          "name": "Infrastructure spending",
+          "article_count": 4,
+          "direction": "neutral",
+          "tickers": [
+            "CAT",
+            "VMC",
+            "MLM",
+            "URI",
+            "PWR",
+            "EME",
+            "FAST",
+            "AECOM"
+          ]
+        },
+        {
+          "id": "ad6bbc2f86ef4f1e84382e53ebe7e5fb",
+          "name": "AI-driven drug discovery",
+          "article_count": 4,
+          "direction": "neutral",
+          "tickers": [
+            "RXRX",
+            "SDGR",
+            "EXAI",
+            "RLAY",
+            "ABCL",
+            "DNA",
+            "NNOX"
+          ]
+        },
+        {
+          "id": "3467b1ef8e8b41b195bf35c8e377ab64",
+          "name": "Consumer & Digital Economy",
+          "article_count": 4,
+          "direction": "bullish",
+          "tickers": []
+        },
+        {
+          "id": "d1782302a1f744059ed898927f1be164",
+          "name": "Deglobalization & Reshoring",
+          "article_count": 3,
+          "direction": "neutral",
+          "tickers": []
+        }
+      ]
+    },
+    "geopolitics": {
+      "score": -0.07,
+      "direction": "neutral",
+      "conviction": "low",
+      "article_count": 143,
+      "bull_count": 19,
+      "bear_count": 19,
+      "neutral_count": 105,
+      "source_a_count": 115,
+      "source_b_count": 28,
+      "top_themes": [
+        "US defense modernization",
+        "European defense ramp",
+        "Space & satellite defense"
+      ],
+      "sample_evidence": [
+        "Pentagon Wants to Shift Funds to Interceptors Amid Iran War",
+        "The beginning of the end for petrodollar dominance? Why Deutsche sees opportunity for Beijing",
+        "US Yields Fall With Oil With Focus on Hopes of US-Iran Diplomacy"
+      ],
+      "trend": [
+        {
+          "week_start": "2026-03-30",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-23",
+          "score": -0.02,
+          "article_count": 52
+        },
+        {
+          "week_start": "2026-03-16",
+          "score": 0.0,
+          "article_count": 2
+        },
+        {
+          "week_start": "2026-03-09",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-02",
+          "score": 0.09,
+          "article_count": 61
+        },
+        {
+          "week_start": "2026-02-23",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-02-16",
+          "score": -0.09,
+          "article_count": 222
+        },
+        {
+          "week_start": "2026-02-09",
+          "score": -0.02,
+          "article_count": 26
+        }
+      ],
+      "themes_detail": [
+        {
+          "id": "d35abe74aa5a4b2f828b925b6326bb65",
+          "name": "US defense modernization",
+          "article_count": 57,
+          "direction": "neutral",
+          "tickers": [
+            "LMT",
+            "RTX",
+            "NOC",
+            "GD",
+            "LHX",
+            "HII",
+            "TDG",
+            "HWM"
+          ]
+        },
+        {
+          "id": "9d0338d888eb40618afe4d03657b8e2c",
+          "name": "European defense ramp",
+          "article_count": 43,
+          "direction": "neutral",
+          "tickers": [
+            "RHM.DE",
+            "BA.L",
+            "LDO.MI",
+            "HO.PA",
+            "SAAB-B.ST",
+            "AM.PA",
+            "HAG.DE"
+          ]
+        },
+        {
+          "id": "9009fd05700f414eb4370466e9bda0a6",
+          "name": "Space & satellite defense",
+          "article_count": 8,
+          "direction": "neutral",
+          "tickers": [
+            "LMT",
+            "NOC",
+            "LHX",
+            "RKLB",
+            "BA",
+            "RTX",
+            "IRDM",
+            "BKSY"
+          ]
+        },
+        {
+          "id": "0e7ed8adb7a14576b68f225c300f37a3",
+          "name": "Defense & Geopolitical Realignment",
+          "article_count": 7,
+          "direction": "neutral",
+          "tickers": []
+        }
+      ]
+    },
+    "fixed_income": {
+      "score": -0.14,
+      "direction": "bearish",
+      "conviction": "medium",
+      "article_count": 133,
+      "bull_count": 17,
+      "bear_count": 26,
+      "neutral_count": 90,
+      "source_a_count": 127,
+      "source_b_count": 6,
+      "top_themes": [
+        "Interest rate & central bank policy",
+        "Private credit & alternative lending",
+        "Sovereign debt & fiscal stress"
+      ],
+      "sample_evidence": [
+        "Morgan Stanley Finds Less Treasuries Liquidity on War Volatility",
+        "Mortgage demand drops more than 10% as rates hit the highest level since October",
+        "CNBC's UK Exchange newsletter: Why UK bonds bore the brunt of the Iran sell-off"
+      ],
+      "trend": [
+        {
+          "week_start": "2026-03-30",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-23",
+          "score": -0.09,
+          "article_count": 40
+        },
+        {
+          "week_start": "2026-03-16",
+          "score": -0.19,
+          "article_count": 6
+        },
+        {
+          "week_start": "2026-03-09",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-02",
+          "score": -0.05,
+          "article_count": 81
+        },
+        {
+          "week_start": "2026-02-23",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-02-16",
+          "score": -0.1,
+          "article_count": 983
+        },
+        {
+          "week_start": "2026-02-09",
+          "score": -0.08,
+          "article_count": 59
+        }
+      ],
+      "themes_detail": [
+        {
+          "id": "e90e850bab18412582426a366aacaf79",
+          "name": "Interest rate & central bank policy",
+          "article_count": 53,
+          "direction": "neutral",
+          "tickers": [
+            "TLT",
+            "IEF",
+            "SHY",
+            "BND",
+            "JPM",
+            "BAC",
+            "GS"
+          ]
+        },
+        {
+          "id": "f8f027420884464fa8678bf14f8cfd5d",
+          "name": "Private credit & alternative lending",
+          "article_count": 28,
+          "direction": "neutral",
+          "tickers": [
+            "APO",
+            "ARES",
+            "BX",
+            "KKR",
+            "OWL",
+            "MAIN",
+            "ARCC",
+            "BXSL"
+          ]
+        },
+        {
+          "id": "6c5ec2d793c74a21ae8e7e89186402c5",
+          "name": "Sovereign debt & fiscal stress",
+          "article_count": 17,
+          "direction": "neutral",
+          "tickers": [
+            "TLT",
+            "TBT",
+            "JPM",
+            "GS",
+            "BLK",
+            "IBKR"
+          ]
+        },
+        {
+          "id": "6bed3482d24d4dcb8e0fc4e7d69ffcbd",
+          "name": "Bank profitability & credit cycle",
+          "article_count": 12,
+          "direction": "neutral",
+          "tickers": [
+            "JPM",
+            "BAC",
+            "WFC",
+            "C",
+            "GS",
+            "MS",
+            "USB",
+            "PNC"
+          ]
+        },
+        {
+          "id": "d5967c79cff54b34aa5c68a40a665ebe",
+          "name": "Consumer credit stress",
+          "article_count": 11,
+          "direction": "neutral",
+          "tickers": [
+            "COF",
+            "SYF",
+            "DFS",
+            "AXP",
+            "ALLY",
+            "SOFI",
+            "JPM",
+            "BAC"
+          ]
+        },
+        {
+          "id": "975a61b5f10d4dd09db06139809a5e07",
+          "name": "Fintech disruption",
+          "article_count": 4,
+          "direction": "neutral",
+          "tickers": [
+            "PYPL",
+            "SQ",
+            "AFRM",
+            "SOFI",
+            "V",
+            "MA",
+            "FIS",
+            "FISV"
+          ]
+        },
+        {
+          "id": "fb048063d6c4480ab53e0a012c1ad7fc",
+          "name": "Financial System & Rate Regime",
+          "article_count": 2,
+          "direction": "bearish",
+          "tickers": []
+        }
+      ]
+    },
+    "equities": {
+      "score": 0.82,
+      "direction": "bullish",
+      "conviction": "low",
+      "article_count": 6,
+      "bull_count": 4,
+      "bear_count": 0,
+      "neutral_count": 2,
+      "source_a_count": 0,
+      "source_b_count": 6,
+      "top_themes": [],
+      "sample_evidence": [
+        "SpaceX Could Launch Largest IPO Ever",
+        "SpaceX Said to Target as Much as $75 Billion in Blockbuster IPO",
+        "OpenAI raises additional money to bring record funding round to $120 billion, CFO tells Cramer"
+      ],
+      "trend": [
+        {
+          "week_start": "2026-03-30",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-23",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-16",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-09",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-03-02",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-02-23",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-02-16",
+          "score": 0.0,
+          "article_count": 0
+        },
+        {
+          "week_start": "2026-02-09",
+          "score": 0.0,
+          "article_count": 0
+        }
+      ],
+      "themes_detail": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "found_from_url": "https://www.isda.org/events/",
+    "feed_url": "https://www.isda.org/feed/",
+    "type_guess": "rss",
+    "timestamp": "2026-01-08T14:23:55.989884"
+  },
+  {
+    "found_from_url": "https://www.isda.org/events/",
+    "feed_url": "https://www.isda.org/comments/feed/",
+    "type_guess": "rss",
+    "timestamp": "2026-01-08T14:23:55.990366"
+  },
+  {
+    "found_from_url": "https://www.isda.org/events/",
+    "feed_url": "https://www.isda.org/events/feed/",
+    "type_guess": "rss",
+    "timestamp": "2026-01-08T14:23:55.990620"
+  },
+  {
+    "found_from_url": "https://group.bnpparibas/en/news",
+    "feed_url": "https://group.bnpparibas/en/rss/news",
+    "type_guess": "rss",
+    "timestamp": "2026-01-08T14:43:20.869722"
+  }
+]

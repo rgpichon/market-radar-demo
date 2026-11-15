@@ -1,0 +1,812 @@
+{
+  "brookings_events": [
+    {
+      "timestamp": "2026-03-26T10:54:50.618374",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:03.934578",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:34.129128",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:01.105870",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "cepr_events": [
+    {
+      "timestamp": "2026-03-26T10:54:51.214442",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:04.618315",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:34.782998",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:01.826672",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "csis_events": [
+    {
+      "timestamp": "2026-03-26T10:54:51.961484",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:05.317031",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:35.448445",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:02.532509",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "bruegel_events": [
+    {
+      "timestamp": "2026-03-26T10:54:50.779966",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:04.057177",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:34.278357",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:01.247199",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "lse_events": [
+    {
+      "timestamp": "2026-03-26T10:54:58.240320",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:11.181938",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:41.358498",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:27.845084",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "wilson_events": [
+    {
+      "timestamp": "2026-03-26T10:54:59.341239",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:11.728136",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:52.211720",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:28.708312",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "nber_events": [
+    {
+      "timestamp": "2026-03-26T10:54:58.438896",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:11.374959",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:41.537303",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:28.058678",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "icma_events": [
+    {
+      "timestamp": "2026-03-26T10:54:54.199903",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:07.259911",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:37.189165",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:05.133542",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "isda_events": [
+    {
+      "timestamp": "2026-03-26T10:54:54.588938",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:10.865529",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:40.977594",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:05.568774",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "iif_events": [
+    {
+      "timestamp": "2026-03-26T10:54:54.583239",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:10.862931",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:40.973081",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:05.565755",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "afme_events": [
+    {
+      "timestamp": "2026-03-26T10:54:50.199071",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:03.417351",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:33.721584",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:00.737215",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "bis_ifc_events": [
+    {
+      "timestamp": "2026-03-26T10:54:50.480958",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:03.815674",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:34.016549",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:00.991856",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "ecb_conferences": [
+    {
+      "timestamp": "2026-03-26T10:54:53.556095",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:06.666232",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:36.623393",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:04.577804",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "cfr_events": [
+    {
+      "timestamp": "2026-03-26T10:54:51.790653",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:05.154797",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:35.335650",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:02.404725",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "mit_sloan_events": [
+    {
+      "timestamp": "2026-03-26T10:54:58.311570",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:11.239893",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:41.420105",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:27.931603",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "milken_events": [
+    {
+      "timestamp": "2026-03-26T10:54:58.432697",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:11.372759",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:41.534589",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:28.055516",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "stanford_gsb_events": [
+    {
+      "timestamp": "2026-03-26T10:54:59.065603",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:11.595473",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:52.136764",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:28.589045",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "oxford_said_events": [
+    {
+      "timestamp": "2026-03-26T10:54:58.608884",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:11.512054",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:44.414886",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:28.204022",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "carnegie_events": [
+    {
+      "timestamp": "2026-03-26T10:54:53.301824",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:06.244154",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:36.510500",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:04.472692",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "harvard_kennedy_events": [
+    {
+      "timestamp": "2026-03-26T10:54:53.573123",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:06.671810",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:36.628098",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:04.581912",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "wef_events": [
+    {
+      "timestamp": "2026-03-26T10:54:59.345018",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:11.730496",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:52.212919",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:28.711126",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "fia_events": [
+    {
+      "timestamp": "2026-03-26T10:54:53.566406",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:06.669078",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:36.625911",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:04.580091",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "cambridge_judge_business_school_rss": [
+    {
+      "timestamp": "2026-03-26T10:54:51.969889",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:05.320485",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:35.452589",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:02.536818",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "cambridge_judge_business_school_events": [
+    {
+      "timestamp": "2026-03-26T10:54:53.187774",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:06.136980",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:36.409279",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:04.384306",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "aima_events": [
+    {
+      "timestamp": "2026-03-26T10:54:50.336622",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:03.658925",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:33.844159",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:00.859969",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "cfa_society_global_events": [
+    {
+      "timestamp": "2026-03-26T10:54:51.388096",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:04.791301",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:34.915714",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:02.061735",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ],
+  "imperial_college_business_school_events": [
+    {
+      "timestamp": "2026-03-26T10:54:58.130917",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:18:11.052653",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:30:41.150167",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    },
+    {
+      "timestamp": "2026-03-26T11:54:07.999239",
+      "kept_ratio": 0.0,
+      "dated_ratio": 0.0,
+      "raw_count": 0,
+      "future_count": 0
+    }
+  ]
+}

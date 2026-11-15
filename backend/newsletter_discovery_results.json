@@ -1,0 +1,2122 @@
+{
+  "discovered_at": "2026-01-14T10:25:13.062654+00:00",
+  "results": [
+    {
+      "target_id": "jpmorgan_markets",
+      "org_name": "JPMorgan",
+      "seed_urls": [
+        "https://www.jpmorgan.com/insights",
+        "https://www.jpmorgan.com/insights/research",
+        "https://www.jpmorgan.com/insights/markets",
+        "https://www.jpmorgan.com/insights/outlook",
+        "https://www.jpmorgan.com/global-research",
+        "https://www.jpmorgan.com/wealth-management/wealth-partners/insights",
+        "https://www.jpmorganchase.com/news-stories",
+        "https://www.jpmorgan.com/commercial-banking/insights"
+      ],
+      "pages_fetched": 12,
+      "candidates_found": [
+        {
+          "url": "https://www.jpmorgan.com/payments/solutions/newsletter",
+          "anchor_text": "THE MONTH IN...PaymentsMonthlyNews and insights from the world of treasury, trade and payments.Sign ",
+          "score": 95,
+          "signals_hit": [
+            "url:/newsletter",
+            "anchor:sign up",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/newsletters",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.jpmorgan.com/newsletters",
+          "anchor_text": "Newsletters",
+          "score": 80,
+          "signals_hit": [
+            "url:/newsletter",
+            "anchor:newsletter"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights/outlook/jpmorgan-outlook/predictions-and-forecasts",
+          "anchor_text": "2026 Outlooks",
+          "score": 60,
+          "signals_hit": [
+            "url:/insights",
+            "url:/outlook",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights/markets-and-economy/outlook",
+          "anchor_text": "Outlook",
+          "score": 60,
+          "signals_hit": [
+            "url:/insights",
+            "url:/outlook",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights/markets",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights/global-research/outlook",
+          "anchor_text": "Outlook",
+          "score": 60,
+          "signals_hit": [
+            "url:/insights",
+            "url:/outlook",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights/global-research/outlook/market-outlook",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.jpmorgan.com/investment-banking/in-context",
+          "anchor_text": "In ContextWeeklyInsights and research from J.P.\u00a0Morgan\u2019s Commercial and Investment Bank, plus news a",
+          "score": 55,
+          "signals_hit": [
+            "anchor:sign up",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/newsletters",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights/research",
+          "anchor_text": "Global Research",
+          "score": 45,
+          "signals_hit": [
+            "url:/insights",
+            "url:/research"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights/global-research/outlook/market-outlook",
+          "anchor_text": "LEARN MORE",
+          "score": 45,
+          "signals_hit": [
+            "url:/insights",
+            "url:/outlook"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights/research",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights/research/index-research",
+          "anchor_text": "Learn\n                                                more",
+          "score": 45,
+          "signals_hit": [
+            "url:/insights",
+            "url:/research"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights/research",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights/research/macrosynergy-quantamental-system",
+          "anchor_text": "Read\n                                                more",
+          "score": 45,
+          "signals_hit": [
+            "url:/insights",
+            "url:/research"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights/research",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights/markets-and-economy/outlook/biopharma-medtech-deal-reports",
+          "anchor_text": "Biopharma and medtech activity in Q4 2025",
+          "score": 45,
+          "signals_hit": [
+            "url:/insights",
+            "url:/outlook"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights/outlook",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights/research/notice-EU-UK-index-users",
+          "anchor_text": "Notice to European Union (EU) or United Kingdom (UK) users of an Index can be found here.",
+          "score": 45,
+          "signals_hit": [
+            "url:/insights",
+            "url:/research"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights/research/index-research",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights/research/changes-IBORS-other-benchmark-rates",
+          "anchor_text": "Changes to Interbank Offered Rates (IBORS) and other Benchmark Rates can be found here.",
+          "score": 45,
+          "signals_hit": [
+            "url:/insights",
+            "url:/research"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights/research/index-research",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights",
+          "anchor_text": "Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorgan.com/about-us/events-conferences",
+          "anchor_text": "Events and Conferences",
+          "score": 40,
+          "signals_hit": [
+            "url:/events",
+            "anchor:events",
+            "anchor:conference",
+            "mildneg:/about-?us"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights/markets-and-economy/business-leaders-outlook",
+          "anchor_text": "Business Leaders Outlook",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights/markets",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/ir/events",
+          "anchor_text": "Events and presentations",
+          "score": 40,
+          "signals_hit": [
+            "url:/events",
+            "anchor:events"
+          ],
+          "discovered_from": "https://www.jpmorganchase.com/news-stories",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorgan.com/wealth-management/wealth-partners/insights",
+          "anchor_text": "Market Commentary",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights/business-planning",
+          "anchor_text": "Business Planning and Strategy",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        },
+        {
+          "url": "https://www.jpmorgan.com/insights/real-estate/commercial-real-estate",
+          "anchor_text": "Commercial Real Estate",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.jpmorgan.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets"
+        }
+      ],
+      "errors": [
+        "https://www.jpmorgan.com/global-research: 404 Client Error: Not Found for url: https://www.j"
+      ]
+    },
+    {
+      "target_id": "goldman_markets",
+      "org_name": "Goldman Sachs",
+      "seed_urls": [
+        "https://www.goldmansachs.com/insights",
+        "https://www.goldmansachs.com/insights/topics/markets",
+        "https://www.goldmansachs.com/insights/series",
+        "https://www.goldmansachs.com/our-firm/events",
+        "https://www.goldmansachs.com/media-relations",
+        "https://www.gs.com/research",
+        "https://www.goldmansachs.com/what-we-do/global-markets"
+      ],
+      "pages_fetched": 4,
+      "candidates_found": [
+        {
+          "url": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+          "anchor_text": "2026 OutlooksWhat themes will drive the global economy in the year ahead? Explore the 2026 Outlooks ",
+          "score": 60,
+          "signals_hit": [
+            "url:/insights",
+            "url:/outlook",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets"
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/outlooks",
+          "anchor_text": "Outlooks",
+          "score": 60,
+          "signals_hit": [
+            "url:/insights",
+            "url:/outlook",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights/articles/the-global-economy-forecast-to-post-sturdy-growth-in-2026",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights",
+          "anchor_text": "Explore Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets"
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/articles/the-global-economy-forecast-to-post-sturdy-growth-in-2026",
+          "anchor_text": "OutlooksThe Global Economy Is Forecast to Post \u2018Sturdy\u2019 Growth of 2.8% in 2026Dec 19, 2025",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets"
+        },
+        {
+          "url": "https://www.goldmansachs.com/what-we-do/investment-banking/insights/articles/2026-ma-outlook",
+          "anchor_text": "Investment Banking2026 Global M&A Outlook",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/goldman-sachs-exchanges/goldman-sachs-exchanges-outlook-2026-episode-1-the-big-picture",
+          "anchor_text": "Goldman Sachs Exchanges: Outlook 2026 Episode 1: The Big Picture",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://pwm.gs.com/nam/en-us/insights/markets-and-investing/market-insights/outlook?gsid=10495&cmp=ISGAO&chl=own&plt=gs&obj=",
+          "anchor_text": "Wealth Management Investment Strategy GroupUS Resilience Resilient",
+          "score": 35,
+          "signals_hit": [
+            "url:/insights",
+            "url:/outlook",
+            "many_params"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/goldman-sachs-exchanges",
+          "anchor_text": "Exchanges",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets"
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/the-markets",
+          "anchor_text": "The Markets",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets"
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/talks-at-gs",
+          "anchor_text": "Talks at GS",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets"
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/macroeconomics",
+          "anchor_text": "Macroeconomics",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets"
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/the-markets/we-like-bonds",
+          "anchor_text": "The Markets\"We Like Bonds\"volume_upPodcast|Dec 19, 2025",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets"
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/goldman-sachs-exchanges/looking-for-trends-one-river-asset-managements-eric-peters",
+          "anchor_text": "ExchangesLooking for Trends: One River Asset Management\u2019s Eric Petersvolume_upPodcast|Dec 22, 2025",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets"
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/talks-at-gs/arvind-jain",
+          "anchor_text": "play_arrow27:02Talks at GSTransforming Work Productivity with AI: Glean CEO Arvind JainVideo|Dec 22,",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets"
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/articles/global-stocks-are-projected-to-return-11-percent-in-next-12-months",
+          "anchor_text": "Global Stocks Are Projected to Return 11% in the Next 12 Months",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/articles/chinas-economy-expected-to-grow-in-2026-amid-surging-exports",
+          "anchor_text": "China's Economy is Expected to Grow 4.8% in 2026 Amid Surging Exports",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/articles/the-sp-500-expected-to-rally-12-this-year",
+          "anchor_text": "The S&P 500 Is Expected to Rally 12% This Year",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/articles/uk-gdp-is-expected-to-grow-1-point-4-percent-this-year-despite-weaker-employment",
+          "anchor_text": "UK GDP Is Expected to Grow 1.4% This Year Despite Weaker Employment",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/goldman-sachs-exchanges/whats-driving-the-surge-in-deal-making",
+          "anchor_text": "What\u2019s Driving the Surge in Deal-Making?",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.goldmansachs.com/insights/goldman-sachs-research/macro-outlook-2026-sturdy-growth-stagnant-jobs-stable-prices",
+          "anchor_text": "Read Report",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+          "evidence_path": ""
+        }
+      ],
+      "errors": [
+        "https://www.goldmansachs.com/insights/topics/markets: 404 Client Error: Not Found for url: https://www.g",
+        "https://www.goldmansachs.com/insights/series: 404 Client Error: Not Found for url: https://www.g",
+        "https://www.goldmansachs.com/our-firm/events: 404 Client Error: Not Found for url: https://www.g",
+        "https://www.gs.com/research: 404 Client Error: Not Found for url: https://www.g",
+        "https://www.goldmansachs.com/what-we-do/global-markets: 404 Client Error: Not Found for url: https://www.g"
+      ]
+    },
+    {
+      "target_id": "morgan_stanley_markets",
+      "org_name": "Morgan Stanley",
+      "seed_urls": [
+        "https://www.morganstanley.com/ideas",
+        "https://www.morganstanley.com/ideas/events",
+        "https://www.morganstanley.com/what-we-do/research",
+        "https://www.morganstanley.com/im/en-us/individual-investor/insights",
+        "https://www.morganstanley.com/articles",
+        "https://www.morganstanley.com/press-releases",
+        "https://www.morganstanley.com/what-we-do/wealth-management"
+      ],
+      "pages_fetched": 9,
+      "candidates_found": [
+        {
+          "url": "https://www.morganstanley.com/newsletter/subscribe",
+          "anchor_text": "Sign Up For Our Newsletter",
+          "score": 180,
+          "signals_hit": [
+            "url:/subscribe",
+            "url:/newsletter",
+            "anchor:newsletter",
+            "anchor:sign up",
+            "combo:newsletter+subscribe"
+          ],
+          "discovered_from": "https://www.morganstanley.com/ideas",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "http://www.morganstanley.com/im/subscription-center.html",
+          "anchor_text": "Subscriptions",
+          "score": 75,
+          "signals_hit": [
+            "url:/subscription",
+            "anchor:subscription"
+          ],
+          "discovered_from": "https://www.morganstanley.com/im/en-us/individual-investor/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/insights",
+          "anchor_text": "Our Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.morganstanley.com/ideas",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/articles/investment-outlook-midyear-2025",
+          "anchor_text": "2025 Midyear Investment Outlook: All Eyes on the U.S.",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.morganstanley.com/ideas",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/Themes/outlooks",
+          "anchor_text": "Outlooks",
+          "score": 40,
+          "signals_hit": [
+            "url:/outlook",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.morganstanley.com/ideas",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/articles/economic-outlook-midyear-2025",
+          "anchor_text": "2025 Midyear Economic Outlook: A Widespread Deceleration",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.morganstanley.com/ideas",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/articles/corporate-travel-trends-2026",
+          "anchor_text": "ResearchClear Skies for Corporate Travel in 2026Dec 11, 2025A new survey shows that corporate travel",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.morganstanley.com/what-we-do/research",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/articles/global-economic-outlook-2026",
+          "anchor_text": "Research2026 Economic Outlook: Moderate Growth With a Range of PossibilitiesNov 19, 2025U.S. consume",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.morganstanley.com/what-we-do/research",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/articles/us-eu-trade-deal-2025",
+          "anchor_text": "ResearchTariffs Remain a Moving Target After DealsJul 31, 2025The U.S. has reached trade deals with ",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.morganstanley.com/what-we-do/research",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/im/en-us/individual-investor/insights/all-insights.html",
+          "anchor_text": "Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.morganstanley.com/im/en-us/individual-investor/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/im/en-us/individual-investor/insights/series/alternatives-2026-outlooks.html",
+          "anchor_text": "Alts In Focus: 2026 Outlooks",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.morganstanley.com/im/en-us/individual-investor/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/podcasts/thoughts-on-the-market/global-fixed-income-outlook-2026-micro-trends-vishy-tirupattur",
+          "anchor_text": "2026 Global Outlook: Micro Themes Take the Spotlight",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.morganstanley.com/Themes/outlooks",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/podcasts/thoughts-on-the-market/us-equity-market-outlook-2026-mike-wilson",
+          "anchor_text": "2026 U.S. Outlook: The Bull Market\u2019s Underappreciated Narrative",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.morganstanley.com/Themes/outlooks",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/podcasts/thoughts-on-the-market/global-economic-outlook-2026-cross-asset-perspective-seth-carpenter-serena-tang",
+          "anchor_text": "2026 Global Outlook: A Strong Year for Risk Assets",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.morganstanley.com/Themes/outlooks",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/podcasts/thoughts-on-the-market/global-economic-outlook-part-1-serena-tang-seth-carpenter",
+          "anchor_text": "2026 Global Outlook: Slower Growth and Inflation",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.morganstanley.com/Themes/outlooks",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/topics/personal-finance",
+          "anchor_text": "Personal Finance",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.morganstanley.com/ideas",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/topics/market-trends",
+          "anchor_text": "Market Trends",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.morganstanley.com/ideas",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/topics/technology-disruption",
+          "anchor_text": "Technology & Disruption",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.morganstanley.com/ideas",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/topics/sustainability",
+          "anchor_text": "Sustainability",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.morganstanley.com/ideas",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        },
+        {
+          "url": "https://www.morganstanley.com/insights/topics/diversity-and-inclusion",
+          "anchor_text": "Diversity & Inclusion",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.morganstanley.com/ideas",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets"
+        }
+      ],
+      "errors": [
+        "https://www.morganstanley.com/ideas/events: 404 Client Error: Not Found for url: https://www.m",
+        "https://www.morganstanley.com/articles: 403 Client Error: Forbidden for url: https://www.m",
+        "https://www.morganstanley.com/press-releases: 403 Client Error: Forbidden for url: https://www.m"
+      ]
+    },
+    {
+      "target_id": "citigroup_markets",
+      "org_name": "Citigroup",
+      "seed_urls": [
+        "https://www.citigroup.com/global/insights",
+        "https://www.citigroup.com/global/news",
+        "https://www.citivelocity.com",
+        "https://www.citi.com/commercialbank/insights",
+        "https://www.citi.com/treasuryandtradesolutions/insights",
+        "https://icg.citi.com/icghome/what-we-think",
+        "https://www.citigroup.com/global/news/perspective"
+      ],
+      "pages_fetched": 9,
+      "candidates_found": [
+        {
+          "url": "https://www.citigroup.com/global/insights/citi-institute#newsletter",
+          "anchor_text": "Subscribe",
+          "score": 60,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:subscribe"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://icg.citi.com/global/insights/citi-institute#newsletter",
+          "anchor_text": "Subscribe",
+          "score": 60,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:subscribe"
+          ],
+          "discovered_from": "https://icg.citi.com/icghome/what-we-think",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/research-citi-podcasts",
+          "anchor_text": "",
+          "score": 45,
+          "signals_hit": [
+            "url:/insights",
+            "url:/research"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://icg.citi.com/global/insights/research-citi-podcasts",
+          "anchor_text": "",
+          "score": 45,
+          "signals_hit": [
+            "url:/insights",
+            "url:/research"
+          ],
+          "discovered_from": "https://icg.citi.com/icghome/what-we-think",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/tags/research",
+          "anchor_text": "Research",
+          "score": 45,
+          "signals_hit": [
+            "url:/insights",
+            "url:/research"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights/research-citi-podcasts",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/all",
+          "anchor_text": "View All Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/combating-fraud-awareness-prevention",
+          "anchor_text": "InsightsCombating Fraud: Awareness, Prevention and Best PracticesMarch 25, 2025",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.citi.com/commercialbank/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/uk-pivoting-toward-new-technologies",
+          "anchor_text": "InsightsUK: Pivoting Toward New TechnologiesFebruary 28, 2025",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.citi.com/commercialbank/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/commercial-bank",
+          "anchor_text": "View Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.citi.com/commercialbank/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights",
+          "anchor_text": "Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights/research-citi-podcasts",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/apec",
+          "anchor_text": "Global Markets and EconomyAPEC - The New Connections Driving TradeThis report aims to provide a snap",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/stablecoins-2030",
+          "anchor_text": "Technology & InnovationStablecoins 2030The evolution of digital assets - stablecoins, tokenized depo",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/tags/citi-global-perspectives-solutions",
+          "anchor_text": "View All Reports",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/prospects-for-2026-goldilocks-performance-but-risks-linger",
+          "anchor_text": "Learn More",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/etfs-in-europe-fortune-favors-the-brave",
+          "anchor_text": "Learn More",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/custody-in-a-real-time-world",
+          "anchor_text": "Learn More",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/the-citi-institute-podcast-season-2",
+          "anchor_text": "",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/citi-institute-qa",
+          "anchor_text": "",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/must-c",
+          "anchor_text": "",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        },
+        {
+          "url": "https://www.citigroup.com/global/insights/citi-institute/FAQs",
+          "anchor_text": "View All FAQs",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.citigroup.com/global/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets"
+        }
+      ],
+      "errors": [
+        "https://www.citigroup.com/global/news/perspective: 404 Client Error: Not Found for url: https://www.c"
+      ]
+    },
+    {
+      "target_id": "bofa_markets",
+      "org_name": "Bank of America",
+      "seed_urls": [
+        "https://business.bofa.com/en-us/content/market-strategies-insights.html",
+        "https://www.bankofamerica.com/salesandtrading/",
+        "https://about.bankofamerica.com/en/making-an-impact",
+        "https://institute.bankofamerica.com",
+        "https://newsroom.bankofamerica.com",
+        "https://business.bofa.com/en-us/content/economic-insights.html",
+        "https://www.bofasecurities.com/en-us/content/global-research.html"
+      ],
+      "pages_fetched": 6,
+      "candidates_found": [
+        {
+          "url": "https://investor.bankofamerica.com/events-and-presentations/email-alerts",
+          "anchor_text": "Email Alerts",
+          "score": 135,
+          "signals_hit": [
+            "url:/email-?alerts",
+            "url:/events",
+            "anchor:email alerts",
+            "anchor:alerts"
+          ],
+          "discovered_from": "https://investor.bankofamerica.com/events-and-presentations",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://institute.bankofamerica.com/subscribe.html",
+          "anchor_text": "Subscribe",
+          "score": 80,
+          "signals_hit": [
+            "url:/subscribe",
+            "anchor:subscribe"
+          ],
+          "discovered_from": "https://institute.bankofamerica.com",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets"
+        },
+        {
+          "url": "https://institute.bankofamerica.com/subscribe-form.html",
+          "anchor_text": "subscribe here",
+          "score": 80,
+          "signals_hit": [
+            "url:/subscribe",
+            "anchor:subscribe"
+          ],
+          "discovered_from": "https://institute.bankofamerica.com/subscribe.html",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://institute.bankofamerica.com/subscribe-employee.html",
+          "anchor_text": "subscribe here",
+          "score": 80,
+          "signals_hit": [
+            "url:/subscribe",
+            "anchor:subscribe"
+          ],
+          "discovered_from": "https://institute.bankofamerica.com/subscribe.html",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://investor.bankofamerica.com/events-and-presentations",
+          "anchor_text": "Events & presentations",
+          "score": 40,
+          "signals_hit": [
+            "url:/events",
+            "anchor:events"
+          ],
+          "discovered_from": "https://about.bankofamerica.com/en/making-an-impact",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets"
+        },
+        {
+          "url": "https://investor.bankofamerica.com/events-and-presentations/events",
+          "anchor_text": "Events",
+          "score": 40,
+          "signals_hit": [
+            "url:/events",
+            "anchor:events"
+          ],
+          "discovered_from": "https://investor.bankofamerica.com/events-and-presentations",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://investor.bankofamerica.com/events-and-presentations/events/detail/20260114-q4-2025-bank-of-america-earnings-conference-call",
+          "anchor_text": "Q4 2025 Bank of America Earnings Conference CallView Event",
+          "score": 40,
+          "signals_hit": [
+            "url:/events",
+            "anchor:conference"
+          ],
+          "discovered_from": "https://investor.bankofamerica.com/events-and-presentations",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://newsroom.bankofamerica.com/content/newsroom/email-subscription-form.html",
+          "anchor_text": "Subscribe",
+          "score": 25,
+          "signals_hit": [
+            "anchor:subscribe",
+            "mildneg:/newsroom"
+          ],
+          "discovered_from": "https://newsroom.bankofamerica.com",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets"
+        },
+        {
+          "url": "https://investor.bankofamerica.com/events-and-presentations/presentations",
+          "anchor_text": "Presentations",
+          "score": 25,
+          "signals_hit": [
+            "url:/events"
+          ],
+          "discovered_from": "https://investor.bankofamerica.com/events-and-presentations",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://investor.bankofamerica.com/events-and-presentations/annual-shareholder-meeting",
+          "anchor_text": "Annual Shareholder Meeting",
+          "score": 25,
+          "signals_hit": [
+            "url:/events"
+          ],
+          "discovered_from": "https://investor.bankofamerica.com/events-and-presentations",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://investor.bankofamerica.com/events-and-presentations/investor-day",
+          "anchor_text": "Investor Day",
+          "score": 25,
+          "signals_hit": [
+            "url:/events"
+          ],
+          "discovered_from": "https://investor.bankofamerica.com/events-and-presentations",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://business.bofa.com/en-us/content/trader-insights.html",
+          "anchor_text": "Trader Insights",
+          "score": 20,
+          "signals_hit": [
+            "anchor:insights"
+          ],
+          "discovered_from": "https://business.bofa.com/en-us/content/market-strategies-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets"
+        },
+        {
+          "url": "https://business.bofa.com/en-us/content/transaction-services-treasury-management-solutions.html",
+          "anchor_text": "Treasury Insights",
+          "score": 20,
+          "signals_hit": [
+            "anchor:insights"
+          ],
+          "discovered_from": "https://business.bofa.com/en-us/content/market-strategies-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets"
+        },
+        {
+          "url": "https://business.bofa.com/en-us/content/institutional-investing-insights.html",
+          "anchor_text": "Institutional investing insightsChart the right path with nuanced perspectives and analysis.",
+          "score": 20,
+          "signals_hit": [
+            "anchor:insights"
+          ],
+          "discovered_from": "https://business.bofa.com/en-us/content/market-strategies-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets"
+        },
+        {
+          "url": "https://business.bofa.com/jp/en/japan-insights.html",
+          "anchor_text": "Transforming JapanWith Japan poised for growth, global investors and corporates can capitalize on th",
+          "score": 20,
+          "signals_hit": [
+            "anchor:insights"
+          ],
+          "discovered_from": "https://business.bofa.com/en-us/content/market-strategies-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets"
+        },
+        {
+          "url": "https://institute.bankofamerica.com/daily-insights.html",
+          "anchor_text": "Daily Insights",
+          "score": 20,
+          "signals_hit": [
+            "anchor:insights"
+          ],
+          "discovered_from": "https://institute.bankofamerica.com",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets"
+        },
+        {
+          "url": "https://institute.bankofamerica.com/institute-insights.html",
+          "anchor_text": "Institute Insights",
+          "score": 20,
+          "signals_hit": [
+            "anchor:insights"
+          ],
+          "discovered_from": "https://institute.bankofamerica.com",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets"
+        },
+        {
+          "url": "https://investor.bankofamerica.com/ical?id=10471",
+          "anchor_text": "Add to Calendar",
+          "score": 20,
+          "signals_hit": [
+            "anchor:calendar"
+          ],
+          "discovered_from": "https://investor.bankofamerica.com/events-and-presentations",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://business.bofa.com/en-us/content/market-strategies-insights.html",
+          "anchor_text": "BofA Global Research",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://business.bofa.com/en-us/content/market-strategies-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets"
+        },
+        {
+          "url": "https://business.bofa.com/en-us/content/market-strategies-insights/weekly-market-recap-report.html",
+          "anchor_text": "Must Read Research",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://business.bofa.com/en-us/content/market-strategies-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets"
+        }
+      ],
+      "errors": [
+        "https://www.bankofamerica.com/salesandtrading/: 404 Client Error: Not Found for url: https://www.b",
+        "https://business.bofa.com/en-us/content/economic-insights.html: 404 Client Error: Not Found for url: https://busin",
+        "https://www.bofasecurities.com/en-us/content/global-research.html: HTTPSConnectionPool(host='www.bofasecurities.com',"
+      ]
+    },
+    {
+      "target_id": "barclays_markets",
+      "org_name": "Barclays",
+      "seed_urls": [
+        "https://www.cib.barclays/our-insights.html",
+        "https://www.cib.barclays/news-and-events.html",
+        "https://www.cib.barclays",
+        "https://home.barclays/insights",
+        "https://home.barclays/news",
+        "https://www.barclays.co.uk/wealth-management/insights",
+        "https://www.investmentbank.barclays.com/our-insights.html"
+      ],
+      "pages_fetched": 12,
+      "candidates_found": [
+        {
+          "url": "https://www.barclays.co.uk/subscriptions?scl=8_sb",
+          "anchor_text": "View subscriptions",
+          "score": 80,
+          "signals_hit": [
+            "url:/subscription",
+            "anchor:subscription"
+          ],
+          "discovered_from": "https://www.barclays.co.uk/wealth-management/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://www.cib.barclays/research/global-outlook.html",
+          "anchor_text": "Global Outlook",
+          "score": 40,
+          "signals_hit": [
+            "url:/research",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.cib.barclays/our-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://home.barclays/insights/sustainability-insights/",
+          "anchor_text": "Sustainability insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://home.barclays/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://home.barclays/insights/barclays-insights/",
+          "anchor_text": "Barclays' insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://home.barclays/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://www.investmentbank.barclays.com/research/global-outlook.html",
+          "anchor_text": "Global Outlook",
+          "score": 40,
+          "signals_hit": [
+            "url:/research",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.investmentbank.barclays.com/our-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://www.cib.barclays/research.html",
+          "anchor_text": "ResearchResearch",
+          "score": 25,
+          "signals_hit": [
+            "url:/research"
+          ],
+          "discovered_from": "https://www.cib.barclays/our-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://www.cib.barclays/research.html#Equity",
+          "anchor_text": "Equity Research",
+          "score": 25,
+          "signals_hit": [
+            "url:/research"
+          ],
+          "discovered_from": "https://www.cib.barclays/our-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://www.cib.barclays/research.html#Credit",
+          "anchor_text": "Credit Research",
+          "score": 25,
+          "signals_hit": [
+            "url:/research"
+          ],
+          "discovered_from": "https://www.cib.barclays/our-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://www.cib.barclays/research.html#Macro",
+          "anchor_text": "Macro & Strategy Research",
+          "score": 25,
+          "signals_hit": [
+            "url:/research"
+          ],
+          "discovered_from": "https://www.cib.barclays/our-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://www.cib.barclays/research.html#Thematic",
+          "anchor_text": "Thematic Investing Research",
+          "score": 25,
+          "signals_hit": [
+            "url:/research"
+          ],
+          "discovered_from": "https://www.cib.barclays/our-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://www.cib.barclays/research.html#esg",
+          "anchor_text": "Sustainable Investing Research",
+          "score": 25,
+          "signals_hit": [
+            "url:/research"
+          ],
+          "discovered_from": "https://www.cib.barclays/our-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://www.cib.barclays/research.html#Data",
+          "anchor_text": "Data & Investment Sciences",
+          "score": 25,
+          "signals_hit": [
+            "url:/research"
+          ],
+          "discovered_from": "https://www.cib.barclays/our-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://www.cib.barclays/research.html#Quantitative",
+          "anchor_text": "Quantitative Portfolio Strategy",
+          "score": 25,
+          "signals_hit": [
+            "url:/research"
+          ],
+          "discovered_from": "https://www.cib.barclays/our-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://www.cib.barclays/research/barclays-live.html",
+          "anchor_text": "Barclays Live",
+          "score": 25,
+          "signals_hit": [
+            "url:/research"
+          ],
+          "discovered_from": "https://www.cib.barclays/our-insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://home.barclays/insights/uk-unlocked/",
+          "anchor_text": "UK unlocked",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://home.barclays/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://home.barclays/investor-relations/investor-news/regulatory-news-email-alerts/",
+          "anchor_text": "Regulatory news alerts",
+          "score": 25,
+          "signals_hit": [
+            "anchor:alerts",
+            "mildneg:/investor-?relations"
+          ],
+          "discovered_from": "https://home.barclays/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://home.barclays/insights/2026/01/Mobilising-Retail-Savings-for-Deeper-Capital-Markets/",
+          "anchor_text": "Read more",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://home.barclays/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://home.barclays/insights/2026/01/December-2025-Spend-Trends/",
+          "anchor_text": "Read more",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://home.barclays/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://home.barclays/insights/2026/01/Savings-Investment-Union/",
+          "anchor_text": "Read more",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://home.barclays/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        },
+        {
+          "url": "https://home.barclays/insights/2026/01/Charity-Sector-Investment-Trends/",
+          "anchor_text": "Read more",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://home.barclays/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "target_id": "ubs_markets",
+      "org_name": "UBS",
+      "seed_urls": [
+        "https://www.ubs.com/global/en/wealth-management/insights.html",
+        "https://www.ubs.com/global/en/investment-bank/insights.html",
+        "https://www.ubs.com/global/en/assetmanagement/insights.html",
+        "https://www.ubs.com/global/en/media/news.html",
+        "https://www.ubs.com/ch/en/research.html",
+        "https://www.ubs.com/global/en/our-firm/events.html",
+        "https://www.ubs.com/global/en/wealth-management/chief-investment-office.html"
+      ],
+      "pages_fetched": 5,
+      "candidates_found": [
+        {
+          "url": "https://www.ubs.com/global/en/wealthmanagement/insights.html",
+          "anchor_text": "Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/wealth-management/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/wealthmanagement/insights/chief-investment-office/potus-47.html",
+          "anchor_text": "More Trump 2.0 insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/wealth-management/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+          "anchor_text": "Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/wealthmanagement/insights/house-view.html",
+          "anchor_text": "House view",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/wealth-management/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/wealthmanagement/insights/year-ahead-registration.html",
+          "anchor_text": "Get your copyabout year ahead",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/wealth-management/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://secure.ubs.com/global/en/wealthmanagement/insights/chief-investment-office/market-insights/paul-donovan.html",
+          "anchor_text": "More from Paul Donovan",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/wealth-management/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/wealthmanagement/insights/chief-investment-office/wealth-planning/our-investment-philosophy.html",
+          "anchor_text": "Our investment philosophyEveryone has a unique set of preferences and behavioral characteristics, wh",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/wealth-management/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/assetmanagement/insights/thematic-viewpoints/apac-and-emerging.html",
+          "anchor_text": "China",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/assetmanagement/insights/thematic-viewpoints/sustainable-impact-investing.html",
+          "anchor_text": "Sustainable investing",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/assetmanagement/insights/thematic-viewpoints/alternatives.html",
+          "anchor_text": "Alternatives",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/assetmanagement/insights/asset-class-perspectives/fixed-income/bond-bites.html",
+          "anchor_text": "Bond Bites",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/assetmanagement/insights/asset-class-perspectives/real-estate/the-red-thread-alternatives.html",
+          "anchor_text": "The Red Thread \u2013 Alternatives",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/assetmanagement/insights/market-updates.html",
+          "anchor_text": "Macro Monthly",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/assetmanagement/insights/investment-outlook/the-red-thread.html",
+          "anchor_text": "The Red Thread",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/assetmanagement/insights/investment-outlook/the-red-thread/trt-end-year-2025.html",
+          "anchor_text": "on Life Sciences beyond borders",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/assetmanagement/insights/market-updates/articles/2024-04-macro-monthly.html",
+          "anchor_text": "on What if the Fed doesn\u2019t cut?",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/assetmanagement/insights/investment-outlook/the-red-thread/trt-mid-year-2025.html",
+          "anchor_text": "The Red Thread: Europe EditionA crossroads",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/wealthmanagement/insights/chief-investment-office.html",
+          "anchor_text": "Chief Investment Office",
+          "score": 25,
+          "signals_hit": [
+            "url:/insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/wealthmanagement/insights/chief-investment-office/potus-47.html",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.ubs.com/am-insights",
+          "anchor_text": "https://www.ubs.com/am-insights",
+          "score": 20,
+          "signals_hit": [
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        },
+        {
+          "url": "https://www.ubs.com/global/en/wealthmanagement/chief-investment-office/features.html",
+          "anchor_text": "Latest insights",
+          "score": 20,
+          "signals_hit": [
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.ubs.com/global/en/wealth-management/chief-investment-office.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets"
+        }
+      ],
+      "errors": [
+        "https://www.ubs.com/global/en/investment-bank/insights.html: 404 Client Error: Not Found for url: https://www.u",
+        "https://www.ubs.com/global/en/media/news.html: 404 Client Error: Not Found for url: https://www.u",
+        "https://www.ubs.com/ch/en/research.html: 404 Client Error: Not Found for url: https://www.u",
+        "https://www.ubs.com/global/en/our-firm/events.html: 404 Client Error: Not Found for url: https://www.u"
+      ]
+    },
+    {
+      "target_id": "deutsche_bank_markets",
+      "org_name": "Deutsche Bank",
+      "seed_urls": [
+        "https://www.db.com/news",
+        "https://www.db.com/what-we-do/focus-topics",
+        "https://flow.db.com",
+        "https://www.deutschewealth.com/en/insights.html",
+        "https://www.db.com/news/events",
+        "https://www.db.com/research",
+        "https://corporates.db.com/insights"
+      ],
+      "pages_fetched": 10,
+      "candidates_found": [
+        {
+          "url": "https://flow.db.com/newsletter/subscribe-to-flow-digest-newsletter",
+          "anchor_text": "Subscribe toflowdigest newsletter",
+          "score": 180,
+          "signals_hit": [
+            "url:/subscribe",
+            "url:/newsletter",
+            "anchor:subscribe",
+            "anchor:newsletter",
+            "combo:newsletter+subscribe"
+          ],
+          "discovered_from": "https://flow.db.com",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://flow.db.com/newsletter",
+          "anchor_text": "Newsletter",
+          "score": 80,
+          "signals_hit": [
+            "url:/newsletter",
+            "anchor:newsletter"
+          ],
+          "discovered_from": "https://flow.db.com",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://flow.db.com/newsletter/index",
+          "anchor_text": "",
+          "score": 45,
+          "signals_hit": [
+            "url:/newsletter"
+          ],
+          "discovered_from": "https://flow.db.com",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://flow.db.com/newsbites/newsbites-subscription",
+          "anchor_text": "Subscribe",
+          "score": 40,
+          "signals_hit": [
+            "anchor:subscribe"
+          ],
+          "discovered_from": "https://flow.db.com",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/investing-insights.html",
+          "anchor_text": "Investing Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/investing-insights/economic-and-market-outlook.html",
+          "anchor_text": "Economic Outlook",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/investing-insights/asset-class-insights.html",
+          "anchor_text": "Asset-class Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/sustainability/blue-economy.html",
+          "anchor_text": "Blue Economy Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/sustainability/biodiversity.html",
+          "anchor_text": "Biodiversity Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/investing-insights/economic-and-market-outlook/cio-annual-outlook-2026-regional-cio-views.html",
+          "anchor_text": "CIO Video UpdateAnnual outlook 2026 \u2013 Investing in tomorrow: opportunities and risksGlobal Chief Inv",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/sustainability/blue-economy/edna-measuring-ocean-biodiversity/eDNA-programme-Alaska.html",
+          "anchor_text": "Measuring ocean biodiversityUnderstanding our oceans: Deutsche Bank eDNA testing programme reaches A",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/art/2025/artlive-new-york-2025.html",
+          "anchor_text": "Event videoArt:LIVE, Frieze New York 2025Join a virtual tour of Frieze New York 2025, led by Matthew",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://www.db.com/servlet/reweb2.ReWEB?rwlogin=true&rwnode=RPS_EN-PROD$ABOS&rwsite=RPS_EN-PROD",
+          "anchor_text": "Subscription",
+          "score": 40,
+          "signals_hit": [
+            "anchor:subscription"
+          ],
+          "discovered_from": "https://www.db.com/research",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights.html",
+          "anchor_text": "Insights",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights/investing-insights.html",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/investing-insights/economic-and-market-outlook/cio-annual-outlook-2026-investing-in-tomorrow.html",
+          "anchor_text": "Investing in tomorrow: our 2026 annual outlook",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights/investing-insights.html",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/investing-insights/investing-themes/risk-event-venezuela-no-shift-in-our-market-outlook.html",
+          "anchor_text": "PERSPECTIVES MemoRisk event in Venezuela: No shift in our market outlookFinancial markets remain lar",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights/investing-insights.html",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/investing-insights/investing-themes/apec-summit-deals-and-implications.html",
+          "anchor_text": "PERSPECTIVES SpecialAPEC summit \u2013 the deals and their implicationsThe APEC meeting in South Korea sa",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:insights"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights/investing-insights.html",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/investing-insights/asset-class-insights/india-equity-market-ready-to-rebound.html",
+          "anchor_text": "PERSPECTIVES Viewpoint EquityIndia\u2019s equity market \u2013 Ready to rebound?In this PERSPECTIVES Viewpoint",
+          "score": 40,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights/investing-insights.html",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/investing-insights/economic-and-market-outlook/cyclical-impulses-key-investment-themes-for-Europe-in-2026.html",
+          "anchor_text": "PERSPECTIVES Annual OutlookCyclical impulses: key investment themes for Europe in 2026Europe's story",
+          "score": 30,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook",
+            "long_url"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        },
+        {
+          "url": "https://www.deutschewealth.com/en/insights/investing-insights/economic-and-market-outlook/fierce-competition-key-investment-themes-for-emerging-markets-in-2026.html",
+          "anchor_text": "PERSPECTIVES Annual OutlookFierce competition: key investment themes for emerging markets in 2026Deu",
+          "score": 30,
+          "signals_hit": [
+            "url:/insights",
+            "anchor:outlook",
+            "long_url"
+          ],
+          "discovered_from": "https://www.deutschewealth.com/en/insights.html",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets"
+        }
+      ],
+      "errors": [
+        "https://www.db.com/news/events: 404 Client Error: Not Found for url: https://www.d",
+        "https://corporates.db.com/insights: 404 Client Error: Not Found for url: https://corpo"
+      ]
+    },
+    {
+      "target_id": "socgen_markets",
+      "org_name": "Societe Generale",
+      "seed_urls": [
+        "https://www.societegenerale.com/en/news-and-media",
+        "https://www.societegenerale.com/en/measuring-our-performance/publications",
+        "https://wholesale.banking.societegenerale.com/en/insights",
+        "https://www.sgresearch.com",
+        "https://cib.societegenerale.com/en/news-insights",
+        "https://www.privatebanking.societegenerale.com/en/our-expertise/publications",
+        "https://www.societegenerale.com/en/actuality"
+      ],
+      "pages_fetched": 2,
+      "candidates_found": [
+        {
+          "url": "https://wholesale.banking.societegenerale.com/en/news-insights/",
+          "anchor_text": "News & Insights",
+          "score": 20,
+          "signals_hit": [
+            "anchor:insights"
+          ],
+          "discovered_from": "https://wholesale.banking.societegenerale.com/en/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://wholesale.banking.societegenerale.com/en/news-insights/all-news-insights/",
+          "anchor_text": "All news & insights",
+          "score": 20,
+          "signals_hit": [
+            "anchor:insights"
+          ],
+          "discovered_from": "https://wholesale.banking.societegenerale.com/en/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://cib.societegenerale.com/en/news-insights/",
+          "anchor_text": "News & Insights",
+          "score": 20,
+          "signals_hit": [
+            "anchor:insights"
+          ],
+          "discovered_from": "https://cib.societegenerale.com/en/news-insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://cib.societegenerale.com/en/news-insights/all-news-insights/",
+          "anchor_text": "All news & insights",
+          "score": 20,
+          "signals_hit": [
+            "anchor:insights"
+          ],
+          "discovered_from": "https://cib.societegenerale.com/en/news-insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://cib.societegenerale.com/en/news-insights/all-news-insights/news-details/news/asias-2026-market-outlook-resilience-amid-rotation-1/",
+          "anchor_text": "Asia\u2019s 2026 Market Outlook: Resilience amid rotation",
+          "score": 20,
+          "signals_hit": [
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://cib.societegenerale.com/en/news-insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://wholesale.banking.societegenerale.com/en/news-insights/#main",
+          "anchor_text": "Go to content",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://wholesale.banking.societegenerale.com/en/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://wholesale.banking.societegenerale.com/en/news-insights/#menu-header",
+          "anchor_text": "Go to menu",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://wholesale.banking.societegenerale.com/en/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://wholesale.banking.societegenerale.com/en/news-insights/#form-search",
+          "anchor_text": "Go to search",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://wholesale.banking.societegenerale.com/en/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://wholesale.banking.societegenerale.com/en/news-insights/expert-view-points/",
+          "anchor_text": "Expert viewpoints",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://wholesale.banking.societegenerale.com/en/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://wholesale.banking.societegenerale.com/en/news-insights/awards-amp-rankings/",
+          "anchor_text": "Awards & Rankings",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://wholesale.banking.societegenerale.com/en/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://wholesale.banking.societegenerale.com/en/news-insights/glossary/",
+          "anchor_text": "Glossary",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://wholesale.banking.societegenerale.com/en/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://wholesale.banking.societegenerale.com/en/news-insights/podcast-2050-investors-1/",
+          "anchor_text": "2050 Investors Podcast",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://wholesale.banking.societegenerale.com/en/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://cib.societegenerale.com/en/news-insights/expert-view-points/",
+          "anchor_text": "Expert viewpoints",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://cib.societegenerale.com/en/news-insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://cib.societegenerale.com/en/news-insights/awards-amp-rankings/",
+          "anchor_text": "Awards & Rankings",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://cib.societegenerale.com/en/news-insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://cib.societegenerale.com/en/news-insights/glossary/",
+          "anchor_text": "Glossary",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://cib.societegenerale.com/en/news-insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://cib.societegenerale.com/en/news-insights/podcast-2050-investors-1/",
+          "anchor_text": "2050 Investors Podcast",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://cib.societegenerale.com/en/news-insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://cib.societegenerale.com/en/news-insights/all-news-insights/news-details/news/transition-finance-is-asias-opportunity-to-show-leadership/",
+          "anchor_text": "Transition finance is Asia\u2019s opportunity to show leadership",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://cib.societegenerale.com/en/news-insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://cib.societegenerale.com/en/news-insights/all-news-insights/news-details/news/corporate-hybrid-bonds-a-strategic-tool-in-constant-evolution/",
+          "anchor_text": "Corporate Hybrid Bonds: a strategic tool in constant evolution",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://cib.societegenerale.com/en/news-insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        },
+        {
+          "url": "https://cib.societegenerale.com/en/news-insights/all-news-insights/news-details/news/the-dual-power-of-advertising-from-ad-diction-to-good-vertising/",
+          "anchor_text": "The Dual Power of Advertising: From Ad-diction to Good-vertising",
+          "score": 5,
+          "signals_hit": [],
+          "discovered_from": "https://cib.societegenerale.com/en/news-insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets"
+        }
+      ],
+      "errors": [
+        "https://www.societegenerale.com/en/news-and-media: 404 Client Error: Not Found for url: https://www.s",
+        "https://www.societegenerale.com/en/measuring-our-performance/publications: 404 Client Error: Not Found for url: https://www.s",
+        "https://www.sgresearch.com: HTTPSConnectionPool(host='www.sgresearch.com', por",
+        "https://www.privatebanking.societegenerale.com/en/our-expertise/publications: 404 Client Error: Not Found for url: https://www.p",
+        "https://www.societegenerale.com/en/actuality: 404 Client Error: Not Found for url: https://www.s"
+      ]
+    },
+    {
+      "target_id": "bnpp_markets",
+      "org_name": "BNP Paribas",
+      "seed_urls": [
+        "https://group.bnpparibas/en/news",
+        "https://group.bnpparibas/en/publications",
+        "https://economic-research.bnpparibas.com",
+        "https://cib.bnpparibas/insights",
+        "https://wealthmanagement.bnpparibas/en/expert-voices",
+        "https://www.bnpparibas.com/en/events",
+        "https://mediaroom.bnpparibas/en"
+      ],
+      "pages_fetched": 5,
+      "candidates_found": [
+        {
+          "url": "https://economic-research.bnpparibas.com/Subscriptions/fr-FR",
+          "anchor_text": "Mon Compte",
+          "score": 45,
+          "signals_hit": [
+            "url:/subscription"
+          ],
+          "discovered_from": "https://economic-research.bnpparibas.com",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bnpp_markets"
+        },
+        {
+          "url": "http://economic-research.bnpparibas.com/Subscriptions/fr-FR",
+          "anchor_text": "FRAN\u00c7AISFR",
+          "score": 40,
+          "signals_hit": [
+            "url:/subscription"
+          ],
+          "discovered_from": "https://economic-research.bnpparibas.com/Subscriptions/fr-FR",
+          "evidence_path": ""
+        },
+        {
+          "url": "http://economic-research.bnpparibas.com/Subscriptions/en-US",
+          "anchor_text": "ANGLAISEN",
+          "score": 40,
+          "signals_hit": [
+            "url:/subscription"
+          ],
+          "discovered_from": "https://economic-research.bnpparibas.com/Subscriptions/fr-FR",
+          "evidence_path": ""
+        },
+        {
+          "url": "https://cib.bnpparibas/global-outlook-2026-in-a-good-place/",
+          "anchor_text": "Global Outlook 2026: In a good place",
+          "score": 20,
+          "signals_hit": [
+            "anchor:outlook"
+          ],
+          "discovered_from": "https://cib.bnpparibas/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bnpp_markets"
+        },
+        {
+          "url": "https://cib.bnpparibas/bnp-paribas-global-markets-conference-2025-3-key-takeaways/",
+          "anchor_text": "BNP Paribas Global Markets Conference 2025: three key takeaways",
+          "score": 20,
+          "signals_hit": [
+            "anchor:conference"
+          ],
+          "discovered_from": "https://cib.bnpparibas/insights",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bnpp_markets"
+        }
+      ],
+      "errors": [
+        "https://wealthmanagement.bnpparibas/en/expert-voices: 404 Client Error: Not Found for url: https://wealt",
+        "https://www.bnpparibas.com/en/events: 404 Client Error: Not Found for url: https://group",
+        "https://mediaroom.bnpparibas/en: HTTPSConnectionPool(host='mediaroom.bnpparibas', p"
+      ]
+    }
+  ]
+}

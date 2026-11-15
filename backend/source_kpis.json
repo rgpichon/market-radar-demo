@@ -1,0 +1,26 @@
+{
+  "test_source": {
+    "runs": [
+      {
+        "timestamp": "2026-01-28T13:30:35.806383+00:00",
+        "kept_count": 5,
+        "dated_count": 4,
+        "undated_count": 1,
+        "future_count": 3,
+        "dated_ratio": 0.8,
+        "event_likeness_rate": 0.0,
+        "detail_date_hit_rate": null,
+        "churn_rate": 0.0
+      }
+    ],
+    "current_metrics": {
+      "avg_kept_count": 5.0,
+      "avg_dated_ratio": 0.8,
+      "avg_event_likeness_rate": 0.0,
+      "avg_detail_date_hit_rate": null,
+      "avg_future_count": 3.0
+    },
+    "auto_paused": false,
+    "auto_promoted": false
+  }
+}

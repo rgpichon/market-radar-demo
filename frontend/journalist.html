@@ -1,0 +1,3694 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Market Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#0f0f0f;
+      --ink-muted:#6b6b6b;
+      --ink-faint:#b0b0b0;
+      --paper:#faf8f4;
+      --paper-card:#ffffff;
+      --accent:#c8102e;
+      --accent-soft:#fff0f0;
+      --signal-up:#1a7f4b;
+      --signal-dn:#c8102e;
+      --border:#e8e4dd;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+    body{font-family:"DM Sans",sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+
+    .masthead{
+      position:fixed;top:0;left:0;right:0;height:56px;background:var(--paper);
+      border-bottom:1px solid var(--border);z-index:40;
+    }
+    .masthead .inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+    .brand-title{font-family:"Playfair Display",serif;font-size:20px;font-weight:500;line-height:1}
+    .brand-sub{font-size:11px;letter-spacing:.14em;color:var(--ink-muted);margin-top:2px}
+    .right-meta{display:flex;align-items:center;gap:14px;font-size:12px;color:var(--ink-muted)}
+    .refresh-btn{border:none;background:none;color:var(--accent);font-family:"DM Sans",sans-serif;font-size:12px;cursor:pointer;padding:0}
+
+    .signals-bar{
+      position:fixed;top:56px;left:0;right:0;height:44px;background:var(--paper-card);
+      border-bottom:1px solid var(--border);z-index:35;
+    }
+    .signals-row{height:100%;display:flex;align-items:center;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+    .signals-row::-webkit-scrollbar{display:none}
+    .sig-pill{display:inline-flex;align-items:center;font-size:12px;padding-right:10px}
+    .sig-name{font-family:"DM Sans",sans-serif}
+    .sig-num{font-family:"DM Mono",monospace;margin-left:6px}
+    .sig-up{color:var(--signal-up)}
+    .sig-dn{color:var(--signal-dn)}
+    .sep{color:var(--ink-faint);margin:0 10px}
+
+    .digest-panel{margin-top:0;background:var(--paper-card);border-bottom:1px solid var(--border)}
+    .digest-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:20px 24px}
+    .digest-title{font-family:"Playfair Display",serif;font-size:15px;font-weight:500}
+    .digest-sub{font-size:12px;color:var(--ink-muted);margin-top:2px}
+    .btn-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .btn{
+      border:1px solid var(--border);background:var(--paper-card);color:var(--ink-muted);
+      border-radius:3px;padding:6px 10px;font-size:12px;font-family:"DM Sans",sans-serif;cursor:pointer;
+    }
+    .btn:hover{border-color:var(--accent);color:var(--ink)}
+    .btn.active{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+    .btn:disabled{opacity:.45;cursor:not-allowed}
+    .tooltip{position:relative}
+    .tooltip:hover::after{
+      content:attr(data-tip);position:absolute;bottom:130%;right:0;background:var(--ink);color:#fff;
+      padding:6px 8px;border-radius:3px;font-size:11px;white-space:nowrap;
+    }
+    .topic-inline{display:none;align-items:center;gap:8px}
+    .topic-inline input{
+      border:1px solid var(--border);border-radius:2px;padding:7px 9px;background:#fff;
+      font-family:"DM Sans",sans-serif;font-size:12px;min-width:220px;
+    }
+    .digest-loading{padding:0 24px 16px;color:var(--ink-muted);font-size:13px}
+    .progress{height:2px;background:linear-gradient(90deg,var(--accent) 0%, transparent 60%);background-size:200% 100%;animation:move 1.2s linear infinite}
+    @keyframes move{from{background-position:0 0}to{background-position:200% 0}}
+    .digest-body{padding:0 24px 20px}
+    .fmt-label{font-size:11px;letter-spacing:.14em;color:var(--accent);margin-bottom:10px}
+    .digest-content{font-size:15px;line-height:1.7;white-space:pre-wrap}
+    .digest-content strong{font-family:"Playfair Display",serif;font-size:15px;font-weight:700}
+    .digest-meta{margin-top:12px;font-size:11px;color:var(--ink-muted)}
+    .digest-actions{margin-top:8px}
+    .collapse-link{font-size:12px;color:var(--accent);cursor:pointer}
+
+    .tabs-bar{
+      position:sticky;top:56px;height:48px;background:var(--paper);border-bottom:1px solid var(--border);z-index:32;
+    }
+    .tabs-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+    .tabs{display:flex;gap:20px;height:100%}
+    .tab-btn{
+      height:100%;border:none;background:none;padding:0 2px;cursor:pointer;
+      font-family:"DM Sans",sans-serif;font-size:14px;font-weight:500;color:var(--ink-muted);
+      border-bottom:2px solid transparent;
+    }
+    .tab-btn.active{color:var(--ink);border-bottom-color:var(--accent)}
+    #topic-filter-wrapper{display:flex;align-items:center}
+    .topic-select-wrap{position:relative}
+    .topic-select{
+      appearance:none;-webkit-appearance:none;-moz-appearance:none;
+      border:1px solid var(--border);border-radius:2px;background:var(--paper-card);
+      font-family:"DM Sans",sans-serif;font-size:12px;padding:6px 28px 6px 10px;color:var(--ink);
+    }
+    .topic-select-wrap::after{
+      content:"⌄";position:absolute;right:10px;top:50%;transform:translateY(-48%);color:var(--ink-muted);pointer-events:none;
+    }
+
+    .main{max-width:1280px;margin:0 auto;padding:20px 24px 48px}
+    .hero-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+    .hero-card{
+      background:var(--paper-card);border:1px solid var(--border);border-top:3px solid var(--accent);
+      padding:20px 24px;transition:border-top-color .15s ease;
+    }
+    .hero-card:hover{border-top-color:var(--ink)}
+    .meta-row{display:flex;justify-content:space-between;gap:10px;font-size:11px;color:var(--ink-muted);letter-spacing:.02em}
+    .meta-tags{display:flex;gap:8px;min-width:0}
+    .meta-tags span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .hero-title{
+      margin:14px 0 10px;font-family:"Playfair Display",serif;font-size:20px;font-weight:500;line-height:1.25;
+      display:-webkit-box;line-clamp:2;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+    }
+    .hero-desc{
+      margin:0 0 12px;font-size:13px;color:var(--ink-muted);line-height:1.6;
+      display:-webkit-box;line-clamp:3;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+    }
+    .hero-link{font-size:12px}
+
+    .article-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .article-card{
+      background:var(--paper-card);border:1px solid var(--border);border-top:2px solid transparent;
+      padding:16px 18px;transition:border-top-color .15s ease;
+    }
+    .article-card:hover{border-top-color:var(--accent)}
+    .article-title{
+      margin:10px 0 8px;font-family:"Playfair Display",serif;font-size:16px;font-weight:500;line-height:1.3;
+      display:-webkit-box;line-clamp:2;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+    }
+    .article-desc{
+      margin:0 0 10px;font-size:12px;color:var(--ink-muted);line-height:1.55;
+      display:-webkit-box;line-clamp:2;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+    }
+    .article-link{font-size:12px}
+
+    .signals-section{margin-top:22px}
+    .section-label{
+      font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:10px;
+    }
+    .signals-pills{display:flex;gap:8px;flex-wrap:wrap}
+    .signal-pill{
+      border:1px solid var(--border);background:var(--paper);padding:6px 12px;border-radius:2px;
+      display:inline-flex;gap:8px;align-items:center;
+    }
+    .signal-pill .label{font-size:11px}
+    .signal-pill .num{font-family:"DM Mono",monospace;font-size:12px}
+
+    .news-skeleton{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .sk{
+      background:linear-gradient(90deg,#f0ede6 25%,#e8e4dd 50%,#f0ede6 75%);
+      background-size:200% 100%;animation:pulse 1.2s infinite;height:128px;border:1px solid var(--border);
+    }
+    @keyframes pulse{0%{background-position:100% 0}100%{background-position:-100% 0}}
+
+    .events-wrap{background:var(--paper-card);border:1px solid var(--border);padding:12px 22px}
+    .bucket{margin-top:10px}
+    .bucket:first-child{margin-top:0}
+    .bucket-head{
+      display:flex;justify-content:space-between;align-items:center;padding:10px 0 8px;border-bottom:1px solid var(--border);
+      font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted);
+    }
+    .event-row{
+      display:grid;grid-template-columns:80px 1px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);
+      text-decoration:none;color:inherit;
+    }
+    .event-row:hover{background:var(--paper-card)}
+    .event-date{font-family:"DM Mono",monospace;font-size:13px;color:var(--ink-muted);padding-top:2px}
+    .today-pill{
+      display:inline-block;background:var(--accent);color:#fff;font-family:"DM Sans",sans-serif;font-size:11px;
+      border-radius:2px;padding:2px 6px;letter-spacing:.04em;
+    }
+    .event-divider{background:var(--border)}
+    .event-meta{font-size:11px;color:var(--ink-muted);margin-bottom:4px}
+    .event-title{font-family:"Playfair Display",serif;font-size:15px;line-height:1.3;margin-bottom:6px}
+    .event-bottom{font-size:12px;color:var(--ink-muted)}
+    .event-bottom a{font-size:12px}
+    .empty{padding:34px 0;text-align:center;font-family:"Playfair Display",serif;font-size:16px;color:var(--ink-muted)}
+
+    .toast{
+      position:fixed;right:18px;bottom:18px;background:var(--ink);color:#fff;font-size:13px;
+      padding:10px 12px;border-radius:3px;opacity:0;transform:translateY(6px);transition:.2s ease;z-index:80;
+    }
+    .toast.show{opacity:1;transform:translateY(0)}
+
+    #reading-pane{
+      position:fixed;top:0;right:-640px;width:min(640px,100vw);height:100vh;background:var(--paper-card);
+      border-left:1px solid var(--border);z-index:1000;transition:right .28s cubic-bezier(.4,0,.2,1);
+      display:flex;flex-direction:column;overflow:hidden;
+    }
+    .pane-top{
+      padding:16px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:10px;
+      flex-shrink:0;
+    }
+    .pane-badges{display:flex;gap:8px;min-width:0}
+    .source-badge,.topic-badge{
+      font-family:"DM Sans",sans-serif;font-size:11px;text-transform:uppercase;padding:3px 8px;border-radius:2px;border:1px solid var(--border);
+      letter-spacing:.08em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px;
+    }
+    .source-badge{background:var(--paper);color:var(--ink-muted)}
+    .topic-badge{background:var(--accent-soft);color:var(--accent)}
+    .pane-actions{display:flex;gap:12px;align-items:center}
+    .pane-close{background:none;border:none;cursor:pointer;font-size:18px;color:var(--ink-muted);padding:0;line-height:1}
+    #pane-content{flex:1;overflow-y:auto;padding:22px 26px 46px}
+    #pane-loading{font-size:13px;color:var(--ink-muted);padding-top:40px}
+    #pane-title{font-family:"Playfair Display",serif;font-size:20px;font-weight:500;line-height:1.3;margin:0 0 12px}
+    #pane-meta{font-family:"DM Sans",sans-serif;font-size:12px;color:var(--ink-muted);margin-bottom:16px}
+    .pane-divider{border-top:1px solid var(--border);margin:14px 0}
+    .pane-prose{max-width:520px;margin:0 auto}
+    .pane-prose p{font-size:15px;line-height:1.75;color:var(--ink);margin:0 0 14px}
+    .pane-prose p:first-child{font-size:16px}
+    .fallback-text{font-size:15px;color:var(--ink-muted);line-height:1.75}
+    .open-full{
+      display:inline-block;margin-top:10px;background:var(--accent);color:#fff;padding:10px 14px;border-radius:2px;
+      font-family:"DM Sans",sans-serif;font-size:13px;
+    }
+    #pane-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.15);z-index:999}
+
+    @media (max-width: 1024px){
+      .hero-row{grid-template-columns:1fr}
+      .article-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 700px){
+      .digest-head{flex-direction:column}
+      .tabs-inner{gap:10px}
+      .article-grid,.news-skeleton{grid-template-columns:1fr}
+      .main{padding:16px}
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap inner">
+      <div>
+        <div class="brand-title">Market Intelligence</div>
+        <div class="brand-sub">FINANCIAL EVENTS & SIGNALS</div>
+      </div>
+      <div class="right-meta">
+        <span id="lastUpdated">Updated --</span>
+        <button class="refresh-btn" id="refreshBtn">Refresh</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="signals-bar">
+    <div class="wrap signals-row" id="signalsRow"></div>
+  </div>
+
+  <div id="action-bar" style="
+    margin-top:100px;
+    height:52px;
+    padding:0 24px;
+    border-bottom:1px solid var(--border);
+    background:var(--paper);
+    display:flex;
+    align-items:center;
+    gap:0;
+  ">
+    <div style="flex:7; padding-right:12px;">
+      <div id="search-wrapper" style="
+        display:flex; align-items:center; gap:8px;
+        border:1px solid var(--border); background:var(--paper-card);
+        padding:0 12px; height:36px;
+        transition:border-color 0.15s;
+      ">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0; opacity:0.4;">
+          <circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="9.5" y1="9.5" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search articles, events, topics..."
+          autocomplete="off"
+          style="flex:1; border:none; outline:none; background:transparent; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--ink);"
+        />
+        <button id="search-clear" onclick="clearSearch()" style="
+          display:none; background:none; border:none; cursor:pointer;
+          font-size:16px; color:var(--ink-muted); padding:0; line-height:1;
+        ">×</button>
+      </div>
+    </div>
+
+    <div style="flex:3; padding-right:12px; position:relative;">
+      <button id="ai-toggle-btn" onclick="toggleAiDropdown()"
+        style="
+          width:100%; height:36px;
+          font-family:'DM Sans',sans-serif; font-size:12px;
+          color:var(--ink-muted); background:var(--paper-card);
+          border:1px solid var(--border); padding:0 12px;
+          cursor:pointer; display:flex; align-items:center;
+          justify-content:space-between;
+          transition:border-color 0.15s, color 0.15s;
+        "
+        onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'"
+        onmouseout="if(!aiDropdownOpen){this.style.borderColor='var(--border)';this.style.color='var(--ink-muted)'}">
+        <span>AI Digest</span>
+        <span id="ai-toggle-chevron" style="font-size:10px; transition:transform 0.15s;">▾</span>
+      </button>
+
+      <div id="ai-dropdown" style="
+        display:none;
+        position:absolute; top:40px; left:0; right:0;
+        background:var(--paper-card);
+        border:1px solid var(--border);
+        border-top:2px solid var(--accent);
+        z-index:200;
+        box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      ">
+        <div id="digest-context-indicator" style="
+          display:none; padding:8px 12px 0;
+          font-family:'DM Sans',sans-serif; font-size:11px;
+          color:var(--accent); font-style:italic;
+        "></div>
+        <div style="padding:8px 12px; display:flex; flex-direction:column; gap:4px;">
+          <button onclick="handleDigestBtn('weekly_briefing')" style="font-family:'DM Sans',sans-serif; font-size:12px; color:var(--ink); background:none; border:none; padding:7px 8px; cursor:pointer; text-align:left; transition:background 0.1s;" onmouseover="this.style.background='var(--paper)'" onmouseout="this.style.background='none'">
+            Weekly Briefing <span style="font-size:10px; color:var(--ink-muted); margin-left:4px;">~400 words</span>
+          </button>
+          <button onclick="handleDigestBtn('market_pulse')" style="font-family:'DM Sans',sans-serif; font-size:12px; color:var(--ink); background:none; border:none; padding:7px 8px; cursor:pointer; text-align:left; transition:background 0.1s;" onmouseover="this.style.background='var(--paper)'" onmouseout="this.style.background='none'">
+            Market Pulse <span style="font-size:10px; color:var(--ink-muted); margin-left:4px;">~100 words</span>
+          </button>
+          <button onclick="handleDigestBtn('topic_roundup')" style="font-family:'DM Sans',sans-serif; font-size:12px; color:var(--ink); background:none; border:none; padding:7px 8px; cursor:pointer; text-align:left; transition:background 0.1s;" onmouseover="this.style.background='var(--paper)'" onmouseout="this.style.background='none'">
+            Topic Roundup <span style="font-size:10px; color:var(--ink-muted); margin-left:4px;">~250 words</span>
+          </button>
+          <button id="flash-note-btn" onclick="handleFlashNote()" disabled style="font-family:'DM Sans',sans-serif; font-size:12px; color:var(--ink-muted); background:none; border:none; padding:7px 8px; cursor:default; text-align:left; opacity:0.4;">
+            Flash Note <span style="font-size:10px; color:var(--ink-muted); margin-left:4px;">open an article first</span>
+          </button>
+        </div>
+
+        <div id="topicInline" style="display:none; padding:0 12px 10px; gap:6px; align-items:center;">
+          <input id="topicInput" type="text" placeholder="Enter topic..."
+            style="flex:1; font-family:'DM Sans',sans-serif; font-size:12px; border:1px solid var(--border); padding:6px 10px; color:var(--ink); background:var(--paper); outline:none; width:100%; box-sizing:border-box; margin-bottom:6px;"
+            onfocus="this.style.borderColor='var(--accent)'"
+            onblur="this.style.borderColor='var(--border)'"
+            onkeydown="if(event.key==='Enter'){const v=this.value.trim();if(v)generateDigest('topic_roundup',v);}"
+          />
+          <button onclick="const v=document.getElementById('topicInput').value.trim();if(v)generateDigest('topic_roundup',v);" style="width:100%; font-family:'DM Sans',sans-serif; font-size:12px; color:white; background:var(--accent); border:none; padding:7px 12px; cursor:pointer;">
+            Generate →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:relative; flex-shrink:0;">
+      <button id="data-toggle-btn" onclick="toggleDataPopover()" title="Feed data & refresh"
+        style="width:36px; height:36px; font-family:'DM Sans',sans-serif; font-size:16px; color:var(--ink-muted); background:var(--paper-card); border:1px solid var(--border); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:border-color 0.15s, color 0.15s;"
+        onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'"
+        onmouseout="if(!dataPopoverOpen){this.style.borderColor='var(--border)';this.style.color='var(--ink-muted)'}">
+        ⊞
+      </button>
+
+      <div id="data-popover" style="
+        display:none; position:absolute; top:40px; right:0; width:320px;
+        background:var(--paper-card); border:1px solid var(--border);
+        border-top:2px solid var(--accent); z-index:200;
+        box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      ">
+        <div id="data-summary" style="display:none;"></div>
+        <div style="padding:14px 16px; display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div>
+            <div id="stat-articles" style="font-family:'DM Mono',monospace; font-size:20px; color:var(--ink);">—</div>
+            <div style="font-family:'DM Sans',sans-serif; font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-muted); margin-top:2px;">Articles</div>
+          </div>
+          <div>
+            <div id="stat-events" style="font-family:'DM Mono',monospace; font-size:20px; color:var(--ink);">—</div>
+            <div style="font-family:'DM Sans',sans-serif; font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-muted); margin-top:2px;">Upcoming Events</div>
+          </div>
+        </div>
+        <div style="padding:0 16px 10px; font-family:'DM Sans',sans-serif; font-size:11px; color:var(--ink-muted);">
+          Last refreshed: <span id="stat-updated">—</span>
+        </div>
+        <div style="padding:0 16px 12px;">
+          <div style="font-family:'DM Sans',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:6px;">Top topics</div>
+          <div id="stat-topics" style="display:flex; flex-wrap:wrap; gap:4px;"></div>
+        </div>
+        <div style="padding:10px 16px 4px; border-top:1px solid var(--border);">
+          <div style="font-family:'DM Sans',sans-serif; font-size:10px;
+            letter-spacing:0.08em; text-transform:uppercase;
+            color:var(--ink-muted); margin-bottom:8px;">
+            Signals this week
+          </div>
+          <div id="signals-summary">
+            <span style="font-family:'DM Sans',sans-serif; font-size:11px;
+              color:var(--ink-muted);">Loading…</span>
+          </div>
+          <div id="signals-run-status" style="
+            font-family:'DM Sans',sans-serif; font-size:10px;
+            color:var(--ink-muted); margin-top:6px;
+          "></div>
+        </div>
+        <div style="padding:10px 16px; border-top:1px solid var(--border); display:flex; flex-direction:column; gap:6px;">
+          <button onclick="triggerScrape()" id="btn-scrape" style="font-family:'DM Sans',sans-serif; font-size:12px; color:var(--ink); background:none; border:1px solid var(--border); padding:7px 12px; cursor:pointer; text-align:left; transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">Scrape events</button>
+          <button onclick="triggerPipeline()" id="btn-pipeline" style="font-family:'DM Sans',sans-serif; font-size:12px; color:var(--ink); background:none; border:1px solid var(--border); padding:7px 12px; cursor:pointer; text-align:left; transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">Refresh articles</button>
+          <button onclick="triggerFeedRefresh()" id="btn-feed" style="font-family:'DM Sans',sans-serif; font-size:12px; color:var(--ink); background:none; border:1px solid var(--border); padding:7px 12px; cursor:pointer; text-align:left; transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">Refresh feed cache</button>
+          <div id="data-action-status" style="font-family:'DM Sans',sans-serif; font-size:11px; color:var(--ink-muted); min-height:16px;"></div>
+        </div>
+        <div id="scheduler-status" style="padding:8px 16px 12px; border-top:1px solid var(--border); font-family:'DM Sans',sans-serif; font-size:10px; color:var(--ink-muted);"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="digest-result-card" style="
+    display:none;
+    max-width:860px;
+    margin:12px auto;
+    border:1px solid var(--border);
+    border-top:3px solid var(--accent);
+    background:var(--paper-card);
+    padding:20px 24px;
+  ">
+    <div style="display:flex; justify-content:flex-end; margin-bottom:8px;">
+      <button onclick="dismissDigest()" style="background:none; border:none; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; color:var(--ink-muted);">× Dismiss</button>
+    </div>
+    <div id="digest-loading" style="display:none; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--ink-muted);">
+      <div style="height:2px; background:var(--border); margin-bottom:16px; overflow:hidden;">
+        <div id="digest-progress" style="height:100%; width:0%; background:var(--accent); transition:width 0.1s linear;"></div>
+      </div>
+      Generating briefing...
+    </div>
+    <div id="digest-content" style="display:none;">
+      <div id="digest-format-label" style="font-family:'DM Sans',sans-serif; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:14px;"></div>
+      <div id="digest-text" style="font-family:'DM Sans',sans-serif; font-size:14px; line-height:1.75; color:var(--ink);"></div>
+      <div id="digest-meta" style="margin-top:16px; padding-top:12px; border-top:1px solid var(--border); font-family:'DM Sans',sans-serif; font-size:11px; color:var(--ink-muted);"></div>
+    </div>
+  </div>
+
+  <section class="tabs-bar" id="tabs-bar">
+    <div class="wrap tabs-inner">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="news">News<span id="signal-count-indicator" style="
+          display:none;
+          font-family:'DM Mono',monospace; font-size:10px;
+          color:var(--accent); margin-left:6px;
+        "></span></button>
+        <button class="tab-btn" data-tab="events">Events</button>
+        <button class="tab-btn" data-tab="signals" onclick="switchTab('signals')">
+          Signals
+          <span id="signals-tab-count" style="
+            font-family:'DM Mono',monospace; font-size:10px;
+            color:var(--accent); margin-left:6px; display:none;
+          "></span>
+        </button>
+      </div>
+      <div id="topic-filter-wrapper">
+        <div class="topic-select-wrap">
+          <select id="topicSelect" class="topic-select">
+            <option value="">All topics</option>
+          </select>
+        </div>
+      </div>
+      <button onclick="refreshNewsFeed()" id="refresh-feed-btn" style="
+        font-family:'DM Sans',sans-serif; font-size:11px;
+        color:var(--ink-muted); background:none; border:none;
+        cursor:pointer; padding:4px 8px;
+        transition:color 0.15s;
+        flex-shrink:0;
+      "
+      onmouseover="this.style.color='var(--accent)'"
+      onmouseout="this.style.color='var(--ink-muted)'">
+        ↻ Refresh
+      </button>
+      <div id="personalisation-toggle" style="
+        display:flex; align-items:center; gap:6px; flex-shrink:0;
+        position:relative;
+      ">
+        <button id="pref-toggle-btn" onclick="togglePersonalisation()" style="
+          font-family:'DM Sans',sans-serif; font-size:11px;
+          padding:4px 10px; cursor:pointer;
+          border:1px solid var(--accent); color:var(--accent);
+          background:var(--accent-soft, #fef0f0);
+          transition:all 0.15s;
+        ">
+          ★ For you
+        </button>
+        <button onclick="openPrefsPanel()" style="
+          font-family:'DM Sans',sans-serif; font-size:11px;
+          color:var(--ink-muted); background:none; border:none;
+          cursor:pointer; padding:4px;
+        " title="Customise topics">⚙</button>
+        <div id="prefs-panel" style="
+          display:none;
+          position:absolute; top:48px; right:0;
+          width:300px; max-height:400px; overflow-y:auto;
+          background:var(--paper-card);
+          border:1px solid var(--border);
+          border-top:2px solid var(--accent);
+          z-index:300;
+          box-shadow:0 4px 12px rgba(0,0,0,0.08);
+          padding:12px 16px;
+        ">
+          <div style="font-family:'DM Sans',sans-serif; font-size:11px;
+            letter-spacing:0.06em; text-transform:uppercase;
+            color:var(--ink-muted); margin-bottom:10px;">
+            Preferred topics
+          </div>
+          <div id="prefs-topic-list" style="
+            display:flex; flex-direction:column; gap:6px;
+          "></div>
+          <div style="margin-top:12px; padding-top:10px;
+            border-top:1px solid var(--border);
+            display:flex; gap:8px;">
+            <button onclick="savePrefsAndClose()" style="
+              font-family:'DM Sans',sans-serif; font-size:12px;
+              color:white; background:var(--accent); border:none;
+              padding:6px 14px; cursor:pointer;
+            ">Save</button>
+            <button onclick="closePrefsPanel()" style="
+              font-family:'DM Sans',sans-serif; font-size:12px;
+              color:var(--ink-muted); background:none;
+              border:1px solid var(--border); padding:6px 14px;
+              cursor:pointer;
+            ">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+    <div id="search-results-panel" style="display:none; max-width:1200px; margin:0 auto; padding:0 24px 48px;">
+      <div style="
+        padding: 16px 0 12px;
+        border-bottom: 1px solid var(--border);
+        display: flex; justify-content: space-between; align-items: baseline;
+        margin-bottom: 24px;
+      ">
+        <span id="search-results-label" style="
+          font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-muted);
+        "></span>
+        <button onclick="clearSearch()" style="
+          font-family: 'DM Sans', sans-serif; font-size: 12px;
+          color: var(--accent); background: none; border: none; cursor: pointer;
+        ">Clear search</button>
+      </div>
+
+      <div id="search-loading" style="display:none; text-align:center; padding:40px 0;">
+        <span style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--ink-muted);">
+          Searching...
+        </span>
+      </div>
+
+      <div id="search-results-grid" style="
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--border);
+      "></div>
+
+      <div id="search-no-results" style="
+        display:none; text-align:center; padding:60px 0;
+        font-family:'Playfair Display',serif; font-size:17px; color:var(--ink-muted);
+      ">No results found.</div>
+    </div>
+    <section id="news-panel"></section>
+    <section id="events-panel" style="display:none"></section>
+    <div id="signals-panel" style="display:none; padding-bottom:60px;">
+      <div id="signals-scorecard-view">
+        <div id="sector-scorecard" style="margin-bottom: 24px;">
+          <div style="display:flex; justify-content:space-between; align-items:center;
+                      margin-bottom: 12px;">
+            <div style="font-family: 'DM Sans', sans-serif; font-size: 11px;
+                        font-weight: 600; letter-spacing: 0.08em; color: #888;
+                        text-transform: uppercase;">
+              Sector Overview
+            </div>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span id="scorecard-timestamp" style="font-family:'DM Mono',monospace;
+                    font-size:10px; color:#aaa;"></span>
+              <button id="scorecard-refresh-btn"
+                      onclick="refreshSectorScores()"
+                      style="font-family:'DM Sans',sans-serif; font-size:11px;
+                            color:#c8102e; background:none; border:none;
+                            cursor:pointer; padding:0; font-weight:500;">
+                ↻ Refresh
+              </button>
+            </div>
+          </div>
+          <div id="scorecard-rows" style="border-top: 1px solid #e8e4dc;"></div>
+        </div>
+      </div>
+      <div id="signals-detail-view" style="display:none; margin-bottom:24px;"></div>
+      <div id="signals-theme-view" style="display:none; margin-bottom:24px;"></div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <div id="reading-pane" style="
+    position: fixed; top: 0; right: -640px;
+    width: min(640px, 100vw); height: 100vh;
+    background: var(--paper-card);
+    border-left: 1px solid var(--border);
+    box-shadow: -8px 0 32px rgba(0,0,0,0.08);
+    z-index: 1000;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex; flex-direction: column; overflow: hidden;
+  ">
+    <div style="
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-shrink: 0; background: var(--paper);
+    ">
+      <div style="display:flex; gap:8px; align-items:center;">
+        <span id="pane-source-badge" style="
+          font-family:'DM Sans',sans-serif; font-size:11px;
+          letter-spacing:0.06em; text-transform:uppercase;
+          background:var(--paper); border:1px solid var(--border);
+          padding:3px 8px; border-radius:2px; color:var(--ink-muted);
+        "></span>
+        <span id="pane-topic-badge" style="
+          font-family:'DM Sans',sans-serif; font-size:11px;
+          letter-spacing:0.06em; text-transform:uppercase;
+          background:var(--accent-soft); border:1px solid var(--accent);
+          padding:3px 8px; border-radius:2px; color:var(--accent);
+          display:none;
+        "></span>
+      </div>
+      <button onclick="closePane()" style="
+        background:none; border:none; cursor:pointer;
+        font-size:20px; color:var(--ink-muted); padding:0; line-height:1;
+      ">×</button>
+    </div>
+    <div style="flex:1; overflow-y:auto; padding:32px 36px 60px;">
+      <h1 id="pane-title" style="
+        font-family:'Playfair Display',serif; font-size:26px;
+        font-weight:500; line-height:1.25; color:var(--ink);
+        margin:0 0 16px; letter-spacing:-0.01em;
+      "></h1>
+
+      <div id="pane-meta" style="
+        font-family:'DM Sans',sans-serif; font-size:12px;
+        color:var(--ink-muted); margin-bottom:24px;
+        padding-bottom:20px; border-bottom:1px solid var(--border);
+      "></div>
+
+      <div id="pane-summary" style="
+        font-family:'DM Sans',sans-serif; font-size:15px;
+        line-height:1.75; color:var(--ink);
+        margin-bottom:32px; display:none;
+      "></div>
+
+      <div id="pane-signal-section" style="display:none;">
+      </div>
+
+      <div id="pane-body" style="
+        font-family:'DM Sans',sans-serif; font-size:15px;
+        line-height:1.75; color:var(--ink); display:none;
+      "></div>
+
+      <p id="pane-no-content" style="
+        font-family:'DM Sans',sans-serif; font-size:14px;
+        color:var(--ink-muted); font-style:italic; display:none;
+      ">Full article available at source.</p>
+
+      <div id="pane-cta" style="margin-top:32px; display:none;">
+        <a id="pane-external-link" href="#" target="_blank"
+           rel="noopener" style="
+          display:inline-block;
+          font-family:'DM Sans',sans-serif; font-size:13px;
+          color:var(--accent); border:1px solid var(--accent);
+          padding:10px 20px; text-decoration:none;
+          transition:background 0.15s;
+        " onmouseover="this.style.background='var(--accent-soft)'"
+           onmouseout="this.style.background='transparent'">
+          Read full article →
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="pane-backdrop" onclick="closePane()"></div>
+
+  <script>
+    let activeTab = "news";
+    let newsLoaded = false;
+    let eventsLoaded = false;
+    let signalsLoaded = false;
+    let sectorScoresData = null;
+    let openSectorKey = null;
+    let openSectorPanelEl = null;
+    let openSectorRowEl = null;
+    let currentDetailSectorKey = null;
+    let openThemeId = null;
+    let openThemeName = null;
+    let openThemeSectorKey = null;
+    let _themeBriefExpanded = false;
+    let _themeBriefLoading = false;
+    let _themeBriefLoadingTimer = null;
+    let _currentThemeBriefData = null;
+    let _currentThemeArticles = [];
+    let _newsBriefExpanded = false;
+    let _newsBriefLoading = false;
+    let _newsBriefLoadingTimer = null;
+    let currentTopic = "";
+    let allSignals = [];
+    let newsItems = [];
+    let eventsItems = [];
+    let searchTimeout = null;
+    let currentQuery = "";
+    let currentSearchResults = [];
+    let currentPaneItem = null;
+    let _pipelinePollInterval = null;
+    let aiDropdownOpen = false;
+    let dataPopoverOpen = false;
+    let prefsPanelOpen = false;
+    let tempSelectedTopics = [];
+    let personalisationActive = true;
+    let progressInterval = null;
+    const _signalCache = {};
+    const DEFAULT_PREFERRED_TOPICS = [
+      "Geopolitics",
+      "Macro",
+      "European defense ramp",
+      "US defense modernization",
+      "Trade policy & tariffs",
+      "Energy storage & batteries",
+      "Renewable energy (solar & wind)",
+      "Natural gas as bridge fuel",
+      "Interest rate & central bank policy",
+      "Central Bank",
+    ];
+    const PREFS_KEY = "market_radar_topic_prefs";
+    const SECTOR_ORDER = ["macro", "fixed_income", "equities", "technology", "geopolitics", "energy"];
+    const SECTOR_LABELS = {
+      macro: "Macro",
+      fixed_income: "Fixed Income",
+      equities: "Equities",
+      technology: "Technology",
+      geopolitics: "Geopolitics",
+      energy: "Energy",
+    };
+    window.__newsPaneItems = [];
+    window.__eventsPaneItems = [];
+
+    function showToast(msg) {
+      const t = document.getElementById("toast");
+      t.textContent = msg;
+      t.classList.add("show");
+      setTimeout(() => t.classList.remove("show"), 3000);
+    }
+
+    async function api(url, opts = {}) {
+      const res = await fetch(url, opts);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    }
+
+    function fmtDate(dateStr) {
+      if (!dateStr) return "";
+      try {
+        const dt = new Date(dateStr);
+        if (isNaN(dt)) return "";
+        const now = new Date();
+        const diffMs = now - dt;
+        const diffMins = Math.floor(diffMs / 60000);
+        const diffHours = Math.floor(diffMs / 3600000);
+        const diffDays = Math.floor(diffMs / 86400000);
+
+        if (diffMins < 60) return `${diffMins}m ago`;
+        if (diffHours < 24) return `${diffHours}h ago`;
+        if (diffDays === 1) return "Yesterday";
+        if (diffDays < 7) return `${diffDays}d ago`;
+        return dt.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+      } catch (e) {
+        return "";
+      }
+    }
+
+    function toTitleCase(str) {
+      const minors = new Set(["a","an","the","and","but","or","for","nor","on","at","to","by","in","of","up","as","is","vs"]);
+      return String(str || "").toLowerCase().split(" ").map((word, i) => {
+        if (i === 0 || !minors.has(word)) {
+          return word.charAt(0).toUpperCase() + word.slice(1);
+        }
+        return word;
+      }).join(" ");
+    }
+
+    function escapeHtml(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    const PAYWALL_SIGNALS = [
+      "email required", "password required", "sign in to read",
+      "subscribe to continue", "create a free account",
+      "please enter your email", "reset-password",
+      "already have an account", "start your free trial",
+      "this content is for subscribers"
+    ];
+
+    function isPaywalled(text) {
+      if (!text) return false;
+      const lower = String(text).toLowerCase().slice(0, 500);
+      return PAYWALL_SIGNALS.some((signal) => lower.includes(signal));
+    }
+
+    function escHtml(str) {
+      return escapeHtml(str);
+    }
+
+    function renderSignalsTicker(items) {
+      const row = document.getElementById("signalsRow");
+      row.innerHTML = "";
+      (items || []).forEach((it, idx) => {
+        const wrap = document.createElement("span");
+        wrap.className = "sig-pill";
+        const title = String(it.title || "");
+        const sigNum = title.match(/([+-]\d+(\.\d+)?%)/);
+        const base = sigNum ? title.replace(sigNum[1], "").trim() : title;
+        const num = sigNum ? sigNum[1] : "";
+        const cls = num.startsWith("+") ? "sig-up" : (num.startsWith("-") ? "sig-dn" : "");
+        wrap.innerHTML = `<span class="sig-name">${escapeHtml(base)}</span>${num ? `<span class="sig-num ${cls}">${escapeHtml(num)}</span>` : ""}`;
+        row.appendChild(wrap);
+        if (idx < items.length - 1) {
+          const sep = document.createElement("span");
+          sep.className = "sep";
+          sep.textContent = "|";
+          row.appendChild(sep);
+        }
+      });
+    }
+
+    function renderSignalPills(items) {
+      if (!items.length) return "";
+      const pills = items.map((s) => {
+        const numMatch = String(s.title || "").match(/([+-]\d+(\.\d+)?%)/);
+        const cls = numMatch && numMatch[1].startsWith("+") ? "sig-up" : "sig-dn";
+        return `<span class="signal-pill"><span class="label">${escapeHtml(s.source_name || s.title || "Signal")}</span><span class="num ${numMatch ? cls : ""}">${escapeHtml(numMatch ? numMatch[1] : String(s.score || ""))}</span></span>`;
+      }).join("");
+      return `<div class="signals-section"><div class="section-label">Market snapshot</div><div class="signals-pills">${pills}</div></div>`;
+    }
+
+    function renderNewsSkeleton() {
+      document.getElementById("news-panel").innerHTML =
+        `<div class="news-skeleton">${Array.from({ length: 6 }).map(() => "<div class='sk'></div>").join("")}</div>`;
+    }
+
+    function renderNews() {
+      const panel = document.getElementById("news-panel");
+      if (!newsItems.length) {
+        panel.innerHTML = `<div class="empty">No news available for this topic.</div>`;
+        return;
+      }
+
+      const heroes = newsItems.slice(0, 2);
+      const rest = newsItems.slice(2);
+      window.__newsPaneItems = newsItems;
+
+      const heroHtml = heroes.map((it, idx) => `
+        <article class="hero-card" data-item-title="${escapeHtml(it.title || "")}"
+          data-topic="${escapeHtml(it.topic || "")}"
+          data-title="${escapeHtml(it.title || "")}"
+          data-summary="${escapeHtml(it.description || "")}"
+          data-source="${escapeHtml(it.source_name || "")}"
+          data-date="${escapeHtml((it.date_published || "").substring(0, 10))}"
+          data-sentiment="${escapeHtml(it.sentiment || "neutral")}"
+          data-url="${escapeHtml(it.url || "")}">
+          <div class="meta-row">
+            <div class="meta-tags"><span>${escapeHtml(it.source_name || "Unknown")}</span><span>·</span><span>${escapeHtml(it.topic || "")}</span></div>
+            <span style="
+              font-family:'DM Sans',sans-serif; font-size:11px;
+              color:var(--ink-muted);
+            ">${fmtDate(it.date_published || "")}</span>
+          </div>
+          <div class="hero-title title-clickable" data-idx="${idx}">${escapeHtml(it.title || "")}</div>
+          <p class="hero-desc">${escapeHtml(it.description || "")}</p>
+          <div class="signal-badge-container">${renderSignalBadge(it)}</div>
+          ${it.url ? `<a href="${escapeHtml(it.url)}" class="pane-link" data-idx="${idx}" target="_blank" rel="noopener">Read →</a>` : ""}
+        </article>
+      `).join("");
+
+      const gridHtml = rest.map((it, i) => {
+        const idx = i + 2;
+        return `
+          <article class="article-card" data-item-title="${escapeHtml(it.title || "")}"
+            data-topic="${escapeHtml(it.topic || "")}"
+            data-title="${escapeHtml(it.title || "")}"
+            data-summary="${escapeHtml(it.description || "")}"
+            data-source="${escapeHtml(it.source_name || "")}"
+            data-date="${escapeHtml((it.date_published || "").substring(0, 10))}"
+            data-sentiment="${escapeHtml(it.sentiment || "neutral")}"
+            data-url="${escapeHtml(it.url || "")}">
+            <div class="meta-row">
+              <div class="meta-tags"><span>${escapeHtml(it.source_name || "Unknown")}</span><span>·</span><span>${escapeHtml(it.topic || "")}</span></div>
+              <span style="
+                font-family:'DM Sans',sans-serif; font-size:11px;
+                color:var(--ink-muted);
+              ">${fmtDate(it.date_published || "")}</span>
+            </div>
+            <div class="article-title title-clickable" data-idx="${idx}">${escapeHtml(it.title || "")}</div>
+            <p class="article-desc">${escapeHtml(it.description || "")}</p>
+            <div class="signal-badge-container">${renderSignalBadge(it)}</div>
+            ${it.url ? `<a href="${escapeHtml(it.url)}" class="pane-link" data-idx="${idx}" target="_blank" rel="noopener">Read →</a>` : ""}
+          </article>
+        `;
+      }).join("");
+
+      panel.innerHTML = `
+        <div id="news-brief-card" style="display:none; margin-bottom:20px;"></div>
+        <div class="hero-row">${heroHtml}</div>
+        <div class="article-grid">${gridHtml}</div>
+        ${renderSignalPills(allSignals)}
+      `;
+
+      showNewsBriefReady(currentTopic || "All topics");
+    }
+
+    function eventBucketLabel(daysUntil) {
+      if (daysUntil <= 1) return "Today & tomorrow";
+      if (daysUntil <= 7) return "This week";
+      if (daysUntil <= 14) return "Next week";
+      if (daysUntil <= 30) return "This month";
+      return "Coming up";
+    }
+
+    function shortEventDate(iso) {
+      const d = new Date(iso);
+      if (isNaN(d)) return "";
+      const now = new Date();
+      const opts = d.getFullYear() === now.getFullYear()
+        ? { month: "short", day: "numeric" }
+        : { month: "short", day: "numeric", year: "numeric" };
+      return d.toLocaleDateString("en-US", opts);
+    }
+
+    function renderEvents() {
+      const panel = document.getElementById("events-panel");
+      if (!eventsItems.length) {
+        panel.innerHTML = `<div class="empty">No upcoming events in the next 30 days.</div>`;
+        return;
+      }
+      window.__eventsPaneItems = eventsItems;
+
+      const now = new Date();
+      const groups = {};
+      eventsItems.forEach((ev, idx) => {
+        const d = new Date(ev.date_published || "");
+        if (isNaN(d)) return;
+        const daysUntil = Math.ceil((d - now) / 86400000);
+        const label = eventBucketLabel(daysUntil);
+        if (!groups[label]) groups[label] = [];
+        groups[label].push({ ...ev, idx, daysUntil });
+      });
+
+      const order = ["Today & tomorrow", "This week", "Next week", "This month", "Coming up"];
+      const bucketsHtml = order.filter((b) => groups[b] && groups[b].length).map((bucket) => {
+        const rows = groups[bucket].map((e) => {
+          const isToday = e.daysUntil <= 0;
+          const left = isToday ? `<span class="today-pill">TODAY</span>` : escapeHtml(shortEventDate(e.date_published));
+          return `
+            <a class="event-row title-clickable" data-idx="${e.idx}" href="${escapeHtml(e.url || "#")}">
+              <div class="event-date">${left}</div>
+              <div class="event-divider"></div>
+              <div>
+                <div class="event-meta">${escapeHtml(e.source_name || "Unknown")} · ${escapeHtml(e.topic || "")}</div>
+                <div class="event-title">${escapeHtml(toTitleCase(e.title || ""))}</div>
+                <div class="event-bottom">${escapeHtml((e.extra && e.extra.format) ? e.extra.format : "Event")} · ${e.url ? `<span style="color:var(--accent)">Register →</span>` : ""}</div>
+              </div>
+            </a>
+          `;
+        }).join("");
+        return `
+          <section class="bucket">
+            <div class="bucket-head"><span>${bucket}</span><span>${groups[bucket].length} events</span></div>
+            ${rows}
+          </section>
+        `;
+      }).join("");
+
+      panel.innerHTML = `<div class="events-wrap">${bucketsHtml || `<div class="empty">No upcoming events in the next 30 days.</div>`}</div>`;
+    }
+
+    function toggleAiDropdown() {
+      aiDropdownOpen = !aiDropdownOpen;
+      const dropdown = document.getElementById("ai-dropdown");
+      const chevron = document.getElementById("ai-toggle-chevron");
+      const btn = document.getElementById("ai-toggle-btn");
+      dropdown.style.display = aiDropdownOpen ? "block" : "none";
+      chevron.style.transform = aiDropdownOpen ? "rotate(180deg)" : "rotate(0deg)";
+      btn.style.borderColor = aiDropdownOpen ? "var(--accent)" : "var(--border)";
+      btn.style.color = aiDropdownOpen ? "var(--accent)" : "var(--ink-muted)";
+      if (aiDropdownOpen) {
+        dataPopoverOpen = false;
+        document.getElementById("data-popover").style.display = "none";
+        const dataBtn = document.getElementById("data-toggle-btn");
+        dataBtn.style.borderColor = "var(--border)";
+        dataBtn.style.color = "var(--ink-muted)";
+      }
+    }
+
+    function toggleDataPopover() {
+      dataPopoverOpen = !dataPopoverOpen;
+      const popover = document.getElementById("data-popover");
+      const btn = document.getElementById("data-toggle-btn");
+      popover.style.display = dataPopoverOpen ? "block" : "none";
+      btn.style.borderColor = dataPopoverOpen ? "var(--accent)" : "var(--border)";
+      btn.style.color = dataPopoverOpen ? "var(--accent)" : "var(--ink-muted)";
+      if (dataPopoverOpen) {
+        aiDropdownOpen = false;
+        document.getElementById("ai-dropdown").style.display = "none";
+        document.getElementById("ai-toggle-chevron").style.transform = "rotate(0deg)";
+        const aiBtn = document.getElementById("ai-toggle-btn");
+        aiBtn.style.borderColor = "var(--border)";
+        aiBtn.style.color = "var(--ink-muted)";
+        loadDataStats();
+      }
+    }
+
+    function dismissDigest() {
+      document.getElementById("digest-result-card").style.display = "none";
+    }
+
+    async function loadDataStats() {
+      try {
+        const [stats, scheduler] = await Promise.all([
+          fetch("/api/news/stats").then((r) => r.json()),
+          fetch("/api/scheduler/status").then((r) => r.json()),
+        ]);
+
+        const byType = stats.by_type || {};
+        document.getElementById("stat-articles").textContent = Number(byType.article || 0).toLocaleString();
+        document.getElementById("stat-events").textContent = Number(byType.event || 0).toLocaleString();
+
+        const updatedAt = stats.generated_at || "";
+        document.getElementById("stat-updated").textContent = updatedAt ? updatedAt.replace("T", " ").slice(0, 16) : "-";
+
+        const total = Number(stats.total || 0);
+        const summaryEl = document.getElementById("data-summary");
+        if (summaryEl) summaryEl.textContent = `${total.toLocaleString()} items`;
+
+        const topicsEl = document.getElementById("stat-topics");
+        topicsEl.innerHTML = "";
+        (stats.by_topic || []).slice(0, 8).forEach((entry) => {
+          const topic = entry[0];
+          const count = entry[1];
+          const pill = document.createElement("span");
+          pill.style.cssText = `
+            font-family:'DM Sans',sans-serif; font-size:11px;
+            color:var(--ink-muted); background:var(--paper);
+            border:1px solid var(--border); padding:3px 8px;
+          `;
+          pill.textContent = `${topic} (${count})`;
+          topicsEl.appendChild(pill);
+        });
+
+        const schedEl = document.getElementById("scheduler-status");
+        if (scheduler.running && scheduler.jobs) {
+          const jobStr = scheduler.jobs
+            .map((j) => `${j.id}: next run ${j.next_run ? j.next_run.slice(0, 16) : "not scheduled"}`)
+            .join(" · ");
+          schedEl.textContent = `Scheduler: ${jobStr}`;
+        } else {
+          schedEl.textContent = "Scheduler: not running";
+        }
+
+        try {
+          const signals = await fetch("/api/signals/summary?days=7").then((r) => r.json());
+          const signalsEl = document.getElementById("signals-summary");
+          if (signalsEl && signals.sectors && signals.sectors.length > 0) {
+            const top = signals.sectors.slice(0, 8);
+            signalsEl.innerHTML = top.map((s) => {
+              const sentScore = s.sentiment_score || 0;
+              const dir = sentScore > 0.2 ? "bullish" : sentScore < -0.2 ? "bearish" : "neutral";
+              const dirColor = dir === "bullish" ? "#2d7a3a" : dir === "bearish" ? "#c8102e" : "#6b6b6b";
+              const barWidth = Math.round((s.avg_confidence || 0) * 100);
+              const label = s.sector.split(".").pop().replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+              const domain = s.sector.split(".")[0].replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+              return `
+                <div style="margin-bottom:8px;">
+                  <div style="display:flex; justify-content:space-between;
+                    align-items:baseline; margin-bottom:2px;">
+                    <span style="font-family:'DM Sans',sans-serif; font-size:11px;
+                      color:var(--ink);">${label}</span>
+                    <span style="font-family:'DM Sans',sans-serif; font-size:10px;
+                      color:var(--ink-muted);">${domain} · ${s.count}</span>
+                  </div>
+                  <div style="height:3px; background:var(--border); position:relative;">
+                    <div style="position:absolute; left:0; top:0; height:100%;
+                      width:${barWidth}%; background:${dirColor};
+                      transition:width 0.3s ease;"></div>
+                  </div>
+                </div>
+              `;
+            }).join("");
+
+            const runEl = document.getElementById("signals-run-status");
+            if (runEl && signals.last_run) {
+              const run = signals.last_run;
+              const status = run.status === "running"
+                ? `Enriching articles… (${run.succeeded || 0} done)`
+                : run.status === "success"
+                ? `${run.succeeded} articles enriched · ${run.finished_at ? run.finished_at.slice(0, 16).replace("T", " ") : ""}`
+                : "Not yet run";
+              runEl.textContent = `NLP signals: ${status}`;
+            }
+          }
+        } catch (e) {
+          // Signals not available yet, skip silently
+        }
+      } catch (e) {
+        const summaryEl = document.getElementById("data-summary");
+        if (summaryEl) summaryEl.textContent = "error loading stats";
+      }
+    }
+
+    async function loadSignalsForItems(items) {
+      try {
+        const res = await fetch("/api/signals/search?days=7&limit=100&min_impact=0.3");
+        const data = await res.json();
+        (data.items || []).forEach((sig) => {
+          const key = (sig.title || "").slice(0, 60).toLowerCase().trim();
+          _signalCache[key] = sig;
+        });
+        await refreshSignalBadges();
+        await updateSignalCount();
+      } catch (e) {
+        // Signals not available, skip silently
+      }
+    }
+
+    function getSignalForItem(item) {
+      const key = (item.title || "").slice(0, 60).toLowerCase().trim();
+      return _signalCache[key] || null;
+    }
+
+    function renderSignalBadge(item) {
+      const sig = getSignalForItem(item);
+      if (!sig) return "";
+      const sectors = (sig.sector_signals || []).sort((a, b) => b.confidence - a.confidence);
+      const topSector = sectors[0];
+      if (!topSector) return "";
+      const label = topSector.sector.split(".").pop().replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+      const dirColor = topSector.direction === "bullish" ? "#2d7a3a"
+        : topSector.direction === "bearish" ? "#c8102e"
+        : "#6b6b6b";
+      const summary = sig.summary_signal || "";
+      return `
+        <div style="margin-top:8px; padding-top:8px;
+          border-top:1px solid var(--border);">
+          ${summary ? `
+            <div style="font-family:'DM Sans',sans-serif; font-size:11px;
+              color:var(--ink-muted); line-height:1.4; margin-bottom:5px;
+              font-style:italic;">
+              "${escapeHtml(summary)}"
+            </div>
+          ` : ""}
+          <span style="
+            display:inline-block;
+            font-family:'DM Sans',sans-serif; font-size:10px;
+            letter-spacing:0.04em; text-transform:uppercase;
+            color:${dirColor}; border:1px solid ${dirColor};
+            padding:2px 6px;
+          ">${escapeHtml(label)} · ${escapeHtml(topSector.direction)}</span>
+          ${sig.market_impact_score >= 0.7 ? `
+            <span style="
+              display:inline-block; margin-left:4px;
+              font-family:'DM Sans',sans-serif; font-size:10px;
+              background:var(--accent); color:white;
+              padding:2px 6px;
+            ">HIGH IMPACT</span>
+          ` : ""}
+        </div>
+      `;
+    }
+
+    async function refreshSignalBadges() {
+      document.querySelectorAll("[data-item-title]").forEach((card) => {
+        const title = card.dataset.itemTitle || "";
+        const key = title.slice(0, 60).toLowerCase().trim();
+        const sig = _signalCache[key];
+        if (sig) {
+          const badgeContainer = card.querySelector(".signal-badge-container");
+          if (badgeContainer) {
+            badgeContainer.innerHTML = renderSignalBadge({ title });
+          }
+        }
+      });
+    }
+
+    async function updateSignalCount() {
+      try {
+        const status = await fetch("/api/signals/status").then((r) => r.json());
+        const count = status.succeeded || 0;
+        const indicator = document.getElementById("signal-count-indicator");
+        if (indicator) {
+          if (count > 0) {
+            indicator.textContent = `${count} signals`;
+            indicator.style.display = "inline";
+          } else {
+            indicator.style.display = "none";
+          }
+        }
+      } catch (e) {}
+    }
+
+    async function triggerScrape() {
+      const btn = document.getElementById("btn-scrape");
+      const status = document.getElementById("data-action-status");
+      btn.disabled = true;
+      btn.textContent = "Scraping...";
+      status.textContent = "";
+      try {
+        const res = await fetch("/api/scrape", { method: "POST" });
+        const data = await res.json();
+        status.textContent = `✓ Scrape complete — ${data.events_added || 0} new events`;
+        await loadDataStats();
+      } catch (e) {
+        status.textContent = "✗ Scrape failed";
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Scrape events";
+      }
+    }
+
+    async function triggerPipeline() {
+      const btn = document.getElementById("btn-pipeline");
+      const status = document.getElementById("data-action-status");
+
+      const currentState = await fetch("/api/news/pipeline/status")
+        .then((r) => r.json())
+        .catch(() => null);
+      if (currentState && currentState.running) {
+        status.textContent = "Pipeline already running...";
+        startPipelinePolling();
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = "Starting pipeline...";
+      status.textContent = "";
+      try {
+        await fetch("/api/news/pipeline/run", { method: "POST" });
+        startPipelinePolling();
+      } catch (e) {
+        status.textContent = "✗ Failed to start pipeline";
+        btn.disabled = false;
+        btn.textContent = "Refresh articles";
+      }
+    }
+
+    function startPipelinePolling() {
+      const btn = document.getElementById("btn-pipeline");
+      const status = document.getElementById("data-action-status");
+
+      clearInterval(_pipelinePollInterval);
+      _pipelinePollInterval = setInterval(async () => {
+        try {
+          const state = await fetch("/api/news/pipeline/status").then((r) => r.json());
+
+          if (state.running) {
+            const elapsed = state.elapsed_seconds
+              ? ` (${Math.floor(state.elapsed_seconds / 60)}m ${state.elapsed_seconds % 60}s)`
+              : "";
+            btn.disabled = true;
+            btn.textContent = `Running...${elapsed}`;
+            status.textContent = "Pipeline in progress — this takes ~10 min";
+          } else {
+            clearInterval(_pipelinePollInterval);
+            btn.disabled = false;
+            btn.textContent = "Refresh articles";
+
+            if (state.status === "success") {
+              const diff = (state.articles_after || 0) - (state.articles_before || 0);
+              const diffStr = diff > 0 ? ` (+${diff} new)` : "";
+              status.textContent = `✓ Pipeline complete${diffStr} — finished ${state.finished_at || ""}`;
+              await loadDataStats();
+            } else if (state.status === "error") {
+              status.textContent = `✗ Pipeline error: ${state.error || "unknown"}`;
+            }
+          }
+        } catch (e) {
+          clearInterval(_pipelinePollInterval);
+          btn.disabled = false;
+          btn.textContent = "Refresh articles";
+        }
+      }, 5000);
+    }
+
+    async function triggerFeedRefresh() {
+      const btn = document.getElementById("btn-feed");
+      const status = document.getElementById("data-action-status");
+      btn.disabled = true;
+      btn.textContent = "Refreshing...";
+      try {
+        await fetch("/api/news/refresh", { method: "POST" });
+        status.textContent = "✓ Feed cache refreshed";
+        await loadDataStats();
+      } catch (e) {
+        status.textContent = "✗ Refresh failed";
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Refresh feed cache";
+      }
+    }
+
+    function loadTopicPrefs() {
+      try {
+        const stored = localStorage.getItem(PREFS_KEY);
+        if (stored) return JSON.parse(stored);
+      } catch (e) {}
+      return { preferredTopics: DEFAULT_PREFERRED_TOPICS, usePrefs: true };
+    }
+
+    function saveTopicPrefs(prefs) {
+      try {
+        localStorage.setItem(PREFS_KEY, JSON.stringify(prefs));
+      } catch (e) {}
+    }
+
+    async function refreshNewsFeed() {
+      const btn = document.getElementById("refresh-feed-btn");
+      if (btn) {
+        btn.textContent = "↻ Refreshing…";
+        btn.disabled = true;
+      }
+      try {
+        await fetch("/api/news/refresh", { method: "POST" });
+        newsLoaded = false;
+        await loadNews();
+      } catch (e) {
+        console.error("Refresh failed", e);
+      } finally {
+        if (btn) {
+          btn.textContent = "↻ Refresh";
+          btn.disabled = false;
+        }
+      }
+    }
+
+    function togglePersonalisation() {
+      personalisationActive = !personalisationActive;
+      const btn = document.getElementById("pref-toggle-btn");
+      if (personalisationActive) {
+        btn.style.background = "var(--accent-soft, #fef0f0)";
+        btn.style.color = "var(--accent)";
+        btn.style.borderColor = "var(--accent)";
+        btn.textContent = "★ For you";
+      } else {
+        btn.style.background = "none";
+        btn.style.color = "var(--ink-muted)";
+        btn.style.borderColor = "var(--border)";
+        btn.textContent = "☆ For you";
+      }
+      const prefs = loadTopicPrefs();
+      saveTopicPrefs({ ...prefs, usePrefs: personalisationActive });
+      newsLoaded = false;
+      loadNews();
+    }
+
+    async function openPrefsPanel() {
+      prefsPanelOpen = true;
+      const panel = document.getElementById("prefs-panel");
+      panel.style.display = "block";
+
+      const prefs = loadTopicPrefs();
+      tempSelectedTopics = [...(prefs.preferredTopics || [])];
+
+      try {
+        const res = await fetch("/api/news/topics");
+        const data = await res.json();
+        const topicsRaw = data.topics || [];
+        const topics = topicsRaw.map((t) => {
+          if (Array.isArray(t)) return { topic: t[0], count: t[1] || 0 };
+          return { topic: t.topic, count: t.count || 0 };
+        });
+
+        const list = document.getElementById("prefs-topic-list");
+        list.innerHTML = topics.slice(0, 40).map(({ topic, count }) => {
+          const checked = tempSelectedTopics.includes(topic);
+          return `
+            <label style="
+              display:flex; align-items:center; gap:8px;
+              font-family:'DM Sans',sans-serif; font-size:12px;
+              color:var(--ink); cursor:pointer;
+              padding:3px 0;
+            ">
+              <input type="checkbox"
+                value="${escapeHtml(topic)}"
+                ${checked ? "checked" : ""}
+                onchange="toggleTopicPref(this)"
+                style="cursor:pointer; accent-color:var(--accent);"
+              />
+              ${escapeHtml(topic)}
+              <span style="color:var(--ink-muted); font-size:10px;
+                margin-left:auto;">${count}</span>
+            </label>
+          `;
+        }).join("");
+      } catch (e) {}
+    }
+
+    function toggleTopicPref(checkbox) {
+      if (checkbox.checked) {
+        if (!tempSelectedTopics.includes(checkbox.value)) {
+          tempSelectedTopics.push(checkbox.value);
+        }
+      } else {
+        tempSelectedTopics = tempSelectedTopics.filter((t) => t !== checkbox.value);
+      }
+    }
+
+    function savePrefsAndClose() {
+      const prefs = { preferredTopics: tempSelectedTopics, usePrefs: true };
+      saveTopicPrefs(prefs);
+      personalisationActive = true;
+      const btn = document.getElementById("pref-toggle-btn");
+      if (btn) {
+        btn.style.background = "var(--accent-soft, #fef0f0)";
+        btn.style.color = "var(--accent)";
+        btn.style.borderColor = "var(--accent)";
+        btn.textContent = "★ For you";
+      }
+      closePrefsPanel();
+      newsLoaded = false;
+      loadNews();
+    }
+
+    function closePrefsPanel() {
+      prefsPanelOpen = false;
+      document.getElementById("prefs-panel").style.display = "none";
+    }
+
+    function expandDigest() {
+      aiDropdownOpen = false;
+      document.getElementById("ai-dropdown").style.display = "none";
+      document.getElementById("ai-toggle-chevron").style.transform = "rotate(0deg)";
+      const aiBtn = document.getElementById("ai-toggle-btn");
+      aiBtn.style.borderColor = "var(--border)";
+      aiBtn.style.color = "var(--ink-muted)";
+      document.getElementById("digest-result-card").style.display = "block";
+    }
+
+    function handleDigestBtn(format) {
+      if (format === "topic_roundup") {
+        const inline = document.getElementById("topicInline");
+        inline.style.display = "flex";
+        inline.style.flexDirection = "column";
+        const topicInput = document.getElementById("topicInput");
+        if (topicInput && !topicInput.value.trim() && currentQuery) {
+          topicInput.value = currentQuery;
+        }
+        setTimeout(() => topicInput.focus(), 50);
+        return;
+      }
+      if (aiDropdownOpen) toggleAiDropdown();
+      generateDigest(format);
+    }
+
+    function startProgress() {
+      const bar = document.getElementById("digest-progress");
+      let pct = 0;
+      bar.style.width = "0%";
+      clearInterval(progressInterval);
+      progressInterval = setInterval(() => {
+        pct += (85 - pct) * 0.04;
+        bar.style.width = pct + "%";
+      }, 500);
+    }
+
+    function finishProgress() {
+      clearInterval(progressInterval);
+      document.getElementById("digest-progress").style.width = "100%";
+      setTimeout(() => {
+        document.getElementById("digest-progress").style.width = "0%";
+      }, 400);
+    }
+
+    function renderDigestText(text) {
+      const el = document.getElementById("digest-text");
+      const SECTION_LABELS = [
+        "EVENTS TO WATCH:", "INTELLIGENCE DIGEST:", "MARKET PULSE:", "TOPIC ROUNDUP"
+      ];
+      let html = escHtml(text);
+      SECTION_LABELS.forEach((label) => {
+        const escaped = escHtml(label);
+        html = html.replace(
+          new RegExp(escaped, "g"),
+          `</p><p style="
+            font-family:'DM Sans',sans-serif; font-size:10px;
+            letter-spacing:0.1em; text-transform:uppercase;
+            color:var(--ink-muted); margin:18px 0 6px;
+            border-top:1px solid var(--border); padding-top:14px;
+          ">${escaped}</p><p style="margin:0 0 0;">`
+        );
+      });
+      html = '<p style="margin:0;">' + html + "</p>";
+      html = html.replace(/<p[^>]*><\/p>/g, "");
+      el.innerHTML = html;
+    }
+
+    function showDigestLoading() {
+      document.getElementById("digest-content").style.display = "none";
+      document.getElementById("digest-loading").style.display = "block";
+      expandDigest();
+      startProgress();
+    }
+
+    function showDigestResult(data) {
+      finishProgress();
+      document.getElementById("digest-loading").style.display = "none";
+      if (data.error) {
+        showToast("Digest generation failed: " + data.error);
+        return;
+      }
+      const labelMap = {
+        weekly_briefing: "Weekly Briefing",
+        market_pulse: "Market Pulse",
+        topic_roundup: "Topic Roundup",
+        flash_note: "Flash Note",
+      };
+      document.getElementById("digest-format-label").textContent = labelMap[data.format] || data.format;
+      renderDigestText(data.content || "");
+      const meta = [
+        data.generated_at ? data.generated_at.replace("T", " ").slice(0, 16) : "",
+        data.context_items ? data.context_items + " items in context" : "",
+        data.model || "",
+      ].filter(Boolean).join(" · ");
+      document.getElementById("digest-meta").textContent = meta;
+      document.getElementById("digest-content").style.display = "block";
+      expandDigest();
+      document.getElementById("topicInline").style.display = "none";
+    }
+
+    function showDigestError() {
+      finishProgress();
+      document.getElementById("digest-loading").style.display = "none";
+      showToast("Digest generation failed");
+    }
+
+    async function generateDigest(format, topic = "") {
+      showDigestLoading();
+      try {
+        const payload = { format, model: "llama3" };
+        if (topic) payload.topic = topic;
+        if (format === "flash_note") {
+          const targetItem = currentPaneItem || currentSearchResults[0] || null;
+          if (!targetItem) {
+            showToast("Open an article or run a search first");
+            finishProgress();
+            document.getElementById("digest-loading").style.display = "none";
+            return;
+          }
+          payload.context_items = [targetItem];
+        } else if (currentSearchResults.length > 0) {
+          payload.context_items = currentSearchResults;
+        }
+        const result = await api("/api/news/digest/generate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        showDigestResult(result);
+      } catch (e) {
+        showDigestError(e);
+      }
+    }
+
+    function closePane() {
+      document.getElementById("reading-pane").style.right = "-640px";
+      document.getElementById("pane-backdrop").style.display = "none";
+      document.body.style.overflow = "";
+      currentPaneItem = null;
+      updateFlashNoteState();
+    }
+
+    function renderArticleText(text) {
+      const blocks = String(text || "").split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+      return blocks.map((p) => `<p>${escapeHtml(p)}</p>`).join("");
+    }
+
+    function openArticlePane(item) {
+      const pane = document.getElementById("reading-pane");
+      const backdrop = document.getElementById("pane-backdrop");
+      currentPaneItem = item;
+      updateFlashNoteState();
+
+      ["pane-summary","pane-body","pane-no-content","pane-cta","pane-signal-section"]
+        .forEach(id => document.getElementById(id).style.display = "none");
+
+      const signalSection = document.getElementById("pane-signal-section");
+      if (signalSection) {
+        signalSection.style.display = "none";
+        signalSection.innerHTML = "";
+      }
+
+      const sourceBadge = document.getElementById("pane-source-badge");
+      sourceBadge.textContent = item.source_name || "";
+
+      const topicBadge = document.getElementById("pane-topic-badge");
+      if (item.topic) {
+        topicBadge.textContent = item.topic;
+        topicBadge.style.display = "inline-block";
+      } else {
+        topicBadge.style.display = "none";
+      }
+
+      document.getElementById("pane-title").textContent = item.title || "";
+
+      const metaParts = [];
+      if (item.date_published) metaParts.push(fmtDate(item.date_published));
+      if (item.source_name) metaParts.push(item.source_name);
+      document.getElementById("pane-meta").textContent = metaParts.join(" · ");
+
+      const extLink = document.getElementById("pane-external-link");
+      if (item.url) {
+        extLink.href = item.url;
+        document.getElementById("pane-cta").style.display = "block";
+      }
+
+      pane.style.right = "0";
+      backdrop.style.display = "block";
+      document.body.style.overflow = "hidden";
+
+      const desc = (item.description || "").trim();
+      if (desc && desc.length > 30) {
+        const summaryEl = document.getElementById("pane-summary");
+        summaryEl.textContent = desc;
+        summaryEl.style.display = "block";
+      } else {
+        document.getElementById("pane-no-content").style.display = "block";
+      }
+
+      if (item.url) {
+        fetch("/api/news/article/fetch?url=" + encodeURIComponent(item.url))
+          .then(r => r.json())
+          .then(data => {
+            if (data.success && data.text && data.text.length > 200 && !isPaywalled(data.text)) {
+              const bodyEl = document.getElementById("pane-body");
+              const paras = data.text.split(/\n\n+/).filter(p => p.trim().length > 30);
+              bodyEl.innerHTML = paras.map((p, i) =>
+                `<p style="margin:0 0 18px;${i===0?"font-size:16px;":""}">
+                  ${escapeHtml(p.trim())}
+                </p>`
+              ).join("");
+              bodyEl.style.display = "block";
+              document.getElementById("pane-no-content").style.display = "none";
+            }
+          })
+          .catch(() => {});
+      }
+
+      if (item._signal) {
+        renderPaneSignals(item._signal);
+      } else if (item.title) {
+        const sig = getSignalForItem(item);
+        if (sig) {
+          renderPaneSignals(sig);
+        } else {
+          fetch("/api/signals/search?days=30&limit=100")
+            .then((r) => r.json())
+            .then((data) => {
+              const titleKey = (item.title || "").slice(0, 60).toLowerCase().trim();
+              const match = (data.items || []).find(
+                (s) => (s.title || "").slice(0, 60).toLowerCase().trim() === titleKey
+              );
+              if (match) renderPaneSignals(match);
+            })
+            .catch(() => {});
+        }
+      }
+    }
+
+    async function loadTopics() {
+      try {
+        const data = await api("/api/news/topics");
+        const sel = document.getElementById("topicSelect");
+        const cur = sel.value;
+        sel.innerHTML = `<option value="">All topics</option>`;
+        (data.topics || []).forEach((t) => {
+          const o = document.createElement("option");
+          o.value = t.topic;
+          o.textContent = `${t.topic} (${t.count})`;
+          sel.appendChild(o);
+        });
+        sel.value = cur || "";
+      } catch (e) {
+        showToast("Failed to load topics");
+      }
+    }
+
+    async function loadStats() {
+      try {
+        const s = await api("/api/news/stats");
+        document.getElementById("lastUpdated").textContent = `Updated ${fmtDate(s.generated_at) || "--"}`;
+      } catch (e) {
+        document.getElementById("lastUpdated").textContent = "Updated --";
+      }
+    }
+
+    async function loadSignals() {
+      try {
+        const data = await api("/api/news/signals?limit=10");
+        allSignals = data.items || [];
+      } catch (e) {
+        allSignals = [];
+      }
+      renderSignalsTicker(allSignals);
+      if (newsLoaded && activeTab === "news") renderNews();
+    }
+
+    async function loadNews() {
+      renderNewsSkeleton();
+      try {
+        const prefs = loadTopicPrefs();
+        const selectedTopic = currentTopic;
+        const q = new URLSearchParams();
+        q.set("type", "article");
+
+        if (selectedTopic && selectedTopic !== "all") {
+          q.set("limit", "60");
+          q.set("topic", selectedTopic);
+        } else if (personalisationActive && prefs.usePrefs && (prefs.preferredTopics || []).length > 0) {
+          q.set("limit", "200");
+        } else {
+          q.set("limit", "60");
+        }
+
+        const data = await api(`/api/news/feed?${q.toString()}`);
+        const fetchedItems = data.items || [];
+        let articles = fetchedItems;
+
+        if (
+          personalisationActive &&
+          (!selectedTopic || selectedTopic === "all") &&
+          (prefs.preferredTopics || []).length > 0
+        ) {
+          const preferred = prefs.preferredTopics || [];
+          const matched = fetchedItems.filter((a) =>
+            preferred.some((pref) =>
+              (a.topic || "").toLowerCase().includes(pref.toLowerCase()) ||
+              pref.toLowerCase().includes((a.topic || "").toLowerCase())
+            )
+          );
+          if (matched.length < 20) {
+            const extra = fetchedItems
+              .filter((a) => !matched.find((b) => b.url === a.url || b.title === a.title))
+              .slice(0, 20 - matched.length);
+            articles = [...matched, ...extra];
+          } else {
+            articles = matched;
+          }
+        }
+
+        newsItems = articles;
+        newsLoaded = true;
+        renderNews();
+        loadSignalsForItems(newsItems);
+      } catch (e) {
+        showToast("Failed to load news");
+        document.getElementById("news-panel").innerHTML = `<div class="empty">No news available for this topic.</div>`;
+      }
+    }
+
+    async function loadEvents() {
+      const panel = document.getElementById("events-panel");
+      panel.innerHTML = `<div class="news-skeleton">${Array.from({ length: 4 }).map(() => "<div class='sk'></div>").join("")}</div>`;
+      try {
+        const data = await api("/api/news/events?days_ahead=60&limit=100");
+        eventsItems = data.items || [];
+        eventsItems.sort((a, b) => String(a.date_published || "").localeCompare(String(b.date_published || "")));
+        eventsLoaded = true;
+        renderEvents();
+      } catch (e) {
+        showToast("Failed to load events");
+        panel.innerHTML = `<div class="empty">No upcoming events in the next 30 days.</div>`;
+      }
+    }
+
+    async function loadSignalsTab() {
+      signalsLoaded = true;
+      try {
+        await loadSectorScores();
+        const statusRes = await fetch("/api/signals/status").then((r) => r.json());
+        const count = statusRes.succeeded || 0;
+        const tabCount = document.getElementById("signals-tab-count");
+        if (tabCount && count > 0) {
+          tabCount.textContent = count;
+          tabCount.style.display = "inline";
+        }
+      } catch (e) {}
+    }
+
+    async function loadSectorScores() {
+      const rows = document.getElementById("scorecard-rows");
+      if (!rows) return;
+      try {
+        const res = await fetch("/api/signals/sector-scores");
+        const data = await res.json();
+        sectorScoresData = data;
+        if (data.error && (!data.sectors || Object.keys(data.sectors).length === 0)) {
+          rows.innerHTML = `<div style="font-size:12px;color:#aaa;padding:12px 0;">${escHtml(data.error)}</div>`;
+          document.getElementById("scorecard-timestamp").textContent = "";
+          return;
+        }
+        renderSectorScorecard(data);
+        if (currentDetailSectorKey && data.sectors && data.sectors[currentDetailSectorKey]) {
+          renderSectorDetailView(currentDetailSectorKey, data.sectors[currentDetailSectorKey]);
+        }
+      } catch (e) {
+        console.error("Failed to load sector scores", e);
+        rows.innerHTML = '<div style="font-size:12px;color:#aaa;padding:12px 0;">Failed to load sector scores.</div>';
+      }
+    }
+
+    function renderSectorScorecard(data) {
+      openSectorKey = null;
+      openSectorPanelEl = null;
+      openSectorRowEl = null;
+      const tsEl = document.getElementById("scorecard-timestamp");
+      if (tsEl) {
+        if (data.generated_at) {
+          const d = new Date(data.generated_at);
+          if (!Number.isNaN(d.getTime())) {
+            const label = data.stale ? "⚠ stale · " : "";
+            tsEl.textContent = `${label}scored ${d.toLocaleDateString("en-GB", { day: "numeric", month: "short" })} ${d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}`;
+          } else {
+            tsEl.textContent = "";
+          }
+        } else {
+          tsEl.textContent = "";
+        }
+      }
+
+      const container = document.getElementById("scorecard-rows");
+      container.innerHTML = "";
+      const sectors = data.sectors || {};
+      for (const key of SECTOR_ORDER) {
+        const s = sectors[key];
+        if (!s) continue;
+        container.appendChild(buildSectorRow(key, s));
+        if (key === "technology" && s.sub_sectors) {
+          const subContainer = document.createElement("div");
+          subContainer.id = "subsector-rows-technology";
+          subContainer.style.display = "none";
+          for (const [subKey, ss] of Object.entries(s.sub_sectors)) {
+            subContainer.appendChild(buildSubSectorRow(subKey, ss));
+          }
+          container.appendChild(subContainer);
+        }
+      }
+    }
+
+    function buildSectorRow(key, s) {
+      const row = document.createElement("div");
+      row.dataset.sectorKey = key;
+      row.style.cssText = `
+        width:100%;
+        border-bottom:1px solid #e8e4dc;
+        padding:10px 0;
+        display:grid;
+        grid-template-columns:120px 80px 52px 1fr 60px 80px;
+        gap:8px;
+        align-items:center;
+        cursor:pointer;
+        border-left:2px solid transparent;
+      `;
+      row.onmouseenter = () => { row.style.background = "#faf8f4"; };
+      row.onmouseleave = () => { row.style.background = "transparent"; };
+
+      const score = Number(s.score || 0);
+      const direction = String(s.direction || "neutral");
+      const scoreColor = Math.abs(score) < 0.05 ? "#888" : (score > 0 ? "#2e7d32" : "#c8102e");
+      const barColor = direction === "bullish" ? "#2e7d32" : direction === "bearish" ? "#c8102e" : "#aaa";
+      const barWidth = Math.min(100, Math.max(0, Math.round(Math.abs(score) * 100)));
+      const conviction = String(s.conviction || "low");
+      const convictionHtml = conviction === "high"
+        ? '<span style="font-family:\'DM Mono\',monospace; font-size:10px; color:#2e7d32;">● high</span>'
+        : conviction === "medium"
+          ? '<span style="font-family:\'DM Mono\',monospace; font-size:10px; color:#e8a000;">● med</span>'
+          : "";
+
+      const dirHtml = direction === "bullish"
+        ? '<span style="background:#e8f5e9;color:#2e7d32;font-family:\'DM Mono\',monospace;font-size:9px;font-weight:600;padding:3px 6px;border-radius:3px;">▲ BULLISH</span>'
+        : direction === "bearish"
+          ? '<span style="background:#fdecea;color:#c8102e;font-family:\'DM Mono\',monospace;font-size:9px;font-weight:600;padding:3px 6px;border-radius:3px;">▼ BEARISH</span>'
+          : '<span style="background:#f5f5f5;color:#888;font-family:\'DM Mono\',monospace;font-size:9px;font-weight:600;padding:3px 6px;border-radius:3px;">— NEUTRAL</span>';
+
+      const isTechnology = key === "technology";
+      const toggle = isTechnology
+        ? '<button class="tech-toggle" style="margin-right:6px;border:none;background:none;cursor:pointer;color:#888;padding:0;transform:rotate(0deg);transition:transform 0.15s;">▶</button>'
+        : "";
+
+      const leftBar = direction === "bearish" ? "auto" : "0";
+      const rightBar = direction === "bearish" ? "0" : "auto";
+      row.innerHTML = `
+        <div style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.04em;color:#2a2a2a;text-transform:uppercase;">
+          ${toggle}${escHtml(SECTOR_LABELS[key] || key)}
+        </div>
+        <div>${dirHtml}</div>
+        <div style="font-family:'DM Mono',monospace;font-size:12px;color:${scoreColor};">${score >= 0 ? "+" : ""}${score.toFixed(2)}</div>
+        <div style="height:4px;border-radius:2px;background:#e8e4dc;position:relative;">
+          <div style="position:absolute;top:0;bottom:0;left:${leftBar};right:${rightBar};width:${barWidth}%;background:${barColor};border-radius:2px;"></div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888;">${Number(s.bull_count || 0)}↑ ${Number(s.bear_count || 0)}↓</div>
+        <div>${convictionHtml}</div>
+      `;
+
+      row.addEventListener("click", (e) => {
+        if (isTechnology && e.target && e.target.classList && e.target.classList.contains("tech-toggle")) {
+          e.stopPropagation();
+          const subRows = document.getElementById("subsector-rows-technology");
+          const toggleBtn = row.querySelector(".tech-toggle");
+          if (subRows) {
+            const open = subRows.style.display !== "none";
+            subRows.style.display = open ? "none" : "block";
+            if (toggleBtn) toggleBtn.style.transform = open ? "rotate(0deg)" : "rotate(90deg)";
+          }
+          return;
+        }
+        toggleSectorDetailPanel(key, row);
+      });
+
+      return row;
+    }
+
+    function buildSubSectorRow(key, ss) {
+      const row = document.createElement("div");
+      row.style.cssText = `
+        width:100%;
+        border-bottom:1px solid #e8e4dc;
+        padding:8px 0 8px 16px;
+        display:grid;
+        grid-template-columns:120px 80px 52px 1fr 60px 80px;
+        gap:8px;
+        align-items:center;
+        background:#faf8f4;
+      `;
+      const labels = {
+        ai_infrastructure: "└ AI Infra",
+        ai_platforms: "└ AI Platf",
+        ai_enterprise: "└ AI Enterp",
+      };
+      const score = Number(ss.score || 0);
+      const direction = String(ss.direction || "neutral");
+      const scoreColor = Math.abs(score) < 0.05 ? "#888" : (score > 0 ? "#2e7d32" : "#c8102e");
+      const barColor = direction === "bullish" ? "#2e7d32" : direction === "bearish" ? "#c8102e" : "#aaa";
+      const barWidth = Math.min(100, Math.max(0, Math.round(Math.abs(score) * 100)));
+      const dirHtml = direction === "bullish"
+        ? '<span style="background:#e8f5e9;color:#2e7d32;font-family:\'DM Mono\',monospace;font-size:9px;font-weight:600;padding:3px 6px;border-radius:3px;">▲ BULLISH</span>'
+        : direction === "bearish"
+          ? '<span style="background:#fdecea;color:#c8102e;font-family:\'DM Mono\',monospace;font-size:9px;font-weight:600;padding:3px 6px;border-radius:3px;">▼ BEARISH</span>'
+          : '<span style="background:#f5f5f5;color:#888;font-family:\'DM Mono\',monospace;font-size:9px;font-weight:600;padding:3px 6px;border-radius:3px;">— NEUTRAL</span>';
+      const leftBar = direction === "bearish" ? "auto" : "0";
+      const rightBar = direction === "bearish" ? "0" : "auto";
+      row.innerHTML = `
+        <div style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;color:#2a2a2a;">
+          ${escHtml(labels[key] || key)}
+        </div>
+        <div>${dirHtml}</div>
+        <div style="font-family:'DM Mono',monospace;font-size:11px;color:${scoreColor};">${score >= 0 ? "+" : ""}${score.toFixed(2)}</div>
+        <div style="height:4px;border-radius:2px;background:#e8e4dc;position:relative;">
+          <div style="position:absolute;top:0;bottom:0;left:${leftBar};right:${rightBar};width:${barWidth}%;background:${barColor};border-radius:2px;"></div>
+        </div>
+        <div></div>
+        <div></div>
+      `;
+      return row;
+    }
+
+    function _directionBadgeHtml(direction) {
+      if (direction === "bullish") {
+        return '<span style="background:#e8f5e9;color:#2e7d32;font-family:\'DM Mono\',monospace;font-size:9px;font-weight:600;padding:3px 6px;border-radius:3px;">▲ BULLISH</span>';
+      }
+      if (direction === "bearish") {
+        return '<span style="background:#fdecea;color:#c8102e;font-family:\'DM Mono\',monospace;font-size:9px;font-weight:600;padding:3px 6px;border-radius:3px;">▼ BEARISH</span>';
+      }
+      return '<span style="background:#f5f5f5;color:#888;font-family:\'DM Mono\',monospace;font-size:9px;font-weight:600;padding:3px 6px;border-radius:3px;">— NEUTRAL</span>';
+    }
+
+    function _directionBadgeHtmlSmall(direction) {
+      if (direction === "bullish") {
+        return '<span style="background:#e8f5e9;color:#2e7d32;font-family:\'DM Mono\',monospace;font-size:8px;font-weight:600;padding:2px 5px;border-radius:3px;">▲ BULLISH</span>';
+      }
+      if (direction === "bearish") {
+        return '<span style="background:#fdecea;color:#c8102e;font-family:\'DM Mono\',monospace;font-size:8px;font-weight:600;padding:2px 5px;border-radius:3px;">▼ BEARISH</span>';
+      }
+      return '<span style="background:#f5f5f5;color:#888;font-family:\'DM Mono\',monospace;font-size:8px;font-weight:600;padding:2px 5px;border-radius:3px;">— NEUTRAL</span>';
+    }
+
+    function _formatArticleDatePublished(iso) {
+      if (!iso) return "";
+      const d = new Date(iso);
+      if (Number.isNaN(d.getTime())) return "";
+      return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+    }
+
+    function _escapeAttr(s) {
+      return String(s || "")
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/</g, "&lt;");
+    }
+
+    function extractBriefSubtitle(briefText) {
+      const text = String(briefText || "").trim();
+      const match = text.match(/^(.{20,120}?[.!?])\s/);
+      if (match) return match[1];
+      if (text.length <= 100) return text || "No summary available.";
+      return text.substring(0, 100) + "...";
+    }
+
+    function toggleNewsBrief() {
+      if (_newsBriefLoading) return;
+      _newsBriefExpanded = !_newsBriefExpanded;
+      const expanded = document.getElementById("news-brief-expanded");
+      const read = document.getElementById("news-brief-read");
+      if (expanded) expanded.style.display = _newsBriefExpanded ? "block" : "none";
+      if (read) read.textContent = _newsBriefExpanded ? "▲ collapse" : "Read brief →";
+    }
+
+    function toggleThemeBrief() {
+      if (_themeBriefLoading) return;
+      _themeBriefExpanded = !_themeBriefExpanded;
+      const expanded = document.getElementById("theme-brief-expanded");
+      const read = document.getElementById("theme-brief-read");
+      if (expanded) expanded.style.display = _themeBriefExpanded ? "block" : "none";
+      if (read) read.textContent = _themeBriefExpanded ? "▲ collapse" : "Read brief →";
+    }
+
+    function _collectNewsBriefArticles(sectorName, limit = 15) {
+      if (!sectorName || sectorName === "All topics") return [];
+      const domArticles = Array.from(document.querySelectorAll("[data-topic]"))
+        .filter((el) => (el.dataset.topic || "") === sectorName)
+        .slice(0, limit)
+        .map((el) => ({
+          title: el.dataset.title || "",
+          summary: el.dataset.summary || "",
+          source_name: el.dataset.source || "",
+          date_published: el.dataset.date || "",
+          sentiment: el.dataset.sentiment || "neutral",
+          source_url: el.dataset.url || "#",
+        }));
+      if (domArticles.length) return domArticles;
+      return (newsItems || [])
+        .filter((i) => (i.topic || "") === sectorName)
+        .slice(0, limit)
+        .map((i) => ({
+          title: i.title || "",
+          summary: i.description || i.summary || "",
+          source_name: i.source_name || "",
+          date_published: i.date_published || "",
+          sentiment: i.sentiment || "neutral",
+          source_url: i.url || i.source_url || "#",
+        }));
+    }
+
+    function showNewsBriefReady(sectorName) {
+      const card = document.getElementById("news-brief-card");
+      if (!card) return;
+      if (!sectorName || sectorName === "All topics") {
+        clearInterval(_newsBriefLoadingTimer);
+        _newsBriefLoading = false;
+        card.style.display = "none";
+        return;
+      }
+
+      const readyCount = _collectNewsBriefArticles(sectorName, 15).length;
+      _newsBriefExpanded = false;
+      _newsBriefLoading = false;
+      clearInterval(_newsBriefLoadingTimer);
+      card.style.display = "block";
+      card.innerHTML = `
+        <div style="border:1px solid #e8e4dc; background:#fff;">
+          <div id="news-brief-collapsed" style="padding:16px 20px;">
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#c8102e; font-weight:600;">AI BRIEF</span>
+              <span style="font-family:'DM Sans',sans-serif; font-size:10px; color:#aaa;">·</span>
+              <span style="font-family:'DM Sans',sans-serif; font-size:10px; color:#888;">${escHtml(sectorName)}</span>
+            </div>
+            <div id="news-brief-title" style="margin-top:8px; font-family:'Playfair Display',serif; font-size:20px; font-weight:400; color:#2a2a2a;">
+              AI Briefing: ${escHtml(sectorName)}
+            </div>
+            <div id="news-brief-subtitle" style="margin-top:6px; font-family:'DM Sans',sans-serif; font-size:13px; color:#888; font-style:italic; line-height:1.5; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">
+              Click to generate an AI analysis of ${escHtml(sectorName)} from ${readyCount} recent articles
+            </div>
+            <div style="margin-top:12px;">
+              <button onclick="generateNewsSectorBrief('${_escapeAttr(sectorName)}')" style="font-family:'DM Sans',sans-serif; font-size:12px; color:#c8102e; background:none; border:none; cursor:pointer; padding:0;">
+                ✦ Generate brief
+              </button>
+            </div>
+          </div>
+          <div id="news-brief-expanded" style="display:none; padding:0 20px 16px 20px;">
+            <div style="border-top:1px solid #e8e4dc; margin:12px 0;"></div>
+            <div id="news-brief-text" style="font-family:'DM Sans',sans-serif; font-size:13px; color:#2a2a2a; line-height:1.7; white-space:pre-wrap; margin-bottom:12px;"></div>
+            <div id="news-brief-citations" style="font-family:'DM Mono',monospace; font-size:10px; color:#aaa; border-top:1px solid #e8e4dc; padding-top:8px;"></div>
+            <div style="text-align:right; margin-top:8px;">
+              <button onclick="generateNewsSectorBrief('${_escapeAttr(sectorName)}')" style="font-family:'DM Sans',sans-serif; font-size:11px; color:#c8102e; background:none; border:none; cursor:pointer; padding:0;">
+                ↻ Regenerate
+              </button>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    async function generateThemeBrief(themeId, themeName, articles) {
+      _currentThemeArticles = Array.isArray(articles) ? articles : [];
+
+      const expanded = document.getElementById("theme-brief-expanded");
+      const subtitle = document.getElementById("theme-brief-subtitle");
+      const timeEl = document.getElementById("theme-brief-time");
+      const read = document.getElementById("theme-brief-read");
+      const collapsed = document.getElementById("theme-brief-collapsed");
+      const title = document.getElementById("theme-brief-title");
+      const textEl = document.getElementById("theme-brief-text");
+      const citationsEl = document.getElementById("theme-brief-citations");
+      if (!expanded || !subtitle || !title || !textEl || !citationsEl) return;
+
+      _themeBriefExpanded = false;
+      _themeBriefLoading = true;
+      clearInterval(_themeBriefLoadingTimer);
+      expanded.style.display = "none";
+      if (read) {
+        read.textContent = "Read brief →";
+        read.style.color = "#ccc";
+        read.style.pointerEvents = "none";
+      }
+      title.textContent = `AI Briefing: ${themeName || "Theme"}`;
+      if (timeEl) timeEl.textContent = "Generating...";
+      textEl.textContent = "";
+      citationsEl.textContent = "";
+      let dotIdx = 0;
+      const loadingFrames = ["Analysing sources", "Analysing sources.", "Analysing sources..", "Analysing sources..."];
+      subtitle.textContent = loadingFrames[0];
+      _themeBriefLoadingTimer = setInterval(() => {
+        dotIdx = (dotIdx + 1) % loadingFrames.length;
+        subtitle.textContent = loadingFrames[dotIdx];
+      }, 450);
+
+      try {
+        const topArticles = _currentThemeArticles.slice(0, 15).map((a) => ({
+          title: a.title || "",
+          summary: String(a.summary || "").substring(0, 200),
+          source_name: a.source_name || "",
+          date_published: String(a.date_published || "").substring(0, 10),
+          sentiment: a.sentiment || "neutral",
+        }));
+
+        const res = await fetch("/api/signals/theme-brief", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ themeId, themeName, articles: topArticles }),
+        });
+        const data = await res.json();
+
+        if (data.error) {
+          clearInterval(_themeBriefLoadingTimer);
+          _themeBriefLoading = false;
+          subtitle.textContent = "Generation failed.";
+          if (timeEl) timeEl.textContent = "--:--";
+          return;
+        }
+
+        _currentThemeBriefData = data;
+        clearInterval(_themeBriefLoadingTimer);
+        _themeBriefLoading = false;
+        subtitle.textContent = extractBriefSubtitle(data.brief);
+        if (timeEl) {
+          timeEl.textContent = new Date(data.generated_at).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+        }
+        if (read) {
+          read.style.display = "block";
+          read.style.color = "#c8102e";
+          read.style.pointerEvents = "auto";
+        }
+        if (collapsed) {
+          collapsed.setAttribute("role", "button");
+          collapsed.setAttribute("tabindex", "0");
+          collapsed.style.cursor = "pointer";
+          collapsed.onclick = toggleThemeBrief;
+          collapsed.onkeydown = (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              toggleThemeBrief();
+            }
+          };
+        }
+        function linkifyCitations(text, articleList) {
+          return String(text || "").replace(/\[(\d+)\]/g, (match, num) => {
+            const idx = parseInt(num, 10) - 1;
+            if (idx >= 0 && idx < articleList.length) {
+              const source = articleList[idx].source_name || "?";
+              const url = articleList[idx].source_url || "#";
+              const title = (articleList[idx].title || "").substring(0, 60);
+              return `<sup><a href="${_escapeAttr(url)}" target="_blank" title="${escHtml(source)}: ${escHtml(title)}" style="color:#c8102e; text-decoration:none; font-family:'DM Mono', monospace; font-size:9px; font-weight:600;">[${num}]</a></sup>`;
+            }
+            return match;
+          });
+        }
+
+        textEl.innerHTML = linkifyCitations(data.brief, _currentThemeArticles);
+
+        const validCited = Array.isArray(data.cited_indices)
+          ? data.cited_indices.filter((i) => Number.isInteger(i))
+          : [];
+        const indices = validCited.length > 0 ? validCited : [0, 1, 2, 3, 4];
+        const citedSources = indices
+          .filter((i) => i < _currentThemeArticles.length)
+          .map((i) => {
+            const a = _currentThemeArticles[i] || {};
+            const url = a.source_url || a.url || "#";
+            const name = a.source_name || a.source || "?";
+            return `<a href="${_escapeAttr(url)}" target="_blank" style="color:#888; text-decoration:none;" onmouseover="this.style.color='#c8102e'" onmouseout="this.style.color='#888'">[${i + 1}] ${escHtml(name)}</a>`;
+          })
+          .join("  ·  ");
+        citationsEl.innerHTML = "Sources: " + citedSources;
+      } catch (e) {
+        clearInterval(_themeBriefLoadingTimer);
+        _themeBriefLoading = false;
+        subtitle.textContent = "Generation error.";
+        if (timeEl) timeEl.textContent = "--:--";
+        console.error("Brief generation error:", e);
+      }
+    }
+
+    async function generateNewsSectorBrief(sectorName) {
+      const card = document.getElementById("news-brief-card");
+      if (!card) return;
+      if (!sectorName || sectorName === "All topics") {
+        clearInterval(_newsBriefLoadingTimer);
+        _newsBriefLoading = false;
+        card.style.display = "none";
+        return;
+      }
+
+      _newsBriefExpanded = false;
+      _newsBriefLoading = true;
+      clearInterval(_newsBriefLoadingTimer);
+      card.style.display = "block";
+      card.innerHTML = `
+        <div style="border:1px solid #e8e4dc; background:#fff;">
+          <div id="news-brief-collapsed" role="button" tabindex="0" onclick="toggleNewsBrief()" onkeydown="if(event.key==='Enter' || event.key===' '){event.preventDefault();toggleNewsBrief();}" style="padding:16px 20px; cursor:pointer;">
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#c8102e; font-weight:600;">AI BRIEF</span>
+              <span style="font-family:'DM Sans',sans-serif; font-size:10px; color:#aaa;">·</span>
+              <span style="font-family:'DM Sans',sans-serif; font-size:10px; color:#888;">${escHtml(sectorName)}</span>
+              <span style="font-family:'DM Sans',sans-serif; font-size:10px; color:#aaa;">·</span>
+              <span id="news-brief-time" style="font-family:'DM Mono',monospace; font-size:10px; color:#aaa;">Generating...</span>
+            </div>
+            <div id="news-brief-title" style="margin-top:8px; font-family:'Playfair Display',serif; font-size:20px; font-weight:400; color:#2a2a2a;">
+              AI Briefing: ${escHtml(sectorName)}
+            </div>
+            <div id="news-brief-subtitle" style="margin-top:6px; font-family:'DM Sans',sans-serif; font-size:13px; color:#666; line-height:1.5; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">
+              Analysing sources
+            </div>
+            <div id="news-brief-read" style="margin-top:12px; font-family:'DM Sans',sans-serif; font-size:12px; color:#ccc; pointer-events:none;">
+              Read brief →
+            </div>
+          </div>
+          <div id="news-brief-expanded" style="display:none; padding:0 20px 16px 20px;">
+            <div style="border-top:1px solid #e8e4dc; margin:12px 0;"></div>
+            <div id="news-brief-text" style="font-family:'DM Sans',sans-serif; font-size:13px; color:#2a2a2a; line-height:1.7; white-space:pre-wrap; margin-bottom:12px;"></div>
+            <div id="news-brief-citations" style="font-family:'DM Mono',monospace; font-size:10px; color:#aaa; border-top:1px solid #e8e4dc; padding-top:8px;"></div>
+            <div style="text-align:right; margin-top:8px;">
+              <button onclick="generateNewsSectorBrief('${_escapeAttr(sectorName)}')" style="font-family:'DM Sans',sans-serif; font-size:11px; color:#c8102e; background:none; border:none; cursor:pointer; padding:0;">
+                ↻ Regenerate
+              </button>
+            </div>
+          </div>
+        </div>`;
+      const newsSubtitleEl = document.getElementById("news-brief-subtitle");
+      let newsDotIdx = 0;
+      const loadingFrames = ["Analysing sources", "Analysing sources.", "Analysing sources..", "Analysing sources..."];
+      _newsBriefLoadingTimer = setInterval(() => {
+        if (newsSubtitleEl) {
+          newsDotIdx = (newsDotIdx + 1) % loadingFrames.length;
+          newsSubtitleEl.textContent = loadingFrames[newsDotIdx];
+        }
+      }, 450);
+
+      try {
+        let articles = _collectNewsBriefArticles(sectorName, 15);
+        if (articles.length === 0 || !articles[0].title) {
+          const r = await fetch(`/api/news/feed?topic=${encodeURIComponent(sectorName)}&limit=15`);
+          const d = await r.json();
+          const items = Array.isArray(d) ? d : (d.items || d.feed || []);
+          articles = items.slice(0, 15).map((i) => ({
+            title: i.title || "",
+            summary: i.description || i.summary || "",
+            source_name: i.source_name || "",
+            date_published: i.date_published || "",
+            sentiment: i.sentiment || "neutral",
+            source_url: i.url || i.source_url || "#",
+          }));
+        }
+
+        if (articles.length === 0) {
+          clearInterval(_newsBriefLoadingTimer);
+          _newsBriefLoading = false;
+          card.style.display = "none";
+          return;
+        }
+
+        const r = await fetch("/api/signals/theme-brief", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            themeId: sectorName,
+            themeName: sectorName,
+            articles,
+          }),
+        });
+        const data = await r.json();
+        if (data.error) {
+          clearInterval(_newsBriefLoadingTimer);
+          _newsBriefLoading = false;
+          const subtitleEl = document.getElementById("news-brief-subtitle");
+          const timeEl = document.getElementById("news-brief-time");
+          if (subtitleEl) subtitleEl.textContent = "Brief generation failed.";
+          if (timeEl) timeEl.textContent = "--:--";
+          return;
+        }
+
+        const validCited = Array.isArray(data.cited_indices)
+          ? data.cited_indices.filter((i) => Number.isInteger(i))
+          : [];
+        const indices = validCited.length > 0 ? validCited : [0, 1, 2, 3, 4];
+        const citedLinks = indices
+          .filter((i) => i < articles.length)
+          .map((i) => {
+            const a = articles[i];
+            const url = a.source_url || a.url || "#";
+            const name = a.source_name || a.source || "?";
+            return `<a href="${_escapeAttr(url)}" target="_blank" style="color:#888;text-decoration:none;" onmouseover="this.style.color='#c8102e'" onmouseout="this.style.color='#888'">[${i + 1}] ${escHtml(name)}</a>`;
+          })
+          .join("  ·  ");
+
+        function linkify(text, arts) {
+          return String(text || "").replace(/\[(\d+)\]/g, (m, n) => {
+            const idx = parseInt(n, 10) - 1;
+            if (idx >= 0 && idx < arts.length) {
+              const url = arts[idx].source_url || "#";
+              const src = arts[idx].source_name || "?";
+              return `<sup><a href="${_escapeAttr(url)}" target="_blank" title="${escHtml(src)}" style="color:#c8102e;text-decoration:none; font-family:'DM Mono',monospace;font-size:9px; font-weight:600;">[${n}]</a></sup>`;
+            }
+            return m;
+          });
+        }
+
+        clearInterval(_newsBriefLoadingTimer);
+        _newsBriefLoading = false;
+        const readEl = document.getElementById("news-brief-read");
+        const subtitleEl = document.getElementById("news-brief-subtitle");
+        const timeEl = document.getElementById("news-brief-time");
+        const textEl = document.getElementById("news-brief-text");
+        const citationsEl = document.getElementById("news-brief-citations");
+        if (readEl) {
+          readEl.style.color = "#c8102e";
+          readEl.style.pointerEvents = "auto";
+          readEl.textContent = "Read brief →";
+        }
+        if (subtitleEl) subtitleEl.textContent = extractBriefSubtitle(data.brief);
+        if (timeEl) {
+          timeEl.textContent = new Date(data.generated_at).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+        }
+        if (textEl) textEl.innerHTML = linkify(data.brief, articles);
+        if (citationsEl) citationsEl.innerHTML = `Sources: ${citedLinks}`;
+      } catch (e) {
+        clearInterval(_newsBriefLoadingTimer);
+        _newsBriefLoading = false;
+        const subtitleEl = document.getElementById("news-brief-subtitle");
+        const timeEl = document.getElementById("news-brief-time");
+        if (subtitleEl) subtitleEl.textContent = "Brief generation error.";
+        if (timeEl) timeEl.textContent = "--:--";
+        console.error("News brief error:", e);
+      }
+    }
+
+    async function regenerateThemeBrief() {
+      if (!openThemeId || !openThemeName) return;
+      await generateThemeBrief(openThemeId, openThemeName, _currentThemeArticles);
+    }
+
+    function _convictionBadgeHtml(conviction) {
+      if (conviction === "high") {
+        return '<span style="font-family:\'DM Mono\',monospace; font-size:10px; color:#2e7d32;">● high</span>';
+      }
+      if (conviction === "medium") {
+        return '<span style="font-family:\'DM Mono\',monospace; font-size:10px; color:#e8a000;">● med</span>';
+      }
+      return '<span style="font-family:\'DM Mono\',monospace; font-size:10px; color:#888;">● low</span>';
+    }
+
+    function _subSectorLabel(subKey) {
+      if (subKey === "ai_infrastructure") return "AI Infrastructure";
+      if (subKey === "ai_platforms") return "AI Platforms";
+      if (subKey === "ai_enterprise") return "AI Enterprise";
+      return subKey.replace(/_/g, " ");
+    }
+
+    function _detailSectionHeader(title, withTopMargin = true) {
+      return `
+        <div style="
+          font-family:'DM Sans',sans-serif;
+          font-size:10px;
+          font-weight:600;
+          letter-spacing:0.08em;
+          color:#888;
+          text-transform:uppercase;
+          margin-bottom:12px;
+          margin-top:${withTopMargin ? "24px" : "0"};
+        ">${escHtml(title)}</div>
+      `;
+    }
+
+    function _directionColor(direction) {
+      if (direction === "bullish") return "#2e7d32";
+      if (direction === "bearish") return "#c8102e";
+      return "#aaa";
+    }
+
+    function _scoreColor(score) {
+      if (Math.abs(score) < 0.05) return "#888";
+      return score > 0 ? "#2e7d32" : "#c8102e";
+    }
+
+    function _formatWeekLabel(isoDate) {
+      const d = new Date(`${isoDate}T00:00:00`);
+      if (Number.isNaN(d.getTime())) return isoDate;
+      return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+    }
+
+    function _chartFillColor(direction) {
+      if (direction === "bullish") return "rgba(46,125,50,0.08)";
+      if (direction === "bearish") return "rgba(200,16,46,0.08)";
+      return "rgba(170,170,170,0.08)";
+    }
+
+    function _ensureChartJsLoaded() {
+      if (window.Chart) return Promise.resolve();
+      if (window._chartJsPromise) return window._chartJsPromise;
+      window._chartJsPromise = new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js";
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error("Failed to load Chart.js"));
+        document.head.appendChild(script);
+      });
+      return window._chartJsPromise;
+    }
+
+    function _destroySectorTrendChart() {
+      if (window._sectorTrendChart) {
+        window._sectorTrendChart.destroy();
+        window._sectorTrendChart = null;
+      }
+    }
+
+    function _classifyEvidenceDirection(text, sectorDirection) {
+      const t = String(text || "").toLowerCase();
+      const bullSignals = ["rise", "rises", "gain", "gains", "beat", "beats", "upgrade", "strong", "growth", "record", "surge"];
+      const bearSignals = ["fall", "falls", "drop", "drops", "cut", "cuts", "downgrade", "weak", "decline", "risk", "warning", "warns"];
+      if (bullSignals.some((k) => t.includes(k))) return "bullish";
+      if (bearSignals.some((k) => t.includes(k))) return "bearish";
+      return sectorDirection === "neutral" ? "neutral" : sectorDirection;
+    }
+
+    function _renderBullBearItems(s, direction) {
+      const sectorDirection = String(s.direction || "neutral");
+      const source = (s.sample_evidence || []).map((title) => ({
+        type: "evidence",
+        title: String(title || ""),
+        direction: _classifyEvidenceDirection(title, sectorDirection),
+      }));
+      const themes = (s.themes_detail || [])
+        .filter((t) => String(t.direction || "neutral") === direction)
+        .map((t) => ({
+          type: "theme",
+          title: String(t.name || ""),
+          articleCount: Number(t.article_count || 0),
+          direction,
+        }));
+
+      const picked = [
+        ...source.filter((it) => it.direction === direction),
+        ...themes,
+      ].slice(0, 8);
+
+      if (!picked.length) {
+        return '<div style="font-family:\'DM Mono\',monospace; font-size:11px; color:#aaa;">No supporting items</div>';
+      }
+
+      return picked.map((it) => {
+        if (it.type === "theme") {
+          return `
+            <div style="font-family:'DM Sans',sans-serif; font-size:12px; color:#2a2a2a; margin-bottom:8px;">
+              <span style="font-style:italic;">${escHtml(it.title)}</span>
+              <span style="color:#888;"> (${Number(it.articleCount || 0)} articles)</span>
+            </div>
+          `;
+        }
+        const barColor = direction === "bullish" ? "#2e7d32" : "#c8102e";
+        return `
+          <div style="border-left:2px solid ${barColor}; padding-left:8px; margin-bottom:10px;">
+            <div style="font-family:'DM Sans',sans-serif; font-size:12px; color:#2a2a2a; line-height:1.45;">
+              ${escHtml(it.title)}
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function _insertPanelAfterRow(sectorKey, rowEl, panelEl) {
+      const container = document.getElementById("scorecard-rows");
+      if (!container) return;
+      if (sectorKey === "technology") {
+        const techSub = document.getElementById("subsector-rows-technology");
+        if (techSub && techSub.parentNode === container) {
+          container.insertBefore(panelEl, techSub.nextSibling);
+          return;
+        }
+      }
+      container.insertBefore(panelEl, rowEl.nextSibling);
+    }
+
+    function _buildSectorDetailPanel(sectorKey, s) {
+      const panel = document.createElement("div");
+      panel.className = "sector-detail-panel";
+      panel.dataset.sectorPanel = sectorKey;
+      panel.style.cssText = `
+        background:#faf8f4;
+        border-bottom:1px solid #e8e4dc;
+        padding:0;
+        opacity:0;
+        max-height:0;
+        overflow:hidden;
+        transition:max-height 200ms ease, opacity 200ms ease, padding 200ms ease;
+      `;
+
+      const score = Number(s.score || 0);
+      const scoreColor = Math.abs(score) < 0.05 ? "#888" : score > 0 ? "#2e7d32" : "#c8102e";
+      const direction = String(s.direction || "neutral");
+      const total = Math.max(1, Number(s.article_count || 0));
+      const bull = Number(s.bull_count || 0);
+      const bear = Number(s.bear_count || 0);
+      const neutral = Number(s.neutral_count || 0);
+      const bullPct = Math.round((bull / total) * 100);
+      const bearPct = Math.round((bear / total) * 100);
+      const neutralPct = Math.max(0, 100 - bullPct - bearPct);
+      const topThemes = (s.top_themes || []).slice(0, 3);
+      const sampleEvidence = (s.sample_evidence || []).slice(0, 3);
+
+      const themesHtml = topThemes.length
+        ? topThemes.map((t, i) => `
+            <div style="padding:8px 0; border-bottom:${i < topThemes.length - 1 ? "1px solid #e8e4dc" : "none"};">
+              <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
+                <span style="font-family:'DM Sans',sans-serif; font-size:12px; color:#2a2a2a;">${escHtml(t)}</span>
+                <span style="font-family:'DM Mono',monospace; font-size:10px; color:#888;">—</span>
+              </div>
+            </div>
+          `).join("")
+        : '<div style="font-family:\'DM Sans\',sans-serif; font-size:12px; color:#aaa;">No dominant themes.</div>';
+
+      const subHtml = sectorKey === "technology" && s.sub_sectors
+        ? `
+          <div style="margin-top:12px; border-top:1px solid #e8e4dc; padding-top:10px;">
+            ${Object.entries(s.sub_sectors).map(([subKey, ss]) => {
+              const subScore = Number(ss.score || 0);
+              const subScoreColor = Math.abs(subScore) < 0.05 ? "#888" : subScore > 0 ? "#2e7d32" : "#c8102e";
+              return `
+                <div style="display:grid; grid-template-columns:1fr auto auto auto; gap:8px; align-items:center; padding:5px 0;">
+                  <span style="font-family:'DM Sans',sans-serif; font-size:11px; color:#2a2a2a;">${escHtml(_subSectorLabel(subKey))}</span>
+                  <span style="font-family:'DM Mono',monospace; font-size:11px; color:${subScoreColor};">${subScore >= 0 ? "+" : ""}${subScore.toFixed(2)}</span>
+                  <span style="font-family:'DM Mono',monospace; font-size:10px; color:#aaa;">n=${Number(ss.article_count || 0)}</span>
+                  ${_directionBadgeHtml(String(ss.direction || "neutral"))}
+                </div>
+              `;
+            }).join("")}
+          </div>
+        `
+        : "";
+
+      const evidenceHtml = sampleEvidence.length
+        ? sampleEvidence.map((ev) => `
+            <div style="border-left:2px solid #e8e4dc; padding-left:8px; margin:0 0 10px;">
+              <div style="
+                font-family:'DM Sans',sans-serif; font-size:12px; color:#2a2a2a; line-height:1.45;
+                display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+              ">${escHtml(ev)}</div>
+            </div>
+          `).join("")
+        : '<div style="font-family:\'DM Sans\',sans-serif; font-size:12px; color:#aaa;">No sample evidence.</div>';
+
+      panel.innerHTML = `
+        <div style="padding:16px 0 20px 0;">
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px;">
+            <div>
+              <div style="font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; color:#888; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;">Signal Summary</div>
+              <div style="font-family:'DM Mono',monospace; font-size:32px; color:${scoreColor}; line-height:1;">${score >= 0 ? "+" : ""}${score.toFixed(2)}</div>
+              <div style="margin-top:6px;">${_directionBadgeHtml(direction)}</div>
+              <div style="margin-top:14px;">
+                <div style="display:flex; height:8px; width:100%; border-radius:4px; overflow:hidden; background:#e8e4dc;">
+                  <div style="width:${bullPct}%; background:#2e7d32;"></div>
+                  <div style="width:${bearPct}%; background:#c8102e;"></div>
+                  <div style="width:${neutralPct}%; background:#aaa;"></div>
+                </div>
+                <div style="margin-top:6px; font-family:'DM Mono',monospace; font-size:10px; color:#888;">
+                  ${bull}↑ bull&nbsp;&nbsp;${bear}↓ bear&nbsp;&nbsp;${neutral}— neutral
+                </div>
+              </div>
+              <div style="margin-top:10px; font-family:'DM Mono',monospace; font-size:10px; color:#aaa;">
+                ${Number(s.article_count || 0)} articles · ${Number(s.source_a_count || 0)} from news feed · ${Number(s.source_b_count || 0)} from signals
+              </div>
+              <div style="margin-top:8px;">${_convictionBadgeHtml(String(s.conviction || "low"))}</div>
+            </div>
+            <div>
+              <div style="font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; color:#888; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;">Top Themes</div>
+              ${themesHtml}
+              ${subHtml}
+            </div>
+            <div>
+              <div style="font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; color:#888; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;">Signal Evidence</div>
+              ${evidenceHtml}
+            </div>
+          </div>
+          <div style="display:flex; justify-content:flex-end; padding-top:4px;">
+            <button onclick="event.stopPropagation(); showDetailView('${escHtml(sectorKey)}')" style="
+              border:none;
+              background:none;
+              cursor:pointer;
+              padding:0 0 4px 0;
+              font-family:'DM Sans',sans-serif;
+              font-size:11px;
+              color:#c8102e;
+              text-decoration:none;
+            ">→ Full Analysis</button>
+          </div>
+        </div>
+      `;
+      return panel;
+    }
+
+    function _closeOpenSectorPanel() {
+      return new Promise((resolve) => {
+        if (!openSectorPanelEl) {
+          resolve();
+          return;
+        }
+        const panel = openSectorPanelEl;
+        const prevRow = openSectorRowEl;
+        openSectorPanelEl = null;
+        openSectorRowEl = null;
+        openSectorKey = null;
+        if (prevRow) prevRow.style.borderLeftColor = "transparent";
+        panel.style.opacity = "0";
+        panel.style.maxHeight = "0";
+        panel.style.padding = "0";
+        setTimeout(() => {
+          if (panel.parentNode) panel.parentNode.removeChild(panel);
+          resolve();
+        }, 210);
+      });
+    }
+
+    async function toggleSectorDetailPanel(sectorKey, rowEl) {
+      const sectorData = sectorScoresData && sectorScoresData.sectors
+        ? sectorScoresData.sectors[sectorKey]
+        : null;
+      if (!sectorData) return;
+
+      if (openSectorKey === sectorKey) {
+        await _closeOpenSectorPanel();
+        return;
+      }
+
+      await _closeOpenSectorPanel();
+
+      rowEl.style.borderLeftColor = "#c8102e";
+      const panel = _buildSectorDetailPanel(sectorKey, sectorData);
+      _insertPanelAfterRow(sectorKey, rowEl, panel);
+      openSectorPanelEl = panel;
+      openSectorRowEl = rowEl;
+      openSectorKey = sectorKey;
+
+      requestAnimationFrame(() => {
+        panel.style.padding = "16px 0 20px 0";
+        panel.style.maxHeight = "400px";
+        panel.style.opacity = "1";
+      });
+    }
+
+    async function showDetailView(sectorKey) {
+      const scorecardView = document.getElementById("signals-scorecard-view");
+      const detailView = document.getElementById("signals-detail-view");
+      const themeView = document.getElementById("signals-theme-view");
+      if (!scorecardView || !detailView) return;
+      if (themeView) {
+        themeView.style.display = "none";
+        themeView.innerHTML = "";
+      }
+      openThemeId = null;
+      openThemeName = null;
+      openThemeSectorKey = null;
+      const sectorData = sectorScoresData && sectorScoresData.sectors
+        ? sectorScoresData.sectors[sectorKey]
+        : null;
+      if (!sectorData) return;
+      await _closeOpenSectorPanel();
+      currentDetailSectorKey = sectorKey;
+      scorecardView.style.display = "none";
+      detailView.style.display = "block";
+      renderSectorDetailView(sectorKey, sectorData);
+    }
+
+    function showThemeView(themeId, themeName, sectorKey) {
+      const scorecardView = document.getElementById("signals-scorecard-view");
+      const detailView = document.getElementById("signals-detail-view");
+      const themeView = document.getElementById("signals-theme-view");
+      if (!scorecardView || !detailView || !themeView) return;
+      openThemeId = themeId;
+      openThemeName = themeName;
+      openThemeSectorKey = sectorKey;
+      scorecardView.style.display = "none";
+      detailView.style.display = "none";
+      themeView.style.display = "block";
+      renderThemeView(themeId, themeName, sectorKey);
+    }
+
+    function showDetailViewFromTheme() {
+      const themeView = document.getElementById("signals-theme-view");
+      const detailView = document.getElementById("signals-detail-view");
+      if (!themeView || !detailView) return;
+      themeView.style.display = "none";
+      themeView.innerHTML = "";
+      detailView.style.display = "block";
+      openThemeId = null;
+      openThemeName = null;
+      openThemeSectorKey = null;
+    }
+
+    function showScorecardView() {
+      const scorecardView = document.getElementById("signals-scorecard-view");
+      const detailView = document.getElementById("signals-detail-view");
+      const themeView = document.getElementById("signals-theme-view");
+      if (!scorecardView || !detailView) return;
+      _destroySectorTrendChart();
+      detailView.innerHTML = "";
+      detailView.style.display = "none";
+      if (themeView) {
+        themeView.innerHTML = "";
+        themeView.style.display = "none";
+      }
+      scorecardView.style.display = "block";
+      currentDetailSectorKey = null;
+      openThemeId = null;
+      openThemeName = null;
+      openThemeSectorKey = null;
+    }
+
+    async function renderSectorDetailView(sectorKey, s) {
+      const detailView = document.getElementById("signals-detail-view");
+      if (!detailView) return;
+
+      const sectorLabel = SECTOR_LABELS[sectorKey] || sectorKey;
+      const direction = String(s.direction || "neutral");
+      const score = Number(s.score || 0);
+      const scoreColor = _scoreColor(score);
+      const directionColor = _directionColor(direction);
+      const trend = Array.isArray(s.trend) ? s.trend.slice(0, 8) : [];
+      const trendOldestToNewest = trend.slice().reverse();
+      const hasTrendData = trendOldestToNewest.some((p) => Number(p.score || 0) !== 0);
+
+      detailView.innerHTML = `
+        <div style="border-bottom:1px solid #e8e4dc; padding-bottom:16px; margin-bottom:24px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:16px;">
+            <div style="display:flex; align-items:center; min-width:0;">
+              <button onclick="showScorecardView()" style="
+                font-family:'DM Sans',sans-serif;
+                font-size:12px;
+                color:#888;
+                background:none;
+                border:none;
+                cursor:pointer;
+                margin-right:16px;
+                padding:0;
+              ">← Overview</button>
+              <div style="font-family:'Playfair Display',serif; font-size:22px; color:#2a2a2a;">${escHtml(sectorLabel)}</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:12px;">
+              ${_directionBadgeHtml(direction)}
+              <span style="font-family:'DM Mono',monospace; font-size:18px; color:${scoreColor};">
+                ${score >= 0 ? "+" : ""}${score.toFixed(2)}
+              </span>
+              ${_convictionBadgeHtml(String(s.conviction || "low"))}
+            </div>
+          </div>
+        </div>
+
+        <section>
+          ${_detailSectionHeader("Score Trend - 8 Weeks", false)}
+          <div id="sector-trend-wrap" style="width:100%; min-height:120px; border-top:1px solid transparent;">
+            ${hasTrendData ? '<canvas id="sector-trend-canvas" height="120"></canvas>' : `
+              <div style="
+                height:120px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                font-family:'DM Mono',monospace;
+                font-size:11px;
+                color:#aaa;
+              ">Insufficient historical data</div>
+            `}
+          </div>
+        </section>
+
+        <section>
+          ${_detailSectionHeader("Signal Breakdown")}
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+            <div style="background:#f0faf0; border-radius:6px; padding:16px;">
+              <div style="font-family:'DM Sans',sans-serif; font-size:12px; color:#2e7d32; font-weight:600; margin-bottom:12px;">
+                ▲ BULL CASE&nbsp;&nbsp;${Number(s.bull_count || 0)}↑
+              </div>
+              ${_renderBullBearItems(s, "bullish")}
+            </div>
+            <div style="background:#fdf0f0; border-radius:6px; padding:16px;">
+              <div style="font-family:'DM Sans',sans-serif; font-size:12px; color:#c8102e; font-weight:600; margin-bottom:12px;">
+                ▼ BEAR CASE&nbsp;&nbsp;${Number(s.bear_count || 0)}↓
+              </div>
+              ${_renderBullBearItems(s, "bearish")}
+            </div>
+          </div>
+        </section>
+
+        <section>
+          ${_detailSectionHeader("Themes & Tickers")}
+          <div id="themes-detail-grid"></div>
+        </section>
+      `;
+
+      const themesWrap = detailView.querySelector("#themes-detail-grid");
+      const themes = Array.isArray(s.themes_detail) ? s.themes_detail : [];
+      if (!themes.length) {
+        themesWrap.innerHTML = '<div style="font-family:\'DM Mono\',monospace; font-size:11px; color:#aaa;">No theme detail available</div>';
+      } else {
+        themesWrap.innerHTML = themes.map((t, idx) => {
+          const chips = (t.tickers || []).slice(0, 6).map((tk) => `
+            <span style="
+              font-family:'DM Mono',monospace;
+              font-size:10px;
+              background:#f0f0f0;
+              color:#2a2a2a;
+              border-radius:3px;
+              padding:2px 5px;
+              margin-right:4px;
+              display:inline-block;
+              margin-bottom:4px;
+            ">${escHtml(String(tk || ""))}</span>
+          `).join("");
+          return `
+            <div class="sector-theme-drill-row" data-theme-idx="${idx}" style="
+              display:grid;
+              grid-template-columns:1fr 80px 80px auto 24px;
+              gap:10px;
+              align-items:center;
+              padding:10px 8px;
+              border-bottom:1px solid #e8e4dc;
+              cursor:pointer;
+            " onmouseenter="this.style.background='#f5f2ec'" onmouseleave="this.style.background='transparent'">
+              <div style="font-family:'DM Sans',sans-serif; font-size:13px; color:#2a2a2a;">${escHtml(String(t.name || ""))}</div>
+              <div style="font-family:'DM Mono',monospace; font-size:11px; color:#aaa;">${Number(t.article_count || 0)} articles</div>
+              <div>${_directionBadgeHtml(String(t.direction || "neutral"))}</div>
+              <div>${chips}</div>
+              <div style="font-family:'DM Mono',monospace; font-size:11px; color:#ccc; text-align:right;">→</div>
+            </div>
+          `;
+        }).join("");
+        themesWrap.querySelectorAll(".sector-theme-drill-row").forEach((el) => {
+          el.addEventListener("click", () => {
+            const i = Number(el.getAttribute("data-theme-idx"));
+            const t = themes[i];
+            const tid = t && (t.id || t.themeId);
+            if (!tid) return;
+            showThemeView(String(tid), String(t.name || ""), sectorKey);
+          });
+        });
+      }
+
+      if (!hasTrendData) {
+        _destroySectorTrendChart();
+        return;
+      }
+
+      try {
+        await _ensureChartJsLoaded();
+        if (currentDetailSectorKey !== sectorKey) return;
+        _destroySectorTrendChart();
+        const canvas = document.getElementById("sector-trend-canvas");
+        if (!canvas) return;
+        const labels = trendOldestToNewest.map((p) => _formatWeekLabel(String(p.week_start || "")));
+        const scores = trendOldestToNewest.map((p) => Number(p.score || 0));
+        window._sectorTrendChart = new window.Chart(canvas.getContext("2d"), {
+          type: "line",
+          data: {
+            labels,
+            datasets: [{
+              data: scores,
+              borderColor: directionColor,
+              backgroundColor: _chartFillColor(direction),
+              fill: true,
+              tension: 0.25,
+              pointRadius: 3,
+              pointHoverRadius: 3,
+              pointBackgroundColor: directionColor,
+              pointBorderColor: directionColor,
+              borderWidth: 1.8,
+            }],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false }, title: { display: false } },
+            scales: {
+              x: {
+                grid: { display: false, drawBorder: false },
+                ticks: {
+                  color: "#aaa",
+                  font: { family: "DM Mono", size: 10 },
+                  autoSkip: false,
+                  maxRotation: 0,
+                },
+                border: { display: false },
+              },
+              y: {
+                min: -1.0,
+                max: 1.0,
+                ticks: {
+                  stepSize: 0.5,
+                  color: "#aaa",
+                  font: { family: "DM Mono", size: 10 },
+                },
+                grid: {
+                  drawBorder: false,
+                  color: (ctx) => (ctx.tick && ctx.tick.value === 0 ? "#e8e4dc" : "rgba(232,228,220,0.45)"),
+                  lineWidth: (ctx) => (ctx.tick && ctx.tick.value === 0 ? 1.5 : 1),
+                },
+                border: { display: false },
+              },
+            },
+          },
+        });
+      } catch (err) {
+        const wrap = detailView.querySelector("#sector-trend-wrap");
+        if (wrap) {
+          wrap.innerHTML = '<div style="height:120px; display:flex; align-items:center; justify-content:center; font-family:\'DM Mono\',monospace; font-size:11px; color:#aaa;">Insufficient historical data</div>';
+        }
+      }
+    }
+
+    async function renderThemeView(themeId, themeName, sectorKey) {
+      const container = document.getElementById("signals-theme-view");
+      if (!container) return;
+
+      container.innerHTML = `
+        <div style="padding: 24px 0; font-family: 'DM Mono', monospace;
+                    font-size: 11px; color: #aaa;">Loading articles...</div>
+      `;
+
+      const sectorLabel = SECTOR_LABELS[sectorKey] || sectorKey;
+      let data;
+      try {
+        const res = await fetch(
+          "/api/signals/theme-articles?themeId=" + encodeURIComponent(themeId) + "&limit=20"
+        );
+        data = await res.json();
+        if (!res.ok) {
+          container.innerHTML = `
+            <div style="padding:24px 0;font-family:'DM Mono',monospace;font-size:11px;color:#aaa;">
+              ${escHtml(data.error || "Request failed")}
+            </div>
+          `;
+          return;
+        }
+      } catch (e) {
+        container.innerHTML = `
+          <div style="padding:24px 0;font-family:'DM Mono',monospace;font-size:11px;color:#c8102e;">
+            Failed to load articles.
+          </div>
+        `;
+        return;
+      }
+
+      if (openThemeId !== themeId) return;
+
+      if (data.error && (!data.articles || data.articles.length === 0)) {
+        container.innerHTML = `
+          <div style="padding:24px 0;font-family:'DM Mono',monospace;font-size:11px;color:#aaa;">
+            ${escHtml(data.error)}
+          </div>
+        `;
+        return;
+      }
+
+      const articles = Array.isArray(data.articles) ? data.articles : [];
+      const totalCount = data.article_count != null ? Number(data.article_count) : articles.length;
+
+      const rowsHtml = articles.length
+        ? articles.map((a) => {
+            const dateStr = _formatArticleDatePublished(a.date_published || "");
+            const href = _escapeAttr(String(a.source_url || "").trim() || "#");
+            const summary = String(a.summary || "").trim();
+            const sentRaw = String(a.sentiment || "").toLowerCase();
+            const sentDir = sentRaw === "bullish" ? "bullish" : sentRaw === "bearish" ? "bearish" : "neutral";
+            const ms = Number(a.match_score != null ? a.match_score : 0);
+            return `
+              <div style="border-bottom:1px solid #e8e4dc;padding:14px 0;cursor:default;">
+                <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;">
+                  <span style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;">${escHtml(a.source_name || "")}</span>
+                  <span style="font-family:'DM Mono',monospace;font-size:10px;color:#aaa;">${escHtml(dateStr)}</span>
+                </div>
+                <a href="${href}" target="_blank" rel="noopener" style="
+                  display:block;
+                  margin-top:6px;
+                  font-family:'DM Sans',sans-serif;
+                  font-size:14px;
+                  font-weight:500;
+                  color:#2a2a2a;
+                  text-decoration:none;
+                " onmouseover="this.style.textDecoration='underline';this.style.color='#c8102e'"
+                   onmouseout="this.style.textDecoration='none';this.style.color='#2a2a2a'">${escHtml(a.title || "")}</a>
+                ${summary ? `
+                  <div style="
+                    margin-top:6px;
+                    font-family:'DM Sans',sans-serif;
+                    font-size:12px;
+                    color:#666;
+                    line-height:1.45;
+                    display:-webkit-box;
+                    -webkit-line-clamp:2;
+                    -webkit-box-orient:vertical;
+                    overflow:hidden;
+                  ">${escHtml(summary)}</div>
+                ` : ""}
+                <div style="margin-top:8px;display:flex;align-items:center;flex-wrap:wrap;">
+                  ${_directionBadgeHtmlSmall(sentDir)}
+                  <span style="font-family:'DM Mono',monospace;font-size:10px;color:#aaa;margin-left:8px;">match: ${ms.toFixed(2)}</span>
+                </div>
+              </div>
+            `;
+          }).join("")
+        : `
+          <div style="font-family:'DM Mono',monospace;font-size:11px;color:#aaa;padding:12px 0;">
+            No articles found for this theme.
+          </div>
+        `;
+
+      const builtHTML = `
+        <div style="border-bottom:1px solid #e8e4dc; padding-bottom:16px; margin-bottom:24px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;">
+            <div style="display:flex; align-items:center; min-width:0;">
+              <button type="button" onclick="showDetailViewFromTheme()" style="
+                font-family:'DM Sans',sans-serif;
+                font-size:12px;
+                color:#888;
+                background:none;
+                border:none;
+                cursor:pointer;
+                margin-right:16px;
+                padding:0;
+              ">← Back to ${escHtml(sectorLabel)}</button>
+              <div style="font-family:'Playfair Display',serif; font-size:22px; color:#2a2a2a;">${escHtml(themeName || "")}</div>
+            </div>
+            <div style="font-family:'DM Mono',monospace; font-size:11px; color:#aaa;">
+              ${totalCount} articles
+            </div>
+          </div>
+        </div>
+        <div id="theme-brief-card" style="
+          border: 1px solid #e8e4dc;
+          margin-bottom: 24px;
+          background: #fff;
+        ">
+          <div id="theme-brief-collapsed" style="padding:16px 20px;">
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#c8102e; font-weight:600;">AI BRIEF</span>
+              <span style="font-family:'DM Sans',sans-serif; font-size:10px; color:#aaa;">·</span>
+              <span style="font-family:'DM Sans',sans-serif; font-size:10px; color:#888;">${escHtml(themeName || "")}</span>
+              <span style="font-family:'DM Sans',sans-serif; font-size:10px; color:#aaa;">·</span>
+              <span id="theme-brief-time" style="font-family:'DM Mono',monospace; font-size:10px; color:#aaa;">--:--</span>
+            </div>
+            <div id="theme-brief-title" style="margin-top:8px; font-family:'Playfair Display',serif; font-size:20px; font-weight:400; color:#2a2a2a;">
+              AI Briefing: ${escHtml(themeName || "")}
+            </div>
+            <div id="theme-brief-subtitle" style="margin-top:6px; font-family:'DM Sans',sans-serif; font-size:13px; color:#888; font-style:italic; line-height:1.5; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">
+              Click to generate an AI analysis of ${escHtml(themeName || "")} from ${articles.length} recent articles
+            </div>
+            <div style="margin-top:12px;">
+              <button onclick="generateThemeBrief('${_escapeAttr(themeId)}', '${_escapeAttr(themeName || "")}', _currentThemeArticles)" style="font-family:'DM Sans',sans-serif; font-size:12px; color:#c8102e; background:none; border:none; cursor:pointer; padding:0;">
+                ✦ Generate brief
+              </button>
+            </div>
+            <div id="theme-brief-read" style="display:none; margin-top:12px; font-family:'DM Sans',sans-serif; font-size:12px; color:#c8102e; pointer-events:auto;">
+              Read brief →
+            </div>
+          </div>
+          <div id="theme-brief-expanded" style="display:none; padding: 0 20px 16px 20px;">
+            <div style="border-top:1px solid #e8e4dc; margin:12px 0;"></div>
+            <div id="theme-brief-text" style="
+              font-family: 'DM Sans', sans-serif;
+              font-size: 13px;
+              line-height: 1.7;
+              color: #2a2a2a;
+              white-space: pre-wrap;
+              margin-bottom: 12px;
+            "></div>
+            <div id="theme-brief-citations" style="
+              font-family: 'DM Mono', monospace;
+              font-size: 10px;
+              color: #aaa;
+              border-top: 1px solid #e8e4dc;
+              padding-top: 8px;
+              margin-top: 8px;
+            "></div>
+            <div style="text-align:right; margin-top:8px;">
+              <button onclick="regenerateThemeBrief()"
+                      style="font-family:'DM Sans',sans-serif; font-size:11px;
+                             color:#c8102e; background:none; border:none;
+                             cursor:pointer; padding:0;">
+                ↻ Regenerate
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>${rowsHtml}</div>
+      `;
+      container.innerHTML = builtHTML;
+      _currentThemeArticles = articles;
+    }
+
+    async function refreshSectorScores() {
+      const btn = document.getElementById("scorecard-refresh-btn");
+      if (!btn) return;
+      btn.textContent = "↻ Running...";
+      btn.style.color = "#aaa";
+      try {
+        const res = await fetch("/api/signals/sector-scores/refresh", { method: "POST" });
+        const data = await res.json();
+        if (data.success) {
+          await loadSectorScores();
+        } else {
+          console.error("Refresh failed:", data.error);
+        }
+      } catch (e) {
+        console.error("Refresh failed:", e);
+      } finally {
+        btn.textContent = "↻ Refresh";
+        btn.style.color = "#c8102e";
+      }
+    }
+
+    function renderPaneSignals(sig) {
+      const section = document.getElementById("pane-signal-section");
+      if (!section) return;
+
+      const topSectors = (sig.sector_signals || [])
+        .sort((a, b) => b.confidence - a.confidence)
+        .slice(0, 5);
+
+      const entities = (sig.entities || []).slice(0, 6)
+        .map((e) => escHtml(e.name || "")).join(" · ");
+
+      const actions = (sig.actions || []).slice(0, 3).map((a) => {
+        const parts = [a.subject, a.verb, a.object, a.magnitude].filter(Boolean).join(" ");
+        return `<li style="margin-bottom:3px;">${escHtml(parts)}</li>`;
+      }).join("");
+
+      const quant = (sig.quantitative || []).slice(0, 4).map((q) => {
+        const arrow = q.direction === "up" ? "▲" : q.direction === "down" ? "▼" : "";
+        const dirColor = q.direction === "up" ? "#2d7a3a"
+          : q.direction === "down" ? "var(--accent)" : "var(--ink-muted)";
+        return `<span style="
+          font-family:'DM Mono',monospace; font-size:11px;
+          color:${dirColor}; background:var(--paper);
+          border:1px solid var(--border); padding:2px 6px;
+          margin-right:4px; display:inline-block; margin-bottom:4px;
+        ">${arrow} ${escHtml(q.metric || "")} ${q.value != null ? q.value : ""} ${escHtml(q.unit || "")}</span>`;
+      }).join("");
+
+      const sectorBars = topSectors.map((s) => {
+        const label = s.sector.replace(/\./g, " › ").replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+        const dirColor = s.direction === "bullish" ? "#2d7a3a"
+          : s.direction === "bearish" ? "var(--accent)"
+          : "var(--ink-muted)";
+        const arrow = s.direction === "bullish" ? "▲" : s.direction === "bearish" ? "▼" : "—";
+        const barWidth = Math.round(s.confidence * 100);
+        return `
+          <div style="margin-bottom:10px;">
+            <div style="display:flex; justify-content:space-between;
+              align-items:center; margin-bottom:3px;">
+              <span style="font-family:'DM Sans',sans-serif; font-size:11px;
+                color:var(--ink);">${escHtml(label)}</span>
+              <span style="font-family:'DM Mono',monospace; font-size:11px;
+                color:${dirColor};">${arrow} ${s.confidence.toFixed(2)}</span>
+            </div>
+            <div style="height:3px; background:var(--border);">
+              <div style="height:100%; width:${barWidth}%;
+                background:${dirColor};"></div>
+            </div>
+            ${s.evidence ? `
+              <div style="font-family:'DM Sans',sans-serif; font-size:10px;
+                color:var(--ink-muted); margin-top:3px; font-style:italic;">
+                ${escHtml(s.evidence)}
+              </div>
+            ` : ""}
+          </div>
+        `;
+      }).join("");
+
+      const geoScore = sig.geopolitical_risk_score || 0;
+      const impactScore = sig.market_impact_score || 0;
+      const geoWidth = Math.round(geoScore * 100);
+      const impactWidth = Math.round(impactScore * 100);
+      const geoColor = geoScore >= 0.7 ? "var(--accent)" : "var(--ink-muted)";
+      const impactColor = impactScore >= 0.7 ? "var(--accent)" : "var(--ink-muted)";
+
+      section.style.display = "block";
+      section.innerHTML = `
+        <div style="
+          margin:20px 0;
+          padding:20px;
+          background:var(--paper);
+          border-left:3px solid var(--accent);
+        ">
+          <div style="font-family:'DM Sans',sans-serif; font-size:10px;
+            letter-spacing:0.1em; text-transform:uppercase;
+            color:var(--accent); margin-bottom:16px;">
+            Extracted Signals
+          </div>
+
+          ${sig.summary_signal ? `
+            <div style="font-family:'DM Sans',sans-serif; font-size:13px;
+              color:var(--ink); font-style:italic; line-height:1.5;
+              margin-bottom:16px; padding-bottom:16px;
+              border-bottom:1px solid var(--border);">
+              "${escHtml(sig.summary_signal)}"
+            </div>
+          ` : ""}
+
+          <div style="margin-bottom:16px; padding-bottom:16px;
+            border-bottom:1px solid var(--border);">
+            ${sectorBars}
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr;
+            gap:12px; margin-bottom:16px; padding-bottom:16px;
+            border-bottom:1px solid var(--border);">
+            <div>
+              <div style="font-family:'DM Sans',sans-serif; font-size:10px;
+                letter-spacing:0.06em; text-transform:uppercase;
+                color:var(--ink-muted); margin-bottom:4px;">
+                Geopolitical Risk
+              </div>
+              <div style="height:4px; background:var(--border); margin-bottom:3px;">
+                <div style="height:100%; width:${geoWidth}%;
+                  background:${geoColor};"></div>
+              </div>
+              <div style="font-family:'DM Mono',monospace; font-size:11px;
+                color:${geoColor};">${geoScore.toFixed(2)}</div>
+            </div>
+            <div>
+              <div style="font-family:'DM Sans',sans-serif; font-size:10px;
+                letter-spacing:0.06em; text-transform:uppercase;
+                color:var(--ink-muted); margin-bottom:4px;">
+                Market Impact
+              </div>
+              <div style="height:4px; background:var(--border); margin-bottom:3px;">
+                <div style="height:100%; width:${impactWidth}%;
+                  background:${impactColor};"></div>
+              </div>
+              <div style="font-family:'DM Mono',monospace; font-size:11px;
+                color:${impactColor};">${impactScore.toFixed(2)}</div>
+            </div>
+          </div>
+
+          ${entities ? `
+            <div style="margin-bottom:10px;">
+              <span style="font-family:'DM Sans',sans-serif; font-size:10px;
+                letter-spacing:0.06em; text-transform:uppercase;
+                color:var(--ink-muted); margin-right:8px;">Entities</span>
+              <span style="font-family:'DM Sans',sans-serif; font-size:12px;
+                color:var(--ink);">${entities}</span>
+            </div>
+          ` : ""}
+
+          ${actions ? `
+            <div style="margin-bottom:10px;">
+              <div style="font-family:'DM Sans',sans-serif; font-size:10px;
+                letter-spacing:0.06em; text-transform:uppercase;
+                color:var(--ink-muted); margin-bottom:4px;">Actions</div>
+              <ul style="margin:0; padding-left:16px;
+                font-family:'DM Sans',sans-serif; font-size:12px;
+                color:var(--ink-muted); line-height:1.6;">
+                ${actions}
+              </ul>
+            </div>
+          ` : ""}
+
+          ${quant ? `
+            <div>
+              <div style="font-family:'DM Sans',sans-serif; font-size:10px;
+                letter-spacing:0.06em; text-transform:uppercase;
+                color:var(--ink-muted); margin-bottom:6px;">Numbers</div>
+              <div>${quant}</div>
+            </div>
+          ` : ""}
+        </div>
+      `;
+    }
+
+    function switchTab(tab) {
+      if (activeTab === "signals" && tab !== "signals") {
+        showScorecardView();
+      }
+      activeTab = tab;
+      if (currentQuery) clearSearch();
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.tab === tab);
+      });
+      document.getElementById("news-panel").style.display = tab === "news" ? "block" : "none";
+      document.getElementById("events-panel").style.display = tab === "events" ? "block" : "none";
+      document.getElementById("signals-panel").style.display = tab === "signals" ? "block" : "none";
+      document.getElementById("topic-filter-wrapper").style.display = tab === "news" ? "flex" : "none";
+      document.getElementById("refresh-feed-btn").style.display = tab === "news" ? "inline-block" : "none";
+      document.getElementById("personalisation-toggle").style.display = tab === "news" ? "flex" : "none";
+      if (tab === "news" && !newsLoaded) loadNews();
+      if (tab === "events" && !eventsLoaded) loadEvents();
+      if (tab === "signals" && !signalsLoaded) loadSignalsTab();
+      if (tab === "signals") loadSectorScores();
+    }
+
+    function updateDigestContextIndicator() {
+      const indicator = document.getElementById("digest-context-indicator");
+      if (!indicator) return;
+      if (currentSearchResults.length > 0 && currentQuery) {
+        indicator.textContent = `· scoped to "${currentQuery}" (${currentSearchResults.length} items)`;
+        indicator.style.display = "inline";
+      } else {
+        indicator.style.display = "none";
+      }
+    }
+
+    function updateFlashNoteState() {
+      const btn = document.getElementById("flash-note-btn");
+      if (!btn) return;
+
+      const hasSelectedItem = currentPaneItem !== null;
+      const hasSearchResult = currentSearchResults.length > 0;
+      const item = currentPaneItem || currentSearchResults[0] || null;
+      const hasContent = !!(
+        item &&
+        ((item.description && item.description.length > 30) ||
+          (item.url && item.url.length > 0))
+      );
+
+      if ((hasSelectedItem || hasSearchResult) && hasContent) {
+        btn.disabled = false;
+        btn.style.opacity = "1";
+        btn.style.cursor = "pointer";
+        btn.title = item.description
+          ? `Flash note on: ${(item.title || "").slice(0, 50)}`
+          : "Flash note (will fetch article first)";
+      } else if ((hasSelectedItem || hasSearchResult) && !hasContent) {
+        btn.disabled = true;
+        btn.style.opacity = "0.4";
+        btn.style.cursor = "default";
+        btn.title = "No article content available for flash note";
+      } else {
+        btn.disabled = true;
+        btn.style.opacity = "0.4";
+        btn.style.cursor = "default";
+        btn.title = "Open an article or run a search first";
+      }
+    }
+
+    async function handleFlashNote() {
+      const targetItem = currentPaneItem || currentSearchResults[0] || null;
+      if (!targetItem) return;
+
+      let enrichedItem = { ...targetItem };
+
+      if ((!enrichedItem.description || enrichedItem.description.length < 30) && enrichedItem.url) {
+        showDigestLoading();
+        try {
+          const res = await fetch(
+            "/api/news/article/fetch?url=" + encodeURIComponent(enrichedItem.url)
+          );
+          const data = await res.json();
+          if (data.success && data.text && data.text.length > 100) {
+            enrichedItem.description = data.text.slice(0, 300).trim();
+          }
+        } catch (e) {
+          // Continue without enrichment
+        }
+      }
+
+      if (!enrichedItem.description || enrichedItem.description.length < 30) {
+        showToast("Not enough article content for a flash note — try opening the article first");
+        return;
+      }
+
+      showDigestLoading();
+      const body = {
+        format: "flash_note",
+        model: "llama3",
+        context_items: [enrichedItem],
+      };
+
+      try {
+        const res = await fetch("/api/news/digest/generate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        });
+        const data = await res.json();
+        showDigestResult(data);
+      } catch (e) {
+        showDigestError(e);
+      }
+    }
+
+    async function performSearch(query) {
+      if (query === currentQuery) return;
+      currentQuery = query;
+
+      document.getElementById("search-results-panel").style.display = "block";
+      document.getElementById("tabs-bar").style.display = "block";
+      document.getElementById("news-panel").style.display = "none";
+      document.getElementById("events-panel").style.display = "none";
+
+      document.getElementById("search-loading").style.display = "block";
+      document.getElementById("search-results-grid").innerHTML = "";
+      document.getElementById("search-no-results").style.display = "none";
+      document.getElementById("search-results-label").textContent = `Searching for "${query}"...`;
+
+      try {
+        const res = await fetch(`/api/news/search?q=${encodeURIComponent(query)}&limit=30`);
+        const data = await res.json();
+        currentSearchResults = data.items || [];
+        const topicInput = document.getElementById("topicInput");
+        if (
+          topicInput &&
+          document.getElementById("topicInline").style.display === "flex" &&
+          !topicInput.value.trim()
+        ) {
+          topicInput.value = currentQuery;
+        }
+        updateDigestContextIndicator();
+        updateFlashNoteState();
+
+        document.getElementById("search-loading").style.display = "none";
+
+        if (!currentSearchResults.length) {
+          document.getElementById("search-no-results").style.display = "block";
+          document.getElementById("search-results-label").textContent = `No results for "${query}"`;
+          return;
+        }
+
+        document.getElementById("search-results-label").textContent =
+          `${data.total} results for "${query}" - searched ${data.searched} items`;
+
+        const grid = document.getElementById("search-results-grid");
+        currentSearchResults.forEach((item) => {
+          grid.appendChild(renderSearchResult(item));
+        });
+      } catch (err) {
+        currentSearchResults = [];
+        updateDigestContextIndicator();
+        updateFlashNoteState();
+        document.getElementById("search-loading").style.display = "none";
+        document.getElementById("search-results-label").textContent = "Search failed.";
+      }
+    }
+
+    function renderSearchResult(item) {
+      const card = document.createElement("div");
+      card.style.cssText = `
+        background: var(--paper-card); padding: 16px 18px;
+        cursor: pointer;
+        border-top: 2px solid transparent;
+        transition: border-top-color 0.15s;
+      `;
+      card.addEventListener("mouseenter", () => {
+        card.style.borderTopColor = "var(--accent)";
+      });
+      card.addEventListener("mouseleave", () => {
+        card.style.borderTopColor = "transparent";
+      });
+      card.addEventListener("click", () => openArticlePane(item));
+
+      const typeBadge = item.item_type === "event"
+        ? `<span style="
+            font-family:'DM Sans',sans-serif; font-size:10px;
+            background:var(--accent-soft); color:var(--accent);
+            border:1px solid var(--accent); padding:1px 5px;
+            border-radius:2px; margin-left:6px; vertical-align:middle;
+          ">EVENT</span>`
+        : "";
+
+      const title = item.item_type === "event"
+        ? toTitleCase(item.title || "")
+        : (item.title || "");
+
+      card.innerHTML = `
+        <div style="
+          font-family:'DM Sans',sans-serif; font-size:11px;
+          color:var(--ink-muted); margin-bottom:8px;
+          display:flex; justify-content:space-between; align-items:center;
+        ">
+          <span>${escHtml(item.source_name || "")} · ${escHtml(item.topic || "")}${typeBadge}</span>
+          <span>${fmtDate(item.date_published || "")}</span>
+        </div>
+        <div style="
+          font-family:'Playfair Display',serif; font-size:15px;
+          font-weight:400; line-height:1.35; color:var(--ink); margin-bottom:8px;
+        ">${escHtml(title)}</div>
+        ${item.description ? `<div style="
+          font-family:'DM Sans',sans-serif; font-size:12px;
+          color:var(--ink-muted); line-height:1.5;
+          display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+          overflow:hidden;
+        ">${escHtml(item.description)}</div>` : ""}
+        <div style="margin-top:10px;">
+          <span style="
+            font-family:'DM Sans',sans-serif; font-size:12px; color:var(--accent);
+          ">${item.item_type === "event" ? "Register →" : "Read →"}</span>
+        </div>
+      `;
+      return card;
+    }
+
+    function clearSearch() {
+      currentQuery = "";
+      currentSearchResults = [];
+      document.getElementById("search-input").value = "";
+      document.getElementById("search-clear").style.display = "none";
+      document.getElementById("search-results-panel").style.display = "none";
+      document.getElementById("tabs-bar").style.display = "block";
+      updateDigestContextIndicator();
+      updateFlashNoteState();
+      if (activeTab === "news") {
+        document.getElementById("news-panel").style.display = "block";
+      } else {
+        document.getElementById("events-panel").style.display = "block";
+      }
+    }
+
+    function bindUI() {
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closePane();
+      });
+
+      document.getElementById("refreshBtn").addEventListener("click", async () => {
+        try {
+          await api("/api/news/refresh", { method: "POST" });
+          newsLoaded = false;
+          eventsLoaded = false;
+          await Promise.all([loadStats(), loadTopics(), loadSignals()]);
+          if (activeTab === "news") await loadNews();
+          else await loadEvents();
+        } catch (e) {
+          showToast("Refresh failed");
+        }
+      });
+
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => switchTab(btn.dataset.tab));
+      });
+
+      document.getElementById("search-input").addEventListener("focus", () => {
+        document.getElementById("search-wrapper").style.borderColor = "var(--accent)";
+      });
+      document.getElementById("search-input").addEventListener("blur", () => {
+        document.getElementById("search-wrapper").style.borderColor = "var(--border)";
+      });
+      document.getElementById("search-input").addEventListener("input", function () {
+        const q = this.value.trim();
+        document.getElementById("search-clear").style.display = q ? "block" : "none";
+
+        clearTimeout(searchTimeout);
+        if (!q) {
+          clearSearch();
+          return;
+        }
+        searchTimeout = setTimeout(() => performSearch(q), 400);
+      });
+      document.getElementById("search-input").addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          clearTimeout(searchTimeout);
+          const q = this.value.trim();
+          if (q) performSearch(q);
+        }
+        if (e.key === "Escape") clearSearch();
+      });
+
+      document.getElementById("topicSelect").addEventListener("change", async (e) => {
+        currentTopic = e.target.value || "";
+        newsLoaded = false;
+        await loadNews();
+      });
+
+      document.addEventListener("click", function (e) {
+        const aiBtn = document.getElementById("ai-toggle-btn");
+        const aiDrop = document.getElementById("ai-dropdown");
+        const dataBtn = document.getElementById("data-toggle-btn");
+        const dataPop = document.getElementById("data-popover");
+        if (aiDropdownOpen && aiBtn && aiDrop && !aiBtn.contains(e.target) && !aiDrop.contains(e.target)) {
+          aiDropdownOpen = false;
+          aiDrop.style.display = "none";
+          document.getElementById("ai-toggle-chevron").style.transform = "rotate(0deg)";
+          aiBtn.style.borderColor = "var(--border)";
+          aiBtn.style.color = "var(--ink-muted)";
+        }
+        if (dataPopoverOpen && dataBtn && dataPop && !dataBtn.contains(e.target) && !dataPop.contains(e.target)) {
+          dataPopoverOpen = false;
+          dataPop.style.display = "none";
+          dataBtn.style.borderColor = "var(--border)";
+          dataBtn.style.color = "var(--ink-muted)";
+        }
+        const prefsPanel = document.getElementById("prefs-panel");
+        const settingsBtn = document.querySelector('[title="Customise topics"]');
+        if (
+          prefsPanelOpen &&
+          prefsPanel &&
+          !prefsPanel.contains(e.target) &&
+          (!settingsBtn || !settingsBtn.contains(e.target))
+        ) {
+          closePrefsPanel();
+        }
+      });
+
+      document.getElementById("news-panel").addEventListener("click", (e) => {
+        const t = e.target.closest(".title-clickable, .pane-link");
+        if (!t) return;
+        e.preventDefault();
+        const idx = Number(t.getAttribute("data-idx"));
+        const item = (window.__newsPaneItems || [])[idx];
+        if (item) openArticlePane(item);
+      });
+      document.getElementById("events-panel").addEventListener("click", (e) => {
+        const t = e.target.closest(".title-clickable");
+        if (!t) return;
+        e.preventDefault();
+        const idx = Number(t.getAttribute("data-idx"));
+        const item = (window.__eventsPaneItems || [])[idx];
+        if (item) openArticlePane(item);
+      });
+    }
+
+    async function init() {
+      bindUI();
+      updateDigestContextIndicator();
+      updateFlashNoteState();
+      const savedPrefs = loadTopicPrefs();
+      personalisationActive = savedPrefs.usePrefs !== false;
+      if (!personalisationActive) {
+        const btn = document.getElementById("pref-toggle-btn");
+        if (btn) {
+          btn.style.background = "none";
+          btn.style.color = "var(--ink-muted)";
+          btn.style.borderColor = "var(--border)";
+          btn.textContent = "☆ For you";
+        }
+      }
+      try {
+        const state = await fetch("/api/news/pipeline/status").then((r) => r.json());
+        if (state.running) {
+          startPipelinePolling();
+          const btn = document.getElementById("btn-pipeline");
+          if (btn) {
+            btn.disabled = true;
+            btn.textContent = "Pipeline running...";
+          }
+        }
+      } catch (e) {}
+      await loadDataStats();
+      await Promise.all([loadStats(), loadTopics(), loadSignals()]);
+      await updateSignalCount();
+      await loadSectorScores();
+      await loadNews();
+    }
+
+    init();
+  </script>
+</body>
+</html>

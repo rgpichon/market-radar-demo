@@ -1,0 +1,69 @@
+{
+  "mode": "local",
+  "source_dir": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_email_ingest",
+  "discovered_at": "2026-01-14T10:18:13.509092+00:00",
+  "total_emails": 0,
+  "senders": {},
+  "by_target": {
+    "jpmorgan_markets": {
+      "org_name": "JPMorgan",
+      "matched_senders": [],
+      "confidence": "low",
+      "last_seen": null
+    },
+    "goldman_markets": {
+      "org_name": "Goldman Sachs",
+      "matched_senders": [],
+      "confidence": "low",
+      "last_seen": null
+    },
+    "morgan_stanley_markets": {
+      "org_name": "Morgan Stanley",
+      "matched_senders": [],
+      "confidence": "low",
+      "last_seen": null
+    },
+    "citigroup_markets": {
+      "org_name": "Citigroup",
+      "matched_senders": [],
+      "confidence": "low",
+      "last_seen": null
+    },
+    "bofa_markets": {
+      "org_name": "Bank of America",
+      "matched_senders": [],
+      "confidence": "low",
+      "last_seen": null
+    },
+    "barclays_markets": {
+      "org_name": "Barclays",
+      "matched_senders": [],
+      "confidence": "low",
+      "last_seen": null
+    },
+    "ubs_markets": {
+      "org_name": "UBS",
+      "matched_senders": [],
+      "confidence": "low",
+      "last_seen": null
+    },
+    "deutsche_bank_markets": {
+      "org_name": "Deutsche Bank",
+      "matched_senders": [],
+      "confidence": "low",
+      "last_seen": null
+    },
+    "socgen_markets": {
+      "org_name": "Societe Generale",
+      "matched_senders": [],
+      "confidence": "low",
+      "last_seen": null
+    },
+    "bnpp_markets": {
+      "org_name": "BNP Paribas",
+      "matched_senders": [],
+      "confidence": "low",
+      "last_seen": null
+    }
+  }
+}

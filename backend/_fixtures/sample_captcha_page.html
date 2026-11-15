@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protected Signup - Test Bank</title>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+<body>
+    <h1>Subscribe to Market Insights</h1>
+    
+    <form id="signup-form" action="/api/subscribe" method="POST">
+        <input type="email" name="email" required>
+        
+        <div class="g-recaptcha" data-sitekey="test-key"></div>
+        
+        <button type="submit">Subscribe</button>
+    </form>
+</body>
+</html>

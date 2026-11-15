@@ -1,0 +1,60 @@
+# market-radar/requirements.txt
+# Unified venv for Market Radar + Reports news integration
+#
+# ARCHITECTURE NOTE — read before modifying:
+# This venv serves market-radar/ as the host application for the unified news app.
+# It intentionally merges market-radar/ and reports/ dependencies only.
+#
+# signal/ (torch, transformers, spacy, psycopg2, fastapi) is EXCLUDED by design:
+#   - torch alone is ~2GB and has Python version constraints
+#   - fastapi conflicts with flask in the same environment
+#   - signal/ runs as a separate process with its own venv
+#   - signal enrichment (FinBERT sentiment) is accessed via optional HTTP call
+#     to http://localhost:8000 — graceful no-op if signal server is not running
+#
+# Future integrations that belong in THIS venv:
+#   - market-radar/backend/news/feed_adapters.py (imports from reports/ via sys.path)
+#   - market-radar/backend/news/feed_aggregator.py (merges articles + events + market data)
+#   - market-radar/backend/news/digest_generator.py (llm journalist layer)
+#   - market-radar/backend/news/news_routes.py (flask blueprint: /api/feed, /api/digest)
+#   - APNs push notification sender (ios app backend)
+#
+# Install: pip install -r requirements.txt
+# After install, also run: playwright install chromium
+#
+# --- core market radar (flask server, scraping pipeline, email ingestion) ---
+flask==3.0.0
+requests==2.31.0
+beautifulsoup4==4.12.2
+python-dateutil==2.8.2
+feedparser==6.0.10
+icalendar==5.0.11
+html2text==2024.2.26
+google-auth==2.23.4
+google-auth-oauthlib==1.1.0
+google-api-python-client==2.108.0
+playwright==1.40.0
+
+# --- reports integration (rss adapter, gnews, theme matcher, article extractor) ---
+flask-cors>=4.0.0
+yfinance>=0.2.40
+pandas>=2.0.0
+numpy>=1.20.0
+gnews
+newspaper3k
+lxml_html_clean
+scikit-learn>=1.3.0
+joblib>=1.3.0
+
+# --- news app: llm journalist layer (digest generation, briefings) ---
+ollama
+groq
+httpx>=0.25.0
+aiohttp>=3.9.0
+
+# --- news app: ios push notifications (track a) ---
+apns2
+PyJWT>=2.8.0
+
+# --- note: signal/ keeps its own venv. torch/transformers/spacy are intentionally excluded. ---
+# --- signal enrichment is called optionally via http when signal server is running. ---

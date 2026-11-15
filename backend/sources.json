@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "afme_events",
+    "firm_name": "AFME",
+    "firm_type": "Association",
+    "url": "https://www.afme.eu/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": "article",
+      "title_selector": "h3",
+      "link_selector": "a[href*='/events/']",
+      "date_selector": ".date, time"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/events/"
+      ]
+    },
+    "default_tags_json": [
+      "Capital Markets",
+      "EU"
+    ],
+    "detail_fetch": {
+      "enabled": true,
+      "max": 10,
+      "stop_after_first_valid": true,
+      "date_selector": "script[type=\"application/ld+json\"], time[datetime], meta[itemprop=\"startDate\"], meta[property*=\"date\"], .date, .event-date, [class*=\"date\"]",
+      "date_attr": "datetime",
+      "priority_order": [
+        "jsonld",
+        "time_datetime",
+        "meta_itemprop",
+        "meta_property",
+        "class_date"
+      ],
+      "participants_selectors": [
+        ".speakers",
+        ".panelists",
+        ".event-speakers",
+        ".participants",
+        ".speaker-list"
+      ],
+      "participants_fallback": true
+    },
+    "active": 1
+  },
+  {
+    "id": "aima_events",
+    "firm_name": "AIMA",
+    "firm_type": "Association",
+    "url": "https://www.aima.org/events.html",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Association"
+    ],
+    "active": 1,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444830+00:00 - Status: deferred (low_tier_html) - detail_fetch enabled for date extraction",
+    "selectors_json": {
+      "item_selector": "article",
+      "title_selector": "h3 a",
+      "link_selector": "h3 a"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.aima.org/events.html ===\n\nHTTP Status: 200\nContent-Type: text/html;charset=UTF-8\nContent Length: 76128 bytes\nFinal URL: https://www.aima.org/events.html\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 76,128 bytes\nScript tags: 17\nLinks: 156\nPotential event containers: 0\nEvent-like CSS classes: 33\n\nTop 10 event-like classes:\n  .articles-entry: 23 occurrences\n  .articles-entry-details: 23 occurrences\n  .ar"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate",
+    "selector_extracted_at": "2026-01-27T20:34:32.096296+00:00",
+    "activated_at": "2026-01-27T20:36:06.351855+00:00",
+    "detail_fetch": {
+      "enabled": true,
+      "max": 10,
+      "stop_after_first_valid": true,
+      "date_selector": "script[type=\"application/ld+json\"], time[datetime], meta[itemprop=\"startDate\"], meta[property*=\"date\"], .date, .event-date, [class*=\"date\"]",
+      "date_attr": "datetime",
+      "priority_order": [
+        "jsonld",
+        "time_datetime",
+        "meta_itemprop",
+        "meta_property",
+        "class_date"
+      ]
+    }
+  },
+  {
+    "id": "aima_events_5e71e7",
+    "firm_name": "AIMA",
+    "firm_type": "Association",
+    "url": "https://www.aima.org/events/forthcoming-aima-events.html",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Association"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444837+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.aima.org/events/forthcoming-aima-events.html ===\n\nHTTP Status: 200\nContent-Type: text/html;charset=UTF-8\nContent Length: 76128 bytes\nFinal URL: https://www.aima.org/events.html\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 76,128 bytes\nScript tags: 17\nLinks: 156\nPotential event containers: 0\nEvent-like CSS classes: 33\n\nTop 10 event-like classes:\n  .articles-entry: 23 occurrences\n  .articles-entry-detai"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "aqr_events",
+    "firm_name": "AQR",
+    "firm_type": "Asset Manager",
+    "url": "https://www.aqr.com/Insights/Events",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Asset Management"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444782+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.aqr.com/Insights/Events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=utf-8\nContent Length: 56772 bytes\nFinal URL: https://www.aqr.com/404\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 56,772 bytes\nScript tags: 11\nLinks: 61\nPotential event containers: 0\nEvent-like CSS classes: 10\n\nTop 10 event-like classes:\n  .nav2__item__link: 19 occurrences\n  .nav2__item: 6 occurrences\n  .nav2__item__name: 4"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "bis_ifc_events",
+    "firm_name": "BIS IFC",
+    "firm_type": "Central Bank",
+    "url": "https://www.bis.org/ifc/events.htm",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": "table tr",
+      "title_selector": "td:nth-child(2) a, td a",
+      "link_selector": "a",
+      "date_selector": "td:first-child"
+    },
+    "postprocess_rules": {
+      "min_title_length": 15
+    },
+    "default_tags_json": [
+      "Central Bank",
+      "Statistics"
+    ],
+    "active": 1
+  },
+  {
+    "id": "bnp_paribas_news",
+    "firm_name": "BNP Paribas",
+    "firm_type": "Bulge Bracket",
+    "url": "https://group.bnpparibas/en/rss/news",
+    "adapter_type": "rss",
+    "default_tags_json": [
+      "Banking",
+      "Macro"
+    ],
+    "enforce_events_only": true,
+    "postprocess_rules": {
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/seminar",
+        "/conference"
+      ]
+    },
+    "active": 0,
+    "comment": "RSS feed contains press releases, not events. All 20 items rejected as article_like.",
+    "failure_class": "press_release_only",
+    "failure_evidence": "RSS feed validated: 20 items found, all rejected as article_like (press releases)",
+    "recommended_next_action": "rss_search"
+  },
+  {
+    "id": "bank_of_england_events",
+    "firm_name": "Bank of England",
+    "firm_type": "Central Bank",
+    "url": "https://www.bankofengland.co.uk/news/events",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Central Bank",
+      "Monetary Policy"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444846+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.bankofengland.co.uk/news/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=utf-8\nContent Length: 75261 bytes\nFinal URL: https://www.bankofengland.co.uk/news/events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 75,261 bytes\nScript tags: 10\nLinks: 175\nPotential event containers: 0\nEvent-like CSS classes: 11\n\nTop 10 event-like classes:\n  .nav-primary__sublist-item: 126 occurrences\n  .nav-prima"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "bank_of_england_events_ac8e61",
+    "firm_name": "Bank of England",
+    "firm_type": "Central Bank",
+    "url": "https://www.bankofengland.co.uk/events/2026/march/boe-to-hear-the-views-of-the-people-in-north-london-about-the-cost-of-living",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Central Bank",
+      "Monetary Policy"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444854+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.bankofengland.co.uk/events/2026/march/boe-to-hear-the-views-of-the-people-in-north-london-about-the-cost-of-living ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=utf-8\nContent Length: 74022 bytes\nFinal URL: https://www.bankofengland.co.uk/events/2026/march/boe-to-hear-the-views-of-the-people-in-north-london-about-the-cost-of-living\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 74,022 bytes\nScri"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "brookings_events",
+    "firm_name": "Brookings Institution",
+    "firm_type": "Think Tank",
+    "url": "https://www.brookings.edu/events/",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": "article.article.event",
+      "title_selector": ".article-title",
+      "link_selector": "a.overlay-link",
+      "date_selector": ".event-date"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/events/",
+        "/event/"
+      ]
+    },
+    "default_tags_json": [
+      "Macro",
+      "Policy"
+    ],
+    "active": 1
+  },
+  {
+    "id": "bruegel_events",
+    "firm_name": "Bruegel",
+    "firm_type": "Think Tank",
+    "url": "https://www.bruegel.org/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".views-row",
+      "title_selector": ".c-list-item__title a",
+      "link_selector": ".c-list-item__title a",
+      "date_selector": ".c-list-item__date"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/"
+      ]
+    },
+    "default_tags_json": [
+      "Macro",
+      "EU"
+    ],
+    "active": 1
+  },
+  {
+    "id": "caia_association_events",
+    "firm_name": "CAIA Association",
+    "firm_type": "Association",
+    "url": "https://www.caia.org/events",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Association"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444822+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.caia.org/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 42219 bytes\nFinal URL: https://caia.org/events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 42,219 bytes\nScript tags: 8\nLinks: 105\nPotential event containers: 0\nEvent-like CSS classes: 9\n\nTop 10 event-like classes:\n  .menu-item: 62 occurrences\n  .field__item: 16 occurrences\n  .menu-item--expanded: 12 occurrenc"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "cepr_events",
+    "firm_name": "CEPR",
+    "firm_type": "Research Network",
+    "url": "https://cepr.org/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": "article.c-card--event",
+      "title_selector": "a.c-card__image-wrapper",
+      "link_selector": "a.c-card__image-wrapper",
+      "date_selector": "time, .c-card__date"
+    },
+    "title_extraction": {
+      "mode": "attribute",
+      "title_attr": "title"
+    },
+    "postprocess_rules": {
+      "reject_date_only_titles": true,
+      "min_title_length": 15,
+      "title_regex_replace": [
+        {
+          "pattern": "\\s*-\\s*Seminar\\s*\\d+\\s*-\\s*",
+          "repl": " - "
+        }
+      ]
+    },
+    "default_tags_json": [
+      "Macro",
+      "Research"
+    ],
+    "active": 1
+  },
+  {
+    "id": "cfa_events",
+    "firm_name": "CFA Institute",
+    "firm_type": "Association",
+    "url": "https://www.cfainstitute.org/en/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".card, article, .event-item",
+      "title_selector": "h3 a, .title a, a",
+      "link_selector": "a",
+      "date_selector": ".date, time"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/events/",
+        "/event/"
+      ]
+    },
+    "default_tags_json": [
+      "Investment",
+      "Research"
+    ],
+    "active": 0
+  },
+  {
+    "id": "cfa_society_global_events",
+    "firm_name": "CFA Society Global",
+    "firm_type": "Association",
+    "url": "https://www.cfainstitute.org/insights/events/upcoming",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Association"
+    ],
+    "active": 1,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444804+00:00 - Status: deferred (low_tier_html) - detail_fetch enabled for date extraction",
+    "selectors_json": {
+      "item_selector": ".coh-menu-list-item",
+      "title_selector": "a[href]",
+      "link_selector": "a[href]"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.cfainstitute.org/insights/events/upcoming ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 231879 bytes\nFinal URL: https://www.cfainstitute.org/insights/events/upcoming\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 231,879 bytes\nScript tags: 17\nLinks: 126\nPotential event containers: 0\nEvent-like CSS classes: 32\n\nTop 10 event-like classes:\n  .coh-menu-list-item: 108 occurrenc"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate",
+    "selector_extracted_at": "2026-01-27T20:34:36.597688+00:00",
+    "activated_at": "2026-01-27T20:36:06.354169+00:00",
+    "detail_fetch": {
+      "enabled": true,
+      "max": 10,
+      "stop_after_first_valid": true,
+      "date_selector": "script[type=\"application/ld+json\"], time[datetime], meta[itemprop=\"startDate\"], meta[property*=\"date\"], .date, .event-date, [class*=\"date\"]",
+      "date_attr": "datetime",
+      "priority_order": [
+        "jsonld",
+        "time_datetime",
+        "meta_itemprop",
+        "meta_property",
+        "class_date"
+      ]
+    }
+  },
+  {
+    "id": "cfa_society_global_events_3fda95",
+    "firm_name": "CFA Society Global",
+    "firm_type": "Association",
+    "url": "https://www.cfainstitute.org/insights/events/past",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Association"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444813+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.cfainstitute.org/insights/events/past ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 158002 bytes\nFinal URL: https://www.cfainstitute.org/insights/events/past\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 158,002 bytes\nScript tags: 17\nLinks: 123\nPotential event containers: 0\nEvent-like CSS classes: 11\n\nTop 10 event-like classes:\n  .coh-menu-list-item: 108 occurrences\n  .js"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "cfr_events",
+    "firm_name": "CFR",
+    "firm_type": "Think Tank",
+    "url": "https://www.cfr.org/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".card-article.event",
+      "title_selector": ".card-article__title",
+      "link_selector": ".card-article__link",
+      "date_selector": ".card-article__date"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/"
+      ]
+    },
+    "default_tags_json": [
+      "Geopolitics",
+      "Policy"
+    ],
+    "active": 1
+  },
+  {
+    "id": "csis_events",
+    "firm_name": "CSIS",
+    "firm_type": "Think Tank",
+    "url": "https://www.csis.org/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": "article.ts-card-event-sm",
+      "title_selector": "h3.headline-sm a",
+      "link_selector": "h3.headline-sm a",
+      "date_selector": ".utility-xs"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/events/",
+        "/event/"
+      ]
+    },
+    "default_tags_json": [
+      "Geopolitics",
+      "Policy"
+    ],
+    "active": 1
+  },
+  {
+    "id": "cambridge_judge_business_school_rss",
+    "firm_name": "Cambridge Judge Business School",
+    "firm_type": "Academic",
+    "url": "https://www.jbs.cam.ac.uk/events/feed/",
+    "adapter_type": "rss",
+    "default_tags_json": [
+      "Academic",
+      "Research"
+    ],
+    "active": 1,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444862+00:00 - Status: deferred (no_future_events)",
+    "enforce_events_only": true,
+    "postprocess_rules": {
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "no_future_events",
+    "failure_evidence": {
+      "status_code": 200,
+      "content_type": "application/rss+xml; charset=UTF-8",
+      "raw_count": 10,
+      "kept_count": 10
+    },
+    "recommended_next_action": "Fix no_future_events issue and re-validate",
+    "activated_at": "2026-01-27T20:27:22.196944+00:00"
+  },
+  {
+    "id": "cambridge_judge_business_school_events",
+    "firm_name": "Cambridge Judge Business School",
+    "firm_type": "Academic",
+    "url": "https://www.jbs.cam.ac.uk/events/?term=&category=3267&audience=&location=&date=&pagination=1",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Academic",
+      "Research"
+    ],
+    "active": 1,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444872+00:00 - Status: deferred (low_tier_html) - detail_fetch enabled for date extraction",
+    "selectors_json": {
+      "item_selector": ".mega-menu-item",
+      "title_selector": "a[href]",
+      "link_selector": "a[href]"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.jbs.cam.ac.uk/events/?term=&category=3267&audience=&location=&date=&pagination=1 ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 236439 bytes\nFinal URL: https://www.jbs.cam.ac.uk/events/?term=&category=3267&audience=&location=&date=&pagination=1\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 236,439 bytes\nScript tags: 38\nLinks: 334\nPotential event containers: 0\nEvent-like CS"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate",
+    "selector_extracted_at": "2026-01-27T20:34:36.869580+00:00",
+    "activated_at": "2026-01-27T20:36:06.356028+00:00",
+    "detail_fetch": {
+      "enabled": true,
+      "max": 10,
+      "stop_after_first_valid": true,
+      "date_selector": "script[type=\"application/ld+json\"], time[datetime], meta[itemprop=\"startDate\"], meta[property*=\"date\"], .date, .event-date, [class*=\"date\"]",
+      "date_attr": "datetime",
+      "priority_order": [
+        "jsonld",
+        "time_datetime",
+        "meta_itemprop",
+        "meta_property",
+        "class_date"
+      ]
+    }
+  },
+  {
+    "id": "carnegie_events",
+    "firm_name": "Carnegie Endowment",
+    "firm_type": "Think Tank",
+    "url": "https://carnegieendowment.org/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": "article",
+      "title_selector": "a",
+      "link_selector": "a[href*=\"/events/\"]",
+      "date_selector": "time, .date"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/events/"
+      ]
+    },
+    "default_tags_json": [
+      "Think Tank",
+      "Policy",
+      "Geopolitics"
+    ],
+    "active": 1,
+    "detail_fetch": {
+      "enabled": true,
+      "max": 10,
+      "stop_after_first_valid": true,
+      "date_selector": "script[type=\"application/ld+json\"], time[datetime], meta[itemprop=\"startDate\"], meta[property*=\"date\"], .date, .event-date, [class*=\"date\"]",
+      "date_attr": "datetime",
+      "priority_order": [
+        "jsonld",
+        "time_datetime",
+        "meta_itemprop",
+        "meta_property",
+        "class_date"
+      ]
+    },
+    "comment": "- detail_fetch enabled for date extraction"
+  },
+  {
+    "id": "chicago_booth_events",
+    "firm_name": "Chicago Booth",
+    "firm_type": "Academic",
+    "url": "https://www.chicagobooth.edu/events",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Academic",
+      "Research"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444929+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.chicagobooth.edu/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=utf-8\nContent Length: 131365 bytes\nFinal URL: https://www.chicagobooth.edu/events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 131,365 bytes\nScript tags: 26\nLinks: 378\nPotential event containers: 0\nEvent-like CSS classes: 2\n\nTop 10 event-like classes:\n  .Recorded-Admissions-Events-preview-content-Swiss-Container-1: 1 occurr"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "chicago_booth_events_e5a52f",
+    "firm_name": "Chicago Booth",
+    "firm_type": "Academic",
+    "url": "https://www.chicagobooth.edu/mba/full-time/admissions/events",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Academic",
+      "Research"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444936+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.chicagobooth.edu/mba/full-time/admissions/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=utf-8\nContent Length: 141202 bytes\nFinal URL: https://www.chicagobooth.edu/mba/full-time/admissions/events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 141,202 bytes\nScript tags: 25\nLinks: 411\nPotential event containers: 0\nEvent-like CSS classes: 7\n\nTop 10 event-like classes:\n  .eventssort: 1 occurr"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "ecb_conferences",
+    "firm_name": "ECB",
+    "firm_type": "Central Bank",
+    "url": "https://www.ecb.europa.eu/press/conferences/html/index.en.html",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": "dl dd",
+      "title_selector": "a",
+      "link_selector": "a",
+      "date_selector": ""
+    },
+    "postprocess_rules": {
+      "min_title_length": 15,
+      "require_url_contains_one_of": [
+        "/press/conferences/"
+      ]
+    },
+    "default_tags_json": [
+      "Central Bank",
+      "Macro",
+      "Policy"
+    ],
+    "active": 1,
+    "detail_fetch": {
+      "enabled": true,
+      "max": 10,
+      "stop_after_first_valid": true,
+      "date_selector": "script[type=\"application/ld+json\"], time[datetime], meta[itemprop=\"startDate\"], meta[property*=\"date\"], .date, .event-date, [class*=\"date\"]",
+      "date_attr": "datetime",
+      "priority_order": [
+        "jsonld",
+        "time_datetime",
+        "meta_itemprop",
+        "meta_property",
+        "class_date"
+      ]
+    },
+    "comment": "- detail_fetch enabled for date extraction"
+  },
+  {
+    "id": "ecb_events_rss",
+    "firm_name": "ECB",
+    "firm_type": "Central Bank",
+    "url": "https://www.ecb.europa.eu/rss/events.html",
+    "adapter_type": "rss",
+    "default_tags_json": [
+      "Central Bank",
+      "Macro",
+      "Policy"
+    ],
+    "enforce_events_only": true,
+    "active": 0,
+    "comment": "disabled: feed URL returns HTTP error, update URL when valid RSS feed is available"
+  },
+  {
+    "id": "fdic_events",
+    "firm_name": "FDIC",
+    "firm_type": "Regulator",
+    "url": "https://www.fdic.gov/news/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".glider-card",
+      "title_selector": ".glider-card-title a",
+      "link_selector": ".glider-card-title a",
+      "date_selector": "time, .views-field-field-event-smartdate"
+    },
+    "default_tags_json": [
+      "Regulatory",
+      "Banking"
+    ],
+    "active": 0,
+    "comment": "Disabled: mostly press releases, not webinars"
+  },
+  {
+    "id": "fia_events",
+    "firm_name": "FIA",
+    "firm_type": "Association",
+    "url": "https://www.fia.org/events",
+    "adapter_type": "playwright",
+    "selectors_json": {
+      "item_selector": "a[href*='/events/'][href*='fia.org']",
+      "title_selector": "a",
+      "link_selector": "a[href*='/events/']",
+      "date_selector": ".date, time"
+    },
+    "postprocess_rules": {
+      "min_title_length": 10,
+      "require_url_contains_one_of": [
+        "/events/"
+      ],
+      "reject_url_contains": [
+        "login",
+        "saml"
+      ],
+      "title_regex_replace": [
+        {
+          "pattern": "^[A-Z&]+\\s+[A-Z&]+\\s+(The\\s+.+?)(?:\\s*-\\s*|$)",
+          "repl": "\\1"
+        }
+      ]
+    },
+    "default_tags_json": [
+      "Derivatives",
+      "Futures",
+      "Markets"
+    ],
+    "playwright_config": {
+      "wait_time": 3000,
+      "timeout": 30000
+    },
+    "active": 1
+  },
+  {
+    "id": "fed_events",
+    "firm_name": "Federal Reserve",
+    "firm_type": "Regulator",
+    "url": "https://www.federalreserve.gov/newsevents.htm",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".news__item",
+      "title_selector": ".news__title a",
+      "link_selector": ".news__title a",
+      "date_selector": ".news__date, time"
+    },
+    "default_tags_json": [
+      "Monetary Policy",
+      "Macro"
+    ],
+    "active": 0,
+    "comment": "Disabled: mostly news/speeches, not events"
+  },
+  {
+    "id": "hec_paris_events",
+    "firm_name": "HEC Paris",
+    "firm_type": "Academic",
+    "url": "https://events.myapplication.hec.fr/en/Wx3Bll37/webinar-data-science-and-ai-at-hec-paris-5a2MSZ8i7u1/overview",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Academic",
+      "Research"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444898+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://events.myapplication.hec.fr/en/Wx3Bll37/webinar-data-science-and-ai-at-hec-paris-5a2MSZ8i7u1/overview ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 13370 bytes\nFinal URL: https://events.myapplication.hec.fr/en/Wx3Bll37/webinar-data-science-and-ai-at-hec-paris-5a2MSZ8i7u1/overview\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 13,370 bytes\nScript tags: 7\nLinks: 2\nPotential even"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "hec_paris_events_ac06ae",
+    "firm_name": "HEC Paris",
+    "firm_type": "Academic",
+    "url": "https://events.blackthorn.io/en/7R4PSv67/g/7Yqg2sYp73/hec-paris-mba-campus-visit-february-02-2026-4a26bFk3Az/overview",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Academic",
+      "Research"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444905+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://events.blackthorn.io/en/7R4PSv67/g/7Yqg2sYp73/hec-paris-mba-campus-visit-february-02-2026-4a26bFk3Az/overview ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 13150 bytes\nFinal URL: https://events.blackthorn.io/en/7R4PSv67/g/7Yqg2sYp73/hec-paris-mba-campus-visit-february-02-2026-4a26bFk3Az/overview\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 13,150 bytes\nScript tags: 6\nLinks: "
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "harvard_kennedy_events",
+    "firm_name": "Harvard Kennedy School",
+    "firm_type": "Academic",
+    "url": "https://www.hks.harvard.edu/events",
+    "adapter_type": "playwright",
+    "selectors_json": {
+      "item_selector": "article.content-type--event",
+      "title_selector": "h2 a, h3 a, .title a, a",
+      "link_selector": "a",
+      "date_selector": ".field--name-field-event-date, .date, time"
+    },
+    "postprocess_rules": {
+      "min_title_length": 15,
+      "require_url_contains_one_of": [
+        "/events/",
+        "/event/"
+      ]
+    },
+    "default_tags_json": [
+      "Academic",
+      "Policy",
+      "US"
+    ],
+    "playwright_config": {
+      "wait_time": 3000,
+      "timeout": 30000
+    },
+    "active": 1
+  },
+  {
+    "id": "heritage_events",
+    "firm_name": "Heritage Foundation",
+    "firm_type": "Think Tank",
+    "url": "https://www.heritage.org/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".views-row",
+      "title_selector": "h2 a, .title a",
+      "link_selector": "a",
+      "date_selector": ".date, time"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/"
+      ]
+    },
+    "default_tags_json": [
+      "Policy"
+    ],
+    "active": 0
+  },
+  {
+    "id": "icma_events",
+    "firm_name": "ICMA",
+    "firm_type": "Association",
+    "url": "https://www.icmagroup.org/events/",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".event",
+      "title_selector": ".ttl",
+      "link_selector": "a.btn.view, a[href*='/events/']",
+      "date_selector": "a.btn.clock",
+      "date_attr": "date"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/events/"
+      ]
+    },
+    "default_tags_json": [
+      "Fixed Income",
+      "Credit"
+    ],
+    "detail_fetch": {
+      "enabled": true,
+      "max": 10,
+      "participants_selectors": [
+        ".speakers",
+        ".panelists",
+        ".event-speakers",
+        ".participants",
+        ".speaker-list"
+      ],
+      "participants_fallback": true
+    },
+    "active": 1
+  },
+  {
+    "id": "iif_events",
+    "firm_name": "IIF",
+    "firm_type": "Association",
+    "url": "https://www.iif.com/Events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".event",
+      "title_selector": ".event--title",
+      "link_selector": "a.event--intro",
+      "date_selector": ".event--date .date, meta[itemprop='startDate']"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/Events/",
+        "/events/"
+      ]
+    },
+    "default_tags_json": [
+      "Macro",
+      "Banking"
+    ],
+    "detail_fetch": {
+      "enabled": true,
+      "max": 10,
+      "participants_selectors": [
+        ".speakers",
+        ".panelists",
+        ".event-speakers",
+        ".participants",
+        ".speaker-list"
+      ],
+      "participants_fallback": true
+    },
+    "active": 1
+  },
+  {
+    "id": "imf_events",
+    "firm_name": "IMF",
+    "firm_type": "Policy Institution",
+    "url": "https://www.imf.org/en/News/Seminars",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".result-item, article, .event",
+      "title_selector": "h3 a, .title a, a",
+      "link_selector": "a",
+      "date_selector": ".date, time"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12
+    },
+    "default_tags_json": [
+      "Macro",
+      "Policy"
+    ],
+    "active": 0
+  },
+  {
+    "id": "isda_events",
+    "firm_name": "ISDA",
+    "firm_type": "Association",
+    "url": "https://www.isda.org/events/feed/",
+    "adapter_type": "rss",
+    "default_tags_json": [
+      "Derivatives",
+      "Credit"
+    ],
+    "enforce_events_only": true,
+    "postprocess_rules": {
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/"
+      ]
+    },
+    "detail_fetch": {
+      "enabled": true,
+      "max": 10,
+      "participants_selectors": [
+        ".speakers",
+        ".panelists",
+        ".event-speakers",
+        ".participants",
+        ".speaker-list"
+      ],
+      "participants_fallback": true
+    },
+    "active": 1
+  },
+  {
+    "id": "imperial_college_business_school_events",
+    "firm_name": "Imperial College Business School",
+    "firm_type": "Academic",
+    "url": "https://www.imperial.ac.uk/business-school/events",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Academic",
+      "Research"
+    ],
+    "active": 1,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444881+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {
+      "item_selector": "article",
+      "title_selector": "h2",
+      "link_selector": "a[href]",
+      "date_selector": ".field--name-date"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.imperial.ac.uk/business-school/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 188018 bytes\nFinal URL: https://www.imperial.ac.uk/business-school/events/\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 188,018 bytes\nScript tags: 12\nLinks: 198\nPotential event containers: 0\nEvent-like CSS classes: 42\n\nTop 10 event-like classes:\n  .megamenu__item: 137 occurrences\n  .c-car"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate",
+    "selector_extracted_at": "2026-01-27T20:34:40.874207+00:00",
+    "activated_at": "2026-01-27T20:35:04.999159+00:00"
+  },
+  {
+    "id": "imperial_college_business_school_events_9f8233",
+    "firm_name": "Imperial College Business School",
+    "firm_type": "Academic",
+    "url": "https://www.imperial.ac.uk/business-school/events/",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Academic",
+      "Research"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444890+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.imperial.ac.uk/business-school/events/ ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 188018 bytes\nFinal URL: https://www.imperial.ac.uk/business-school/events/\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 188,018 bytes\nScript tags: 12\nLinks: 198\nPotential event containers: 0\nEvent-like CSS classes: 42\n\nTop 10 event-like classes:\n  .megamenu__item: 137 occurrences\n  .c-ca"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "lse_events",
+    "firm_name": "LSE",
+    "firm_type": "Academic",
+    "url": "https://www.lse.ac.uk/Events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".ui-card, .uiCardstyled__UICardStyled-sc-69biw8-0",
+      "title_selector": ".card__title a, .card__title, a",
+      "link_selector": "a",
+      "date_selector": ".date, time"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "reject_title_contains": [
+        "course",
+        "programme",
+        "pre-event dining",
+        "dining offer",
+        "campus tour",
+        "accommodation",
+        "student life",
+        "apply now",
+        "how to apply",
+        "scholarships",
+        "funding",
+        "fees",
+        "online courses",
+        "art on campus",
+        "lse player",
+        "green impact"
+      ],
+      "reject_url_contains": [
+        "/courses",
+        "/study",
+        "/programmes",
+        "/accommodation",
+        "/dining",
+        "/offer",
+        "/student",
+        "/apply",
+        "/fees",
+        "/scholarships",
+        "/funding",
+        "/admissions"
+      ],
+      "require_url_contains_one_of": [
+        "/events/",
+        "/event/",
+        "/public-event",
+        "/lecture",
+        "/seminar"
+      ]
+    },
+    "default_tags_json": [
+      "Research",
+      "Academic"
+    ],
+    "active": 1
+  },
+  {
+    "id": "lse_events_ics",
+    "firm_name": "LSE",
+    "firm_type": "Academic",
+    "url": "https://www.lse.ac.uk/Events/Events-Calendar.ics",
+    "adapter_type": "ics",
+    "default_tags_json": [
+      "Research",
+      "Academic"
+    ],
+    "enforce_events_only": true,
+    "active": 0,
+    "comment": "disabled: feed URL returns HTTP error, update URL when valid ICS feed is available"
+  },
+  {
+    "id": "mit_sloan_events",
+    "firm_name": "MIT Sloan",
+    "firm_type": "Academic",
+    "url": "https://mitsloan.mit.edu/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".search-result--event",
+      "title_selector": ".search-result--title a",
+      "link_selector": ".search-result--title a",
+      "date_selector": ".search-result--day, .search-result--month"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12
+    },
+    "default_tags_json": [
+      "Academic",
+      "Finance",
+      "US"
+    ],
+    "active": 1
+  },
+  {
+    "id": "man_group_events",
+    "firm_name": "Man Group",
+    "firm_type": "Hedge Fund",
+    "url": "https://www.man.com/maninstitute/events",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Hedge Fund"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444793+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.man.com/maninstitute/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 178224 bytes\nFinal URL: https://www.man.com/insights#_events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 178,224 bytes\nScript tags: 13\nLinks: 141\nPotential event containers: 0\nEvent-like CSS classes: 30\n\nTop 10 event-like classes:\n  .nav__item: 70 occurrences\n  .menu-item: 39 occurrences\n  .js-for"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "milken_events",
+    "firm_name": "Milken Institute",
+    "firm_type": "Conference",
+    "url": "https://milkeninstitute.org/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".node--type-event-overview",
+      "title_selector": "h2 a, .field--name-title a",
+      "link_selector": "a",
+      "date_selector": ".field--name-field-event-date"
+    },
+    "postprocess_rules": {
+      "min_title_length": 10,
+      "require_url_contains_one_of": [
+        "/events/",
+        "/event/"
+      ]
+    },
+    "default_tags_json": [
+      "Conference",
+      "Finance",
+      "Macro"
+    ],
+    "active": 1
+  },
+  {
+    "id": "moodys_events",
+    "firm_name": "Moody's",
+    "firm_type": "Data Provider",
+    "url": "https://www.moodys.com/web/en/us/events.html",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".card, article, .event-card",
+      "title_selector": "h3 a, .title a, a",
+      "link_selector": "a[href*='/events/'], a[href*='/event/']",
+      "date_selector": ".date, time"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/events/",
+        "/event/",
+        "/webinar"
+      ]
+    },
+    "default_tags_json": [
+      "Credit",
+      "Research"
+    ],
+    "active": 0,
+    "comment": "Disabled: 404 error"
+  },
+  {
+    "id": "nber_events",
+    "firm_name": "NBER",
+    "firm_type": "Research",
+    "url": "https://www.nber.org/conferences",
+    "adapter_type": "json_api",
+    "api_config": {
+      "endpoint": "https://www.nber.org/api/v1/conference_listing/contentType/conference/_/_/search",
+      "items_path": "results",
+      "title_path": "title",
+      "link_path": "url",
+      "date_path": "displaydate",
+      "base_url": "https://www.nber.org"
+    },
+    "postprocess_rules": {
+      "min_title_length": 15
+    },
+    "default_tags_json": [
+      "Research",
+      "Economics"
+    ],
+    "active": 1
+  },
+  {
+    "id": "oecd_events",
+    "firm_name": "OECD",
+    "firm_type": "Policy Institution",
+    "url": "https://www.oecd.org/en/events.html",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".card, article, .event",
+      "title_selector": "h3 a, .title a, a",
+      "link_selector": "a",
+      "date_selector": ".date, time"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/events/",
+        "/event/"
+      ]
+    },
+    "default_tags_json": [
+      "Policy",
+      "Macro"
+    ],
+    "active": 0
+  },
+  {
+    "id": "oxford_said_events",
+    "firm_name": "Oxford Said Business School",
+    "firm_type": "Academic",
+    "url": "https://www.sbs.ox.ac.uk/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".finder__list-item",
+      "title_selector": ".finder__list-item__title a",
+      "link_selector": ".finder__list-item__title a",
+      "date_selector": ".finder__list-item__metadata"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/events/",
+        "/event/"
+      ]
+    },
+    "default_tags_json": [
+      "Academic",
+      "Finance",
+      "UK"
+    ],
+    "active": 1
+  },
+  {
+    "id": "pimco_events",
+    "firm_name": "PIMCO",
+    "firm_type": "Asset Manager",
+    "url": "https://event.webcasts.com/starthere.jsp?ei=1745139&tp_key=d458d979fe&sti=homepagehero",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Asset Management"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444519+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://event.webcasts.com/starthere.jsp?ei=1745139&tp_key=d458d979fe&sti=homepagehero ===\n\nHTTP Status: 200\nContent-Type: text/html;charset=utf-8\nContent Length: 95860 bytes\nFinal URL: https://event.webcasts.com/starthere.jsp?ei=1745139&tp_key=d458d979fe&sti=homepagehero\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 95,860 bytes\nScript tags: 6\nLinks: 3\nPotential event containers: 0\nEvent-like CSS classes: 2\n\nTop "
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "schroders_events",
+    "firm_name": "Schroders",
+    "firm_type": "Asset Manager",
+    "url": "https://www.schroders.com/en/insights/events",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Asset Management"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444767+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.schroders.com/en/insights/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 204722 bytes\nFinal URL: https://www.schroders.com/en/insights/events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 204,722 bytes\nScript tags: 2\nLinks: 0\nPotential event containers: 0\nEvent-like CSS classes: 0\n\n=== Tier Assessment ===\nTier: C\nReason: No clear event structure\n\u26a0\ufe0f  Likely requires "
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "stanford_gsb_events",
+    "firm_name": "Stanford GSB",
+    "firm_type": "Academic",
+    "url": "https://www.gsb.stanford.edu/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".views-row",
+      "title_selector": ".title a, a",
+      "link_selector": "a",
+      "date_selector": ".event-date"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/events/",
+        "/event/"
+      ]
+    },
+    "default_tags_json": [
+      "Academic",
+      "Finance",
+      "US"
+    ],
+    "active": 1
+  },
+  {
+    "id": "wharton_school_events",
+    "firm_name": "Wharton School",
+    "firm_type": "Academic",
+    "url": "https://www.wharton.upenn.edu/events",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Academic",
+      "Research"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444914+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://www.wharton.upenn.edu/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 88503 bytes\nFinal URL: https://www.wharton.upenn.edu/events/\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 88,503 bytes\nScript tags: 35\nLinks: 115\nPotential event containers: 0\nEvent-like CSS classes: 45\n\nTop 10 event-like classes:\n  .menu-item: 58 occurrences\n  .menu-item-type-post_type: 43 occurrence"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "wharton_school_events_ad856c",
+    "firm_name": "Wharton School",
+    "firm_type": "Academic",
+    "url": "https://alumni.wharton.upenn.edu/events-hq/#list",
+    "adapter_type": "html_list",
+    "default_tags_json": [
+      "Academic",
+      "Research"
+    ],
+    "active": 0,
+    "comment": "Generated from bulk discovery on 2026-01-27T20:18:55.444921+00:00 - Status: deferred (low_tier_html)",
+    "selectors_json": {},
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/",
+        "/webinar",
+        "/conference"
+      ]
+    },
+    "failure_class": "low_tier_html",
+    "failure_evidence": {
+      "validation_output": "\n=== Validating HTML page: https://alumni.wharton.upenn.edu/events-hq/#list ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 90914 bytes\nFinal URL: https://alumni.wharton.upenn.edu/events-hq/#list\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 90,914 bytes\nScript tags: 30\nLinks: 120\nPotential event containers: 0\nEvent-like CSS classes: 81\n\nTop 10 event-like classes:\n  .menu-item: 55 occurrences\n  .menu-item-type-p"
+    },
+    "recommended_next_action": "Fix low_tier_html issue and re-validate"
+  },
+  {
+    "id": "wilson_events",
+    "firm_name": "Wilson Center",
+    "firm_type": "Think Tank",
+    "url": "https://www.wilsoncenter.org/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": "article.card",
+      "title_selector": "h2.title a",
+      "link_selector": "h2.title a",
+      "date_selector": ".tag[data-category], time"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/event/",
+        "/events/"
+      ]
+    },
+    "detail_fetch": {
+      "enabled": true,
+      "date_selector": "time[datetime], .event-date, .date",
+      "date_attr": "datetime",
+      "max": 10
+    },
+    "default_tags_json": [
+      "Policy",
+      "Geopolitics"
+    ],
+    "active": 1
+  },
+  {
+    "id": "world_bank_events",
+    "firm_name": "World Bank",
+    "firm_type": "Policy Institution",
+    "url": "https://www.worldbank.org/en/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".card, article, .event",
+      "title_selector": "h3 a, .title a, a",
+      "link_selector": "a",
+      "date_selector": ".date, time"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "require_url_contains_one_of": [
+        "/events/",
+        "/event/"
+      ]
+    },
+    "default_tags_json": [
+      "Development",
+      "Macro"
+    ],
+    "active": 0
+  },
+  {
+    "id": "wef_events",
+    "firm_name": "World Economic Forum",
+    "firm_type": "Conference",
+    "url": "https://www.weforum.org/meetings/",
+    "adapter_type": "playwright",
+    "selectors_json": {
+      "item_selector": "article",
+      "title_selector": "div.wef-1xnlgsk",
+      "link_selector": "a[href*=\"/meetings/\"]",
+      "date_selector": "time, .date"
+    },
+    "postprocess_rules": {
+      "min_title_length": 10,
+      "title_regex_replace": [
+        {
+          "pattern": "\\d{1,2}[\u2013-]\\d{1,2}\\s+\\w+\\s+\\d{4}.*",
+          "repl": ""
+        },
+        {
+          "pattern": "^meetings",
+          "repl": "",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\s*meetings?$",
+          "repl": ""
+        }
+      ],
+      "require_url_contains_one_of": [
+        "/meetings/"
+      ]
+    },
+    "default_tags_json": [
+      "Conference",
+      "Global",
+      "Macro",
+      "Policy"
+    ],
+    "playwright_config": {
+      "wait_time": 5000,
+      "timeout": 30000
+    },
+    "active": 1
+  }
+]

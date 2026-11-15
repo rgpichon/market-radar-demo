@@ -1,0 +1,275 @@
+[
+  {
+    "firm_name": "Goldman Sachs",
+    "discovery_results": {
+      "feeds_found": [],
+      "html_feasible": false,
+      "js_rendered": true,
+      "gated": false,
+      "entry_points_tested": [
+        "https://www.goldmansachs.com",
+        "https://www.goldmansachs.com/insights/events",
+        "https://www.goldmansachs.com/insights"
+      ],
+      "errors": [
+        "HTML validation failed for https://www.goldmansachs.com/insights/events: "
+      ]
+    },
+    "lane_candidate": "js_rendered",
+    "acquisition_status": "deferred_js",
+    "notes": "JS-rendered page, requires Playwright",
+    "last_discovered": "2026-01-08T14:43:34.226052+00:00",
+    "region": "US",
+    "known_entry_points": [
+      "https://www.goldmansachs.com",
+      "https://www.goldmansachs.com/insights",
+      "https://www.goldmansachs.com/insights/events"
+    ]
+  },
+  {
+    "firm_name": "JPMorgan",
+    "discovery_results": {
+      "feeds_found": [],
+      "html_feasible": false,
+      "js_rendered": false,
+      "gated": false,
+      "entry_points_tested": [
+        "https://www.jpmorgan.com",
+        "https://www.jpmorgan.com/insights/events",
+        "https://www.jpmorgan.com/insights"
+      ],
+      "errors": [
+        "HTML validation failed for https://www.jpmorgan.com/insights/events: "
+      ]
+    },
+    "lane_candidate": "js_rendered",
+    "acquisition_status": "dead_end",
+    "notes": "Unable to determine feasible acquisition method; Errors: 1",
+    "last_discovered": "2026-01-08T14:43:37.025006+00:00",
+    "region": "US",
+    "known_entry_points": [
+      "https://www.jpmorgan.com",
+      "https://www.jpmorgan.com/insights",
+      "https://www.jpmorgan.com/insights/events"
+    ]
+  },
+  {
+    "firm_name": "Morgan Stanley",
+    "discovery_results": {
+      "feeds_found": [],
+      "html_feasible": false,
+      "js_rendered": false,
+      "gated": false,
+      "entry_points_tested": [
+        "https://www.morganstanley.com",
+        "https://www.morganstanley.com/ideas/events",
+        "https://www.morganstanley.com/ideas"
+      ],
+      "errors": [
+        "HTML validation failed for https://www.morganstanley.com/ideas/events: "
+      ]
+    },
+    "lane_candidate": "js_rendered",
+    "acquisition_status": "dead_end",
+    "notes": "Unable to determine feasible acquisition method; Errors: 1",
+    "last_discovered": "2026-01-08T14:43:38.766098+00:00",
+    "region": "US",
+    "known_entry_points": [
+      "https://www.morganstanley.com",
+      "https://www.morganstanley.com/ideas",
+      "https://www.morganstanley.com/ideas/events"
+    ]
+  },
+  {
+    "firm_name": "Citigroup",
+    "discovery_results": {
+      "feeds_found": [],
+      "html_feasible": false,
+      "js_rendered": true,
+      "gated": false,
+      "entry_points_tested": [
+        "https://www.citigroup.com",
+        "https://www.citigroup.com/citi/news",
+        "https://www.citigroup.com/citi"
+      ],
+      "errors": []
+    },
+    "lane_candidate": "js_rendered",
+    "acquisition_status": "deferred_js",
+    "notes": "JS-rendered page, requires Playwright",
+    "last_discovered": "2026-01-08T14:43:44.648166+00:00",
+    "region": "US",
+    "known_entry_points": [
+      "https://www.citigroup.com",
+      "https://www.citigroup.com/citi",
+      "https://www.citigroup.com/citi/news"
+    ]
+  },
+  {
+    "firm_name": "Bank of America",
+    "discovery_results": {
+      "feeds_found": [],
+      "html_feasible": false,
+      "js_rendered": false,
+      "gated": false,
+      "entry_points_tested": [
+        "https://about.bankofamerica.com",
+        "https://newsroom.bankofamerica.com",
+        "https://about.bankofamerica.com/en/newsroom"
+      ],
+      "errors": [
+        "HTML validation failed for https://about.bankofamerica.com/en/newsroom: "
+      ]
+    },
+    "lane_candidate": "js_rendered",
+    "acquisition_status": "dead_end",
+    "notes": "Unable to determine feasible acquisition method; Errors: 1",
+    "last_discovered": "2026-01-08T14:43:49.364339+00:00",
+    "region": "US",
+    "known_entry_points": [
+      "https://about.bankofamerica.com",
+      "https://about.bankofamerica.com/en/newsroom",
+      "https://newsroom.bankofamerica.com"
+    ]
+  },
+  {
+    "firm_name": "Barclays",
+    "discovery_results": {
+      "feeds_found": [],
+      "html_feasible": false,
+      "js_rendered": false,
+      "gated": false,
+      "entry_points_tested": [
+        "https://www.barclays.com",
+        "https://www.barclays.com/insights",
+        "https://www.barclays.com/about-barclays/news-and-events"
+      ],
+      "errors": [
+        "HTML validation failed for https://www.barclays.com/about-barclays/news-and-events: "
+      ]
+    },
+    "lane_candidate": "js_rendered",
+    "acquisition_status": "dead_end",
+    "notes": "Unable to determine feasible acquisition method; Errors: 1",
+    "last_discovered": "2026-01-08T14:43:52.564939+00:00",
+    "region": "UK",
+    "known_entry_points": [
+      "https://www.barclays.com",
+      "https://www.barclays.com/about-barclays/news-and-events",
+      "https://www.barclays.com/insights"
+    ]
+  },
+  {
+    "firm_name": "Deutsche Bank",
+    "discovery_results": {
+      "feeds_found": [],
+      "html_feasible": false,
+      "js_rendered": false,
+      "gated": false,
+      "entry_points_tested": [
+        "https://www.db.com",
+        "https://www.db.com/news",
+        "https://www.db.com/news/events"
+      ],
+      "errors": [
+        "HTML validation failed for https://www.db.com/news/events: "
+      ]
+    },
+    "lane_candidate": "js_rendered",
+    "acquisition_status": "dead_end",
+    "notes": "Unable to determine feasible acquisition method; Errors: 1",
+    "last_discovered": "2026-01-08T14:43:55.044457+00:00",
+    "region": "DE",
+    "known_entry_points": [
+      "https://www.db.com",
+      "https://www.db.com/news",
+      "https://www.db.com/news/events"
+    ]
+  },
+  {
+    "firm_name": "UBS",
+    "discovery_results": {
+      "feeds_found": [],
+      "html_feasible": false,
+      "js_rendered": false,
+      "gated": false,
+      "entry_points_tested": [
+        "https://www.ubs.com",
+        "https://www.ubs.com/global/en/about_ubs/news_center.html",
+        "https://www.ubs.com/global/en/about_ubs"
+      ],
+      "errors": [
+        "HTML validation failed for https://www.ubs.com/global/en/about_ubs/news_center.html: ",
+        "HTML validation failed for https://www.ubs.com/global/en/about_ubs: "
+      ]
+    },
+    "lane_candidate": "js_rendered",
+    "acquisition_status": "dead_end",
+    "notes": "Unable to determine feasible acquisition method; Errors: 2",
+    "last_discovered": "2026-01-08T14:43:57.089288+00:00",
+    "region": "CH",
+    "known_entry_points": [
+      "https://www.ubs.com",
+      "https://www.ubs.com/global/en/about_ubs",
+      "https://www.ubs.com/global/en/about_ubs/news_center.html"
+    ]
+  },
+  {
+    "firm_name": "BNP Paribas",
+    "discovery_results": {
+      "feeds_found": [
+        {
+          "url": "https://group.bnpparibas/en/rss/news",
+          "type": "rss",
+          "found_from": "https://group.bnpparibas/en/news"
+        }
+      ],
+      "html_feasible": false,
+      "js_rendered": false,
+      "gated": false,
+      "entry_points_tested": [
+        "https://group.bnpparibas",
+        "https://group.bnpparibas/en/news",
+        "https://group.bnpparibas/en"
+      ],
+      "errors": []
+    },
+    "lane_candidate": "rss",
+    "acquisition_status": "failed_validation",
+    "notes": "RSS feed found but contains press releases, not events. Feed URL: https://group.bnpparibas/en/rss/news. All 20 items rejected as article_like. Need to find investor events/calendar feed.",
+    "last_discovered": "2026-01-08T14:43:58.261311+00:00",
+    "region": "FR",
+    "known_entry_points": [
+      "https://group.bnpparibas",
+      "https://group.bnpparibas/en",
+      "https://group.bnpparibas/en/news"
+    ]
+  },
+  {
+    "firm_name": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale",
+    "discovery_results": {
+      "feeds_found": [],
+      "html_feasible": false,
+      "js_rendered": false,
+      "gated": false,
+      "entry_points_tested": [
+        "https://www.societegenerale.com",
+        "https://www.societegenerale.com/en/news",
+        "https://www.societegenerale.com/en"
+      ],
+      "errors": [
+        "HTML validation failed for https://www.societegenerale.com/en/news: "
+      ]
+    },
+    "lane_candidate": "js_rendered",
+    "acquisition_status": "dead_end",
+    "notes": "Unable to determine feasible acquisition method; Errors: 1",
+    "last_discovered": "2026-01-08T14:43:59.897265+00:00",
+    "region": "FR",
+    "known_entry_points": [
+      "https://www.societegenerale.com",
+      "https://www.societegenerale.com/en",
+      "https://www.societegenerale.com/en/news"
+    ]
+  }
+]

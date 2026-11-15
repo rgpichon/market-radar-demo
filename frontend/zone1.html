@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended for You - Market Events Radar</title>
+    <link rel="stylesheet" href="/frontend/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Market Events Radar</h1>
+            <div id="status-bar" class="status-bar">Loading...</div>
+            <button id="theme-toggle" class="theme-toggle">🌙 Dark</button>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="events">Events</button>
+            <button class="tab-button" data-tab="notifications">Notifications</button>
+            <button class="tab-button" data-tab="settings">Settings</button>
+        </nav>
+
+        <div id="events-tab" class="tab-content active">
+            <div class="zone-page-header">
+                <a href="/" class="back-link">← Back to Home</a>
+                <h2>Recommended for You</h2>
+                <p class="zone-page-description">Events most relevant to your interests</p>
+            </div>
+
+            <div class="controls sticky-controls">
+                <div class="filter-group basic-filters">
+                    <select id="topic-filter" class="select-box">
+                        <option value="all">All Topics</option>
+                    </select>
+                    <select id="format-filter" class="select-box">
+                        <option value="">All Formats</option>
+                        <option value="Webinar">Webinar</option>
+                        <option value="Conference">Conference</option>
+                        <option value="Panel">Panel</option>
+                        <option value="Online">Online</option>
+                        <option value="In-person">In-person</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </select>
+                    <select id="days-ahead-select" class="select-box">
+                        <option value="30">Next 30 days</option>
+                        <option value="90">Next 90 days</option>
+                        <option value="180">Next 180 days</option>
+                        <option value="365" selected>Next 365 days</option>
+                    </select>
+                    <select id="signal-filter" class="select-box">
+                        <option value="">All Signals</option>
+                        <option value="70">High (70+)</option>
+                        <option value="60">Medium+ (60+)</option>
+                        <option value="50">All Scored</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="sort-select" class="select-box">
+                        <option value="signal-desc">Signal Score ↓</option>
+                        <option value="date-asc">Date ↑</option>
+                        <option value="date-desc">Date ↓</option>
+                    </select>
+                </div>
+                <button id="run-scrape-btn" class="button">Run scrape now</button>
+            </div>
+
+            <div id="events-list" class="events-list">
+                <p class="loading">Loading recommendations...</p>
+            </div>
+        </div>
+
+        <div id="notifications-tab" class="tab-content">
+            <div class="controls">
+                <button id="mark-all-seen-btn" class="button">Mark all seen</button>
+            </div>
+            <div id="notifications-list" class="notifications-list">
+                <p class="loading">Loading notifications...</p>
+            </div>
+        </div>
+
+        <div id="settings-tab" class="tab-content">
+            <div id="settings-content" class="settings-content">
+                <p class="loading">Loading settings...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/frontend/app.js"></script>
+    <script>
+        // Zone 1 initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.location.protocol === 'file:') return;
+            
+            // Determine zone number from pathname
+            const zoneMatch = window.location.pathname.match(/\/zone(\d)/);
+            if (zoneMatch) {
+                initializeZonePage(parseInt(zoneMatch[1]));
+            }
+        });
+    </script>
+</body>
+</html>

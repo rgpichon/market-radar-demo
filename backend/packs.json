@@ -1,0 +1,22 @@
+{
+  "think_tanks": {
+    "display_name": "Think Tanks & Policy",
+    "firms": ["Brookings Institution", "CSIS", "Bruegel", "Wilson Center"],
+    "default_tags": ["Macro", "Policy", "Geopolitics"]
+  },
+  "research": {
+    "display_name": "Research & Academic",
+    "firms": ["CEPR", "NBER", "LSE"],
+    "default_tags": ["Research", "Economics", "Academic"]
+  },
+  "exchanges": {
+    "display_name": "Exchanges & Venues",
+    "firms": ["CME Group", "Nasdaq", "ICE", "NYSE"],
+    "default_tags": ["Derivatives", "Futures", "Equity"]
+  },
+  "associations": {
+    "display_name": "Industry Associations",
+    "firms": ["ISDA", "SIFMA", "FIA", "CFA Institute"],
+    "default_tags": ["Derivatives", "Capital Markets"]
+  }
+}

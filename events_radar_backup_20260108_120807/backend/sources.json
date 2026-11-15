@@ -1,0 +1,172 @@
+[
+  {
+    "id": "brookings_events",
+    "firm_name": "Brookings Institution",
+    "firm_type": "Think Tank",
+    "url": "https://www.brookings.edu/events/",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".event-card, .card, article",
+      "title_selector": "h3 a, h4 a, a",
+      "link_selector": "a",
+      "date_selector": ".date, time"
+    },
+    "default_tags_json": ["Macro", "Policy"],
+    "active": 1
+  },
+  {
+    "id": "cepr_events",
+    "firm_name": "CEPR",
+    "firm_type": "Research Network",
+    "url": "https://cepr.org/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": "article.c-card--event",
+      "title_selector": "a.c-card__image-wrapper",
+      "link_selector": "a.c-card__image-wrapper",
+      "date_selector": "time, .c-card__date"
+    },
+    "title_extraction": {
+      "mode": "attribute",
+      "title_attr": "title"
+    },
+    "postprocess_rules": {
+      "reject_date_only_titles": true,
+      "min_title_length": 15,
+      "title_regex_replace": [
+        {"pattern": "\\s*-\\s*Seminar\\s*\\d+\\s*-\\s*", "repl": " - "}
+      ]
+    },
+    "default_tags_json": ["Macro", "Research"],
+    "active": 1
+  },
+  {
+    "id": "csis_events",
+    "firm_name": "CSIS",
+    "firm_type": "Think Tank",
+    "url": "https://www.csis.org/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".event-item, article, .card",
+      "title_selector": "h3 a, h4 a, a",
+      "link_selector": "a",
+      "date_selector": ".date, time"
+    },
+    "default_tags_json": ["Geopolitics", "Policy"],
+    "active": 1
+  },
+  {
+    "id": "bruegel_events",
+    "firm_name": "Bruegel",
+    "firm_type": "Think Tank",
+    "url": "https://www.bruegel.org/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".event-item, article, .card",
+      "title_selector": "h3 a, h4 a, a",
+      "link_selector": "a",
+      "date_selector": ".date, time"
+    },
+    "default_tags_json": ["Macro", "EU"],
+    "active": 1
+  },
+  {
+    "id": "lse_events",
+    "firm_name": "LSE",
+    "firm_type": "Academic",
+    "url": "https://www.lse.ac.uk/Events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".ui-card, .uiCardstyled__UICardStyled-sc-69biw8-0",
+      "title_selector": ".card__title a, .card__title, a",
+      "link_selector": "a",
+      "date_selector": ".date, time"
+    },
+    "postprocess_rules": {
+      "min_title_length": 12,
+      "reject_title_contains": [
+        "course", "programme", "pre-event dining", "dining offer",
+        "campus tour", "accommodation", "student life", "apply now",
+        "how to apply", "scholarships", "funding", "fees",
+        "online courses", "art on campus", "lse player", "green impact"
+      ],
+      "reject_url_contains": [
+        "/courses", "/study", "/programmes", "/accommodation",
+        "/dining", "/offer", "/student", "/apply", "/fees",
+        "/scholarships", "/funding", "/admissions"
+      ],
+      "require_url_contains_one_of": [
+        "/events/", "/event/", "/public-event", "/lecture", "/seminar"
+      ]
+    },
+    "default_tags_json": ["Research", "Academic"],
+    "active": 1
+  },
+  {
+    "id": "wilson_events",
+    "firm_name": "Wilson Center",
+    "firm_type": "Think Tank",
+    "url": "https://www.wilsoncenter.org/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".event-item, article, .card",
+      "title_selector": "h3 a, h4 a, a",
+      "link_selector": "a",
+      "date_selector": ".date, time"
+    },
+    "default_tags_json": ["Policy", "Geopolitics"],
+    "active": 1
+  },
+  {
+    "id": "nber_events",
+    "firm_name": "NBER",
+    "firm_type": "Research",
+    "url": "https://www.nber.org/conferences",
+    "adapter_type": "json_api",
+    "api_config": {
+      "endpoint": "https://www.nber.org/api/v1/conference_listing/contentType/conference/_/_/search",
+      "items_path": "results",
+      "title_path": "title",
+      "link_path": "url",
+      "date_path": "displaydate",
+      "base_url": "https://www.nber.org"
+    },
+    "postprocess_rules": {
+      "min_title_length": 15
+    },
+    "default_tags_json": ["Research", "Economics"],
+    "active": 1
+  },
+  {
+    "id": "fed_events",
+    "firm_name": "Federal Reserve",
+    "firm_type": "Regulator",
+    "url": "https://www.federalreserve.gov/newsevents.htm",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".news__item",
+      "title_selector": ".news__title a",
+      "link_selector": ".news__title a",
+      "date_selector": ".news__date, time"
+    },
+    "default_tags_json": ["Monetary Policy", "Macro"],
+    "active": 0,
+    "comment": "Disabled: mostly news/speeches, not events"
+  },
+  {
+    "id": "fdic_events",
+    "firm_name": "FDIC",
+    "firm_type": "Regulator",
+    "url": "https://www.fdic.gov/news/events",
+    "adapter_type": "html_list",
+    "selectors_json": {
+      "item_selector": ".glider-card",
+      "title_selector": ".glider-card-title a",
+      "link_selector": ".glider-card-title a",
+      "date_selector": "time, .views-field-field-event-smartdate"
+    },
+    "default_tags_json": ["Regulatory", "Banking"],
+    "active": 0,
+    "comment": "Disabled: mostly press releases, not webinars"
+  }
+]

@@ -1,0 +1,143 @@
+{
+  "timestamp": "2026-01-27T20:20:17.586155+00:00",
+  "priority": "p0",
+  "initial_event_count": -1,
+  "ready_queue": [],
+  "failure_breakdown": {
+    "other": [
+      {
+        "source_id": "lse_events_ics",
+        "firm_name": "LSE",
+        "lane": "ics",
+        "rank": 135.0,
+        "errors": [
+          "Event count (0) below minimum (3)",
+          "Dated ratio (0.0%) below minimum (70.0%)",
+          "Future events (0) below minimum (1)",
+          "Source ID 'lse_events_ics' already exists"
+        ],
+        "stats": {},
+        "metadata": {
+          "lane": "ics",
+          "firm_name": "LSE",
+          "firm_type": "Academic",
+          "url": "https://www.lse.ac.uk/Events/Events-Calendar.ics",
+          "reasons": [
+            "Lane priority: 100 (ics)",
+            "Lane is supported",
+            "Preferred firm type: Academic",
+            "URL contains event patterns"
+          ],
+          "score": 135.0
+        }
+      },
+      {
+        "source_id": "ecb_events_rss",
+        "firm_name": "ECB",
+        "lane": "rss",
+        "rank": 115.0,
+        "errors": [
+          "Event count (0) below minimum (3)",
+          "Dated ratio (0.0%) below minimum (70.0%)",
+          "Future events (0) below minimum (1)",
+          "Macro-signal contract violation: 0 events < 5 minimum"
+        ],
+        "stats": {},
+        "metadata": {
+          "lane": "rss",
+          "firm_name": "ECB",
+          "firm_type": "Central Bank",
+          "url": "https://www.ecb.europa.eu/rss/events.html",
+          "reasons": [
+            "Lane priority: 90 (rss)",
+            "Lane is supported",
+            "URL contains event patterns"
+          ],
+          "score": 115.0
+        }
+      },
+      {
+        "source_id": "cambridge_judge_business_school_rss",
+        "firm_name": "Cambridge Judge Business School",
+        "lane": "rss",
+        "rank": 105.0,
+        "errors": [
+          "Source ID 'cambridge_judge_business_school_rss' already exists"
+        ],
+        "stats": {},
+        "metadata": {
+          "lane": "rss",
+          "firm_name": "Cambridge Judge Business School",
+          "firm_type": "Academic",
+          "url": "https://www.jbs.cam.ac.uk/events/feed/",
+          "reasons": [
+            "Lane priority: 90 (rss)",
+            "Lane is supported",
+            "Preferred firm type: Academic",
+            "Has failure_class: no_future_events",
+            "URL contains event patterns"
+          ],
+          "score": 105.0
+        }
+      },
+      {
+        "source_id": "cfa_events",
+        "firm_name": "CFA Institute",
+        "lane": "html_simple",
+        "rank": 35.0,
+        "errors": [
+          "Event count (1) below minimum (3)",
+          "Dated ratio (0.0%) below minimum (70.0%)",
+          "Future events (0) below minimum (1)",
+          "Macro-signal contract violation: 1 events < 5 minimum",
+          "Macro-signal contract violation: future ratio 0.0% < 80% minimum"
+        ],
+        "stats": {},
+        "metadata": {
+          "lane": "html_simple",
+          "firm_name": "CFA Institute",
+          "firm_type": "Association",
+          "url": "https://www.cfainstitute.org/en/events",
+          "reasons": [
+            "Lane priority: 0 (html_simple)",
+            "Lane is supported",
+            "Preferred firm type: Association",
+            "URL contains event patterns"
+          ],
+          "score": 35.0
+        }
+      },
+      {
+        "source_id": "heritage_events",
+        "firm_name": "Heritage Foundation",
+        "lane": "html_simple",
+        "rank": 35.0,
+        "errors": [
+          "Event count (0) below minimum (3)",
+          "Dated ratio (0.0%) below minimum (70.0%)",
+          "Future events (0) below minimum (1)",
+          "Macro-signal contract violation: 0 events < 5 minimum"
+        ],
+        "stats": {},
+        "metadata": {
+          "lane": "html_simple",
+          "firm_name": "Heritage Foundation",
+          "firm_type": "Think Tank",
+          "url": "https://www.heritage.org/events",
+          "reasons": [
+            "Lane priority: 0 (html_simple)",
+            "Lane is supported",
+            "Preferred firm type: Think Tank",
+            "URL contains event patterns"
+          ],
+          "score": 35.0
+        }
+      }
+    ]
+  },
+  "summary": {
+    "total_processed": 5,
+    "ready_count": 0,
+    "failed_count": 5
+  }
+}

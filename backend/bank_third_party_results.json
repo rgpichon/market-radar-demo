@@ -1,0 +1,427 @@
+{
+  "Goldman Sachs": {
+    "firm_name": "Goldman Sachs",
+    "ticker": "GS",
+    "discovered_at": "2026-01-08T17:18:48.830487+00:00",
+    "calendars_tested": [
+      {
+        "firm_name": "Goldman Sachs",
+        "ticker": "GS",
+        "calendar_type": "nasdaq_earnings_api",
+        "tested_at": "2026-01-08T17:18:48.830765+00:00",
+        "events_found": 0,
+        "events": [],
+        "failure_class": "format_incompatible",
+        "evidence": "Parse errors: Parse error for 2026-01-10: 'NoneType' object is not iterable; Parse error for 2026-01-11: 'NoneType' object is not iterable",
+        "stats": {
+          "raw": 0,
+          "kept": 0,
+          "rejected": {
+            "no_events_found": 1
+          },
+          "diagnostics": {
+            "provider": "nasdaq_earnings_api",
+            "ticker": "GS",
+            "fetched_url": "https://api.nasdaq.com/api/calendar/earnings?date=2026-01-15",
+            "status_code": 200,
+            "content_type": "application/json; charset=utf-8",
+            "items_found": 0,
+            "parse_errors": [
+              "Parse error for 2026-01-10: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-11: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-15: 'str' object has no attribute 'tzinfo'"
+            ],
+            "error": null,
+            "cached": true
+          }
+        }
+      }
+    ],
+    "best_result": null,
+    "failure_class": "no_coverage",
+    "recommended_next_action": "try_alternative_calendar",
+    "evidence": "No events found in any tested calendar"
+  },
+  "JPMorgan": {
+    "firm_name": "JPMorgan",
+    "ticker": "JPM",
+    "discovered_at": "2026-01-08T17:18:52.519995+00:00",
+    "calendars_tested": [
+      {
+        "firm_name": "JPMorgan",
+        "ticker": "JPM",
+        "calendar_type": "nasdaq_earnings_api",
+        "tested_at": "2026-01-08T17:18:52.520019+00:00",
+        "events_found": 0,
+        "events": [],
+        "failure_class": "format_incompatible",
+        "evidence": "Parse errors: Parse error for 2026-01-10: 'NoneType' object is not iterable; Parse error for 2026-01-11: 'NoneType' object is not iterable",
+        "stats": {
+          "raw": 0,
+          "kept": 0,
+          "rejected": {
+            "no_events_found": 1
+          },
+          "diagnostics": {
+            "provider": "nasdaq_earnings_api",
+            "ticker": "JPM",
+            "fetched_url": "https://api.nasdaq.com/api/calendar/earnings?date=2026-01-14",
+            "status_code": null,
+            "content_type": null,
+            "items_found": 0,
+            "parse_errors": [
+              "Parse error for 2026-01-10: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-11: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-13: 'str' object has no attribute 'tzinfo'"
+            ],
+            "error": null,
+            "cached": true
+          }
+        }
+      }
+    ],
+    "best_result": null,
+    "failure_class": "no_coverage",
+    "recommended_next_action": "try_alternative_calendar",
+    "evidence": "No events found in any tested calendar"
+  },
+  "Morgan Stanley": {
+    "firm_name": "Morgan Stanley",
+    "ticker": "MS",
+    "discovered_at": "2026-01-08T17:18:55.554798+00:00",
+    "calendars_tested": [
+      {
+        "firm_name": "Morgan Stanley",
+        "ticker": "MS",
+        "calendar_type": "nasdaq_earnings_api",
+        "tested_at": "2026-01-08T17:18:55.554813+00:00",
+        "events_found": 0,
+        "events": [],
+        "failure_class": "format_incompatible",
+        "evidence": "Parse errors: Parse error for 2026-01-10: 'NoneType' object is not iterable; Parse error for 2026-01-11: 'NoneType' object is not iterable",
+        "stats": {
+          "raw": 0,
+          "kept": 0,
+          "rejected": {
+            "no_events_found": 1
+          },
+          "diagnostics": {
+            "provider": "nasdaq_earnings_api",
+            "ticker": "MS",
+            "fetched_url": "https://api.nasdaq.com/api/calendar/earnings?date=2026-01-15",
+            "status_code": null,
+            "content_type": null,
+            "items_found": 0,
+            "parse_errors": [
+              "Parse error for 2026-01-10: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-11: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-15: 'str' object has no attribute 'tzinfo'"
+            ],
+            "error": null,
+            "cached": true
+          }
+        }
+      }
+    ],
+    "best_result": null,
+    "failure_class": "no_coverage",
+    "recommended_next_action": "try_alternative_calendar",
+    "evidence": "No events found in any tested calendar"
+  },
+  "Citigroup": {
+    "firm_name": "Citigroup",
+    "ticker": "C",
+    "discovered_at": "2026-01-08T17:18:59.154224+00:00",
+    "calendars_tested": [
+      {
+        "firm_name": "Citigroup",
+        "ticker": "C",
+        "calendar_type": "nasdaq_earnings_api",
+        "tested_at": "2026-01-08T17:18:59.154250+00:00",
+        "events_found": 0,
+        "events": [],
+        "failure_class": "format_incompatible",
+        "evidence": "Parse errors: Parse error for 2026-01-10: 'NoneType' object is not iterable; Parse error for 2026-01-11: 'NoneType' object is not iterable",
+        "stats": {
+          "raw": 0,
+          "kept": 0,
+          "rejected": {
+            "no_events_found": 1
+          },
+          "diagnostics": {
+            "provider": "nasdaq_earnings_api",
+            "ticker": "C",
+            "fetched_url": "https://api.nasdaq.com/api/calendar/earnings?date=2026-01-15",
+            "status_code": null,
+            "content_type": null,
+            "items_found": 0,
+            "parse_errors": [
+              "Parse error for 2026-01-10: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-11: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-14: 'str' object has no attribute 'tzinfo'"
+            ],
+            "error": null,
+            "cached": true
+          }
+        }
+      }
+    ],
+    "best_result": null,
+    "failure_class": "no_coverage",
+    "recommended_next_action": "try_alternative_calendar",
+    "evidence": "No events found in any tested calendar"
+  },
+  "Bank of America": {
+    "firm_name": "Bank of America",
+    "ticker": "BAC",
+    "discovered_at": "2026-01-08T17:19:02.688362+00:00",
+    "calendars_tested": [
+      {
+        "firm_name": "Bank of America",
+        "ticker": "BAC",
+        "calendar_type": "nasdaq_earnings_api",
+        "tested_at": "2026-01-08T17:19:02.688372+00:00",
+        "events_found": 0,
+        "events": [],
+        "failure_class": "format_incompatible",
+        "evidence": "Parse errors: Parse error for 2026-01-10: 'NoneType' object is not iterable; Parse error for 2026-01-11: 'NoneType' object is not iterable",
+        "stats": {
+          "raw": 0,
+          "kept": 0,
+          "rejected": {
+            "no_events_found": 1
+          },
+          "diagnostics": {
+            "provider": "nasdaq_earnings_api",
+            "ticker": "BAC",
+            "fetched_url": "https://api.nasdaq.com/api/calendar/earnings?date=2026-01-15",
+            "status_code": null,
+            "content_type": null,
+            "items_found": 0,
+            "parse_errors": [
+              "Parse error for 2026-01-10: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-11: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-14: 'str' object has no attribute 'tzinfo'"
+            ],
+            "error": null,
+            "cached": true
+          }
+        }
+      }
+    ],
+    "best_result": null,
+    "failure_class": "no_coverage",
+    "recommended_next_action": "try_alternative_calendar",
+    "evidence": "No events found in any tested calendar"
+  },
+  "Barclays": {
+    "firm_name": "Barclays",
+    "ticker": "BCS",
+    "discovered_at": "2026-01-08T17:19:06.216225+00:00",
+    "calendars_tested": [
+      {
+        "firm_name": "Barclays",
+        "ticker": "BCS",
+        "calendar_type": "nasdaq_earnings_api",
+        "tested_at": "2026-01-08T17:19:06.216239+00:00",
+        "events_found": 0,
+        "events": [],
+        "failure_class": "format_incompatible",
+        "evidence": "Parse errors: Parse error for 2026-01-10: 'NoneType' object is not iterable; Parse error for 2026-01-11: 'NoneType' object is not iterable",
+        "stats": {
+          "raw": 0,
+          "kept": 0,
+          "rejected": {
+            "no_events_found": 1
+          },
+          "diagnostics": {
+            "provider": "nasdaq_earnings_api",
+            "ticker": "BCS",
+            "fetched_url": "https://api.nasdaq.com/api/calendar/earnings?date=2026-01-15",
+            "status_code": null,
+            "content_type": null,
+            "items_found": 0,
+            "parse_errors": [
+              "Parse error for 2026-01-10: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-11: 'NoneType' object is not iterable"
+            ],
+            "error": null,
+            "cached": true
+          }
+        }
+      }
+    ],
+    "best_result": null,
+    "failure_class": "no_coverage",
+    "recommended_next_action": "try_alternative_calendar",
+    "evidence": "No events found in any tested calendar"
+  },
+  "Deutsche Bank": {
+    "firm_name": "Deutsche Bank",
+    "ticker": "DB",
+    "discovered_at": "2026-01-08T17:19:09.748807+00:00",
+    "calendars_tested": [
+      {
+        "firm_name": "Deutsche Bank",
+        "ticker": "DB",
+        "calendar_type": "nasdaq_earnings_api",
+        "tested_at": "2026-01-08T17:19:09.748824+00:00",
+        "events_found": 0,
+        "events": [],
+        "failure_class": "format_incompatible",
+        "evidence": "Parse errors: Parse error for 2026-01-10: 'NoneType' object is not iterable; Parse error for 2026-01-11: 'NoneType' object is not iterable",
+        "stats": {
+          "raw": 0,
+          "kept": 0,
+          "rejected": {
+            "no_events_found": 1
+          },
+          "diagnostics": {
+            "provider": "nasdaq_earnings_api",
+            "ticker": "DB",
+            "fetched_url": "https://api.nasdaq.com/api/calendar/earnings?date=2026-01-15",
+            "status_code": null,
+            "content_type": null,
+            "items_found": 0,
+            "parse_errors": [
+              "Parse error for 2026-01-10: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-11: 'NoneType' object is not iterable"
+            ],
+            "error": null,
+            "cached": true
+          }
+        }
+      }
+    ],
+    "best_result": null,
+    "failure_class": "no_coverage",
+    "recommended_next_action": "try_alternative_calendar",
+    "evidence": "No events found in any tested calendar"
+  },
+  "UBS": {
+    "firm_name": "UBS",
+    "ticker": "UBS",
+    "discovered_at": "2026-01-08T17:19:13.291481+00:00",
+    "calendars_tested": [
+      {
+        "firm_name": "UBS",
+        "ticker": "UBS",
+        "calendar_type": "nasdaq_earnings_api",
+        "tested_at": "2026-01-08T17:19:13.291492+00:00",
+        "events_found": 0,
+        "events": [],
+        "failure_class": "format_incompatible",
+        "evidence": "Parse errors: Parse error for 2026-01-10: 'NoneType' object is not iterable; Parse error for 2026-01-11: 'NoneType' object is not iterable",
+        "stats": {
+          "raw": 0,
+          "kept": 0,
+          "rejected": {
+            "no_events_found": 1
+          },
+          "diagnostics": {
+            "provider": "nasdaq_earnings_api",
+            "ticker": "UBS",
+            "fetched_url": "https://api.nasdaq.com/api/calendar/earnings?date=2026-01-15",
+            "status_code": null,
+            "content_type": null,
+            "items_found": 0,
+            "parse_errors": [
+              "Parse error for 2026-01-10: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-11: 'NoneType' object is not iterable"
+            ],
+            "error": null,
+            "cached": true
+          }
+        }
+      }
+    ],
+    "best_result": null,
+    "failure_class": "no_coverage",
+    "recommended_next_action": "try_alternative_calendar",
+    "evidence": "No events found in any tested calendar"
+  },
+  "BNP Paribas": {
+    "firm_name": "BNP Paribas",
+    "ticker": "BNPQY",
+    "discovered_at": "2026-01-08T17:19:16.826161+00:00",
+    "calendars_tested": [
+      {
+        "firm_name": "BNP Paribas",
+        "ticker": "BNPQY",
+        "calendar_type": "nasdaq_earnings_api",
+        "tested_at": "2026-01-08T17:19:16.826181+00:00",
+        "events_found": 0,
+        "events": [],
+        "failure_class": "format_incompatible",
+        "evidence": "Parse errors: Parse error for 2026-01-10: 'NoneType' object is not iterable; Parse error for 2026-01-11: 'NoneType' object is not iterable",
+        "stats": {
+          "raw": 0,
+          "kept": 0,
+          "rejected": {
+            "no_events_found": 1
+          },
+          "diagnostics": {
+            "provider": "nasdaq_earnings_api",
+            "ticker": "BNPQY",
+            "fetched_url": "https://api.nasdaq.com/api/calendar/earnings?date=2026-01-15",
+            "status_code": null,
+            "content_type": null,
+            "items_found": 0,
+            "parse_errors": [
+              "Parse error for 2026-01-10: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-11: 'NoneType' object is not iterable"
+            ],
+            "error": null,
+            "cached": true
+          }
+        }
+      }
+    ],
+    "best_result": null,
+    "failure_class": "no_coverage",
+    "recommended_next_action": "try_alternative_calendar",
+    "evidence": "No events found in any tested calendar"
+  },
+  "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale": {
+    "firm_name": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale",
+    "ticker": "SCGLY",
+    "discovered_at": "2026-01-08T17:19:20.352940+00:00",
+    "calendars_tested": [
+      {
+        "firm_name": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale",
+        "ticker": "SCGLY",
+        "calendar_type": "nasdaq_earnings_api",
+        "tested_at": "2026-01-08T17:19:20.352952+00:00",
+        "events_found": 0,
+        "events": [],
+        "failure_class": "format_incompatible",
+        "evidence": "Parse errors: Parse error for 2026-01-10: 'NoneType' object is not iterable; Parse error for 2026-01-11: 'NoneType' object is not iterable",
+        "stats": {
+          "raw": 0,
+          "kept": 0,
+          "rejected": {
+            "no_events_found": 1
+          },
+          "diagnostics": {
+            "provider": "nasdaq_earnings_api",
+            "ticker": "SCGLY",
+            "fetched_url": "https://api.nasdaq.com/api/calendar/earnings?date=2026-01-15",
+            "status_code": null,
+            "content_type": null,
+            "items_found": 0,
+            "parse_errors": [
+              "Parse error for 2026-01-10: 'NoneType' object is not iterable",
+              "Parse error for 2026-01-11: 'NoneType' object is not iterable"
+            ],
+            "error": null,
+            "cached": true
+          }
+        }
+      }
+    ],
+    "best_result": null,
+    "failure_class": "no_coverage",
+    "recommended_next_action": "try_alternative_calendar",
+    "evidence": "No events found in any tested calendar"
+  }
+}

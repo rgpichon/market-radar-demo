@@ -1,0 +1,44 @@
+{
+  "follow_firms": ["Brookings Institution", "CEPR", "CSIS", "Bruegel", "LSE", "Wilson Center", "NBER"],
+  "follow_packs": ["think_tanks", "research"],
+  "follow_tags": ["Macro", "Policy", "Research", "Economics", "Geopolitics"],
+  "require_confirmed_for_notifications": true,
+  "alert_rules": {
+    "time_based": {
+      "enabled": false,
+      "alert_days_before": [7, 1],
+      "only_future_events": true
+    },
+    "event_type": {
+      "include_intel_types": [],
+      "exclude_intel_types": [],
+      "include_event_types": [],
+      "exclude_event_types": []
+    },
+    "location": {
+      "cities": [],
+      "countries": [],
+      "formats": [],
+      "exclude_online": false
+    }
+  },
+  "notification_channels": {
+    "email": {
+      "enabled": false,
+      "recipient": "",
+      "smtp_host": "",
+      "smtp_port": 587,
+      "smtp_user": "",
+      "smtp_password": "",
+      "from_address": "notifications@marketradar.local",
+      "from_name": "Market Radar"
+    },
+    "webhook": {
+      "enabled": false,
+      "webhooks": []
+    }
+  },
+  "notification_aggregation": {
+    "mode": "none"
+  }
+}

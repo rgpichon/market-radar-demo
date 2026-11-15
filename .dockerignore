@@ -1,0 +1,11 @@
+venv/
+.venv/
+**/__pycache__/
+**/*.pyc
+backend/_secrets/
+backend/_cache/
+backend/_evidence/
+backend/_email_ingest/
+logs/
+*.md
+!README.md

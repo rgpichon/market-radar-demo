@@ -1,0 +1,861 @@
+{
+  "timestamp": "2026-01-27T20:17:03.330916+00:00",
+  "priority": "p0",
+  "firms": [
+    {
+      "firm_name": "BlackRock",
+      "firm_type": "Asset Manager",
+      "candidates": [],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/blackrock/2026-01-27T20:16:07.773405+00:00/discovery.json"
+    },
+    {
+      "firm_name": "Amundi",
+      "firm_type": "Asset Manager",
+      "candidates": [],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/amundi/2026-01-27T20:16:08.591099+00:00/discovery.json"
+    },
+    {
+      "firm_name": "PIMCO",
+      "firm_type": "Asset Manager",
+      "candidates": [
+        {
+          "url": "https://event.webcasts.com/starthere.jsp?ei=1745139&tp_key=d458d979fe&sti=homepagehero",
+          "lane": "html_list",
+          "score": 10,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.pimco.com"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/pimco/2026-01-27T20:16:11.726696+00:00/discovery.json"
+    },
+    {
+      "firm_name": "Schroders",
+      "firm_type": "Asset Manager",
+      "candidates": [
+        {
+          "url": "https://www.schroders.com/en/insights/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.schroders.com"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/schroders/2026-01-27T20:16:12.311573+00:00/discovery.json"
+    },
+    {
+      "firm_name": "JPMorgan Asset Management",
+      "firm_type": "Asset Manager",
+      "candidates": [],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/jpmorgan_asset_management/2026-01-27T20:16:13.118721+00:00/discovery.json"
+    },
+    {
+      "firm_name": "Goldman Sachs Asset Management",
+      "firm_type": "Asset Manager",
+      "candidates": [],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/goldman_sachs_asset_management/2026-01-27T20:16:15.224485+00:00/discovery.json"
+    },
+    {
+      "firm_name": "AQR",
+      "firm_type": "Asset Manager",
+      "candidates": [
+        {
+          "url": "https://www.aqr.com/Insights/Events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.aqr.com"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/aqr/2026-01-27T20:16:18.726405+00:00/discovery.json"
+    },
+    {
+      "firm_name": "Man Group",
+      "firm_type": "Hedge Fund",
+      "candidates": [
+        {
+          "url": "https://www.man.com/maninstitute/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.man.com"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/man_group/2026-01-27T20:16:21.986854+00:00/discovery.json"
+    },
+    {
+      "firm_name": "Blackstone",
+      "firm_type": "Asset Manager",
+      "candidates": [
+        {
+          "url": "https://www.blackstone.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.blackstone.com%2F&format=xml",
+          "lane": "rss",
+          "score": 25,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "atom",
+          "found_from": "https://www.blackstone.com"
+        },
+        {
+          "url": "https://www.blackstone.com/feed/",
+          "lane": "rss",
+          "score": 20,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "rss",
+          "found_from": "https://www.blackstone.com"
+        },
+        {
+          "url": "https://www.blackstone.com/comments/feed/",
+          "lane": "rss",
+          "score": 20,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "rss",
+          "found_from": "https://www.blackstone.com"
+        },
+        {
+          "url": "https://event.webcasts.com/starthere.jsp?ei=1748258&tp_key=b779ba06d9",
+          "lane": "html_list",
+          "score": 10,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.blackstone.com"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/blackstone/2026-01-27T20:16:23.809504+00:00/discovery.json"
+    },
+    {
+      "firm_name": "CFA Society Global",
+      "firm_type": "Association",
+      "candidates": [
+        {
+          "url": "https://www.cfainstitute.org/insights/events/upcoming",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.cfainstitute.org"
+        },
+        {
+          "url": "https://www.cfainstitute.org/insights/events/past",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.cfainstitute.org"
+        },
+        {
+          "url": "https://www.cfainstitute.org/insights/events/sponsorship",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.cfainstitute.org"
+        },
+        {
+          "url": "https://www.cfainstitute.org/insights/events/research-challenge",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.cfainstitute.org"
+        },
+        {
+          "url": "https://www.cfainstitute.org/insights/events/industry-events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.cfainstitute.org"
+        },
+        {
+          "url": "https://www.cfainstitute.org/en/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.cfainstitute.org"
+        },
+        {
+          "url": "https://www.cfainstitute.org/insights/events/upcoming",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.cfainstitute.org"
+        },
+        {
+          "url": "https://www.cfainstitute.org/insights/events/past",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.cfainstitute.org"
+        },
+        {
+          "url": "https://www.cfainstitute.org/insights/events/sponsorship",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.cfainstitute.org"
+        },
+        {
+          "url": "https://www.cfainstitute.org/insights/events/research-challenge",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.cfainstitute.org"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/cfa_society_global/2026-01-27T20:16:25.450820+00:00/discovery.json"
+    },
+    {
+      "firm_name": "CAIA Association",
+      "firm_type": "Association",
+      "candidates": [
+        {
+          "url": "https://www.caia.org/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.caia.org"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/caia_association/2026-01-27T20:16:26.304032+00:00/discovery.json"
+    },
+    {
+      "firm_name": "SIFMA",
+      "firm_type": "Association",
+      "candidates": [],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/sifma/2026-01-27T20:16:27.016616+00:00/discovery.json"
+    },
+    {
+      "firm_name": "AIMA",
+      "firm_type": "Association",
+      "candidates": [
+        {
+          "url": "https://www.aima.org/events.html",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.aima.org"
+        },
+        {
+          "url": "https://www.aima.org/events/forthcoming-aima-events.html",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.aima.org"
+        },
+        {
+          "url": "https://www.aima.org/events/aima-conferences-information.html",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.aima.org"
+        },
+        {
+          "url": "https://www.aima.org/events/sponsorship-opportunities.html",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.aima.org"
+        },
+        {
+          "url": "https://www.aima.org/events/past-events-and-playbacks.html",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.aima.org"
+        },
+        {
+          "url": "https://www.aima.org/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.aima.org"
+        },
+        {
+          "url": "https://www.aima.org/events.html",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.aima.org"
+        },
+        {
+          "url": "https://www.aima.org/events/forthcoming-aima-events.html",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.aima.org"
+        },
+        {
+          "url": "https://www.aima.org/events/aima-conferences-information.html",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.aima.org"
+        },
+        {
+          "url": "https://www.aima.org/events/sponsorship-opportunities.html",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.aima.org"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/aima/2026-01-27T20:16:33.781709+00:00/discovery.json"
+    },
+    {
+      "firm_name": "BIS",
+      "firm_type": "Central Bank",
+      "candidates": [],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/bis/2026-01-27T20:16:34.254754+00:00/discovery.json"
+    },
+    {
+      "firm_name": "Bank of England",
+      "firm_type": "Central Bank",
+      "candidates": [
+        {
+          "url": "https://www.bankofengland.co.uk/news/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.bankofengland.co.uk"
+        },
+        {
+          "url": "https://www.bankofengland.co.uk/events/2026/march/boe-to-hear-the-views-of-the-people-in-north-london-about-the-cost-of-living",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.bankofengland.co.uk"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/bank_of_england/2026-01-27T20:16:35.265221+00:00/discovery.json"
+    },
+    {
+      "firm_name": "Cambridge Judge Business School",
+      "firm_type": "Academic",
+      "candidates": [
+        {
+          "url": "https://www.jbs.cam.ac.uk/events/feed/",
+          "lane": "rss",
+          "score": 60,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "rss",
+          "found_from": "https://www.jbs.cam.ac.uk/events"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/events/?term=&category=3267&audience=&location=&date=&pagination=1",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.jbs.cam.ac.uk"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.jbs.cam.ac.uk"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/events/?term=&category=3267&audience=&location=&date=&pagination=1",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.jbs.cam.ac.uk"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/events/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.jbs.cam.ac.uk"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/alumni/events/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.jbs.cam.ac.uk"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/alumni/events/reunions/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.jbs.cam.ac.uk"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/alumni/events/cjbs-connects-worldwide/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.jbs.cam.ac.uk"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/events/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.jbs.cam.ac.uk"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/alumni/events/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.jbs.cam.ac.uk"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/alumni/events/reunions/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.jbs.cam.ac.uk"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/feed/",
+          "lane": "rss",
+          "score": 20,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "rss",
+          "found_from": "https://www.jbs.cam.ac.uk"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/comments/feed/",
+          "lane": "rss",
+          "score": 20,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "rss",
+          "found_from": "https://www.jbs.cam.ac.uk"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/homepage/feed/",
+          "lane": "rss",
+          "score": 20,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "rss",
+          "found_from": "https://www.jbs.cam.ac.uk"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/feed/",
+          "lane": "rss",
+          "score": 20,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "rss",
+          "found_from": "https://www.jbs.cam.ac.uk/events"
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/comments/feed/",
+          "lane": "rss",
+          "score": 20,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "rss",
+          "found_from": "https://www.jbs.cam.ac.uk/events"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/cambridge_judge_business_school/2026-01-27T20:16:39.730107+00:00/discovery.json"
+    },
+    {
+      "firm_name": "Imperial College Business School",
+      "firm_type": "Academic",
+      "candidates": [
+        {
+          "url": "https://www.imperial.ac.uk/business-school/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.imperial.ac.uk/business-school"
+        },
+        {
+          "url": "https://www.imperial.ac.uk/business-school/events/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.imperial.ac.uk/business-school"
+        },
+        {
+          "url": "https://www.imperial.ac.uk/business-school/executive-education/events/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.imperial.ac.uk/business-school"
+        },
+        {
+          "url": "https://www.imperial.ac.uk/business-school/alumni/events/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.imperial.ac.uk/business-school"
+        },
+        {
+          "url": "https://www.imperial.ac.uk/business-school/events/mba-open-day-0/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.imperial.ac.uk/business-school"
+        },
+        {
+          "url": "https://www.imperial.ac.uk/business-school/events/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.imperial.ac.uk/business-school"
+        },
+        {
+          "url": "https://www.imperial.ac.uk/business-school/executive-education/events/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.imperial.ac.uk/business-school"
+        },
+        {
+          "url": "https://www.imperial.ac.uk/business-school/alumni/events/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.imperial.ac.uk/business-school"
+        },
+        {
+          "url": "https://www.imperial.ac.uk/business-school/events/business-school-conference/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.imperial.ac.uk/business-school"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/imperial_college_business_school/2026-01-27T20:16:40.864726+00:00/discovery.json"
+    },
+    {
+      "firm_name": "HEC Paris",
+      "firm_type": "Academic",
+      "candidates": [
+        {
+          "url": "https://events.myapplication.hec.fr/en/Wx3Bll37/webinar-data-science-and-ai-at-hec-paris-5a2MSZ8i7u1/overview",
+          "lane": "html_list",
+          "score": 50,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.hec.edu"
+        },
+        {
+          "url": "https://events.blackthorn.io/en/7R4PSv67/g/7Yqg2sYp73/hec-paris-mba-campus-visit-february-02-2026-4a26bFk3Az/overview",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.hec.edu"
+        },
+        {
+          "url": "https://events.myapplication.hec.fr/en/Wx3Bll37/coffee-chat-lima-peru-february-2nd-2026-5a2MSZ9QGlV/overview",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.hec.edu"
+        },
+        {
+          "url": "https://events.blackthorn.io/en/7R4PSv67/g/7Yqg2sYp73/hec-paris-mba-in-person-one-to-one-meeting-in-lima-february-02-and-04-2026-4a26bFmQpp/overview",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.hec.edu"
+        },
+        {
+          "url": "https://www.hec.edu/en/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.hec.edu"
+        },
+        {
+          "url": "https://www.hec.edu/en/faculty-research/events/eva-ascarza-department-marketing-room-t015",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.hec.edu"
+        },
+        {
+          "url": "https://www.hec.edu/en/faculty-research/events/adam-kleinbaum-tbd",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.hec.edu"
+        },
+        {
+          "url": "https://www.hec.edu/en/faculty-research/events/online-learning-dynamic-service-mode-control",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.hec.edu"
+        },
+        {
+          "url": "https://www.hec.edu/en/faculty-research/events/claudine-gartenberg-tbd",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.hec.edu"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/hec_paris/2026-01-27T20:16:45.337089+00:00/discovery.json"
+    },
+    {
+      "firm_name": "INSEAD",
+      "firm_type": "Academic",
+      "candidates": [],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/insead/2026-01-27T20:16:45.617422+00:00/discovery.json"
+    },
+    {
+      "firm_name": "Wharton School",
+      "firm_type": "Academic",
+      "candidates": [
+        {
+          "url": "https://www.wharton.upenn.edu/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.wharton.upenn.edu"
+        },
+        {
+          "url": "https://alumni.wharton.upenn.edu/events-hq/#list",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.wharton.upenn.edu"
+        },
+        {
+          "url": "https://groups.wharton.upenn.edu/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.wharton.upenn.edu"
+        },
+        {
+          "url": "https://www.wharton.upenn.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.wharton.upenn.edu%2F&format=xml",
+          "lane": "rss",
+          "score": 25,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "atom",
+          "found_from": "https://www.wharton.upenn.edu"
+        },
+        {
+          "url": "https://www.wharton.upenn.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.wharton.upenn.edu%2Fevents%2F&format=xml",
+          "lane": "rss",
+          "score": 25,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "atom",
+          "found_from": "https://www.wharton.upenn.edu/events"
+        },
+        {
+          "url": "https://www.wharton.upenn.edu/events/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.wharton.upenn.edu"
+        },
+        {
+          "url": "https://www.wharton.upenn.edu/events/",
+          "lane": "html_list",
+          "score": 25,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.wharton.upenn.edu"
+        },
+        {
+          "url": "https://www.wharton.upenn.edu/feed/",
+          "lane": "rss",
+          "score": 20,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "rss",
+          "found_from": "https://www.wharton.upenn.edu"
+        },
+        {
+          "url": "https://www.wharton.upenn.edu/comments/feed/",
+          "lane": "rss",
+          "score": 20,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "rss",
+          "found_from": "https://www.wharton.upenn.edu"
+        },
+        {
+          "url": "https://www.wharton.upenn.edu/feed/",
+          "lane": "rss",
+          "score": 20,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "rss",
+          "found_from": "https://www.wharton.upenn.edu/events"
+        },
+        {
+          "url": "https://www.wharton.upenn.edu/comments/feed/",
+          "lane": "rss",
+          "score": 20,
+          "supported": true,
+          "type": "feed",
+          "feed_type": "rss",
+          "found_from": "https://www.wharton.upenn.edu/events"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/wharton_school/2026-01-27T20:16:49.840887+00:00/discovery.json"
+    },
+    {
+      "firm_name": "Chicago Booth",
+      "firm_type": "Academic",
+      "candidates": [
+        {
+          "url": "https://www.chicagobooth.edu/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.chicagobooth.edu"
+        },
+        {
+          "url": "https://www.chicagobooth.edu/mba/full-time/admissions/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.chicagobooth.edu"
+        },
+        {
+          "url": "https://www.chicagobooth.edu/mba/part-time/admissions/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.chicagobooth.edu"
+        },
+        {
+          "url": "https://www.chicagobooth.edu/mba/executive/admissions/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.chicagobooth.edu"
+        },
+        {
+          "url": "https://www.chicagobooth.edu/master-in-finance/admissions/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.chicagobooth.edu"
+        },
+        {
+          "url": "https://www.chicagobooth.edu/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.chicagobooth.edu"
+        },
+        {
+          "url": "https://www.chicagobooth.edu/events/masterclass",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.chicagobooth.edu"
+        },
+        {
+          "url": "https://www.chicagobooth.edu/events/admissions-recorded-events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.chicagobooth.edu"
+        },
+        {
+          "url": "https://www.chicagobooth.edu/mba/full-time/admissions/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.chicagobooth.edu"
+        },
+        {
+          "url": "https://www.chicagobooth.edu/mba/part-time/admissions/events",
+          "lane": "html_list",
+          "score": 30,
+          "supported": false,
+          "type": "html_list",
+          "found_from": "https://www.chicagobooth.edu"
+        }
+      ],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/chicago_booth/2026-01-27T20:16:59.829254+00:00/discovery.json"
+    },
+    {
+      "firm_name": "Peterson Institute",
+      "firm_type": "Think Tank",
+      "candidates": [],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/peterson_institute/2026-01-27T20:17:00.751447+00:00/discovery.json"
+    },
+    {
+      "firm_name": "Chatham House",
+      "firm_type": "Think Tank",
+      "candidates": [],
+      "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/source_discovery/chatham_house/2026-01-27T20:17:03.330148+00:00/discovery.json"
+    }
+  ]
+}

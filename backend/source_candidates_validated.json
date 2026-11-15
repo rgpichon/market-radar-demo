@@ -1,0 +1,526 @@
+{
+  "timestamp": "2026-01-27T20:17:22.564542+00:00",
+  "priority": "p0",
+  "firms": [
+    {
+      "firm_name": "BlackRock",
+      "firm_type": "Asset Manager",
+      "candidates_validated": []
+    },
+    {
+      "firm_name": "Amundi",
+      "firm_type": "Asset Manager",
+      "candidates_validated": []
+    },
+    {
+      "firm_name": "PIMCO",
+      "firm_type": "Asset Manager",
+      "candidates_validated": [
+        {
+          "url": "https://event.webcasts.com/starthere.jsp?ei=1745139&tp_key=d458d979fe&sti=homepagehero",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://event.webcasts.com/starthere.jsp?ei=1745139&tp_key=d458d979fe&sti=homepagehero ===\n\nHTTP Status: 200\nContent-Type: text/html;charset=utf-8\nContent Length: 95860 bytes\nFinal URL: https://event.webcasts.com/starthere.jsp?ei=1745139&tp_key=d458d979fe&sti=homepagehero\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 95,860 bytes\nScript tags: 6\nLinks: 3\nPotential event containers: 0\nEvent-like CSS classes: 2\n\nTop "
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "Schroders",
+      "firm_type": "Asset Manager",
+      "candidates_validated": [
+        {
+          "url": "https://www.schroders.com/en/insights/events",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.schroders.com/en/insights/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 204722 bytes\nFinal URL: https://www.schroders.com/en/insights/events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 204,722 bytes\nScript tags: 2\nLinks: 0\nPotential event containers: 0\nEvent-like CSS classes: 0\n\n=== Tier Assessment ===\nTier: C\nReason: No clear event structure\n\u26a0\ufe0f  Likely requires "
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "JPMorgan Asset Management",
+      "firm_type": "Asset Manager",
+      "candidates_validated": []
+    },
+    {
+      "firm_name": "Goldman Sachs Asset Management",
+      "firm_type": "Asset Manager",
+      "candidates_validated": []
+    },
+    {
+      "firm_name": "AQR",
+      "firm_type": "Asset Manager",
+      "candidates_validated": [
+        {
+          "url": "https://www.aqr.com/Insights/Events",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.aqr.com/Insights/Events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=utf-8\nContent Length: 56772 bytes\nFinal URL: https://www.aqr.com/404\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 56,772 bytes\nScript tags: 11\nLinks: 61\nPotential event containers: 0\nEvent-like CSS classes: 10\n\nTop 10 event-like classes:\n  .nav2__item__link: 19 occurrences\n  .nav2__item: 6 occurrences\n  .nav2__item__name: 4"
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "Man Group",
+      "firm_type": "Hedge Fund",
+      "candidates_validated": [
+        {
+          "url": "https://www.man.com/maninstitute/events",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.man.com/maninstitute/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 178224 bytes\nFinal URL: https://www.man.com/insights#_events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 178,224 bytes\nScript tags: 13\nLinks: 141\nPotential event containers: 0\nEvent-like CSS classes: 30\n\nTop 10 event-like classes:\n  .nav__item: 70 occurrences\n  .menu-item: 39 occurrences\n  .js-for"
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "Blackstone",
+      "firm_type": "Asset Manager",
+      "candidates_validated": [
+        {
+          "url": "https://www.blackstone.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.blackstone.com%2F&format=xml",
+          "lane": "rss",
+          "status": "failed",
+          "item_count": 0,
+          "dated_count": 0,
+          "dated_ratio": 0.0,
+          "future_count": 0,
+          "future_ratio": 0.0,
+          "failure_class": "no_events",
+          "evidence": {
+            "status_code": 200,
+            "content_type": "text/xml; charset=UTF-8",
+            "raw_count": 0,
+            "kept_count": 0
+          }
+        },
+        {
+          "url": "https://www.blackstone.com/feed/",
+          "lane": "rss",
+          "status": "failed",
+          "item_count": 0,
+          "dated_count": 0,
+          "dated_ratio": 0.0,
+          "future_count": 0,
+          "future_ratio": 0.0,
+          "failure_class": "no_events",
+          "evidence": {
+            "status_code": 200,
+            "content_type": "application/rss+xml; charset=UTF-8",
+            "raw_count": 0,
+            "kept_count": 0
+          }
+        },
+        {
+          "url": "https://www.blackstone.com/comments/feed/",
+          "lane": "rss",
+          "status": "failed",
+          "item_count": 0,
+          "dated_count": 0,
+          "dated_ratio": 0.0,
+          "future_count": 0,
+          "future_ratio": 0.0,
+          "failure_class": "http_error",
+          "evidence": {
+            "status_code": 404,
+            "content_type": "application/rss+xml; charset=UTF-8",
+            "error": "HTTP 404"
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "CFA Society Global",
+      "firm_type": "Association",
+      "candidates_validated": [
+        {
+          "url": "https://www.cfainstitute.org/insights/events/upcoming",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.cfainstitute.org/insights/events/upcoming ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 231879 bytes\nFinal URL: https://www.cfainstitute.org/insights/events/upcoming\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 231,879 bytes\nScript tags: 17\nLinks: 126\nPotential event containers: 0\nEvent-like CSS classes: 32\n\nTop 10 event-like classes:\n  .coh-menu-list-item: 108 occurrenc"
+          }
+        },
+        {
+          "url": "https://www.cfainstitute.org/insights/events/past",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.cfainstitute.org/insights/events/past ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 158002 bytes\nFinal URL: https://www.cfainstitute.org/insights/events/past\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 158,002 bytes\nScript tags: 17\nLinks: 123\nPotential event containers: 0\nEvent-like CSS classes: 11\n\nTop 10 event-like classes:\n  .coh-menu-list-item: 108 occurrences\n  .js"
+          }
+        },
+        {
+          "url": "https://www.cfainstitute.org/insights/events/sponsorship",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.cfainstitute.org/insights/events/sponsorship ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 214454 bytes\nFinal URL: https://www.cfainstitute.org/insights/events/sponsorship\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 214,454 bytes\nScript tags: 16\nLinks: 124\nPotential event containers: 0\nEvent-like CSS classes: 15\n\nTop 10 event-like classes:\n  .coh-menu-list-item: 108 occ"
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "CAIA Association",
+      "firm_type": "Association",
+      "candidates_validated": [
+        {
+          "url": "https://www.caia.org/events",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.caia.org/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 42219 bytes\nFinal URL: https://caia.org/events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 42,219 bytes\nScript tags: 8\nLinks: 105\nPotential event containers: 0\nEvent-like CSS classes: 9\n\nTop 10 event-like classes:\n  .menu-item: 62 occurrences\n  .field__item: 16 occurrences\n  .menu-item--expanded: 12 occurrenc"
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "SIFMA",
+      "firm_type": "Association",
+      "candidates_validated": []
+    },
+    {
+      "firm_name": "AIMA",
+      "firm_type": "Association",
+      "candidates_validated": [
+        {
+          "url": "https://www.aima.org/events.html",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.aima.org/events.html ===\n\nHTTP Status: 200\nContent-Type: text/html;charset=UTF-8\nContent Length: 76128 bytes\nFinal URL: https://www.aima.org/events.html\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 76,128 bytes\nScript tags: 17\nLinks: 156\nPotential event containers: 0\nEvent-like CSS classes: 33\n\nTop 10 event-like classes:\n  .articles-entry: 23 occurrences\n  .articles-entry-details: 23 occurrences\n  .ar"
+          }
+        },
+        {
+          "url": "https://www.aima.org/events/forthcoming-aima-events.html",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.aima.org/events/forthcoming-aima-events.html ===\n\nHTTP Status: 200\nContent-Type: text/html;charset=UTF-8\nContent Length: 76128 bytes\nFinal URL: https://www.aima.org/events.html\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 76,128 bytes\nScript tags: 17\nLinks: 156\nPotential event containers: 0\nEvent-like CSS classes: 33\n\nTop 10 event-like classes:\n  .articles-entry: 23 occurrences\n  .articles-entry-detai"
+          }
+        },
+        {
+          "url": "https://www.aima.org/events/aima-conferences-information.html",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.aima.org/events/aima-conferences-information.html ===\n\nHTTP Status: 200\nContent-Type: text/html;charset=UTF-8\nContent Length: 82081 bytes\nFinal URL: https://www.aima.org/events/aima-conferences-information.html\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 82,081 bytes\nScript tags: 21\nLinks: 169\nPotential event containers: 0\nEvent-like CSS classes: 17\n\nTop 10 event-like classes:\n  .articles-entry: 31 o"
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "BIS",
+      "firm_type": "Central Bank",
+      "candidates_validated": []
+    },
+    {
+      "firm_name": "Bank of England",
+      "firm_type": "Central Bank",
+      "candidates_validated": [
+        {
+          "url": "https://www.bankofengland.co.uk/news/events",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.bankofengland.co.uk/news/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=utf-8\nContent Length: 75261 bytes\nFinal URL: https://www.bankofengland.co.uk/news/events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 75,261 bytes\nScript tags: 10\nLinks: 175\nPotential event containers: 0\nEvent-like CSS classes: 11\n\nTop 10 event-like classes:\n  .nav-primary__sublist-item: 126 occurrences\n  .nav-prima"
+          }
+        },
+        {
+          "url": "https://www.bankofengland.co.uk/events/2026/march/boe-to-hear-the-views-of-the-people-in-north-london-about-the-cost-of-living",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.bankofengland.co.uk/events/2026/march/boe-to-hear-the-views-of-the-people-in-north-london-about-the-cost-of-living ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=utf-8\nContent Length: 74022 bytes\nFinal URL: https://www.bankofengland.co.uk/events/2026/march/boe-to-hear-the-views-of-the-people-in-north-london-about-the-cost-of-living\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 74,022 bytes\nScri"
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "Cambridge Judge Business School",
+      "firm_type": "Academic",
+      "candidates_validated": [
+        {
+          "url": "https://www.jbs.cam.ac.uk/events/feed/",
+          "lane": "rss",
+          "status": "deferred",
+          "item_count": 10,
+          "dated_count": 10,
+          "dated_ratio": 1.0,
+          "future_count": 0,
+          "future_ratio": 0.0,
+          "failure_class": "no_future_events",
+          "evidence": {
+            "status_code": 200,
+            "content_type": "application/rss+xml; charset=UTF-8",
+            "raw_count": 10,
+            "kept_count": 10
+          }
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/events/?term=&category=3267&audience=&location=&date=&pagination=1",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.jbs.cam.ac.uk/events/?term=&category=3267&audience=&location=&date=&pagination=1 ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 236439 bytes\nFinal URL: https://www.jbs.cam.ac.uk/events/?term=&category=3267&audience=&location=&date=&pagination=1\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 236,439 bytes\nScript tags: 38\nLinks: 334\nPotential event containers: 0\nEvent-like CS"
+          }
+        },
+        {
+          "url": "https://www.jbs.cam.ac.uk/events",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.jbs.cam.ac.uk/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 236279 bytes\nFinal URL: https://www.jbs.cam.ac.uk/events/\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 236,279 bytes\nScript tags: 38\nLinks: 334\nPotential event containers: 0\nEvent-like CSS classes: 289\n\nTop 10 event-like classes:\n  .mega-menu-item: 275 occurrences\n  .mega-menu-item-type-custom: 252 occurr"
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "Imperial College Business School",
+      "firm_type": "Academic",
+      "candidates_validated": [
+        {
+          "url": "https://www.imperial.ac.uk/business-school/events",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.imperial.ac.uk/business-school/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 188018 bytes\nFinal URL: https://www.imperial.ac.uk/business-school/events/\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 188,018 bytes\nScript tags: 12\nLinks: 198\nPotential event containers: 0\nEvent-like CSS classes: 42\n\nTop 10 event-like classes:\n  .megamenu__item: 137 occurrences\n  .c-car"
+          }
+        },
+        {
+          "url": "https://www.imperial.ac.uk/business-school/events/",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.imperial.ac.uk/business-school/events/ ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 188018 bytes\nFinal URL: https://www.imperial.ac.uk/business-school/events/\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 188,018 bytes\nScript tags: 12\nLinks: 198\nPotential event containers: 0\nEvent-like CSS classes: 42\n\nTop 10 event-like classes:\n  .megamenu__item: 137 occurrences\n  .c-ca"
+          }
+        },
+        {
+          "url": "https://www.imperial.ac.uk/business-school/executive-education/events/",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.imperial.ac.uk/business-school/executive-education/events/ ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 150774 bytes\nFinal URL: https://www.imperial.ac.uk/business-school/executive-education/events/\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 150,774 bytes\nScript tags: 12\nLinks: 178\nPotential event containers: 0\nEvent-like CSS classes: 30\n\nTop 10 event-like classes:\n  "
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "HEC Paris",
+      "firm_type": "Academic",
+      "candidates_validated": [
+        {
+          "url": "https://events.myapplication.hec.fr/en/Wx3Bll37/webinar-data-science-and-ai-at-hec-paris-5a2MSZ8i7u1/overview",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://events.myapplication.hec.fr/en/Wx3Bll37/webinar-data-science-and-ai-at-hec-paris-5a2MSZ8i7u1/overview ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 13370 bytes\nFinal URL: https://events.myapplication.hec.fr/en/Wx3Bll37/webinar-data-science-and-ai-at-hec-paris-5a2MSZ8i7u1/overview\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 13,370 bytes\nScript tags: 7\nLinks: 2\nPotential even"
+          }
+        },
+        {
+          "url": "https://events.blackthorn.io/en/7R4PSv67/g/7Yqg2sYp73/hec-paris-mba-campus-visit-february-02-2026-4a26bFk3Az/overview",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://events.blackthorn.io/en/7R4PSv67/g/7Yqg2sYp73/hec-paris-mba-campus-visit-february-02-2026-4a26bFk3Az/overview ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 13150 bytes\nFinal URL: https://events.blackthorn.io/en/7R4PSv67/g/7Yqg2sYp73/hec-paris-mba-campus-visit-february-02-2026-4a26bFk3Az/overview\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 13,150 bytes\nScript tags: 6\nLinks: "
+          }
+        },
+        {
+          "url": "https://events.myapplication.hec.fr/en/Wx3Bll37/coffee-chat-lima-peru-february-2nd-2026-5a2MSZ9QGlV/overview",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://events.myapplication.hec.fr/en/Wx3Bll37/coffee-chat-lima-peru-february-2nd-2026-5a2MSZ9QGlV/overview ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 13370 bytes\nFinal URL: https://events.myapplication.hec.fr/en/Wx3Bll37/coffee-chat-lima-peru-february-2nd-2026-5a2MSZ9QGlV/overview\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 13,370 bytes\nScript tags: 7\nLinks: 2\nPotential event "
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "INSEAD",
+      "firm_type": "Academic",
+      "candidates_validated": []
+    },
+    {
+      "firm_name": "Wharton School",
+      "firm_type": "Academic",
+      "candidates_validated": [
+        {
+          "url": "https://www.wharton.upenn.edu/events",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.wharton.upenn.edu/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 88503 bytes\nFinal URL: https://www.wharton.upenn.edu/events/\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 88,503 bytes\nScript tags: 35\nLinks: 115\nPotential event containers: 0\nEvent-like CSS classes: 45\n\nTop 10 event-like classes:\n  .menu-item: 58 occurrences\n  .menu-item-type-post_type: 43 occurrence"
+          }
+        },
+        {
+          "url": "https://alumni.wharton.upenn.edu/events-hq/#list",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://alumni.wharton.upenn.edu/events-hq/#list ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=UTF-8\nContent Length: 90914 bytes\nFinal URL: https://alumni.wharton.upenn.edu/events-hq/#list\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 90,914 bytes\nScript tags: 30\nLinks: 120\nPotential event containers: 0\nEvent-like CSS classes: 81\n\nTop 10 event-like classes:\n  .menu-item: 55 occurrences\n  .menu-item-type-p"
+          }
+        },
+        {
+          "url": "https://groups.wharton.upenn.edu/events",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://groups.wharton.upenn.edu/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=utf-8\nContent Length: 146293 bytes\nFinal URL: https://groups.wharton.upenn.edu/events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 146,293 bytes\nScript tags: 57\nLinks: 18\nPotential event containers: 0\nEvent-like CSS classes: 11\n\nTop 10 event-like classes:\n  .btn-cg--event: 3 occurrences\n  .list-group-item: 2 occurrences"
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "Chicago Booth",
+      "firm_type": "Academic",
+      "candidates_validated": [
+        {
+          "url": "https://www.chicagobooth.edu/events",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.chicagobooth.edu/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=utf-8\nContent Length: 131365 bytes\nFinal URL: https://www.chicagobooth.edu/events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 131,365 bytes\nScript tags: 26\nLinks: 378\nPotential event containers: 0\nEvent-like CSS classes: 2\n\nTop 10 event-like classes:\n  .Recorded-Admissions-Events-preview-content-Swiss-Container-1: 1 occurr"
+          }
+        },
+        {
+          "url": "https://www.chicagobooth.edu/mba/full-time/admissions/events",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.chicagobooth.edu/mba/full-time/admissions/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=utf-8\nContent Length: 141202 bytes\nFinal URL: https://www.chicagobooth.edu/mba/full-time/admissions/events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 141,202 bytes\nScript tags: 25\nLinks: 411\nPotential event containers: 0\nEvent-like CSS classes: 7\n\nTop 10 event-like classes:\n  .eventssort: 1 occurr"
+          }
+        },
+        {
+          "url": "https://www.chicagobooth.edu/mba/part-time/admissions/events",
+          "lane": "html_list",
+          "status": "deferred",
+          "tier": "C",
+          "html_feasible": false,
+          "js_rendered": false,
+          "failure_class": "low_tier_html",
+          "evidence": {
+            "validation_output": "\n=== Validating HTML page: https://www.chicagobooth.edu/mba/part-time/admissions/events ===\n\nHTTP Status: 200\nContent-Type: text/html; charset=utf-8\nContent Length: 136513 bytes\nFinal URL: https://www.chicagobooth.edu/mba/part-time/admissions/events\n\n=== JS Rendering Check ===\n\u2713 No obvious JS-rendering indicators\n\n=== Page Structure ===\nHTML length: 136,513 bytes\nScript tags: 25\nLinks: 396\nPotential event containers: 0\nEvent-like CSS classes: 7\n\nTop 10 event-like classes:\n  .events: 2 occurrence"
+          }
+        }
+      ]
+    },
+    {
+      "firm_name": "Peterson Institute",
+      "firm_type": "Think Tank",
+      "candidates_validated": []
+    },
+    {
+      "firm_name": "Chatham House",
+      "firm_type": "Think Tank",
+      "candidates_validated": []
+    }
+  ]
+}

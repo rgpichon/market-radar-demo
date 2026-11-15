@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Events Radar</title>
+    <link rel="stylesheet" href="/frontend/styles.css">
+</head>
+<body>
+    <!-- TEMP_DEBUG: Status div for error visibility -->
+    <div id="debugStatus" style="display: none;"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Market Events Radar</h1>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="events">Events</button>
+            <button class="tab-button" data-tab="notifications">Notifications</button>
+            <button class="tab-button" data-tab="settings">Settings</button>
+        </nav>
+
+        <!-- Events Tab -->
+        <div id="events-tab" class="tab-content active">
+            <div class="controls">
+                <input type="text" id="search-input" placeholder="Search events..." class="search-box">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="with-date-checkbox">
+                    Only show events with date
+                </label>
+                <select id="days-ahead-select" class="select-box">
+                    <option value="7">Next 7 days</option>
+                    <option value="14">Next 14 days</option>
+                    <option value="30" selected>Next 30 days</option>
+                </select>
+                <button id="run-scrape-btn" class="button">Run scrape now</button>
+            </div>
+            <div id="events-list" class="events-list">
+                <p class="loading">Loading events...</p>
+            </div>
+        </div>
+
+        <!-- Notifications Tab -->
+        <div id="notifications-tab" class="tab-content">
+            <div class="controls">
+                <button id="mark-all-seen-btn" class="button">Mark all seen</button>
+            </div>
+            <div id="notifications-list" class="notifications-list">
+                <p class="loading">Loading notifications...</p>
+            </div>
+        </div>
+
+        <!-- Settings Tab -->
+        <div id="settings-tab" class="tab-content">
+            <div id="settings-content" class="settings-content">
+                <p class="loading">Loading settings...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/frontend/app.js"></script>
+</body>
+</html>
+

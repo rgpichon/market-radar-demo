@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore by Interest - Market Events Radar</title>
+    <link rel="stylesheet" href="/frontend/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Market Events Radar</h1>
+            <div id="status-bar" class="status-bar">Loading...</div>
+            <button id="theme-toggle" class="theme-toggle">🌙 Dark</button>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="events">Events</button>
+            <button class="tab-button" data-tab="notifications">Notifications</button>
+            <button class="tab-button" data-tab="settings">Settings</button>
+        </nav>
+
+        <div id="events-tab" class="tab-content active">
+            <div class="zone-page-header">
+                <a href="/" class="back-link">← Back to Home</a>
+                <h2>Explore by Interest</h2>
+                <p class="zone-page-description">Discover events by topic or theme</p>
+            </div>
+
+            <div class="topic-selection">
+                <h3>Select a Topic:</h3>
+                <div id="topic-filters" class="topic-filters-grid">
+                    <p class="loading">Loading topics...</p>
+                </div>
+            </div>
+
+            <div id="selected-topic" class="selected-topic" style="display: none;">
+                <span id="selected-topic-name"></span>
+            </div>
+
+            <div class="controls sticky-controls" id="zone3-filters" style="display: none;">
+                <div class="filter-group basic-filters">
+                    <select id="format-filter" class="select-box">
+                        <option value="">All Formats</option>
+                        <option value="Webinar">Webinar</option>
+                        <option value="Conference">Conference</option>
+                        <option value="Panel">Panel</option>
+                        <option value="Online">Online</option>
+                        <option value="In-person">In-person</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </select>
+                    <select id="days-ahead-select" class="select-box">
+                        <option value="30">Next 30 days</option>
+                        <option value="90">Next 90 days</option>
+                        <option value="180">Next 180 days</option>
+                        <option value="365" selected>Next 365 days</option>
+                    </select>
+                    <select id="signal-filter" class="select-box">
+                        <option value="">All Signals</option>
+                        <option value="70">High (70+)</option>
+                        <option value="60">Medium+ (60+)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="sort-select" class="select-box">
+                        <option value="date-asc">Date ↑</option>
+                        <option value="date-desc">Date ↓</option>
+                        <option value="signal-desc">Signal Score ↓</option>
+                    </select>
+                </div>
+                <button id="run-scrape-btn" class="button">Run scrape now</button>
+            </div>
+
+            <div id="events-list" class="events-list">
+                <p>Select a topic above to explore events</p>
+            </div>
+        </div>
+
+        <div id="notifications-tab" class="tab-content">
+            <div class="controls">
+                <button id="mark-all-seen-btn" class="button">Mark all seen</button>
+            </div>
+            <div id="notifications-list" class="notifications-list">
+                <p class="loading">Loading notifications...</p>
+            </div>
+        </div>
+
+        <div id="settings-tab" class="tab-content">
+            <div id="settings-content" class="settings-content">
+                <p class="loading">Loading settings...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/frontend/app.js"></script>
+    <script>
+        let currentTopic = null;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.location.protocol === 'file:') return;
+            
+            // Wait for app.js functions to be available
+            waitForAppJS(() => {
+                // Load topics for buttons
+                loadZone3Topics();
+                
+                // Setup filter change handlers (will be set up by initializeZonePage, but also set up here for topic buttons)
+                const formatFilter = document.getElementById('format-filter');
+                const signalFilter = document.getElementById('signal-filter');
+                const sortSelect = document.getElementById('sort-select');
+                const daysAheadSelect = document.getElementById('days-ahead-select');
+                
+                [formatFilter, signalFilter, sortSelect, daysAheadSelect].forEach(el => {
+                    if (el) el.addEventListener('change', () => {
+                        if (currentTopic) loadZone3PageEvents(currentTopic);
+                    });
+                });
+            });
+        });
+        
+        async function loadZone3Topics() {
+            const container = document.getElementById('topic-filters');
+            if (!container) return;
+            
+            try {
+                const response = await fetch(apiUrl('/api/topics'));
+                if (response.ok) {
+                    const topics = await response.json();
+                    container.innerHTML = topics.map(topic => 
+                        `<button class="topic-filter-btn" data-topic="${escapeHtml(topic.slug)}" data-topic-name="${escapeHtml(topic.name)}">
+                            ${escapeHtml(topic.name)} (${topic.count})
+                        </button>`
+                    ).join('');
+                    
+                    container.querySelectorAll('.topic-filter-btn').forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            const topicName = btn.getAttribute('data-topic-name');
+                            currentTopic = topicName;
+                            
+                            // Update UI
+                            container.querySelectorAll('.topic-filter-btn').forEach(b => b.classList.remove('active'));
+                            btn.classList.add('active');
+                            
+                            document.getElementById('selected-topic-name').textContent = topicName;
+                            document.getElementById('selected-topic').style.display = 'block';
+                            document.getElementById('zone3-filters').style.display = 'block';
+                            
+                            // Use the new zone page loading function
+                            loadZone3PageEvents(topicName);
+                        });
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading topics:', error);
+            }
+        }
+    </script>
+</body>
+</html>

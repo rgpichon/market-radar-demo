@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editorial Dashboard - Market Radar</title>
+    <link rel="stylesheet" href="/frontend/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Editorial Dashboard</h1>
+            <a href="/" class="button">Back to Events</a>
+        </header>
+        
+        <div class="editorial-controls">
+            <input type="text" id="event-search" placeholder="Search events..." class="search-box">
+            <button id="save-editorial" class="button">Save Changes</button>
+        </div>
+        
+        <div id="events-list" class="events-list">
+            <p class="loading">Loading events...</p>
+        </div>
+    </div>
+    
+    <script src="/frontend/app.js"></script>
+    <script>
+        // Editorial dashboard logic (Priority 7, Phase 3)
+        let editorialEvents = [];
+        let pendingChanges = {};
+        
+        async function loadEventsForEditorial() {
+            try {
+                const response = await fetch('/api/events?limit=100');
+                editorialEvents = await response.json();
+                renderEditorialEvents(editorialEvents);
+            } catch (error) {
+                document.getElementById('events-list').innerHTML = `<p class="error">Error: ${error.message}</p>`;
+            }
+        }
+        
+        function renderEditorialEvents(events) {
+            const container = document.getElementById('events-list');
+            
+            if (events.length === 0) {
+                container.innerHTML = '<p class="empty">No events found.</p>';
+                return;
+            }
+            
+            container.innerHTML = events.map(event => {
+                const editorialTags = event.editorial_tags_json ? 
+                    (typeof event.editorial_tags_json === 'string' ? JSON.parse(event.editorial_tags_json) : event.editorial_tags_json) : [];
+                const tagsStr = editorialTags.join(', ');
+                
+                return `
+                    <div class="editorial-event-card">
+                        <h3>${escapeHtml(event.event_name)}</h3>
+                        <p>${escapeHtml(event.firm_name)}</p>
+                        
+                        <div class="editorial-controls">
+                            <label>Editorial Tags (comma-separated):</label>
+                            <input type="text" class="editorial-tags" 
+                                   value="${escapeHtml(tagsStr)}"
+                                   data-event-id="${escapeHtml(event.id)}">
+                            
+                            <label>Featured:</label>
+                            <input type="checkbox" class="is-featured" 
+                                   ${event.is_featured ? 'checked' : ''}
+                                   data-event-id="${escapeHtml(event.id)}">
+                            
+                            <label>Editorial Notes:</label>
+                            <textarea class="editorial-notes" data-event-id="${escapeHtml(event.id)}">${escapeHtml(event.editorial_notes || '')}</textarea>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            // Add change listeners
+            document.querySelectorAll('.editorial-tags, .is-featured, .editorial-notes').forEach(el => {
+                el.addEventListener('change', (e) => {
+                    const eventId = e.target.getAttribute('data-event-id');
+                    if (!pendingChanges[eventId]) {
+                        pendingChanges[eventId] = {};
+                    }
+                    if (e.target.classList.contains('editorial-tags')) {
+                        pendingChanges[eventId].editorial_tags = e.target.value.split(',').map(t => t.trim()).filter(t => t);
+                    } else if (e.target.classList.contains('is-featured')) {
+                        pendingChanges[eventId].is_featured = e.target.checked;
+                    } else if (e.target.classList.contains('editorial-notes')) {
+                        pendingChanges[eventId].editorial_notes = e.target.value;
+                    }
+                });
+            });
+        }
+        
+        document.getElementById('save-editorial').addEventListener('click', async () => {
+            const saves = Object.keys(pendingChanges).map(async (eventId) => {
+                const changes = pendingChanges[eventId];
+                try {
+                    const response = await fetch(`/api/events/${eventId}/editorial`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(changes)
+                    });
+                    return await response.json();
+                } catch (error) {
+                    console.error(`Error saving ${eventId}:`, error);
+                    return { error: str(error) };
+                }
+            });
+            
+            await Promise.all(saves);
+            pendingChanges = {};
+            alert('Changes saved!');
+            loadEventsForEditorial();
+        });
+        
+        // Search filter
+        document.getElementById('event-search').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const filtered = editorialEvents.filter(event => 
+                event.event_name.toLowerCase().includes(query) ||
+                event.firm_name.toLowerCase().includes(query)
+            );
+            renderEditorialEvents(filtered);
+        });
+        
+        // Load on page load
+        loadEventsForEditorial();
+    </script>
+</body>
+</html>

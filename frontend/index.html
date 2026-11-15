@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Events Radar</title>
+    <link rel="stylesheet" href="/frontend/styles.css">
+</head>
+<body>
+    <!-- TEMP_DEBUG: Status div for error visibility -->
+    <div id="debugStatus" style="display: none;"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Market Events Radar</h1>
+            <div id="status-bar" class="status-bar">Loading...</div>
+            <button id="theme-toggle" class="theme-toggle">🌙 Dark</button>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="events">Events</button>
+            <button class="tab-button" data-tab="notifications">Notifications</button>
+            <button class="tab-button" data-tab="settings">Settings</button>
+        </nav>
+
+        <!-- Events Tab -->
+        <div id="events-tab" class="tab-content active">
+            <!-- New Homepage: 4 Zone Cards -->
+            <div id="homepage" class="homepage">
+                <div class="zones-grid">
+                    <!-- Zone 1: Recommended for You -->
+                    <a href="/zone1" class="zone-card zone-card-1" data-zone="1">
+                        <div class="zone-card-header">
+                            <h2>Recommended for You</h2>
+                            <p class="zone-description">Events most relevant to your interests</p>
+                        </div>
+                        <div class="zone-preview" id="zone1-preview">
+                            <p class="loading">Loading...</p>
+                        </div>
+                        <div class="zone-card-link">View All →</div>
+                    </a>
+
+                    <!-- Zone 2: Happening Soon -->
+                    <a href="/zone2" class="zone-card zone-card-2" data-zone="2">
+                        <div class="zone-card-header">
+                            <h2>Happening Soon</h2>
+                            <p class="zone-description">Upcoming events you shouldn't miss</p>
+                        </div>
+                        <div class="zone-preview" id="zone2-preview">
+                            <p class="loading">Loading...</p>
+                        </div>
+                        <div class="zone-card-link">View All →</div>
+                    </a>
+
+                    <!-- Zone 3: Explore by Interest -->
+                    <a href="/zone3" class="zone-card zone-card-3" data-zone="3">
+                        <div class="zone-card-header">
+                            <h2>Explore by Interest</h2>
+                            <p class="zone-description">Discover events by topic or theme</p>
+                        </div>
+                        <div class="zone-preview" id="zone3-preview">
+                            <p class="loading">Loading...</p>
+                        </div>
+                        <div class="zone-card-link">Explore →</div>
+                    </a>
+
+                    <!-- Zone 4: All Events / Advanced -->
+                    <a href="/zone4" class="zone-card zone-card-4" data-zone="4">
+                        <div class="zone-card-header">
+                            <h2>All Events / Advanced</h2>
+                            <p class="zone-description">Full event catalog with powerful filtering</p>
+                        </div>
+                        <div class="zone-preview" id="zone4-preview">
+                            <p class="loading">Loading...</p>
+                        </div>
+                        <div class="zone-card-link">Browse All →</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications Tab -->
+        <div id="notifications-tab" class="tab-content">
+            <div class="controls">
+                <button id="mark-all-seen-btn" class="button">Mark all seen</button>
+            </div>
+            <div id="notifications-list" class="notifications-list">
+                <p class="loading">Loading notifications...</p>
+            </div>
+        </div>
+
+        <!-- Settings Tab -->
+        <div id="settings-tab" class="tab-content">
+            <div id="settings-content" class="settings-content">
+                <p class="loading">Loading settings...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/frontend/app.js"></script>
+</body>
+</html>

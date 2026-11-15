@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Newsletter Signup - Test Bank</title>
+</head>
+<body>
+    <h1>Subscribe to Market Insights</h1>
+    <p>Get our weekly macro outlook and event invitations.</p>
+    
+    <nav>
+        <a href="/events">Events</a>
+        <a href="/research">Research</a>
+        <a href="/newsletter/subscribe">Subscribe to Newsletter</a>
+        <a href="/webinars">Webinars</a>
+        <a href="/press">Press Releases</a>
+    </nav>
+    
+    <form id="newsletter-form" action="/api/subscribe" method="POST">
+        <input type="hidden" name="source" value="website">
+        <input type="hidden" name="campaign" value="macro_insights">
+        
+        <label for="email">Email Address:</label>
+        <input type="email" name="email" id="email" required>
+        
+        <label for="name">Name (optional):</label>
+        <input type="text" name="name" id="name">
+        
+        <label>
+            <input type="checkbox" name="consent" id="consent">
+            I agree to receive marketing communications
+        </label>
+        
+        <button type="submit">Subscribe</button>
+    </form>
+    
+    <footer>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+    </footer>
+</body>
+</html>

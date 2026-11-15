@@ -1,0 +1,6 @@
+{
+  "follow_firms": ["Brookings Institution", "CEPR", "CSIS", "Bruegel", "LSE", "Wilson Center", "NBER"],
+  "follow_packs": ["think_tanks", "research"],
+  "follow_tags": ["Macro", "Policy", "Research", "Economics", "Geopolitics"],
+  "require_confirmed_for_notifications": true
+}

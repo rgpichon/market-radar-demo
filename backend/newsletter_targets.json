@@ -1,0 +1,1650 @@
+{
+  "owner_email": "rdr.events.rp@gmail.com",
+  "updated_at": "2026-01-14",
+  "targets": [
+    {
+      "id": "jpmorgan_markets",
+      "org_name": "JPMorgan",
+      "category": "bulge_bracket",
+      "priority": "p0",
+      "signup_url": "https://www.jpmorgan.com/newsletters",
+      "signup_method": "unknown",
+      "expected_from_domains": [
+        "jpmorgan.com",
+        "jpmorganchase.com"
+      ],
+      "expected_from_emails": [],
+      "discovered_senders": [],
+      "sender_confidence": "low",
+      "last_seen_at": null,
+      "subject_include_any": [
+        "webinar",
+        "conference",
+        "roundtable",
+        "outlook",
+        "strategy",
+        "markets",
+        "macro"
+      ],
+      "subject_exclude_any": [
+        "press release",
+        "results",
+        "earnings",
+        "quarter",
+        "dividend",
+        "appointment"
+      ],
+      "notes": "Primary markets/research newsletter",
+      "status": "subscribed",
+      "acquisition": {
+        "discovery_seed_urls": [
+          "https://www.jpmorgan.com/events",
+          "https://www.jpmorgan.com/insights/events",
+          "https://www.jpmorgan.com/global-research/events",
+          "https://www.jpmorgan.com/webinars"
+        ],
+        "discovered_signup_pages": [
+          {
+            "url": "https://www.jpmorgan.com/newsletters",
+            "score": 80,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets",
+            "discovered_at_utc": "2026-01-09T13:29:39.249314+00:00"
+          },
+          {
+            "url": "https://www.jpmorgan.com/insights/outlook/jpmorgan-outlook/predictions-and-forecasts",
+            "score": 60,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets",
+            "discovered_at_utc": "2026-01-09T13:29:39.249314+00:00"
+          },
+          {
+            "url": "https://www.jpmorgan.com/insights/markets-and-economy/outlook",
+            "score": 60,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets",
+            "discovered_at_utc": "2026-01-09T13:29:39.249314+00:00"
+          },
+          {
+            "url": "https://www.jpmorgan.com/insights/research",
+            "score": 45,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets",
+            "discovered_at_utc": "2026-01-09T13:29:39.249314+00:00"
+          },
+          {
+            "url": "https://www.jpmorgan.com/insights/global-research/outlook/market-outlook",
+            "score": 45,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets",
+            "discovered_at_utc": "2026-01-09T13:29:39.249314+00:00"
+          },
+          {
+            "url": "https://www.jpmorgan.com/insights/research/index-research",
+            "score": 45,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets",
+            "discovered_at_utc": "2026-01-09T13:29:39.249314+00:00"
+          },
+          {
+            "url": "https://www.jpmorgan.com/insights/research/macrosynergy-quantamental-system",
+            "score": 45,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets",
+            "discovered_at_utc": "2026-01-09T13:29:39.249314+00:00"
+          },
+          {
+            "url": "https://www.jpmorgan.com/insights/markets-and-economy/outlook/biopharma-medtech-deal-reports",
+            "score": 45,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets",
+            "discovered_at_utc": "2026-01-09T13:29:39.249314+00:00"
+          },
+          {
+            "url": "https://www.jpmorgan.com/insights",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets",
+            "discovered_at_utc": "2026-01-09T13:29:39.249314+00:00"
+          },
+          {
+            "url": "https://www.jpmorgan.com/about-us/events-conferences",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/jpmorgan_markets",
+            "discovered_at_utc": "2026-01-09T13:29:39.249314+00:00"
+          },
+          {
+            "url": "https://www.jpmorgan.com/payments/solutions/newsletter",
+            "score": 95,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-09T13:29:57.215047+00:00"
+          },
+          {
+            "url": "https://www.jpmorgan.com/investment-banking/in-context",
+            "score": 55,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-09T13:29:57.215047+00:00"
+          },
+          {
+            "url": "AUTO_DISCOVER",
+            "score": 100
+          },
+          {
+            "url": "https://www.jpmorgan.com/insights/global-research/outlook",
+            "score": 60,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-14T10:23:13.290803+00:00"
+          },
+          {
+            "url": "https://www.jpmorgan.com/newsletters",
+            "score": 100
+          }
+        ],
+        "discovered_forms": [],
+        "subscribe_attempts": [],
+        "opt_in_required": null,
+        "last_success_utc": null,
+        "last_failure_utc": null,
+        "automation_feasibility": "js_heavy_form"
+      },
+      "acquisition_mode": "both"
+    },
+    {
+      "id": "goldman_markets",
+      "org_name": "Goldman Sachs",
+      "category": "bulge_bracket",
+      "priority": "p0",
+      "signup_url": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+      "signup_method": "unknown",
+      "expected_from_domains": [
+        "gs.com",
+        "goldmansachs.com"
+      ],
+      "expected_from_emails": [],
+      "discovered_senders": [],
+      "sender_confidence": "low",
+      "last_seen_at": null,
+      "subject_include_any": [
+        "webinar",
+        "conference",
+        "roundtable",
+        "outlook",
+        "strategy",
+        "markets",
+        "macro"
+      ],
+      "subject_exclude_any": [
+        "press release",
+        "results",
+        "earnings",
+        "quarter",
+        "dividend",
+        "appointment"
+      ],
+      "notes": "Primary markets/research newsletter",
+      "status": "subscribed",
+      "acquisition": {
+        "discovery_seed_urls": [
+          "https://www.goldmansachs.com/events",
+          "https://www.goldmansachs.com/insights/events",
+          "https://www.goldmansachs.com/webinars"
+        ],
+        "discovered_signup_pages": [
+          {
+            "url": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+            "score": 60,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets",
+            "discovered_at_utc": "2026-01-09T13:30:07.133446+00:00"
+          },
+          {
+            "url": "https://www.goldmansachs.com/insights/outlooks",
+            "score": 60,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-09T13:30:07.133446+00:00"
+          },
+          {
+            "url": "https://www.goldmansachs.com/insights",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets",
+            "discovered_at_utc": "2026-01-09T13:30:07.133446+00:00"
+          },
+          {
+            "url": "https://www.goldmansachs.com/insights/articles/the-global-economy-forecast-to-post-sturdy-growth-in-2026",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets",
+            "discovered_at_utc": "2026-01-09T13:30:07.133446+00:00"
+          },
+          {
+            "url": "https://www.goldmansachs.com/what-we-do/investment-banking/insights/articles/2026-ma-outlook",
+            "score": 40,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-09T13:30:07.133446+00:00"
+          },
+          {
+            "url": "https://www.goldmansachs.com/insights/goldman-sachs-exchanges",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets",
+            "discovered_at_utc": "2026-01-09T13:30:07.133446+00:00"
+          },
+          {
+            "url": "https://www.goldmansachs.com/insights/the-markets",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets",
+            "discovered_at_utc": "2026-01-09T13:30:07.133446+00:00"
+          },
+          {
+            "url": "https://www.goldmansachs.com/insights/talks-at-gs",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets",
+            "discovered_at_utc": "2026-01-09T13:30:07.133446+00:00"
+          },
+          {
+            "url": "https://www.goldmansachs.com/insights/macroeconomics",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets",
+            "discovered_at_utc": "2026-01-09T13:30:07.133446+00:00"
+          },
+          {
+            "url": "https://www.goldmansachs.com/insights/the-markets/we-like-bonds",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/goldman_markets",
+            "discovered_at_utc": "2026-01-09T13:30:07.133446+00:00"
+          },
+          {
+            "url": "AUTO_DISCOVER",
+            "score": 100
+          },
+          {
+            "url": "https://www.goldmansachs.com/insights/goldman-sachs-exchanges/goldman-sachs-exchanges-outlook-2026-episode-1-the-big-picture",
+            "score": 40,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-14T10:23:23.737073+00:00"
+          },
+          {
+            "url": "https://pwm.gs.com/nam/en-us/insights/markets-and-investing/market-insights/outlook?gsid=10495&cmp=ISGAO&chl=own&plt=gs&obj=",
+            "score": 35,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-14T10:23:23.737073+00:00"
+          },
+          {
+            "url": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+            "score": 100
+          }
+        ],
+        "discovered_forms": [
+          {
+            "page_url": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+            "form_selector": "#subscriptionForm",
+            "email_field": {
+              "name": "email",
+              "id": "",
+              "selector": "input[name='email']"
+            },
+            "name_field": null,
+            "consent_checkbox": null,
+            "submit_selector": "button[type='submit']",
+            "method": "POST",
+            "action": "",
+            "hidden_fields": [],
+            "confidence": "medium",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/goldman_markets",
+            "obstacles": {
+              "captcha": false,
+              "login_required": false,
+              "js_heavy": false
+            }
+          },
+          {
+            "page_url": "https://www.goldmansachs.com/insights/outlooks",
+            "form_selector": "#subscriptionForm",
+            "email_field": {
+              "name": "email",
+              "id": "",
+              "selector": "input[name='email']"
+            },
+            "name_field": null,
+            "consent_checkbox": null,
+            "submit_selector": "button[type='submit']",
+            "method": "POST",
+            "action": "",
+            "hidden_fields": [],
+            "confidence": "medium",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/goldman_markets",
+            "obstacles": {
+              "captcha": false,
+              "login_required": false,
+              "js_heavy": false
+            }
+          },
+          {
+            "page_url": "https://www.goldmansachs.com/insights",
+            "form_selector": "#subscriptionForm",
+            "email_field": {
+              "name": "email",
+              "id": "",
+              "selector": "input[name='email']"
+            },
+            "name_field": null,
+            "consent_checkbox": null,
+            "submit_selector": "button[type='submit']",
+            "method": "POST",
+            "action": "",
+            "hidden_fields": [],
+            "confidence": "medium",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/goldman_markets",
+            "obstacles": {
+              "captcha": false,
+              "login_required": false,
+              "js_heavy": false
+            }
+          },
+          {
+            "page_url": "https://www.goldmansachs.com/insights/articles/the-global-economy-forecast-to-post-sturdy-growth-in-2026",
+            "form_selector": "#subscriptionForm",
+            "email_field": {
+              "name": "email",
+              "id": "",
+              "selector": "input[name='email']"
+            },
+            "name_field": null,
+            "consent_checkbox": null,
+            "submit_selector": "button[type='submit']",
+            "method": "POST",
+            "action": "",
+            "hidden_fields": [],
+            "confidence": "medium",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/goldman_markets",
+            "obstacles": {
+              "captcha": false,
+              "login_required": false,
+              "js_heavy": false
+            }
+          }
+        ],
+        "subscribe_attempts": [
+          {
+            "ts_utc": "2026-01-14T10:25:42.459788+00:00",
+            "page_url": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+            "outcome": "failure",
+            "reason": "HTTP 403",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/subscribe/goldman_markets/attempt_20260114_102542.json"
+          },
+          {
+            "ts_utc": "2026-01-14T10:25:42.712444+00:00",
+            "page_url": "https://www.goldmansachs.com/insights/outlooks",
+            "outcome": "failure",
+            "reason": "HTTP 403",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/subscribe/goldman_markets/attempt_20260114_102542.json"
+          }
+        ],
+        "opt_in_required": null,
+        "last_success_utc": null,
+        "last_failure_utc": "2026-01-14T10:25:42.712444+00:00",
+        "automation_feasibility": "requires_manual"
+      },
+      "acquisition_mode": "both"
+    },
+    {
+      "id": "morgan_stanley_markets",
+      "org_name": "Morgan Stanley",
+      "category": "bulge_bracket",
+      "priority": "p0",
+      "signup_url": "https://www.morganstanley.com/newsletter/subscribe",
+      "signup_method": "unknown",
+      "expected_from_domains": [
+        "morganstanley.com"
+      ],
+      "expected_from_emails": [],
+      "discovered_senders": [],
+      "sender_confidence": "low",
+      "last_seen_at": null,
+      "subject_include_any": [
+        "webinar",
+        "conference",
+        "roundtable",
+        "outlook",
+        "strategy",
+        "markets",
+        "macro"
+      ],
+      "subject_exclude_any": [
+        "press release",
+        "results",
+        "earnings",
+        "quarter",
+        "dividend",
+        "appointment"
+      ],
+      "notes": "Primary markets/research newsletter",
+      "status": "subscribed",
+      "acquisition": {
+        "discovery_seed_urls": [
+          "https://www.morganstanley.com/events",
+          "https://www.morganstanley.com/insights/events",
+          "https://www.morganstanley.com/webinars"
+        ],
+        "discovered_signup_pages": [
+          {
+            "url": "https://www.morganstanley.com/newsletter/subscribe",
+            "score": 180,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets",
+            "discovered_at_utc": "2026-01-09T13:30:16.532389+00:00"
+          },
+          {
+            "url": "http://www.morganstanley.com/im/subscription-center.html",
+            "score": 75,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets",
+            "discovered_at_utc": "2026-01-09T13:30:16.532389+00:00"
+          },
+          {
+            "url": "https://www.morganstanley.com/insights",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets",
+            "discovered_at_utc": "2026-01-09T13:30:16.532389+00:00"
+          },
+          {
+            "url": "https://www.morganstanley.com/insights/articles/investment-outlook-midyear-2025",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets",
+            "discovered_at_utc": "2026-01-09T13:30:16.532389+00:00"
+          },
+          {
+            "url": "https://www.morganstanley.com/Themes/outlooks",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets",
+            "discovered_at_utc": "2026-01-09T13:30:16.532389+00:00"
+          },
+          {
+            "url": "https://www.morganstanley.com/insights/articles/economic-outlook-midyear-2025",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets",
+            "discovered_at_utc": "2026-01-09T13:30:16.532389+00:00"
+          },
+          {
+            "url": "https://www.morganstanley.com/insights/articles/corporate-travel-trends-2026",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets",
+            "discovered_at_utc": "2026-01-09T13:30:16.532389+00:00"
+          },
+          {
+            "url": "https://www.morganstanley.com/insights/articles/global-economic-outlook-2026",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets",
+            "discovered_at_utc": "2026-01-09T13:30:16.532389+00:00"
+          },
+          {
+            "url": "https://www.morganstanley.com/insights/articles/us-eu-trade-deal-2025",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets",
+            "discovered_at_utc": "2026-01-09T13:30:16.532389+00:00"
+          },
+          {
+            "url": "https://www.morganstanley.com/im/en-us/individual-investor/insights/all-insights.html",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/morgan_stanley_markets",
+            "discovered_at_utc": "2026-01-09T13:30:16.532389+00:00"
+          },
+          {
+            "url": "AUTO_DISCOVER",
+            "score": 100
+          },
+          {
+            "url": "https://www.morganstanley.com/newsletter/subscribe",
+            "score": 100
+          }
+        ],
+        "discovered_forms": [
+          {
+            "page_url": "http://www.morganstanley.com/im/subscription-center.html",
+            "form_selector": ".form-inline",
+            "email_field": null,
+            "name_field": null,
+            "consent_checkbox": null,
+            "submit_selector": null,
+            "method": "POST",
+            "action": "",
+            "hidden_fields": [],
+            "confidence": "low",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/morgan_stanley_markets",
+            "obstacles": {
+              "captcha": false,
+              "login_required": false,
+              "js_heavy": false
+            }
+          }
+        ],
+        "subscribe_attempts": [],
+        "opt_in_required": null,
+        "last_success_utc": null,
+        "last_failure_utc": null,
+        "automation_feasibility": "unknown"
+      },
+      "acquisition_mode": "both"
+    },
+    {
+      "id": "citigroup_markets",
+      "org_name": "Citigroup",
+      "category": "bulge_bracket",
+      "priority": "p0",
+      "signup_url": "https://www.citigroup.com/global/insights/citi-institute#newsletter",
+      "signup_method": "unknown",
+      "expected_from_domains": [
+        "citi.com",
+        "citigroup.com"
+      ],
+      "expected_from_emails": [],
+      "discovered_senders": [],
+      "sender_confidence": "low",
+      "last_seen_at": null,
+      "subject_include_any": [
+        "webinar",
+        "conference",
+        "roundtable",
+        "outlook",
+        "strategy",
+        "markets",
+        "macro"
+      ],
+      "subject_exclude_any": [
+        "press release",
+        "results",
+        "earnings",
+        "quarter",
+        "dividend",
+        "appointment"
+      ],
+      "notes": "Primary markets/research newsletter",
+      "status": "subscribed",
+      "acquisition": {
+        "discovery_seed_urls": [
+          "https://www.citigroup.com/events",
+          "https://www.citigroup.com/global/insights/events",
+          "https://www.citigroup.com/webinars"
+        ],
+        "discovered_signup_pages": [
+          {
+            "url": "https://www.citigroup.com/global/insights/citi-institute#newsletter",
+            "score": 60,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets",
+            "discovered_at_utc": "2026-01-09T13:30:29.348723+00:00"
+          },
+          {
+            "url": "https://icg.citi.com/global/insights/citi-institute#newsletter",
+            "score": 60,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets",
+            "discovered_at_utc": "2026-01-09T13:30:29.348723+00:00"
+          },
+          {
+            "url": "https://www.citigroup.com/global/insights/research-citi-podcasts",
+            "score": 45,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets",
+            "discovered_at_utc": "2026-01-09T13:30:29.348723+00:00"
+          },
+          {
+            "url": "https://icg.citi.com/global/insights/research-citi-podcasts",
+            "score": 45,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets",
+            "discovered_at_utc": "2026-01-09T13:30:29.348723+00:00"
+          },
+          {
+            "url": "https://www.citigroup.com/global/insights/all",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets",
+            "discovered_at_utc": "2026-01-09T13:30:29.348723+00:00"
+          },
+          {
+            "url": "https://www.citigroup.com/global/insights/combating-fraud-awareness-prevention",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets",
+            "discovered_at_utc": "2026-01-09T13:30:29.348723+00:00"
+          },
+          {
+            "url": "https://www.citigroup.com/global/insights/uk-pivoting-toward-new-technologies",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets",
+            "discovered_at_utc": "2026-01-09T13:30:29.348723+00:00"
+          },
+          {
+            "url": "https://www.citigroup.com/global/insights/commercial-bank",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets",
+            "discovered_at_utc": "2026-01-09T13:30:29.348723+00:00"
+          },
+          {
+            "url": "https://www.citigroup.com/global/insights/apec",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets",
+            "discovered_at_utc": "2026-01-09T13:30:29.348723+00:00"
+          },
+          {
+            "url": "https://www.citigroup.com/global/insights/stablecoins-2030",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/citigroup_markets",
+            "discovered_at_utc": "2026-01-09T13:30:29.348723+00:00"
+          },
+          {
+            "url": "AUTO_DISCOVER",
+            "score": 100
+          },
+          {
+            "url": "https://www.citigroup.com/global/insights/tags/research",
+            "score": 45,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-14T10:23:57.827239+00:00"
+          },
+          {
+            "url": "https://www.citigroup.com/global/insights",
+            "score": 40,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-14T10:23:57.827239+00:00"
+          },
+          {
+            "url": "https://www.citigroup.com/global/insights/citi-institute#newsletter",
+            "score": 100
+          }
+        ],
+        "discovered_forms": [],
+        "subscribe_attempts": [],
+        "opt_in_required": null,
+        "last_success_utc": null,
+        "last_failure_utc": null,
+        "automation_feasibility": "js_heavy_form"
+      },
+      "acquisition_mode": "both"
+    },
+    {
+      "id": "bofa_markets",
+      "org_name": "Bank of America",
+      "category": "bulge_bracket",
+      "priority": "p0",
+      "signup_url": "https://institute.bankofamerica.com/subscribe.html",
+      "signup_method": "unknown",
+      "expected_from_domains": [
+        "bankofamerica.com",
+        "bofa.com",
+        "bofasecurities.com"
+      ],
+      "expected_from_emails": [],
+      "discovered_senders": [],
+      "sender_confidence": "low",
+      "last_seen_at": null,
+      "subject_include_any": [
+        "webinar",
+        "conference",
+        "roundtable",
+        "outlook",
+        "strategy",
+        "markets",
+        "macro"
+      ],
+      "subject_exclude_any": [
+        "press release",
+        "results",
+        "earnings",
+        "quarter",
+        "dividend",
+        "appointment"
+      ],
+      "notes": "Primary markets/research newsletter",
+      "status": "subscribed",
+      "acquisition": {
+        "discovery_seed_urls": [
+          "https://institute.bankofamerica.com/events",
+          "https://institute.bankofamerica.com/webinars",
+          "https://www.bankofamerica.com/events"
+        ],
+        "discovered_signup_pages": [
+          {
+            "url": "https://investor.bankofamerica.com/events-and-presentations/email-alerts",
+            "score": 135,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-09T13:30:55.786608+00:00"
+          },
+          {
+            "url": "https://institute.bankofamerica.com/subscribe.html",
+            "score": 80,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets",
+            "discovered_at_utc": "2026-01-09T13:30:55.786608+00:00"
+          },
+          {
+            "url": "https://institute.bankofamerica.com/subscribe-employee.html",
+            "score": 80,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets",
+            "discovered_at_utc": "2026-01-09T13:30:55.786608+00:00"
+          },
+          {
+            "url": "https://institute.bankofamerica.com/subscribe-form.html",
+            "score": 80,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-09T13:30:55.786608+00:00"
+          },
+          {
+            "url": "https://investor.bankofamerica.com/events-and-presentations",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets",
+            "discovered_at_utc": "2026-01-09T13:30:55.786608+00:00"
+          },
+          {
+            "url": "https://investor.bankofamerica.com/events-and-presentations/events",
+            "score": 40,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-09T13:30:55.786608+00:00"
+          },
+          {
+            "url": "https://investor.bankofamerica.com/events-and-presentations/events/detail/20260114-q4-2025-bank-of-america-earnings-conference-call",
+            "score": 40,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-09T13:30:55.786608+00:00"
+          },
+          {
+            "url": "https://newsroom.bankofamerica.com/content/newsroom/email-subscription-form.html",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bofa_markets",
+            "discovered_at_utc": "2026-01-09T13:30:55.786608+00:00"
+          },
+          {
+            "url": "https://investor.bankofamerica.com/events-and-presentations/presentations",
+            "score": 25,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-09T13:30:55.786608+00:00"
+          },
+          {
+            "url": "https://investor.bankofamerica.com/events-and-presentations/annual-shareholder-meeting",
+            "score": 25,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-09T13:30:55.786608+00:00"
+          },
+          {
+            "url": "AUTO_DISCOVER",
+            "score": 100
+          },
+          {
+            "url": "https://institute.bankofamerica.com/subscribe.html",
+            "score": 100
+          }
+        ],
+        "discovered_forms": [
+          {
+            "page_url": "https://investor.bankofamerica.com/events-and-presentations/email-alerts",
+            "form_selector": ".email-alerts-form.email-alerts.validate-form",
+            "email_field": {
+              "name": "email",
+              "id": "email",
+              "selector": "input[name='email']"
+            },
+            "name_field": {
+              "name": "first_name",
+              "id": "first_name",
+              "selector": "input[name='first_name']"
+            },
+            "consent_checkbox": null,
+            "submit_selector": "button[type='submit']",
+            "method": "POST",
+            "action": "",
+            "hidden_fields": [
+              {
+                "name": "a",
+                "value": ""
+              }
+            ],
+            "confidence": "medium",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/bofa_markets",
+            "obstacles": {
+              "captcha": true,
+              "login_required": false,
+              "js_heavy": false
+            }
+          },
+          {
+            "page_url": "https://institute.bankofamerica.com/subscribe-employee.html",
+            "form_selector": "#654322",
+            "email_field": {
+              "name": "emailUsername",
+              "id": "emailUsername",
+              "selector": "input[name='emailUsername']"
+            },
+            "name_field": {
+              "name": "firstName",
+              "id": "firstName",
+              "selector": "input[name='firstName']"
+            },
+            "consent_checkbox": null,
+            "submit_selector": "input[type='submit']",
+            "method": "POST",
+            "action": "/services/form/salesforce",
+            "hidden_fields": [
+              {
+                "name": "fcp",
+                "value": "/content/experience-fragments/institute/forms/subscribe-employee/jcr:content/root/background_container_525537638/image/backgroundContent/layout_container/column_1/form_container"
+              },
+              {
+                "name": "emailAddress",
+                "value": ""
+              },
+              {
+                "name": "company",
+                "value": ""
+              }
+            ],
+            "confidence": "high",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/bofa_markets",
+            "obstacles": {
+              "captcha": false,
+              "login_required": false,
+              "js_heavy": false
+            }
+          },
+          {
+            "page_url": "https://institute.bankofamerica.com/subscribe-form.html",
+            "form_selector": "#654321",
+            "email_field": {
+              "name": "emailAddress",
+              "id": "emailAddress",
+              "selector": "input[name='emailAddress']"
+            },
+            "name_field": {
+              "name": "firstName",
+              "id": "firstName",
+              "selector": "input[name='firstName']"
+            },
+            "consent_checkbox": null,
+            "submit_selector": "input[type='submit']",
+            "method": "POST",
+            "action": "/services/form/salesforce",
+            "hidden_fields": [
+              {
+                "name": "fcp",
+                "value": "/content/experience-fragments/institute/forms/subscribe/jcr:content/root/background_container_525537638/image/backgroundContent/layout_container/column_1/form_container"
+              }
+            ],
+            "confidence": "high",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/bofa_markets",
+            "obstacles": {
+              "captcha": false,
+              "login_required": false,
+              "js_heavy": false
+            }
+          }
+        ],
+        "subscribe_attempts": [],
+        "opt_in_required": null,
+        "last_success_utc": null,
+        "last_failure_utc": null,
+        "automation_feasibility": "captcha_blocked"
+      },
+      "acquisition_mode": "both"
+    },
+    {
+      "id": "barclays_markets",
+      "org_name": "Barclays",
+      "category": "bulge_bracket",
+      "priority": "p0",
+      "signup_url": "https://www.barclays.co.uk/subscriptions?scl=8_sb",
+      "signup_method": "unknown",
+      "expected_from_domains": [
+        "barclays.com",
+        "barclays.co.uk"
+      ],
+      "expected_from_emails": [],
+      "discovered_senders": [],
+      "sender_confidence": "low",
+      "last_seen_at": null,
+      "subject_include_any": [
+        "webinar",
+        "conference",
+        "roundtable",
+        "outlook",
+        "strategy",
+        "markets",
+        "macro"
+      ],
+      "subject_exclude_any": [
+        "press release",
+        "results",
+        "earnings",
+        "quarter",
+        "dividend",
+        "appointment"
+      ],
+      "notes": "Primary markets/research newsletter",
+      "status": "subscribed",
+      "acquisition": {
+        "discovery_seed_urls": [
+          "https://www.barclays.com/events",
+          "https://www.barclays.com/webinars",
+          "https://www.barclays.com/insights/events"
+        ],
+        "discovered_signup_pages": [
+          {
+            "url": "https://www.barclays.co.uk/subscriptions?scl=8_sb",
+            "score": 80,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets",
+            "discovered_at_utc": "2026-01-09T13:31:06.826697+00:00"
+          },
+          {
+            "url": "https://www.cib.barclays/research/global-outlook.html",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets",
+            "discovered_at_utc": "2026-01-09T13:31:06.826697+00:00"
+          },
+          {
+            "url": "https://home.barclays/insights/sustainability-insights/",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets",
+            "discovered_at_utc": "2026-01-09T13:31:06.826697+00:00"
+          },
+          {
+            "url": "https://home.barclays/insights/barclays-insights/",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets",
+            "discovered_at_utc": "2026-01-09T13:31:06.826697+00:00"
+          },
+          {
+            "url": "https://www.investmentbank.barclays.com/research/global-outlook.html",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets",
+            "discovered_at_utc": "2026-01-09T13:31:06.826697+00:00"
+          },
+          {
+            "url": "https://www.cib.barclays/research.html",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets",
+            "discovered_at_utc": "2026-01-09T13:31:06.826697+00:00"
+          },
+          {
+            "url": "https://www.cib.barclays/research.html#Equity",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets",
+            "discovered_at_utc": "2026-01-09T13:31:06.826697+00:00"
+          },
+          {
+            "url": "https://www.cib.barclays/research.html#Credit",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets",
+            "discovered_at_utc": "2026-01-09T13:31:06.826697+00:00"
+          },
+          {
+            "url": "https://www.cib.barclays/research.html#Macro",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets",
+            "discovered_at_utc": "2026-01-09T13:31:06.826697+00:00"
+          },
+          {
+            "url": "https://www.cib.barclays/research.html#Thematic",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/barclays_markets",
+            "discovered_at_utc": "2026-01-09T13:31:06.826697+00:00"
+          },
+          {
+            "url": "AUTO_DISCOVER",
+            "score": 100
+          },
+          {
+            "url": "https://www.barclays.co.uk/subscriptions?scl=8_sb",
+            "score": 100
+          }
+        ],
+        "discovered_forms": [],
+        "subscribe_attempts": [],
+        "opt_in_required": null,
+        "last_success_utc": null,
+        "last_failure_utc": null,
+        "automation_feasibility": "js_heavy_form"
+      },
+      "acquisition_mode": "both"
+    },
+    {
+      "id": "ubs_markets",
+      "org_name": "UBS",
+      "category": "bulge_bracket",
+      "priority": "p0",
+      "signup_url": "https://www.ubs.com/global/en/wealthmanagement/insights.html",
+      "signup_method": "unknown",
+      "expected_from_domains": [
+        "ubs.com"
+      ],
+      "expected_from_emails": [],
+      "discovered_senders": [],
+      "sender_confidence": "low",
+      "last_seen_at": null,
+      "subject_include_any": [
+        "webinar",
+        "conference",
+        "roundtable",
+        "outlook",
+        "strategy",
+        "markets",
+        "macro"
+      ],
+      "subject_exclude_any": [
+        "press release",
+        "results",
+        "earnings",
+        "quarter",
+        "dividend",
+        "appointment"
+      ],
+      "notes": "Primary markets/research newsletter",
+      "status": "subscribed",
+      "acquisition": {
+        "discovery_seed_urls": [
+          "https://www.ubs.com/events",
+          "https://www.ubs.com/webinars",
+          "https://www.ubs.com/global/en/wealthmanagement/events"
+        ],
+        "discovered_signup_pages": [
+          {
+            "url": "https://www.ubs.com/global/en/wealthmanagement/insights.html",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets",
+            "discovered_at_utc": "2026-01-09T13:31:13.956772+00:00"
+          },
+          {
+            "url": "https://www.ubs.com/global/en/wealthmanagement/insights/chief-investment-office/potus-47.html",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets",
+            "discovered_at_utc": "2026-01-09T13:31:13.956772+00:00"
+          },
+          {
+            "url": "https://www.ubs.com/global/en/assetmanagement/insights.html",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets",
+            "discovered_at_utc": "2026-01-09T13:31:13.956772+00:00"
+          },
+          {
+            "url": "https://www.ubs.com/global/en/wealthmanagement/insights/house-view.html",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets",
+            "discovered_at_utc": "2026-01-09T13:31:13.956772+00:00"
+          },
+          {
+            "url": "https://www.ubs.com/global/en/wealthmanagement/insights/year-ahead-registration.html",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets",
+            "discovered_at_utc": "2026-01-09T13:31:13.956772+00:00"
+          },
+          {
+            "url": "https://secure.ubs.com/global/en/wealthmanagement/insights/chief-investment-office/market-insights/paul-donovan.html",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets",
+            "discovered_at_utc": "2026-01-09T13:31:13.956772+00:00"
+          },
+          {
+            "url": "https://www.ubs.com/global/en/wealthmanagement/insights/chief-investment-office/wealth-planning/our-investment-philosophy.html",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets",
+            "discovered_at_utc": "2026-01-09T13:31:13.956772+00:00"
+          },
+          {
+            "url": "https://www.ubs.com/global/en/assetmanagement/insights/thematic-viewpoints/apac-and-emerging.html",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets",
+            "discovered_at_utc": "2026-01-09T13:31:13.956772+00:00"
+          },
+          {
+            "url": "https://www.ubs.com/global/en/assetmanagement/insights/thematic-viewpoints/sustainable-impact-investing.html",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets",
+            "discovered_at_utc": "2026-01-09T13:31:13.956772+00:00"
+          },
+          {
+            "url": "https://www.ubs.com/global/en/assetmanagement/insights/thematic-viewpoints/alternatives.html",
+            "score": 25,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/ubs_markets",
+            "discovered_at_utc": "2026-01-09T13:31:13.956772+00:00"
+          },
+          {
+            "url": "AUTO_DISCOVER",
+            "score": 100
+          },
+          {
+            "url": "https://www.ubs.com/global/en/wealthmanagement/insights.html",
+            "score": 100
+          }
+        ],
+        "discovered_forms": [
+          {
+            "page_url": "https://www.ubs.com/global/en/wealthmanagement/insights/year-ahead-registration.html",
+            "form_selector": "#5e7f6c104056975f0c319020eb79394c",
+            "email_field": {
+              "name": "email",
+              "id": "email",
+              "selector": "input[name='email']"
+            },
+            "name_field": {
+              "name": "firstName",
+              "id": "firstName",
+              "selector": "input[name='firstName']"
+            },
+            "consent_checkbox": {
+              "name": "confirmation_159246120",
+              "id": "confirmation_159246120",
+              "selector": "input[name='confirmation_159246120']"
+            },
+            "submit_selector": "button[type='submit']",
+            "method": "POST",
+            "action": "javascript:;",
+            "hidden_fields": [
+              {
+                "name": "usedAsDisclaimer",
+                "value": "false"
+              },
+              {
+                "name": "phoneNumber",
+                "value": ""
+              },
+              {
+                "name": "disclaimer_159246120_id",
+                "value": "159246120"
+              },
+              {
+                "name": "disclaimer_159246120_type",
+                "value": "general"
+              },
+              {
+                "name": "disclaimer_159246120_version",
+                "value": "12"
+              },
+              {
+                "name": "disclaimer_657176267_id",
+                "value": "657176267"
+              },
+              {
+                "name": "disclaimer_657176267_type",
+                "value": "emailTracking"
+              },
+              {
+                "name": "disclaimer_657176267_version",
+                "value": "7"
+              },
+              {
+                "name": "referrer",
+                "value": ""
+              },
+              {
+                "name": "campID",
+                "value": ""
+              },
+              {
+                "name": "aecID",
+                "value": ""
+              },
+              {
+                "name": "channel",
+                "value": ""
+              }
+            ],
+            "confidence": "high",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/ubs_markets",
+            "obstacles": {
+              "captcha": false,
+              "login_required": false,
+              "js_heavy": false
+            }
+          }
+        ],
+        "subscribe_attempts": [
+          {
+            "ts_utc": "2026-01-14T10:25:42.812183+00:00",
+            "page_url": "https://www.ubs.com/global/en/wealthmanagement/insights/year-ahead-registration.html",
+            "outcome": "error",
+            "reason": "No connection adapters were found for 'javascript:;'",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/subscribe/ubs_markets/attempt_20260114_102542.json"
+          }
+        ],
+        "opt_in_required": null,
+        "last_success_utc": null,
+        "last_failure_utc": null,
+        "automation_feasibility": "feasible_http_post"
+      },
+      "acquisition_mode": "both"
+    },
+    {
+      "id": "deutsche_bank_markets",
+      "org_name": "Deutsche Bank",
+      "category": "bulge_bracket",
+      "priority": "p0",
+      "signup_url": "https://flow.db.com/newsletter/subscribe-to-flow-digest-newsletter",
+      "signup_method": "unknown",
+      "expected_from_domains": [
+        "db.com",
+        "deutsche-bank.com"
+      ],
+      "expected_from_emails": [],
+      "discovered_senders": [],
+      "sender_confidence": "low",
+      "last_seen_at": null,
+      "subject_include_any": [
+        "webinar",
+        "conference",
+        "roundtable",
+        "outlook",
+        "strategy",
+        "markets",
+        "macro"
+      ],
+      "subject_exclude_any": [
+        "press release",
+        "results",
+        "earnings",
+        "quarter",
+        "dividend",
+        "appointment"
+      ],
+      "notes": "Primary markets/research newsletter",
+      "status": "subscribed",
+      "acquisition": {
+        "discovery_seed_urls": [
+          "https://flow.db.com/events",
+          "https://flow.db.com/webinars",
+          "https://www.deutschewealth.com/events"
+        ],
+        "discovered_signup_pages": [
+          {
+            "url": "https://flow.db.com/newsletter/subscribe-to-flow-digest-newsletter",
+            "score": 180,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets",
+            "discovered_at_utc": "2026-01-09T13:31:25.536969+00:00"
+          },
+          {
+            "url": "https://flow.db.com/newsletter",
+            "score": 80,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets",
+            "discovered_at_utc": "2026-01-09T13:31:25.536969+00:00"
+          },
+          {
+            "url": "https://flow.db.com/newsletter/index",
+            "score": 45,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets",
+            "discovered_at_utc": "2026-01-09T13:31:25.536969+00:00"
+          },
+          {
+            "url": "https://flow.db.com/newsletter/flow.db.com/magazine",
+            "score": 45,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-09T13:31:25.536969+00:00"
+          },
+          {
+            "url": "https://flow.db.com/newsbites/newsbites-subscription",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets",
+            "discovered_at_utc": "2026-01-09T13:31:25.536969+00:00"
+          },
+          {
+            "url": "https://www.deutschewealth.com/en/insights/investing-insights.html",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets",
+            "discovered_at_utc": "2026-01-09T13:31:25.536969+00:00"
+          },
+          {
+            "url": "https://www.deutschewealth.com/en/insights/investing-insights/economic-and-market-outlook.html",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets",
+            "discovered_at_utc": "2026-01-09T13:31:25.536969+00:00"
+          },
+          {
+            "url": "https://www.deutschewealth.com/en/insights/investing-insights/asset-class-insights.html",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets",
+            "discovered_at_utc": "2026-01-09T13:31:25.536969+00:00"
+          },
+          {
+            "url": "https://www.deutschewealth.com/en/insights/sustainability/blue-economy.html",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets",
+            "discovered_at_utc": "2026-01-09T13:31:25.536969+00:00"
+          },
+          {
+            "url": "https://www.deutschewealth.com/en/insights/sustainability/biodiversity.html",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets",
+            "discovered_at_utc": "2026-01-09T13:31:25.536969+00:00"
+          },
+          {
+            "url": "AUTO_DISCOVER",
+            "score": 100
+          },
+          {
+            "url": "https://www.deutschewealth.com/en/insights/investing-insights/economic-and-market-outlook/cio-annual-outlook-2026-regional-cio-views.html",
+            "score": 40,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/deutsche_bank_markets",
+            "discovered_at_utc": "2026-01-14T10:25:01.274674+00:00"
+          },
+          {
+            "url": "https://flow.db.com/newsletter/subscribe-to-flow-digest-newsletter",
+            "score": 100
+          }
+        ],
+        "discovered_forms": [
+          {
+            "page_url": "https://flow.db.com/newsletter/subscribe-to-flow-digest-newsletter",
+            "form_selector": "form",
+            "email_field": {
+              "name": "form_EMAIL",
+              "id": "form_EMAIL",
+              "selector": "input[name='form_EMAIL']"
+            },
+            "name_field": null,
+            "consent_checkbox": {
+              "name": "form_SUBSCRIPTIONS:277",
+              "id": "form_SUBSCRIPTIONS:277",
+              "selector": "input[name='form_SUBSCRIPTIONS:277']"
+            },
+            "submit_selector": "input[type='submit']",
+            "method": "POST",
+            "action": "",
+            "hidden_fields": [
+              {
+                "name": "form_URSPRUNGPOPUP",
+                "value": ""
+              }
+            ],
+            "confidence": "medium",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/deutsche_bank_markets",
+            "obstacles": {
+              "captcha": false,
+              "login_required": false,
+              "js_heavy": false
+            }
+          },
+          {
+            "page_url": "https://flow.db.com/newsbites/newsbites-subscription",
+            "form_selector": "form",
+            "email_field": {
+              "name": "form_EMAIL",
+              "id": "form_EMAIL",
+              "selector": "input[name='form_EMAIL']"
+            },
+            "name_field": null,
+            "consent_checkbox": {
+              "name": "form_SUBSCRIPTIONS:277",
+              "id": "form_SUBSCRIPTIONS:277",
+              "selector": "input[name='form_SUBSCRIPTIONS:277']"
+            },
+            "submit_selector": "input[type='submit']",
+            "method": "POST",
+            "action": "",
+            "hidden_fields": [
+              {
+                "name": "form_URSPRUNGPOPUP",
+                "value": ""
+              }
+            ],
+            "confidence": "medium",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/deutsche_bank_markets",
+            "obstacles": {
+              "captcha": false,
+              "login_required": false,
+              "js_heavy": false
+            }
+          }
+        ],
+        "subscribe_attempts": [
+          {
+            "ts_utc": "2026-01-14T10:25:42.814432+00:00",
+            "page_url": "https://flow.db.com/newsletter/subscribe-to-flow-digest-newsletter",
+            "outcome": "failure",
+            "reason": "error",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/subscribe/deutsche_bank_markets/attempt_20260114_102543.json"
+          },
+          {
+            "ts_utc": "2026-01-14T10:25:43.030560+00:00",
+            "page_url": "https://flow.db.com/newsbites/newsbites-subscription",
+            "outcome": "failure",
+            "reason": "error",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/subscribe/deutsche_bank_markets/attempt_20260114_102543.json"
+          }
+        ],
+        "opt_in_required": null,
+        "last_success_utc": null,
+        "last_failure_utc": "2026-01-14T10:25:43.030560+00:00",
+        "automation_feasibility": "requires_manual"
+      },
+      "acquisition_mode": "both"
+    },
+    {
+      "id": "socgen_markets",
+      "org_name": "Societe Generale",
+      "category": "bulge_bracket",
+      "priority": "p0",
+      "signup_url": "https://wholesale.banking.societegenerale.com/en/news-insights/",
+      "signup_method": "unknown",
+      "expected_from_domains": [
+        "societegenerale.com",
+        "sgresearch.com"
+      ],
+      "expected_from_emails": [],
+      "discovered_senders": [],
+      "sender_confidence": "low",
+      "last_seen_at": null,
+      "subject_include_any": [
+        "webinar",
+        "conference",
+        "roundtable",
+        "outlook",
+        "strategy",
+        "markets",
+        "macro"
+      ],
+      "subject_exclude_any": [
+        "press release",
+        "results",
+        "earnings",
+        "quarter",
+        "dividend",
+        "appointment"
+      ],
+      "notes": "Primary markets/research newsletter",
+      "status": "subscribed",
+      "acquisition": {
+        "discovery_seed_urls": [
+          "https://cib.societegenerale.com/en/events",
+          "https://wholesale.banking.societegenerale.com/en/events",
+          "https://www.sgresearch.com/events"
+        ],
+        "discovered_signup_pages": [
+          {
+            "url": "https://wholesale.banking.societegenerale.com/en/news-insights/",
+            "score": 20,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets",
+            "discovered_at_utc": "2026-01-09T13:31:29.922068+00:00"
+          },
+          {
+            "url": "https://wholesale.banking.societegenerale.com/en/news-insights/all-news-insights/",
+            "score": 20,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets",
+            "discovered_at_utc": "2026-01-09T13:31:29.922068+00:00"
+          },
+          {
+            "url": "https://cib.societegenerale.com/en/news-insights/",
+            "score": 20,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets",
+            "discovered_at_utc": "2026-01-09T13:31:29.922068+00:00"
+          },
+          {
+            "url": "https://cib.societegenerale.com/en/news-insights/all-news-insights/",
+            "score": 20,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets",
+            "discovered_at_utc": "2026-01-09T13:31:29.922068+00:00"
+          },
+          {
+            "url": "https://cib.societegenerale.com/en/news-insights/all-news-insights/news-details/news/asias-2026-market-outlook-resilience-amid-rotation-1/",
+            "score": 20,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets",
+            "discovered_at_utc": "2026-01-09T13:31:29.922068+00:00"
+          },
+          {
+            "url": "https://wholesale.banking.societegenerale.com/en/news-insights/#main",
+            "score": 5,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets",
+            "discovered_at_utc": "2026-01-09T13:31:29.922068+00:00"
+          },
+          {
+            "url": "https://wholesale.banking.societegenerale.com/en/news-insights/#menu-header",
+            "score": 5,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets",
+            "discovered_at_utc": "2026-01-09T13:31:29.922068+00:00"
+          },
+          {
+            "url": "https://wholesale.banking.societegenerale.com/en/news-insights/#form-search",
+            "score": 5,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets",
+            "discovered_at_utc": "2026-01-09T13:31:29.922068+00:00"
+          },
+          {
+            "url": "https://wholesale.banking.societegenerale.com/en/news-insights/expert-view-points/",
+            "score": 5,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets",
+            "discovered_at_utc": "2026-01-09T13:31:29.922068+00:00"
+          },
+          {
+            "url": "https://wholesale.banking.societegenerale.com/en/news-insights/awards-amp-rankings/",
+            "score": 5,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/socgen_markets",
+            "discovered_at_utc": "2026-01-09T13:31:29.922068+00:00"
+          },
+          {
+            "url": "AUTO_DISCOVER",
+            "score": 100
+          },
+          {
+            "url": "https://wholesale.banking.societegenerale.com/en/news-insights/",
+            "score": 100
+          }
+        ],
+        "discovered_forms": [],
+        "subscribe_attempts": [],
+        "opt_in_required": null,
+        "last_success_utc": null,
+        "last_failure_utc": null,
+        "automation_feasibility": "js_heavy_form"
+      },
+      "acquisition_mode": "both"
+    },
+    {
+      "id": "bnpp_markets",
+      "org_name": "BNP Paribas",
+      "category": "bulge_bracket",
+      "priority": "p0",
+      "signup_url": "https://economic-research.bnpparibas.com/Subscriptions/fr-FR",
+      "signup_method": "unknown",
+      "expected_from_domains": [
+        "bnpparibas.com",
+        "group.bnpparibas"
+      ],
+      "expected_from_emails": [],
+      "discovered_senders": [],
+      "sender_confidence": "low",
+      "last_seen_at": null,
+      "subject_include_any": [
+        "webinar",
+        "conference",
+        "roundtable",
+        "outlook",
+        "strategy",
+        "markets",
+        "macro"
+      ],
+      "subject_exclude_any": [
+        "press release",
+        "results",
+        "earnings",
+        "quarter",
+        "dividend",
+        "appointment"
+      ],
+      "notes": "Primary markets/research newsletter",
+      "status": "subscribed",
+      "acquisition": {
+        "discovery_seed_urls": [
+          "https://cib.bnpparibas/events",
+          "https://economic-research.bnpparibas.com/events",
+          "https://group.bnpparibas/en/events"
+        ],
+        "discovered_signup_pages": [
+          {
+            "url": "https://economic-research.bnpparibas.com/Subscriptions/fr-FR",
+            "score": 45,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bnpp_markets",
+            "discovered_at_utc": "2026-01-09T13:31:36.440990+00:00"
+          },
+          {
+            "url": "http://economic-research.bnpparibas.com/Subscriptions/fr-FR",
+            "score": 40,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-09T13:31:36.440990+00:00"
+          },
+          {
+            "url": "http://economic-research.bnpparibas.com/Subscriptions/en-US",
+            "score": 40,
+            "evidence_path": "",
+            "discovered_at_utc": "2026-01-09T13:31:36.440990+00:00"
+          },
+          {
+            "url": "https://cib.bnpparibas/global-outlook-2026-in-a-good-place/",
+            "score": 20,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bnpp_markets",
+            "discovered_at_utc": "2026-01-09T13:31:36.440990+00:00"
+          },
+          {
+            "url": "https://cib.bnpparibas/bnp-paribas-global-markets-conference-2025-3-key-takeaways/",
+            "score": 20,
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/discovery/bnpp_markets",
+            "discovered_at_utc": "2026-01-09T13:31:36.440990+00:00"
+          },
+          {
+            "url": "AUTO_DISCOVER",
+            "score": 100
+          },
+          {
+            "url": "https://economic-research.bnpparibas.com/Subscriptions/fr-FR",
+            "score": 100
+          }
+        ],
+        "discovered_forms": [
+          {
+            "page_url": "https://cib.bnpparibas/global-outlook-2026-in-a-good-place/",
+            "form_selector": "#form-actito",
+            "email_field": {
+              "name": "email",
+              "id": "a-email",
+              "selector": "input[name='email']"
+            },
+            "name_field": null,
+            "consent_checkbox": null,
+            "submit_selector": "button[type='submit']",
+            "method": "POST",
+            "action": "",
+            "hidden_fields": [],
+            "confidence": "medium",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/bnpp_markets",
+            "obstacles": {
+              "captcha": true,
+              "login_required": false,
+              "js_heavy": false
+            }
+          },
+          {
+            "page_url": "https://cib.bnpparibas/bnp-paribas-global-markets-conference-2025-3-key-takeaways/",
+            "form_selector": "#form-actito",
+            "email_field": {
+              "name": "email",
+              "id": "a-email",
+              "selector": "input[name='email']"
+            },
+            "name_field": null,
+            "consent_checkbox": null,
+            "submit_selector": "button[type='submit']",
+            "method": "POST",
+            "action": "",
+            "hidden_fields": [],
+            "confidence": "medium",
+            "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/bnpp_markets",
+            "obstacles": {
+              "captcha": true,
+              "login_required": false,
+              "js_heavy": false
+            }
+          }
+        ],
+        "subscribe_attempts": [],
+        "opt_in_required": null,
+        "last_success_utc": null,
+        "last_failure_utc": null,
+        "automation_feasibility": "captcha_blocked"
+      },
+      "acquisition_mode": "both"
+    }
+  ]
+}

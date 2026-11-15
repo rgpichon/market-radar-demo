@@ -1,0 +1,1553 @@
+{
+  "Goldman Sachs": {
+    "firm_name": "Goldman Sachs",
+    "discovered_at": "2026-01-08T17:02:41.893673+00:00",
+    "entry_points_tested": [
+      "https://www.goldmansachs.com",
+      "https://www.goldmansachs.com/insights",
+      "https://www.goldmansachs.com/insights/events"
+    ],
+    "methods": [
+      {
+        "method": "rss_discovery",
+        "url": "https://www.goldmansachs.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.goldmansachs.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.goldmansachs.com",
+        "status": "accessible",
+        "html_length": 685742,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 685742 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "ir_calendar",
+        "base_url": "https://www.goldmansachs.com",
+        "status": "not_found",
+        "urls_tested": [
+          "https://www.goldmansachs.com/investor-relations/events",
+          "https://www.goldmansachs.com/investor-relations/calendar",
+          "https://www.goldmansachs.com/investor-relations/upcoming-events",
+          "https://www.goldmansachs.com/ir/events",
+          "https://www.goldmansachs.com/ir/calendar"
+        ],
+        "evidence": "Tested 5 IR patterns, none found",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.goldmansachs.com/insights",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.goldmansachs.com/insights",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.goldmansachs.com/insights",
+        "status": "js_rendered",
+        "html_length": 791652,
+        "js_rendered": true,
+        "auth_required": false,
+        "evidence": "JS-rendered: HTML 791652 bytes, 68 scripts",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.goldmansachs.com/insights/events",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.goldmansachs.com/insights/events",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.goldmansachs.com/insights/events",
+        "status": "not_found",
+        "html_length": 0,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "earnings_calendar",
+        "firm_name": "Goldman Sachs",
+        "base_url": "https://www.goldmansachs.com",
+        "status": "not_found",
+        "calendars_tested": [],
+        "evidence": "Earnings calendar discovery requires ticker symbol lookup - not yet implemented",
+        "attempted_lane": "earnings_calendar"
+      },
+      {
+        "method": "ir_aggregator",
+        "firm_name": "Goldman Sachs",
+        "base_url": "https://www.goldmansachs.com",
+        "status": "not_found",
+        "platforms_tested": [],
+        "evidence": "No known IR platform detected",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "third_party_finance_calendar",
+        "firm_name": "Goldman Sachs",
+        "status": "not_found",
+        "calendars_tested": [
+          "https://www.nasdaq.com/earnings",
+          "https://finance.yahoo.com/calendar/earnings",
+          "https://www.marketwatch.com/tools/calendars/earnings",
+          "https://www.investing.com/earnings-calendar/"
+        ],
+        "evidence": "Third-party calendar discovery requires bank ticker lookup and calendar parsing - not yet implemented",
+        "attempted_lane": "third_party_finance_calendar"
+      }
+    ],
+    "attempted_lanes": [
+      "html_simple",
+      "ics",
+      "earnings_calendar",
+      "third_party_finance_calendar",
+      "ir_aggregator",
+      "rss"
+    ],
+    "failure_class": "earnings_only_external",
+    "recommended_next_action": "third_party_calendar",
+    "failure_evidence": "Earnings events available via external calendars, not bank website"
+  },
+  "JPMorgan": {
+    "firm_name": "JPMorgan",
+    "discovered_at": "2026-01-08T17:02:50.616723+00:00",
+    "entry_points_tested": [
+      "https://www.jpmorgan.com",
+      "https://www.jpmorgan.com/insights",
+      "https://www.jpmorgan.com/insights/events"
+    ],
+    "methods": [
+      {
+        "method": "rss_discovery",
+        "url": "https://www.jpmorgan.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.jpmorgan.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.jpmorgan.com",
+        "status": "accessible",
+        "html_length": 193666,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 193666 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "ir_calendar",
+        "base_url": "https://www.jpmorgan.com",
+        "status": "not_found",
+        "urls_tested": [
+          "https://www.jpmorgan.com/investor-relations/events",
+          "https://www.jpmorgan.com/investor-relations/calendar",
+          "https://www.jpmorgan.com/investor-relations/upcoming-events",
+          "https://www.jpmorgan.com/ir/events",
+          "https://www.jpmorgan.com/ir/calendar"
+        ],
+        "evidence": "Tested 5 IR patterns, none found",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.jpmorgan.com/insights",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.jpmorgan.com/insights",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.jpmorgan.com/insights",
+        "status": "accessible",
+        "html_length": 186924,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 186924 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.jpmorgan.com/insights/events",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.jpmorgan.com/insights/events",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.jpmorgan.com/insights/events",
+        "status": "not_found",
+        "html_length": 0,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "earnings_calendar",
+        "firm_name": "JPMorgan",
+        "base_url": "https://www.jpmorgan.com",
+        "status": "not_found",
+        "calendars_tested": [],
+        "evidence": "Earnings calendar discovery requires ticker symbol lookup - not yet implemented",
+        "attempted_lane": "earnings_calendar"
+      },
+      {
+        "method": "ir_aggregator",
+        "firm_name": "JPMorgan",
+        "base_url": "https://www.jpmorgan.com",
+        "status": "not_found",
+        "platforms_tested": [],
+        "evidence": "No known IR platform detected",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "third_party_finance_calendar",
+        "firm_name": "JPMorgan",
+        "status": "not_found",
+        "calendars_tested": [
+          "https://www.nasdaq.com/earnings",
+          "https://finance.yahoo.com/calendar/earnings",
+          "https://www.marketwatch.com/tools/calendars/earnings",
+          "https://www.investing.com/earnings-calendar/"
+        ],
+        "evidence": "Third-party calendar discovery requires bank ticker lookup and calendar parsing - not yet implemented",
+        "attempted_lane": "third_party_finance_calendar"
+      }
+    ],
+    "attempted_lanes": [
+      "html_simple",
+      "ics",
+      "earnings_calendar",
+      "third_party_finance_calendar",
+      "ir_aggregator",
+      "rss"
+    ],
+    "failure_class": "earnings_only_external",
+    "recommended_next_action": "third_party_calendar",
+    "failure_evidence": "Earnings events available via external calendars, not bank website"
+  },
+  "Morgan Stanley": {
+    "firm_name": "Morgan Stanley",
+    "discovered_at": "2026-01-08T17:02:54.939743+00:00",
+    "entry_points_tested": [
+      "https://www.morganstanley.com",
+      "https://www.morganstanley.com/ideas",
+      "https://www.morganstanley.com/ideas/events"
+    ],
+    "methods": [
+      {
+        "method": "rss_discovery",
+        "url": "https://www.morganstanley.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.morganstanley.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.morganstanley.com",
+        "status": "accessible",
+        "html_length": 193905,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 193905 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "ir_calendar",
+        "base_url": "https://www.morganstanley.com",
+        "status": "not_found",
+        "urls_tested": [
+          "https://www.morganstanley.com/investor-relations/events",
+          "https://www.morganstanley.com/investor-relations/calendar",
+          "https://www.morganstanley.com/investor-relations/upcoming-events",
+          "https://www.morganstanley.com/ir/events",
+          "https://www.morganstanley.com/ir/calendar"
+        ],
+        "evidence": "Tested 5 IR patterns, none found",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.morganstanley.com/ideas",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.morganstanley.com/ideas",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.morganstanley.com/ideas",
+        "status": "js_rendered",
+        "html_length": 174878,
+        "js_rendered": true,
+        "auth_required": false,
+        "evidence": "JS-rendered: HTML 174878 bytes, 26 scripts",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.morganstanley.com/ideas/events",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.morganstanley.com/ideas/events",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.morganstanley.com/ideas/events",
+        "status": "not_found",
+        "html_length": 0,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "earnings_calendar",
+        "firm_name": "Morgan Stanley",
+        "base_url": "https://www.morganstanley.com",
+        "status": "not_found",
+        "calendars_tested": [],
+        "evidence": "Earnings calendar discovery requires ticker symbol lookup - not yet implemented",
+        "attempted_lane": "earnings_calendar"
+      },
+      {
+        "method": "ir_aggregator",
+        "firm_name": "Morgan Stanley",
+        "base_url": "https://www.morganstanley.com",
+        "status": "not_found",
+        "platforms_tested": [],
+        "evidence": "No known IR platform detected",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "third_party_finance_calendar",
+        "firm_name": "Morgan Stanley",
+        "status": "not_found",
+        "calendars_tested": [
+          "https://www.nasdaq.com/earnings",
+          "https://finance.yahoo.com/calendar/earnings",
+          "https://www.marketwatch.com/tools/calendars/earnings",
+          "https://www.investing.com/earnings-calendar/"
+        ],
+        "evidence": "Third-party calendar discovery requires bank ticker lookup and calendar parsing - not yet implemented",
+        "attempted_lane": "third_party_finance_calendar"
+      }
+    ],
+    "attempted_lanes": [
+      "html_simple",
+      "ics",
+      "earnings_calendar",
+      "third_party_finance_calendar",
+      "ir_aggregator",
+      "rss"
+    ],
+    "failure_class": "earnings_only_external",
+    "recommended_next_action": "third_party_calendar",
+    "failure_evidence": "Earnings events available via external calendars, not bank website"
+  },
+  "Citigroup": {
+    "firm_name": "Citigroup",
+    "discovered_at": "2026-01-08T17:02:57.691379+00:00",
+    "entry_points_tested": [
+      "https://www.citigroup.com",
+      "https://www.citigroup.com/citi",
+      "https://www.citigroup.com/citi/news"
+    ],
+    "methods": [
+      {
+        "method": "rss_discovery",
+        "url": "https://www.citigroup.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.citigroup.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.citigroup.com",
+        "status": "js_rendered",
+        "html_length": 1436823,
+        "js_rendered": true,
+        "auth_required": false,
+        "evidence": "JS-rendered: HTML 1436823 bytes, 18 scripts",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "ir_calendar",
+        "base_url": "https://www.citigroup.com",
+        "status": "not_found",
+        "urls_tested": [
+          "https://www.citigroup.com/investor-relations/events",
+          "https://www.citigroup.com/investor-relations/calendar",
+          "https://www.citigroup.com/investor-relations/upcoming-events",
+          "https://www.citigroup.com/ir/events",
+          "https://www.citigroup.com/ir/calendar"
+        ],
+        "evidence": "Tested 5 IR patterns, none found",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.citigroup.com/citi",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.citigroup.com/citi",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.citigroup.com/citi",
+        "status": "js_rendered",
+        "html_length": 1436823,
+        "js_rendered": true,
+        "auth_required": false,
+        "evidence": "JS-rendered: HTML 1436823 bytes, 18 scripts",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.citigroup.com/citi/news",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.citigroup.com/citi/news",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.citigroup.com/citi/news",
+        "status": "js_rendered",
+        "html_length": 1041205,
+        "js_rendered": true,
+        "auth_required": false,
+        "evidence": "JS-rendered: HTML 1041205 bytes, 17 scripts",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "earnings_calendar",
+        "firm_name": "Citigroup",
+        "base_url": "https://www.citigroup.com",
+        "status": "not_found",
+        "calendars_tested": [],
+        "evidence": "Earnings calendar discovery requires ticker symbol lookup - not yet implemented",
+        "attempted_lane": "earnings_calendar"
+      },
+      {
+        "method": "ir_aggregator",
+        "firm_name": "Citigroup",
+        "base_url": "https://www.citigroup.com",
+        "status": "detected",
+        "platforms_tested": [],
+        "evidence": "Q4 platform detected",
+        "platform": "q4",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "third_party_finance_calendar",
+        "firm_name": "Citigroup",
+        "status": "not_found",
+        "calendars_tested": [
+          "https://www.nasdaq.com/earnings",
+          "https://finance.yahoo.com/calendar/earnings",
+          "https://www.marketwatch.com/tools/calendars/earnings",
+          "https://www.investing.com/earnings-calendar/"
+        ],
+        "evidence": "Third-party calendar discovery requires bank ticker lookup and calendar parsing - not yet implemented",
+        "attempted_lane": "third_party_finance_calendar"
+      }
+    ],
+    "attempted_lanes": [
+      "html_simple",
+      "ics",
+      "earnings_calendar",
+      "third_party_finance_calendar",
+      "ir_aggregator",
+      "rss"
+    ],
+    "failure_class": null,
+    "recommended_next_action": null,
+    "failure_evidence": "Found 1 successful method(s): ['ir_aggregator']"
+  },
+  "Bank of America": {
+    "firm_name": "Bank of America",
+    "discovered_at": "2026-01-08T17:03:08.687594+00:00",
+    "entry_points_tested": [
+      "https://about.bankofamerica.com",
+      "https://about.bankofamerica.com/en/newsroom",
+      "https://newsroom.bankofamerica.com"
+    ],
+    "methods": [
+      {
+        "method": "rss_discovery",
+        "url": "https://about.bankofamerica.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://about.bankofamerica.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://about.bankofamerica.com",
+        "status": "accessible",
+        "html_length": 403587,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 403587 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "ir_calendar",
+        "base_url": "https://about.bankofamerica.com",
+        "status": "redirect",
+        "urls_tested": [
+          "https://about.bankofamerica.com/investor-relations/events"
+        ],
+        "evidence": "Redirect to https://about.bankofamerica.com/content/about/en/error/404.html",
+        "redirect_url": "https://about.bankofamerica.com/content/about/en/error/404.html",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://about.bankofamerica.com/en/newsroom",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://about.bankofamerica.com/en/newsroom",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://about.bankofamerica.com/en/newsroom",
+        "status": "not_found",
+        "html_length": 0,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://newsroom.bankofamerica.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://newsroom.bankofamerica.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://newsroom.bankofamerica.com",
+        "status": "accessible",
+        "html_length": 79875,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 79875 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "earnings_calendar",
+        "firm_name": "Bank of America",
+        "base_url": "https://about.bankofamerica.com",
+        "status": "not_found",
+        "calendars_tested": [],
+        "evidence": "Earnings calendar discovery requires ticker symbol lookup - not yet implemented",
+        "attempted_lane": "earnings_calendar"
+      },
+      {
+        "method": "ir_aggregator",
+        "firm_name": "Bank of America",
+        "base_url": "https://about.bankofamerica.com",
+        "status": "not_found",
+        "platforms_tested": [],
+        "evidence": "No known IR platform detected",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "third_party_finance_calendar",
+        "firm_name": "Bank of America",
+        "status": "not_found",
+        "calendars_tested": [
+          "https://www.nasdaq.com/earnings",
+          "https://finance.yahoo.com/calendar/earnings",
+          "https://www.marketwatch.com/tools/calendars/earnings",
+          "https://www.investing.com/earnings-calendar/"
+        ],
+        "evidence": "Third-party calendar discovery requires bank ticker lookup and calendar parsing - not yet implemented",
+        "attempted_lane": "third_party_finance_calendar"
+      }
+    ],
+    "attempted_lanes": [
+      "html_simple",
+      "ics",
+      "earnings_calendar",
+      "third_party_finance_calendar",
+      "ir_aggregator",
+      "rss"
+    ],
+    "failure_class": "earnings_only_external",
+    "recommended_next_action": "third_party_calendar",
+    "failure_evidence": "Earnings events available via external calendars, not bank website"
+  },
+  "Barclays": {
+    "firm_name": "Barclays",
+    "discovered_at": "2026-01-08T17:03:15.756228+00:00",
+    "entry_points_tested": [
+      "https://www.barclays.com",
+      "https://www.barclays.com/about-barclays/news-and-events",
+      "https://www.barclays.com/insights"
+    ],
+    "methods": [
+      {
+        "method": "rss_discovery",
+        "url": "https://www.barclays.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.barclays.com",
+        "status": "found",
+        "feeds_found": [
+          {
+            "url": "https://www.barclays.com/investor-relations/reports-and-events/financial-calendar/",
+            "type": "ics"
+          }
+        ],
+        "evidence": "Found 1 ICS link(s)",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.barclays.com",
+        "status": "accessible",
+        "html_length": 135154,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 135154 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "ir_calendar",
+        "base_url": "https://www.barclays.com",
+        "status": "redirect",
+        "urls_tested": [
+          "https://www.barclays.com/investor-relations/events"
+        ],
+        "evidence": "Redirect to https://www.home.barclays/investor-relations/events",
+        "redirect_url": "https://www.home.barclays/investor-relations/events",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.barclays.com/about-barclays/news-and-events",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.barclays.com/about-barclays/news-and-events",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.barclays.com/about-barclays/news-and-events",
+        "status": "not_found",
+        "html_length": 0,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.barclays.com/insights",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.barclays.com/insights",
+        "status": "found",
+        "feeds_found": [
+          {
+            "url": "https://www.barclays.com/investor-relations/reports-and-events/financial-calendar/",
+            "type": "ics"
+          }
+        ],
+        "evidence": "Found 1 ICS link(s)",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.barclays.com/insights",
+        "status": "accessible",
+        "html_length": 146667,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 146667 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "earnings_calendar",
+        "firm_name": "Barclays",
+        "base_url": "https://www.barclays.com",
+        "status": "not_found",
+        "calendars_tested": [],
+        "evidence": "Earnings calendar discovery requires ticker symbol lookup - not yet implemented",
+        "attempted_lane": "earnings_calendar"
+      },
+      {
+        "method": "ir_aggregator",
+        "firm_name": "Barclays",
+        "base_url": "https://www.barclays.com",
+        "status": "not_found",
+        "platforms_tested": [],
+        "evidence": "No known IR platform detected",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "third_party_finance_calendar",
+        "firm_name": "Barclays",
+        "status": "not_found",
+        "calendars_tested": [
+          "https://www.nasdaq.com/earnings",
+          "https://finance.yahoo.com/calendar/earnings",
+          "https://www.marketwatch.com/tools/calendars/earnings",
+          "https://www.investing.com/earnings-calendar/"
+        ],
+        "evidence": "Third-party calendar discovery requires bank ticker lookup and calendar parsing - not yet implemented",
+        "attempted_lane": "third_party_finance_calendar"
+      }
+    ],
+    "attempted_lanes": [
+      "html_simple",
+      "ics",
+      "earnings_calendar",
+      "third_party_finance_calendar",
+      "ir_aggregator",
+      "rss"
+    ],
+    "failure_class": null,
+    "recommended_next_action": null,
+    "failure_evidence": "Found 2 successful method(s): ['ics_discovery', 'ics_discovery']"
+  },
+  "Deutsche Bank": {
+    "firm_name": "Deutsche Bank",
+    "discovered_at": "2026-01-08T17:03:22.625173+00:00",
+    "entry_points_tested": [
+      "https://www.db.com",
+      "https://www.db.com/news",
+      "https://www.db.com/news/events"
+    ],
+    "methods": [
+      {
+        "method": "rss_discovery",
+        "url": "https://www.db.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.db.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.db.com",
+        "status": "accessible",
+        "html_length": 160445,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 160445 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "ir_calendar",
+        "base_url": "https://www.db.com",
+        "status": "redirect",
+        "urls_tested": [
+          "https://www.db.com/investor-relations/events",
+          "https://www.db.com/investor-relations/calendar",
+          "https://www.db.com/investor-relations/upcoming-events",
+          "https://www.db.com/ir/events"
+        ],
+        "evidence": "Redirect to https://investor-relations.db.com/reports-and-events/index?language_id=1&kid=ir-events.redirect-en.shortcut",
+        "redirect_url": "https://investor-relations.db.com/reports-and-events/index?language_id=1&kid=ir-events.redirect-en.shortcut",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.db.com/news",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.db.com/news",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.db.com/news",
+        "status": "accessible",
+        "html_length": 135985,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 135985 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.db.com/news/events",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.db.com/news/events",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.db.com/news/events",
+        "status": "not_found",
+        "html_length": 0,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "earnings_calendar",
+        "firm_name": "Deutsche Bank",
+        "base_url": "https://www.db.com",
+        "status": "not_found",
+        "calendars_tested": [],
+        "evidence": "Earnings calendar discovery requires ticker symbol lookup - not yet implemented",
+        "attempted_lane": "earnings_calendar"
+      },
+      {
+        "method": "ir_aggregator",
+        "firm_name": "Deutsche Bank",
+        "base_url": "https://www.db.com",
+        "status": "detected",
+        "platforms_tested": [],
+        "evidence": "Q4 platform detected",
+        "platform": "q4",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "third_party_finance_calendar",
+        "firm_name": "Deutsche Bank",
+        "status": "not_found",
+        "calendars_tested": [
+          "https://www.nasdaq.com/earnings",
+          "https://finance.yahoo.com/calendar/earnings",
+          "https://www.marketwatch.com/tools/calendars/earnings",
+          "https://www.investing.com/earnings-calendar/"
+        ],
+        "evidence": "Third-party calendar discovery requires bank ticker lookup and calendar parsing - not yet implemented",
+        "attempted_lane": "third_party_finance_calendar"
+      }
+    ],
+    "attempted_lanes": [
+      "html_simple",
+      "ics",
+      "earnings_calendar",
+      "third_party_finance_calendar",
+      "ir_aggregator",
+      "rss"
+    ],
+    "failure_class": null,
+    "recommended_next_action": null,
+    "failure_evidence": "Found 1 successful method(s): ['ir_aggregator']"
+  },
+  "UBS": {
+    "firm_name": "UBS",
+    "discovered_at": "2026-01-08T17:03:25.093487+00:00",
+    "entry_points_tested": [
+      "https://www.ubs.com",
+      "https://www.ubs.com/global/en/about_ubs",
+      "https://www.ubs.com/global/en/about_ubs/news_center.html"
+    ],
+    "methods": [
+      {
+        "method": "rss_discovery",
+        "url": "https://www.ubs.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.ubs.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.ubs.com",
+        "status": "accessible",
+        "html_length": 94254,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 94254 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "ir_calendar",
+        "base_url": "https://www.ubs.com",
+        "status": "not_found",
+        "urls_tested": [
+          "https://www.ubs.com/investor-relations/events",
+          "https://www.ubs.com/investor-relations/calendar",
+          "https://www.ubs.com/investor-relations/upcoming-events",
+          "https://www.ubs.com/ir/events",
+          "https://www.ubs.com/ir/calendar"
+        ],
+        "evidence": "Tested 5 IR patterns, none found",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.ubs.com/global/en/about_ubs",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.ubs.com/global/en/about_ubs",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.ubs.com/global/en/about_ubs",
+        "status": "not_found",
+        "html_length": 0,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.ubs.com/global/en/about_ubs/news_center.html",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.ubs.com/global/en/about_ubs/news_center.html",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.ubs.com/global/en/about_ubs/news_center.html",
+        "status": "not_found",
+        "html_length": 0,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "earnings_calendar",
+        "firm_name": "UBS",
+        "base_url": "https://www.ubs.com",
+        "status": "not_found",
+        "calendars_tested": [],
+        "evidence": "Earnings calendar discovery requires ticker symbol lookup - not yet implemented",
+        "attempted_lane": "earnings_calendar"
+      },
+      {
+        "method": "ir_aggregator",
+        "firm_name": "UBS",
+        "base_url": "https://www.ubs.com",
+        "status": "not_found",
+        "platforms_tested": [],
+        "evidence": "No known IR platform detected",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "third_party_finance_calendar",
+        "firm_name": "UBS",
+        "status": "not_found",
+        "calendars_tested": [
+          "https://www.nasdaq.com/earnings",
+          "https://finance.yahoo.com/calendar/earnings",
+          "https://www.marketwatch.com/tools/calendars/earnings",
+          "https://www.investing.com/earnings-calendar/"
+        ],
+        "evidence": "Third-party calendar discovery requires bank ticker lookup and calendar parsing - not yet implemented",
+        "attempted_lane": "third_party_finance_calendar"
+      }
+    ],
+    "attempted_lanes": [
+      "html_simple",
+      "ics",
+      "earnings_calendar",
+      "third_party_finance_calendar",
+      "ir_aggregator",
+      "rss"
+    ],
+    "failure_class": "earnings_only_external",
+    "recommended_next_action": "third_party_calendar",
+    "failure_evidence": "Earnings events available via external calendars, not bank website"
+  },
+  "BNP Paribas": {
+    "firm_name": "BNP Paribas",
+    "discovered_at": "2026-01-08T17:03:27.749904+00:00",
+    "entry_points_tested": [
+      "https://group.bnpparibas",
+      "https://group.bnpparibas/en",
+      "https://group.bnpparibas/en/news"
+    ],
+    "methods": [
+      {
+        "method": "rss_discovery",
+        "url": "https://group.bnpparibas",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://group.bnpparibas",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://group.bnpparibas",
+        "status": "accessible",
+        "html_length": 129425,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 129425 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "ir_calendar",
+        "base_url": "https://group.bnpparibas",
+        "status": "not_found",
+        "urls_tested": [
+          "https://group.bnpparibas/investor-relations/events",
+          "https://group.bnpparibas/investor-relations/calendar",
+          "https://group.bnpparibas/investor-relations/upcoming-events",
+          "https://group.bnpparibas/ir/events",
+          "https://group.bnpparibas/ir/calendar"
+        ],
+        "evidence": "Tested 5 IR patterns, none found",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://group.bnpparibas/en",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://group.bnpparibas/en",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://group.bnpparibas/en",
+        "status": "accessible",
+        "html_length": 124896,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 124896 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://group.bnpparibas/en/news",
+        "status": "found",
+        "feeds_found": [
+          {
+            "url": "https://group.bnpparibas/en/rss/news",
+            "type": "rss"
+          }
+        ],
+        "evidence": "Found 1 feed(s) via discovery tags",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://group.bnpparibas/en/news",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://group.bnpparibas/en/news",
+        "status": "accessible",
+        "html_length": 191163,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 191163 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "earnings_calendar",
+        "firm_name": "BNP Paribas",
+        "base_url": "https://group.bnpparibas",
+        "status": "not_found",
+        "calendars_tested": [],
+        "evidence": "Earnings calendar discovery requires ticker symbol lookup - not yet implemented",
+        "attempted_lane": "earnings_calendar"
+      },
+      {
+        "method": "ir_aggregator",
+        "firm_name": "BNP Paribas",
+        "base_url": "https://group.bnpparibas",
+        "status": "not_found",
+        "platforms_tested": [],
+        "evidence": "No known IR platform detected",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "third_party_finance_calendar",
+        "firm_name": "BNP Paribas",
+        "status": "not_found",
+        "calendars_tested": [
+          "https://www.nasdaq.com/earnings",
+          "https://finance.yahoo.com/calendar/earnings",
+          "https://www.marketwatch.com/tools/calendars/earnings",
+          "https://www.investing.com/earnings-calendar/"
+        ],
+        "evidence": "Third-party calendar discovery requires bank ticker lookup and calendar parsing - not yet implemented",
+        "attempted_lane": "third_party_finance_calendar"
+      }
+    ],
+    "attempted_lanes": [
+      "html_simple",
+      "ics",
+      "earnings_calendar",
+      "third_party_finance_calendar",
+      "ir_aggregator",
+      "rss"
+    ],
+    "failure_class": null,
+    "recommended_next_action": null,
+    "failure_evidence": "Found 1 successful method(s): ['rss_discovery']"
+  },
+  "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale": {
+    "firm_name": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale",
+    "discovered_at": "2026-01-08T17:03:31.317131+00:00",
+    "entry_points_tested": [
+      "https://www.societegenerale.com",
+      "https://www.societegenerale.com/en",
+      "https://www.societegenerale.com/en/news"
+    ],
+    "methods": [
+      {
+        "method": "rss_discovery",
+        "url": "https://www.societegenerale.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.societegenerale.com",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.societegenerale.com",
+        "status": "js_rendered",
+        "html_length": 173789,
+        "js_rendered": true,
+        "auth_required": false,
+        "evidence": "JS-rendered: HTML 173789 bytes, 72 scripts",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "ir_calendar",
+        "base_url": "https://www.societegenerale.com",
+        "status": "not_found",
+        "urls_tested": [
+          "https://www.societegenerale.com/investor-relations/events",
+          "https://www.societegenerale.com/investor-relations/calendar",
+          "https://www.societegenerale.com/investor-relations/upcoming-events",
+          "https://www.societegenerale.com/ir/events",
+          "https://www.societegenerale.com/ir/calendar"
+        ],
+        "evidence": "Tested 5 IR patterns, none found",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.societegenerale.com/en",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No RSS/Atom discovery tags found",
+        "http_status": 200,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.societegenerale.com/en",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "No ICS links found",
+        "http_status": 200,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.societegenerale.com/en",
+        "status": "accessible",
+        "html_length": 170751,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTML accessible: 170751 bytes, event keywords found",
+        "http_status": 200,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "rss_discovery",
+        "url": "https://www.societegenerale.com/en/news",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "rss"
+      },
+      {
+        "method": "ics_discovery",
+        "url": "https://www.societegenerale.com/en/news",
+        "status": "not_found",
+        "feeds_found": [],
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "ics"
+      },
+      {
+        "method": "html_events",
+        "url": "https://www.societegenerale.com/en/news",
+        "status": "not_found",
+        "html_length": 0,
+        "js_rendered": false,
+        "auth_required": false,
+        "evidence": "HTTP 404",
+        "http_status": 404,
+        "attempted_lane": "html_simple"
+      },
+      {
+        "method": "earnings_calendar",
+        "firm_name": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale",
+        "base_url": "https://www.societegenerale.com",
+        "status": "not_found",
+        "calendars_tested": [],
+        "evidence": "Earnings calendar discovery requires ticker symbol lookup - not yet implemented",
+        "attempted_lane": "earnings_calendar"
+      },
+      {
+        "method": "ir_aggregator",
+        "firm_name": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale",
+        "base_url": "https://www.societegenerale.com",
+        "status": "not_found",
+        "platforms_tested": [],
+        "evidence": "No known IR platform detected",
+        "attempted_lane": "ir_aggregator"
+      },
+      {
+        "method": "third_party_finance_calendar",
+        "firm_name": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale",
+        "status": "not_found",
+        "calendars_tested": [
+          "https://www.nasdaq.com/earnings",
+          "https://finance.yahoo.com/calendar/earnings",
+          "https://www.marketwatch.com/tools/calendars/earnings",
+          "https://www.investing.com/earnings-calendar/"
+        ],
+        "evidence": "Third-party calendar discovery requires bank ticker lookup and calendar parsing - not yet implemented",
+        "attempted_lane": "third_party_finance_calendar"
+      }
+    ],
+    "attempted_lanes": [
+      "html_simple",
+      "ics",
+      "earnings_calendar",
+      "third_party_finance_calendar",
+      "ir_aggregator",
+      "rss"
+    ],
+    "failure_class": "earnings_only_external",
+    "recommended_next_action": "third_party_calendar",
+    "failure_evidence": "Earnings events available via external calendars, not bank website"
+  }
+}

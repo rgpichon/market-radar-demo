@@ -1,0 +1,542 @@
+{
+  "extracted_at": "2026-01-14T10:25:41.896800+00:00",
+  "results": [
+    {
+      "target_id": "jpmorgan_markets",
+      "org_name": "JPMorgan",
+      "pages_processed": 5,
+      "forms_found": [],
+      "obstacles": [
+        "js_heavy"
+      ]
+    },
+    {
+      "target_id": "goldman_markets",
+      "org_name": "Goldman Sachs",
+      "pages_processed": 5,
+      "forms_found": [
+        {
+          "page_url": "https://www.goldmansachs.com/insights/outlooks/2026-outlooks",
+          "form_selector": "#subscriptionForm",
+          "email_field": {
+            "name": "email",
+            "id": "",
+            "selector": "input[name='email']"
+          },
+          "name_field": null,
+          "consent_checkbox": null,
+          "submit_selector": "button[type='submit']",
+          "method": "POST",
+          "action": "",
+          "hidden_fields": [],
+          "confidence": "medium",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/goldman_markets",
+          "obstacles": {
+            "captcha": false,
+            "login_required": false,
+            "js_heavy": false
+          }
+        },
+        {
+          "page_url": "https://www.goldmansachs.com/insights/outlooks",
+          "form_selector": "#subscriptionForm",
+          "email_field": {
+            "name": "email",
+            "id": "",
+            "selector": "input[name='email']"
+          },
+          "name_field": null,
+          "consent_checkbox": null,
+          "submit_selector": "button[type='submit']",
+          "method": "POST",
+          "action": "",
+          "hidden_fields": [],
+          "confidence": "medium",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/goldman_markets",
+          "obstacles": {
+            "captcha": false,
+            "login_required": false,
+            "js_heavy": false
+          }
+        },
+        {
+          "page_url": "https://www.goldmansachs.com/insights/outlooks",
+          "form_selector": "#subscriptionForm",
+          "email_field": {
+            "name": "email",
+            "id": "",
+            "selector": "input[name='email']"
+          },
+          "name_field": null,
+          "consent_checkbox": null,
+          "submit_selector": "button[type='submit']",
+          "method": "POST",
+          "action": "",
+          "hidden_fields": [],
+          "confidence": "medium",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/goldman_markets",
+          "obstacles": {
+            "captcha": false,
+            "login_required": false,
+            "js_heavy": false
+          }
+        },
+        {
+          "page_url": "https://www.goldmansachs.com/insights",
+          "form_selector": "#subscriptionForm",
+          "email_field": {
+            "name": "email",
+            "id": "",
+            "selector": "input[name='email']"
+          },
+          "name_field": null,
+          "consent_checkbox": null,
+          "submit_selector": "button[type='submit']",
+          "method": "POST",
+          "action": "",
+          "hidden_fields": [],
+          "confidence": "medium",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/goldman_markets",
+          "obstacles": {
+            "captcha": false,
+            "login_required": false,
+            "js_heavy": false
+          }
+        },
+        {
+          "page_url": "https://www.goldmansachs.com/insights",
+          "form_selector": "#subscriptionForm",
+          "email_field": {
+            "name": "email",
+            "id": "",
+            "selector": "input[name='email']"
+          },
+          "name_field": null,
+          "consent_checkbox": null,
+          "submit_selector": "button[type='submit']",
+          "method": "POST",
+          "action": "",
+          "hidden_fields": [],
+          "confidence": "medium",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/goldman_markets",
+          "obstacles": {
+            "captcha": false,
+            "login_required": false,
+            "js_heavy": false
+          }
+        },
+        {
+          "page_url": "https://www.goldmansachs.com/insights/articles/the-global-economy-forecast-to-post-sturdy-growth-in-2026",
+          "form_selector": "#subscriptionForm",
+          "email_field": {
+            "name": "email",
+            "id": "",
+            "selector": "input[name='email']"
+          },
+          "name_field": null,
+          "consent_checkbox": null,
+          "submit_selector": "button[type='submit']",
+          "method": "POST",
+          "action": "",
+          "hidden_fields": [],
+          "confidence": "medium",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/goldman_markets",
+          "obstacles": {
+            "captcha": false,
+            "login_required": false,
+            "js_heavy": false
+          }
+        }
+      ],
+      "obstacles": [
+        "js_heavy"
+      ]
+    },
+    {
+      "target_id": "morgan_stanley_markets",
+      "org_name": "Morgan Stanley",
+      "pages_processed": 5,
+      "forms_found": [
+        {
+          "page_url": "http://www.morganstanley.com/im/subscription-center.html",
+          "form_selector": ".form-inline",
+          "email_field": null,
+          "name_field": null,
+          "consent_checkbox": null,
+          "submit_selector": null,
+          "method": "POST",
+          "action": "",
+          "hidden_fields": [],
+          "confidence": "low",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/morgan_stanley_markets",
+          "obstacles": {
+            "captcha": false,
+            "login_required": false,
+            "js_heavy": false
+          }
+        }
+      ],
+      "obstacles": []
+    },
+    {
+      "target_id": "citigroup_markets",
+      "org_name": "Citigroup",
+      "pages_processed": 3,
+      "forms_found": [],
+      "obstacles": [
+        "js_heavy",
+        "js_heavy",
+        "js_heavy"
+      ]
+    },
+    {
+      "target_id": "bofa_markets",
+      "org_name": "Bank of America",
+      "pages_processed": 5,
+      "forms_found": [
+        {
+          "page_url": "https://investor.bankofamerica.com/events-and-presentations/email-alerts",
+          "form_selector": ".email-alerts-form.email-alerts.validate-form",
+          "email_field": {
+            "name": "email",
+            "id": "email",
+            "selector": "input[name='email']"
+          },
+          "name_field": {
+            "name": "first_name",
+            "id": "first_name",
+            "selector": "input[name='first_name']"
+          },
+          "consent_checkbox": null,
+          "submit_selector": "button[type='submit']",
+          "method": "POST",
+          "action": "",
+          "hidden_fields": [
+            {
+              "name": "a",
+              "value": ""
+            }
+          ],
+          "confidence": "medium",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/bofa_markets",
+          "obstacles": {
+            "captcha": true,
+            "login_required": false,
+            "js_heavy": false
+          }
+        },
+        {
+          "page_url": "https://institute.bankofamerica.com/subscribe-employee.html",
+          "form_selector": "#654322",
+          "email_field": {
+            "name": "emailUsername",
+            "id": "emailUsername",
+            "selector": "input[name='emailUsername']"
+          },
+          "name_field": {
+            "name": "firstName",
+            "id": "firstName",
+            "selector": "input[name='firstName']"
+          },
+          "consent_checkbox": null,
+          "submit_selector": "input[type='submit']",
+          "method": "POST",
+          "action": "/services/form/salesforce",
+          "hidden_fields": [
+            {
+              "name": "fcp",
+              "value": "/content/experience-fragments/institute/forms/subscribe-employee/jcr:content/root/background_container_525537638/image/backgroundContent/layout_container/column_1/form_container"
+            },
+            {
+              "name": "emailAddress",
+              "value": ""
+            },
+            {
+              "name": "company",
+              "value": ""
+            }
+          ],
+          "confidence": "high",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/bofa_markets",
+          "obstacles": {
+            "captcha": false,
+            "login_required": false,
+            "js_heavy": false
+          }
+        },
+        {
+          "page_url": "https://institute.bankofamerica.com/subscribe-form.html",
+          "form_selector": "#654321",
+          "email_field": {
+            "name": "emailAddress",
+            "id": "emailAddress",
+            "selector": "input[name='emailAddress']"
+          },
+          "name_field": {
+            "name": "firstName",
+            "id": "firstName",
+            "selector": "input[name='firstName']"
+          },
+          "consent_checkbox": null,
+          "submit_selector": "input[type='submit']",
+          "method": "POST",
+          "action": "/services/form/salesforce",
+          "hidden_fields": [
+            {
+              "name": "fcp",
+              "value": "/content/experience-fragments/institute/forms/subscribe/jcr:content/root/background_container_525537638/image/backgroundContent/layout_container/column_1/form_container"
+            }
+          ],
+          "confidence": "high",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/bofa_markets",
+          "obstacles": {
+            "captcha": false,
+            "login_required": false,
+            "js_heavy": false
+          }
+        }
+      ],
+      "obstacles": [
+        "captcha",
+        "captcha"
+      ]
+    },
+    {
+      "target_id": "barclays_markets",
+      "org_name": "Barclays",
+      "pages_processed": 5,
+      "forms_found": [],
+      "obstacles": []
+    },
+    {
+      "target_id": "ubs_markets",
+      "org_name": "UBS",
+      "pages_processed": 5,
+      "forms_found": [
+        {
+          "page_url": "https://www.ubs.com/global/en/wealthmanagement/insights/year-ahead-registration.html",
+          "form_selector": "#5e7f6c104056975f0c319020eb79394c",
+          "email_field": {
+            "name": "email",
+            "id": "email",
+            "selector": "input[name='email']"
+          },
+          "name_field": {
+            "name": "firstName",
+            "id": "firstName",
+            "selector": "input[name='firstName']"
+          },
+          "consent_checkbox": {
+            "name": "confirmation_159246120",
+            "id": "confirmation_159246120",
+            "selector": "input[name='confirmation_159246120']"
+          },
+          "submit_selector": "button[type='submit']",
+          "method": "POST",
+          "action": "javascript:;",
+          "hidden_fields": [
+            {
+              "name": "usedAsDisclaimer",
+              "value": "false"
+            },
+            {
+              "name": "phoneNumber",
+              "value": ""
+            },
+            {
+              "name": "disclaimer_159246120_id",
+              "value": "159246120"
+            },
+            {
+              "name": "disclaimer_159246120_type",
+              "value": "general"
+            },
+            {
+              "name": "disclaimer_159246120_version",
+              "value": "12"
+            },
+            {
+              "name": "disclaimer_657176267_id",
+              "value": "657176267"
+            },
+            {
+              "name": "disclaimer_657176267_type",
+              "value": "emailTracking"
+            },
+            {
+              "name": "disclaimer_657176267_version",
+              "value": "7"
+            },
+            {
+              "name": "referrer",
+              "value": ""
+            },
+            {
+              "name": "campID",
+              "value": ""
+            },
+            {
+              "name": "aecID",
+              "value": ""
+            },
+            {
+              "name": "channel",
+              "value": ""
+            }
+          ],
+          "confidence": "high",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/ubs_markets",
+          "obstacles": {
+            "captcha": false,
+            "login_required": false,
+            "js_heavy": false
+          }
+        }
+      ],
+      "obstacles": [
+        "js_heavy",
+        "js_heavy",
+        "js_heavy",
+        "js_heavy"
+      ]
+    },
+    {
+      "target_id": "deutsche_bank_markets",
+      "org_name": "Deutsche Bank",
+      "pages_processed": 4,
+      "forms_found": [
+        {
+          "page_url": "https://flow.db.com/newsletter/subscribe-to-flow-digest-newsletter",
+          "form_selector": "form",
+          "email_field": {
+            "name": "form_EMAIL",
+            "id": "form_EMAIL",
+            "selector": "input[name='form_EMAIL']"
+          },
+          "name_field": null,
+          "consent_checkbox": {
+            "name": "form_SUBSCRIPTIONS:277",
+            "id": "form_SUBSCRIPTIONS:277",
+            "selector": "input[name='form_SUBSCRIPTIONS:277']"
+          },
+          "submit_selector": "input[type='submit']",
+          "method": "POST",
+          "action": "",
+          "hidden_fields": [
+            {
+              "name": "form_URSPRUNGPOPUP",
+              "value": ""
+            }
+          ],
+          "confidence": "medium",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/deutsche_bank_markets",
+          "obstacles": {
+            "captcha": false,
+            "login_required": false,
+            "js_heavy": false
+          }
+        },
+        {
+          "page_url": "https://flow.db.com/newsbites/newsbites-subscription",
+          "form_selector": "form",
+          "email_field": {
+            "name": "form_EMAIL",
+            "id": "form_EMAIL",
+            "selector": "input[name='form_EMAIL']"
+          },
+          "name_field": null,
+          "consent_checkbox": {
+            "name": "form_SUBSCRIPTIONS:277",
+            "id": "form_SUBSCRIPTIONS:277",
+            "selector": "input[name='form_SUBSCRIPTIONS:277']"
+          },
+          "submit_selector": "input[type='submit']",
+          "method": "POST",
+          "action": "",
+          "hidden_fields": [
+            {
+              "name": "form_URSPRUNGPOPUP",
+              "value": ""
+            }
+          ],
+          "confidence": "medium",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/deutsche_bank_markets",
+          "obstacles": {
+            "captcha": false,
+            "login_required": false,
+            "js_heavy": false
+          }
+        }
+      ],
+      "obstacles": []
+    },
+    {
+      "target_id": "socgen_markets",
+      "org_name": "Societe Generale",
+      "pages_processed": 5,
+      "forms_found": [],
+      "obstacles": []
+    },
+    {
+      "target_id": "bnpp_markets",
+      "org_name": "BNP Paribas",
+      "pages_processed": 5,
+      "forms_found": [
+        {
+          "page_url": "https://cib.bnpparibas/global-outlook-2026-in-a-good-place/",
+          "form_selector": "#form-actito",
+          "email_field": {
+            "name": "email",
+            "id": "a-email",
+            "selector": "input[name='email']"
+          },
+          "name_field": null,
+          "consent_checkbox": null,
+          "submit_selector": "button[type='submit']",
+          "method": "POST",
+          "action": "",
+          "hidden_fields": [],
+          "confidence": "medium",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/bnpp_markets",
+          "obstacles": {
+            "captcha": true,
+            "login_required": false,
+            "js_heavy": false
+          }
+        },
+        {
+          "page_url": "https://cib.bnpparibas/bnp-paribas-global-markets-conference-2025-3-key-takeaways/",
+          "form_selector": "#form-actito",
+          "email_field": {
+            "name": "email",
+            "id": "a-email",
+            "selector": "input[name='email']"
+          },
+          "name_field": null,
+          "consent_checkbox": null,
+          "submit_selector": "button[type='submit']",
+          "method": "POST",
+          "action": "",
+          "hidden_fields": [],
+          "confidence": "medium",
+          "evidence_path": "/Users/raphael/Desktop/Trading/Market Radar/Codes/backend/_evidence/newsletter_acq/forms/bnpp_markets",
+          "obstacles": {
+            "captcha": true,
+            "login_required": false,
+            "js_heavy": false
+          }
+        }
+      ],
+      "obstacles": [
+        "captcha",
+        "login_required",
+        "captcha",
+        "login_required",
+        "captcha",
+        "login_required",
+        "captcha",
+        "captcha"
+      ]
+    }
+  ]
+}

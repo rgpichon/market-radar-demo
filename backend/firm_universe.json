@@ -1,0 +1,376 @@
+{
+  "firms": [
+    {
+      "firm_name": "BlackRock",
+      "firm_type": "Asset Manager",
+      "priority": "p0",
+      "home_url": "https://www.blackrock.com",
+      "seed_urls": [
+        "https://www.blackrock.com/us/individual/insights/events",
+        "https://www.blackrock.com/corporate/insights/events"
+      ],
+      "notes": "Largest asset manager globally"
+    },
+    {
+      "firm_name": "Amundi",
+      "firm_type": "Asset Manager",
+      "priority": "p0",
+      "home_url": "https://www.amundi.com",
+      "seed_urls": [
+        "https://www.amundi.com/en/events"
+      ],
+      "notes": "European asset manager"
+    },
+    {
+      "firm_name": "PIMCO",
+      "firm_type": "Asset Manager",
+      "priority": "p0",
+      "home_url": "https://www.pimco.com",
+      "seed_urls": [
+        "https://www.pimco.com/en-us/insights/events",
+        "https://www.pimco.com/en-us/insights/webinars"
+      ],
+      "notes": "Fixed income focused"
+    },
+    {
+      "firm_name": "Vanguard",
+      "firm_type": "Asset Manager",
+      "priority": "p1",
+      "home_url": "https://www.vanguard.com",
+      "seed_urls": [
+        "https://investor.vanguard.com/events"
+      ],
+      "notes": "Index fund leader"
+    },
+    {
+      "firm_name": "Schroders",
+      "firm_type": "Asset Manager",
+      "priority": "p0",
+      "home_url": "https://www.schroders.com",
+      "seed_urls": [
+        "https://www.schroders.com/en/insights/events"
+      ],
+      "notes": "UK-based asset manager"
+    },
+    {
+      "firm_name": "JPMorgan Asset Management",
+      "firm_type": "Asset Manager",
+      "priority": "p0",
+      "home_url": "https://am.jpmorgan.com",
+      "seed_urls": [
+        "https://am.jpmorgan.com/us/en/asset-management/insights/events"
+      ],
+      "notes": "JPMAM events"
+    },
+    {
+      "firm_name": "Goldman Sachs Asset Management",
+      "firm_type": "Asset Manager",
+      "priority": "p0",
+      "home_url": "https://www.goldmansachs.com/asset-management",
+      "seed_urls": [
+        "https://www.goldmansachs.com/asset-management/insights/events"
+      ],
+      "notes": "GSAM events"
+    },
+    {
+      "firm_name": "Fidelity",
+      "firm_type": "Asset Manager",
+      "priority": "p1",
+      "home_url": "https://www.fidelity.com",
+      "seed_urls": [
+        "https://www.fidelity.com/events"
+      ],
+      "notes": "US asset manager"
+    },
+    {
+      "firm_name": "Wellington Management",
+      "firm_type": "Asset Manager",
+      "priority": "p1",
+      "home_url": "https://www.wellington.com",
+      "seed_urls": [
+        "https://www.wellington.com/insights/events"
+      ],
+      "notes": "Institutional asset manager"
+    },
+    {
+      "firm_name": "Franklin Templeton",
+      "firm_type": "Asset Manager",
+      "priority": "p1",
+      "home_url": "https://www.franklintempleton.com",
+      "seed_urls": [
+        "https://www.franklintempleton.com/insights/events"
+      ],
+      "notes": "Global asset manager"
+    },
+    {
+      "firm_name": "AQR",
+      "firm_type": "Asset Manager",
+      "priority": "p0",
+      "home_url": "https://www.aqr.com",
+      "seed_urls": [
+        "https://www.aqr.com/Insights/Events"
+      ],
+      "notes": "Quantitative asset manager"
+    },
+    {
+      "firm_name": "Man Group",
+      "firm_type": "Hedge Fund",
+      "priority": "p0",
+      "home_url": "https://www.man.com",
+      "seed_urls": [
+        "https://www.man.com/maninstitute/events"
+      ],
+      "notes": "Alternative investment manager"
+    },
+    {
+      "firm_name": "Blackstone",
+      "firm_type": "Asset Manager",
+      "priority": "p0",
+      "home_url": "https://www.blackstone.com",
+      "seed_urls": [
+        "https://www.blackstone.com/insights/events"
+      ],
+      "notes": "Private equity/credit insights"
+    },
+    {
+      "firm_name": "Bridgewater Associates",
+      "firm_type": "Hedge Fund",
+      "priority": "p1",
+      "home_url": "https://www.bridgewater.com",
+      "seed_urls": [
+        "https://www.bridgewater.com/insights/events"
+      ],
+      "notes": "Public research/events pages only"
+    },
+    {
+      "firm_name": "Point72",
+      "firm_type": "Hedge Fund",
+      "priority": "p2",
+      "home_url": "https://www.point72.com",
+      "seed_urls": [
+        "https://www.point72.com/insights/events"
+      ],
+      "notes": "Sometimes has public content pages"
+    },
+    {
+      "firm_name": "CFA Society Global",
+      "firm_type": "Association",
+      "priority": "p0",
+      "home_url": "https://www.cfainstitute.org",
+      "seed_urls": [
+        "https://www.cfainstitute.org/en/events"
+      ],
+      "notes": "Already have CFA Institute, but check for local chapters"
+    },
+    {
+      "firm_name": "CAIA Association",
+      "firm_type": "Association",
+      "priority": "p0",
+      "home_url": "https://www.caia.org",
+      "seed_urls": [
+        "https://www.caia.org/events"
+      ],
+      "notes": "Alternative investments association"
+    },
+    {
+      "firm_name": "SIFMA",
+      "firm_type": "Association",
+      "priority": "p0",
+      "home_url": "https://www.sifma.org",
+      "seed_urls": [
+        "https://www.sifma.org/events"
+      ],
+      "notes": "Securities Industry and Financial Markets Association"
+    },
+    {
+      "firm_name": "AIMA",
+      "firm_type": "Association",
+      "priority": "p0",
+      "home_url": "https://www.aima.org",
+      "seed_urls": [
+        "https://www.aima.org/events"
+      ],
+      "notes": "Alternative Investment Management Association"
+    },
+    {
+      "firm_name": "PRI",
+      "firm_type": "Association",
+      "priority": "p1",
+      "home_url": "https://www.unpri.org",
+      "seed_urls": [
+        "https://www.unpri.org/events"
+      ],
+      "notes": "Principles for Responsible Investment"
+    },
+    {
+      "firm_name": "GFMA",
+      "firm_type": "Association",
+      "priority": "p1",
+      "home_url": "https://www.gfma.org",
+      "seed_urls": [
+        "https://www.gfma.org/events"
+      ],
+      "notes": "Global Financial Markets Association"
+    },
+    {
+      "firm_name": "ISLA",
+      "firm_type": "Association",
+      "priority": "p1",
+      "home_url": "https://www.isla.org",
+      "seed_urls": [
+        "https://www.isla.org/events"
+      ],
+      "notes": "International Securities Lending Association"
+    },
+    {
+      "firm_name": "BIS",
+      "firm_type": "Central Bank",
+      "priority": "p0",
+      "home_url": "https://www.bis.org",
+      "seed_urls": [
+        "https://www.bis.org/events.htm"
+      ],
+      "notes": "Bank for International Settlements - events pages"
+    },
+    {
+      "firm_name": "Bank of England",
+      "firm_type": "Central Bank",
+      "priority": "p0",
+      "home_url": "https://www.bankofengland.co.uk",
+      "seed_urls": [
+        "https://www.bankofengland.co.uk/events"
+      ],
+      "notes": "BoE events"
+    },
+    {
+      "firm_name": "Bank of Japan",
+      "firm_type": "Central Bank",
+      "priority": "p1",
+      "home_url": "https://www.boj.or.jp",
+      "seed_urls": [
+        "https://www.boj.or.jp/en/announcements/events/index.htm"
+      ],
+      "notes": "BoJ events"
+    },
+    {
+      "firm_name": "Swiss National Bank",
+      "firm_type": "Central Bank",
+      "priority": "p1",
+      "home_url": "https://www.snb.ch",
+      "seed_urls": [
+        "https://www.snb.ch/en/about/snb/events"
+      ],
+      "notes": "SNB events"
+    },
+    {
+      "firm_name": "Cambridge Judge Business School",
+      "firm_type": "Academic",
+      "priority": "p0",
+      "home_url": "https://www.jbs.cam.ac.uk",
+      "seed_urls": [
+        "https://www.jbs.cam.ac.uk/events"
+      ],
+      "notes": "Cambridge finance center"
+    },
+    {
+      "firm_name": "Imperial College Business School",
+      "firm_type": "Academic",
+      "priority": "p0",
+      "home_url": "https://www.imperial.ac.uk/business-school",
+      "seed_urls": [
+        "https://www.imperial.ac.uk/business-school/events"
+      ],
+      "notes": "Imperial finance center"
+    },
+    {
+      "firm_name": "Warwick Business School",
+      "firm_type": "Academic",
+      "priority": "p1",
+      "home_url": "https://www.wbs.ac.uk",
+      "seed_urls": [
+        "https://www.wbs.ac.uk/events"
+      ],
+      "notes": "Warwick finance center"
+    },
+    {
+      "firm_name": "HEC Paris",
+      "firm_type": "Academic",
+      "priority": "p0",
+      "home_url": "https://www.hec.edu",
+      "seed_urls": [
+        "https://www.hec.edu/en/events"
+      ],
+      "notes": "French business school"
+    },
+    {
+      "firm_name": "INSEAD",
+      "firm_type": "Academic",
+      "priority": "p0",
+      "home_url": "https://www.insead.edu",
+      "seed_urls": [
+        "https://www.insead.edu/events"
+      ],
+      "notes": "European business school"
+    },
+    {
+      "firm_name": "Wharton School",
+      "firm_type": "Academic",
+      "priority": "p0",
+      "home_url": "https://www.wharton.upenn.edu",
+      "seed_urls": [
+        "https://www.wharton.upenn.edu/events"
+      ],
+      "notes": "US finance center"
+    },
+    {
+      "firm_name": "Chicago Booth",
+      "firm_type": "Academic",
+      "priority": "p0",
+      "home_url": "https://www.chicagobooth.edu",
+      "seed_urls": [
+        "https://www.chicagobooth.edu/events"
+      ],
+      "notes": "US finance center"
+    },
+    {
+      "firm_name": "Peterson Institute",
+      "firm_type": "Think Tank",
+      "priority": "p0",
+      "home_url": "https://www.piie.com",
+      "seed_urls": [
+        "https://www.piie.com/events"
+      ],
+      "notes": "PIIE events"
+    },
+    {
+      "firm_name": "Chatham House",
+      "firm_type": "Think Tank",
+      "priority": "p0",
+      "home_url": "https://www.chathamhouse.org",
+      "seed_urls": [
+        "https://www.chathamhouse.org/events"
+      ],
+      "notes": "UK think tank"
+    },
+    {
+      "firm_name": "RAND Corporation",
+      "firm_type": "Think Tank",
+      "priority": "p1",
+      "home_url": "https://www.rand.org",
+      "seed_urls": [
+        "https://www.rand.org/events"
+      ],
+      "notes": "Policy research"
+    },
+    {
+      "firm_name": "Cato Institute",
+      "firm_type": "Think Tank",
+      "priority": "p1",
+      "home_url": "https://www.cato.org",
+      "seed_urls": [
+        "https://www.cato.org/events"
+      ],
+      "notes": "Libertarian think tank"
+    }
+  ]
+}
